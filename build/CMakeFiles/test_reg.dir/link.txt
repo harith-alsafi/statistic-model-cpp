@@ -1,0 +1,1 @@
+/usr/bin/g++-7 -g CMakeFiles/test_reg.dir/test/reg_test.cpp.o -o ../out/test_reg 
