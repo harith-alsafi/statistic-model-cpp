@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classintp_1_1LinearInterp" kind="class" language="C++" prot="public">
+    <compoundname>intp::LinearInterp</compoundname>
+    <includes local="yes">int.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>intp::LinearInterp</label>
+        <link refid="classintp_1_1LinearInterp"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/int.hpp" line="4" column="5" bodyfile="include/int.hpp" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

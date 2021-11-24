@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespaceintp" kind="namespace" language="C++">
+    <compoundname>intp</compoundname>
+    <innerclass refid="classintp_1_1LinearInterp" prot="public">intp::LinearInterp</innerclass>
+    <innerclass refid="classintp_1_1PolyInterp" prot="public">intp::PolyInterp</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/int.hpp" line="2" column="1"/>
+  </compounddef>
+</doxygen>

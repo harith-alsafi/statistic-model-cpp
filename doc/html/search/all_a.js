@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['plot_31',['Plot',['../classmisc_1_1Plot.html',1,'misc::Plot'],['../classmisc_1_1Plot.html#ad121e04781c92735596200df60b4ec7a',1,'misc::Plot::Plot(int h=145, int w=145, long double xmn=-10, long double xmx=10, long double ymn=-10, long double ymx=10)']]],
+  ['plotfun_32',['plotFun',['../classmisc_1_1Plot.html#a8bfdf81ac1f5abeb96fa359fc73d9d31',1,'misc::Plot']]],
+  ['plotvect_33',['plotVect',['../classmisc_1_1Plot.html#a6f75f1a37636d3b36b0dc3a117278a38',1,'misc::Plot']]],
+  ['polyinterp_34',['PolyInterp',['../classintp_1_1PolyInterp.html',1,'intp']]],
+  ['polyregression_35',['PolyRegression',['../classregr_1_1PolyRegression.html',1,'regr']]]
+];

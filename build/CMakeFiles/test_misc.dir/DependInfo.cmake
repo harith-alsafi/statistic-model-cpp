@@ -12,10 +12,13 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../includes"
   "../test"
+  "../lib/googletest/googletest/include"
+  "../lib/googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/lib/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

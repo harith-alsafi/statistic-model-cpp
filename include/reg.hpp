@@ -3,7 +3,7 @@ namespace regr
 {
     class LinearRegression
     {
-
+        
     };
 
     class PolyRegression

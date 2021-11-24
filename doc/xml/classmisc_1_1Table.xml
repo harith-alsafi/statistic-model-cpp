@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classmisc_1_1Table" kind="class" language="C++" prot="public">
+    <compoundname>misc::Table</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; std::vector&lt; long double &gt; &gt;</basecompoundref>
+    <includes local="yes">misc.hpp</includes>
+    <innerclass refid="structmisc_1_1Table_1_1QR" prot="private">misc::Table::QR</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmisc_1_1Table_1aa920782e0a9185ee944d7b8e54b880aa" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; misc::Table::headers</definition>
+        <argsstring></argsstring>
+        <name>headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="52" column="25" bodyfile="include/misc.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Table_1a39d2c3781309bd9d679735c67645c9c0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int misc::Table::row</definition>
+        <argsstring></argsstring>
+        <name>row</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="53" column="17" bodyfile="include/misc.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Table_1a03025d4e255a14c2469ae5e6bbc9504b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int misc::Table::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="54" column="17" bodyfile="include/misc.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmisc_1_1Table_1a11154eddd2261171da35511d3afee138" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int misc::Table::checkHeader</definition>
+        <argsstring>(std::string head)</argsstring>
+        <name>checkHeader</name>
+        <param>
+          <type>std::string</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="25" column="17" bodyfile="include/misc.hpp" bodystart="25" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a6e5c955b60123e296e33d6438521b1e9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; misc::Table::getAvgs</definition>
+        <argsstring>()</argsstring>
+        <name>getAvgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="34" column="25" bodyfile="include/misc.hpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a1e6b098ea88b59d0c26b24c5050d5843" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; misc::Table::getStds</definition>
+        <argsstring>()</argsstring>
+        <name>getStds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="38" column="25" bodyfile="include/misc.hpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1ada09ad1dff1ef0d5d50cff347e9bbf70" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; misc::Table::getVars</definition>
+        <argsstring>()</argsstring>
+        <name>getVars</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="42" column="25" bodyfile="include/misc.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a1b42a09b9bc50afb69ce94bc40fe1d52" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structmisc_1_1Table_1_1QR" kindref="compound">QR</ref> &gt;</type>
+        <definition>std::vector&lt;QR&gt; misc::Table::getQRs</definition>
+        <argsstring>()</argsstring>
+        <name>getQRs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="46" column="25" bodyfile="include/misc.hpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmisc_1_1Table_1ac69a4a70b5674acf1e81404b0f7e13d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>misc::Table::Table</definition>
+        <argsstring>()</argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="57" column="13" bodyfile="include/misc.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a067fc995824a17e51c0900b0114605e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Table::checkSize</definition>
+        <argsstring>()</argsstring>
+        <name>checkSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="59" column="18" bodyfile="include/misc.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a4de8db30fe3f14355bf444c2c24a093a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool misc::Table::readCSV</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>readCSV</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Reads from csv file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if read is success <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="return"><para>false: if read did not complete </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="71" column="18" bodyfile="include/misc.hpp" bodystart="71" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1aea1f278838960dbc4eed3cfadd7176dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool misc::Table::saveCSV</definition>
+        <argsstring>(std::string filename)</argsstring>
+        <name>saveCSV</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Reads from csv file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true: if read is success <linebreak/>
+ </para>
+</simplesect>
+<simplesect kind="return"><para>false: if read did not complete </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="116" column="18" bodyfile="include/misc.hpp" bodystart="116" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a9b2a1ba1bfa3946fd0b71a53061f7689" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; long double &gt; &amp;</type>
+        <definition>std::vector&lt;long double&gt;&amp; misc::Table::operator[]</definition>
+        <argsstring>(std::string headname)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::string</type>
+          <declname>headname</declname>
+        </param>
+        <briefdescription>
+<para>Returns colum of certain header. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>headname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;D&gt;&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="151" column="25" bodyfile="include/misc.hpp" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a4553ac717bcf5482688d2e29c05c8b19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double misc::Table::getMin</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getMin</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="156" column="25" bodyfile="include/misc.hpp" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a24471fff20c0a96eadf41531b2bcd923" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double misc::Table::getMax</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getMax</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="160" column="25" bodyfile="include/misc.hpp" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a1978b6ea40bacf28cab9a4dbee6fba74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double misc::Table::getAvg</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getAvg</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="164" column="25" bodyfile="include/misc.hpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a949aa45612aacbdc6709b0ba4c864207" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double misc::Table::getStd</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getStd</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="168" column="25" bodyfile="include/misc.hpp" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1ab194bb65153718986cb8bfff18526294" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double misc::Table::getVar</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getVar</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="172" column="25" bodyfile="include/misc.hpp" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a6c43ec9c6d7e7d4ca414b92617f83881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structmisc_1_1Table_1_1QR" kindref="compound">QR</ref></type>
+        <definition>QR misc::Table::getQR</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;a)</argsstring>
+        <name>getQR</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="178" column="16" bodyfile="include/misc.hpp" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1af39df8b64a7353ae48f237186fc516c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Table::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="182" column="18" bodyfile="include/misc.hpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Table_1a36662d07cb040777cfe3974b4d234fac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmisc_1_1Table" kindref="compound">Table</ref></type>
+        <definition>Table misc::Table::describeAll</definition>
+        <argsstring>()</argsstring>
+        <name>describeAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="186" column="19" bodyfile="include/misc.hpp" bodystart="186" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Table class to contain the dataframe. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>misc::Table</label>
+        <link refid="classmisc_1_1Table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>misc::Table</label>
+        <link refid="classmisc_1_1Table"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/misc.hpp" line="13" column="5" bodyfile="include/misc.hpp" bodystart="14" bodyend="202"/>
+    <listofallmembers>
+      <member refid="classmisc_1_1Table_1a11154eddd2261171da35511d3afee138" prot="protected" virt="non-virtual"><scope>misc::Table</scope><name>checkHeader</name></member>
+      <member refid="classmisc_1_1Table_1a067fc995824a17e51c0900b0114605e6" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>checkSize</name></member>
+      <member refid="classmisc_1_1Table_1a03025d4e255a14c2469ae5e6bbc9504b" prot="private" virt="non-virtual"><scope>misc::Table</scope><name>col</name></member>
+      <member refid="classmisc_1_1Table_1a36662d07cb040777cfe3974b4d234fac" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>describeAll</name></member>
+      <member refid="classstd_1_1vector_1a2396209900e8f592db1f0b2467f7d899" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>elements</name></member>
+      <member refid="classmisc_1_1Table_1a1978b6ea40bacf28cab9a4dbee6fba74" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getAvg</name></member>
+      <member refid="classmisc_1_1Table_1a6e5c955b60123e296e33d6438521b1e9" prot="protected" virt="non-virtual"><scope>misc::Table</scope><name>getAvgs</name></member>
+      <member refid="classmisc_1_1Table_1a24471fff20c0a96eadf41531b2bcd923" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getMax</name></member>
+      <member refid="classmisc_1_1Table_1a4553ac717bcf5482688d2e29c05c8b19" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getMin</name></member>
+      <member refid="classmisc_1_1Table_1a6c43ec9c6d7e7d4ca414b92617f83881" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getQR</name></member>
+      <member refid="classmisc_1_1Table_1a1b42a09b9bc50afb69ce94bc40fe1d52" prot="protected" virt="non-virtual"><scope>misc::Table</scope><name>getQRs</name></member>
+      <member refid="classmisc_1_1Table_1a949aa45612aacbdc6709b0ba4c864207" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getStd</name></member>
+      <member refid="classmisc_1_1Table_1a1e6b098ea88b59d0c26b24c5050d5843" prot="protected" virt="non-virtual"><scope>misc::Table</scope><name>getStds</name></member>
+      <member refid="classmisc_1_1Table_1ab194bb65153718986cb8bfff18526294" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>getVar</name></member>
+      <member refid="classmisc_1_1Table_1ada09ad1dff1ef0d5d50cff347e9bbf70" prot="protected" virt="non-virtual"><scope>misc::Table</scope><name>getVars</name></member>
+      <member refid="classmisc_1_1Table_1aa920782e0a9185ee944d7b8e54b880aa" prot="private" virt="non-virtual"><scope>misc::Table</scope><name>headers</name></member>
+      <member refid="classmisc_1_1Table_1a9b2a1ba1bfa3946fd0b71a53061f7689" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>operator[]</name></member>
+      <member refid="classmisc_1_1Table_1a4de8db30fe3f14355bf444c2c24a093a" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>readCSV</name></member>
+      <member refid="classmisc_1_1Table_1a39d2c3781309bd9d679735c67645c9c0" prot="private" virt="non-virtual"><scope>misc::Table</scope><name>row</name></member>
+      <member refid="classmisc_1_1Table_1aea1f278838960dbc4eed3cfadd7176dd" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>saveCSV</name></member>
+      <member refid="classmisc_1_1Table_1af39df8b64a7353ae48f237186fc516c9" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>show</name></member>
+      <member refid="classmisc_1_1Table_1ac69a4a70b5674acf1e81404b0f7e13d7" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

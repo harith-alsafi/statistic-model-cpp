@@ -26,3 +26,7 @@ add_executable(test_misc test/misc_test.cpp)
 
 # int 
 add_executable(test_int test/int_test.cpp)
+
+target_link_libraries(test_reg gtest pthread) 
+target_link_libraries(test_misc gtest pthread) 
+target_link_libraries(test_int gtest pthread) 

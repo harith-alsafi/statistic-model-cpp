@@ -98,6 +98,7 @@ test_int_EXTERNAL_OBJECTS =
 
 ../out/test_int: CMakeFiles/test_int.dir/test/int_test.cpp.o
 ../out/test_int: CMakeFiles/test_int.dir/build.make
+../out/test_int: lib/libgtestd.a
 ../out/test_int: CMakeFiles/test_int.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../out/test_int"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_int.dir/link.txt --verbose=$(VERBOSE)

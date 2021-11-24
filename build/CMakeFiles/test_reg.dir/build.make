@@ -98,6 +98,7 @@ test_reg_EXTERNAL_OBJECTS =
 
 ../out/test_reg: CMakeFiles/test_reg.dir/test/reg_test.cpp.o
 ../out/test_reg: CMakeFiles/test_reg.dir/build.make
+../out/test_reg: lib/libgtestd.a
 ../out/test_reg: CMakeFiles/test_reg.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../out/test_reg"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_reg.dir/link.txt --verbose=$(VERBOSE)

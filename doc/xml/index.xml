@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="structgraphoptions" kind="struct"><name>graphoptions</name>
+    <member refid="structgraphoptions_1a1d9f747f6f5cc058df8022e496b1fa4a" kind="variable"><name>border</name></member>
+    <member refid="structgraphoptions_1a759a20af91d0700136ff4ab6b6f6459a" kind="variable"><name>axislabel</name></member>
+    <member refid="structgraphoptions_1a6b640af21b351f274169578753012203" kind="variable"><name>axisunitslabel</name></member>
+    <member refid="structgraphoptions_1a89686c844a7ca3a781519ed425683a19" kind="variable"><name>title</name></member>
+    <member refid="structgraphoptions_1ac00b5ba04b71e70f7789cde248f6ad82" kind="variable"><name>style</name></member>
+    <member refid="structgraphoptions_1aee4262c3417f0d9ff7ed47d58770ee5a" kind="variable"><name>color</name></member>
+    <member refid="structgraphoptions_1a142ea0e411fcfd6cfeeeb1c6a8869133" kind="function"><name>graphoptions</name></member>
+    <member refid="structgraphoptions_1af61ad80e401468feeb49505babf1cb3e" kind="function"><name>~graphoptions</name></member>
+  </compound>
+  <compound refid="classintp_1_1LinearInterp" kind="class"><name>intp::LinearInterp</name>
+  </compound>
+  <compound refid="classregr_1_1LinearRegression" kind="class"><name>regr::LinearRegression</name>
+  </compound>
+  <compound refid="classmisc_1_1Plot" kind="class"><name>misc::Plot</name>
+    <member refid="classmisc_1_1Plot_1ae418d8c18c7e0a4682ac9258513ede5e" kind="variable"><name>height</name></member>
+    <member refid="classmisc_1_1Plot_1ae5cb9d73243cfe0675f5bbebc095853f" kind="variable"><name>width</name></member>
+    <member refid="classmisc_1_1Plot_1acd15f49e99e22504cd79b7a673590244" kind="variable"><name>xmin</name></member>
+    <member refid="classmisc_1_1Plot_1ae31d12ae7f4cd55acf4273141585959d" kind="variable"><name>xmax</name></member>
+    <member refid="classmisc_1_1Plot_1aede35cac1221e7be48e067d10a6b5480" kind="variable"><name>ymin</name></member>
+    <member refid="classmisc_1_1Plot_1a5ba170ac536e7d8399f8e4ecad64e1fe" kind="variable"><name>ymax</name></member>
+    <member refid="classmisc_1_1Plot_1a0741ab8b63e13d8a4252acf6e93defbe" kind="variable"><name>cols</name></member>
+    <member refid="classmisc_1_1Plot_1a2a9d2b16ea8c7f3138a5384a1ba923d8" kind="variable"><name>domain</name></member>
+    <member refid="classmisc_1_1Plot_1ad121e04781c92735596200df60b4ec7a" kind="function"><name>Plot</name></member>
+    <member refid="classmisc_1_1Plot_1a3f92965f3826de471737a081164d4c00" kind="function"><name>setDomain</name></member>
+    <member refid="classmisc_1_1Plot_1a18ff734377adc641213aa132bc34063b" kind="function"><name>setRange</name></member>
+    <member refid="classmisc_1_1Plot_1a03321a3f086b7b92f9b722176a8599dc" kind="function"><name>setSize</name></member>
+    <member refid="classmisc_1_1Plot_1afe5d9755ead78c69a1ad1415a2ea532f" kind="function"><name>generateDomain</name></member>
+    <member refid="classmisc_1_1Plot_1a6f75f1a37636d3b36b0dc3a117278a38" kind="function"><name>plotVect</name></member>
+    <member refid="classmisc_1_1Plot_1a8bfdf81ac1f5abeb96fa359fc73d9d31" kind="function"><name>plotFun</name></member>
+  </compound>
+  <compound refid="classintp_1_1PolyInterp" kind="class"><name>intp::PolyInterp</name>
+  </compound>
+  <compound refid="classregr_1_1PolyRegression" kind="class"><name>regr::PolyRegression</name>
+  </compound>
+  <compound refid="structmisc_1_1Table_1_1QR" kind="struct"><name>misc::Table::QR</name>
+    <member refid="structmisc_1_1Table_1_1QR_1a048249726c2a8f0ad9e3eca6f867c3fa" kind="variable"><name>LQ</name></member>
+    <member refid="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" kind="variable"><name>Q1</name></member>
+    <member refid="structmisc_1_1Table_1_1QR_1ac65f73e3532b6dfaa36e1ae65fafcb45" kind="variable"><name>Q2</name></member>
+    <member refid="structmisc_1_1Table_1_1QR_1adcb33506be77f79517adf30cca5bc2ba" kind="variable"><name>Q3</name></member>
+    <member refid="structmisc_1_1Table_1_1QR_1a971d49eb9b6cdeb684cf43d443d2f3c9" kind="variable"><name>UQ</name></member>
+    <member refid="structmisc_1_1Table_1_1QR_1ad325268e08fb78ecdb2ae782f5266a48" kind="variable"><name>IQR</name></member>
+  </compound>
+  <compound refid="classmisc_1_1Table" kind="class"><name>misc::Table</name>
+    <member refid="classmisc_1_1Table_1aa920782e0a9185ee944d7b8e54b880aa" kind="variable"><name>headers</name></member>
+    <member refid="classmisc_1_1Table_1a39d2c3781309bd9d679735c67645c9c0" kind="variable"><name>row</name></member>
+    <member refid="classmisc_1_1Table_1a03025d4e255a14c2469ae5e6bbc9504b" kind="variable"><name>col</name></member>
+    <member refid="classmisc_1_1Table_1a11154eddd2261171da35511d3afee138" kind="function"><name>checkHeader</name></member>
+    <member refid="classmisc_1_1Table_1a6e5c955b60123e296e33d6438521b1e9" kind="function"><name>getAvgs</name></member>
+    <member refid="classmisc_1_1Table_1a1e6b098ea88b59d0c26b24c5050d5843" kind="function"><name>getStds</name></member>
+    <member refid="classmisc_1_1Table_1ada09ad1dff1ef0d5d50cff347e9bbf70" kind="function"><name>getVars</name></member>
+    <member refid="classmisc_1_1Table_1a1b42a09b9bc50afb69ce94bc40fe1d52" kind="function"><name>getQRs</name></member>
+    <member refid="classmisc_1_1Table_1ac69a4a70b5674acf1e81404b0f7e13d7" kind="function"><name>Table</name></member>
+    <member refid="classmisc_1_1Table_1a067fc995824a17e51c0900b0114605e6" kind="function"><name>checkSize</name></member>
+    <member refid="classmisc_1_1Table_1a4de8db30fe3f14355bf444c2c24a093a" kind="function"><name>readCSV</name></member>
+    <member refid="classmisc_1_1Table_1aea1f278838960dbc4eed3cfadd7176dd" kind="function"><name>saveCSV</name></member>
+    <member refid="classmisc_1_1Table_1a9b2a1ba1bfa3946fd0b71a53061f7689" kind="function"><name>operator[]</name></member>
+    <member refid="classmisc_1_1Table_1a4553ac717bcf5482688d2e29c05c8b19" kind="function"><name>getMin</name></member>
+    <member refid="classmisc_1_1Table_1a24471fff20c0a96eadf41531b2bcd923" kind="function"><name>getMax</name></member>
+    <member refid="classmisc_1_1Table_1a1978b6ea40bacf28cab9a4dbee6fba74" kind="function"><name>getAvg</name></member>
+    <member refid="classmisc_1_1Table_1a949aa45612aacbdc6709b0ba4c864207" kind="function"><name>getStd</name></member>
+    <member refid="classmisc_1_1Table_1ab194bb65153718986cb8bfff18526294" kind="function"><name>getVar</name></member>
+    <member refid="classmisc_1_1Table_1a6c43ec9c6d7e7d4ca414b92617f83881" kind="function"><name>getQR</name></member>
+    <member refid="classmisc_1_1Table_1af39df8b64a7353ae48f237186fc516c9" kind="function"><name>show</name></member>
+    <member refid="classmisc_1_1Table_1a36662d07cb040777cfe3974b4d234fac" kind="function"><name>describeAll</name></member>
+  </compound>
+  <compound refid="namespaceintp" kind="namespace"><name>intp</name>
+  </compound>
+  <compound refid="namespacemisc" kind="namespace"><name>misc</name>
+  </compound>
+  <compound refid="namespaceregr" kind="namespace"><name>regr</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="graphs_8hpp" kind="file"><name>graphs.hpp</name>
+    <member refid="graphs_8hpp_1a3cbcc834bba715d7897e5dcb0a500d76" kind="variable"><name>styles</name></member>
+    <member refid="graphs_8hpp_1ac7e7a5b513e5e27b84df7ae424a1e2fc" kind="variable"><name>colors</name></member>
+    <member refid="graphs_8hpp_1a6a1a2273d67802663aa06d5c6213bbc3" kind="variable"><name>dots</name></member>
+    <member refid="graphs_8hpp_1a524d16027eb5d4d9052f1634a15a863d" kind="variable"><name>values</name></member>
+    <member refid="graphs_8hpp_1a84a54be46d61d60c0e6a76ac79bae486" kind="variable"><name>fractions</name></member>
+    <member refid="graphs_8hpp_1a9bd47038e7a99a6f487cd7067247bd07" kind="variable"><name>fractionvalues</name></member>
+    <member refid="graphs_8hpp_1a5c1a8e3cedb72ff9591ac596bd334f28" kind="variable"><name>graphdefaultoptions</name></member>
+    <member refid="graphs_8hpp_1a2c4e6a8e51fcb85e7bf2e4aaca3abdf8" kind="function"><name>strcol</name></member>
+    <member refid="graphs_8hpp_1a7c93086728906d56f07a7320e866e9e0" kind="function"><name>wrap</name></member>
+    <member refid="graphs_8hpp_1a78d4673ef4f8b08c0d58e9128abc0fd3" kind="function"><name>outputlabel</name></member>
+    <member refid="graphs_8hpp_1ad96f6525c5be962000176e0437a294f8" kind="function"><name>graph</name></member>
+    <member refid="graphs_8hpp_1a6cfeb94c998df81de0952aaf62003256" kind="function"><name>graph</name></member>
+    <member refid="graphs_8hpp_1a01dbe23781c1a611f8d763a4b86e60fb" kind="function"><name>graph</name></member>
+    <member refid="graphs_8hpp_1aba2da8a69f16ce7852287271183e134c" kind="function"><name>graph</name></member>
+  </compound>
+  <compound refid="int_8hpp" kind="file"><name>int.hpp</name>
+  </compound>
+  <compound refid="misc_8hpp" kind="file"><name>misc.hpp</name>
+  </compound>
+  <compound refid="reg_8hpp" kind="file"><name>reg.hpp</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+</doxygenindex>

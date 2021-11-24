@@ -98,6 +98,7 @@ test_misc_EXTERNAL_OBJECTS =
 
 ../out/test_misc: CMakeFiles/test_misc.dir/test/misc_test.cpp.o
 ../out/test_misc: CMakeFiles/test_misc.dir/build.make
+../out/test_misc: lib/libgtestd.a
 ../out/test_misc: CMakeFiles/test_misc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../out/test_misc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_misc.dir/link.txt --verbose=$(VERBOSE)

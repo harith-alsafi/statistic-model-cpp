@@ -1,17 +1,17 @@
 [
 {
   "directory": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build",
-  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -g -std=gnu++14 -o CMakeFiles/test_misc.dir/test/misc_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/misc_test.cpp",
+  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest -g -std=gnu++14 -o CMakeFiles/test_misc.dir/test/misc_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/misc_test.cpp",
   "file": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/misc_test.cpp"
 },
 {
   "directory": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build",
-  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -g -std=gnu++14 -o CMakeFiles/test_reg.dir/test/reg_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/reg_test.cpp",
+  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest -g -std=gnu++14 -o CMakeFiles/test_reg.dir/test/reg_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/reg_test.cpp",
   "file": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/reg_test.cpp"
 },
 {
   "directory": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build",
-  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -g -std=gnu++14 -o CMakeFiles/test_int.dir/test/int_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/int_test.cpp",
+  "command": "/usr/bin/g++-7  -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest -g -std=gnu++14 -o CMakeFiles/test_int.dir/test/int_test.cpp.o -c /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/int_test.cpp",
   "file": "/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/int_test.cpp"
 },
 {

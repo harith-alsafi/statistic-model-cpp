@@ -1,0 +1,254 @@
+\hypertarget{classmisc_1_1Plot}{}\doxysection{misc\+::Plot Class Reference}
+\label{classmisc_1_1Plot}\index{misc::Plot@{misc::Plot}}
+
+
+Simple terminal plot.  
+
+
+
+
+{\ttfamily \#include \char`\"{}misc.\+hpp\char`\"{}}
+
+
+
+Collaboration diagram for misc\+::Plot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{classmisc_1_1Plot__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}{Plot}} (int h=145, int w=145, long double xmn=-\/10, long double xmx=10, long double ymn=-\/10, long double ymx=10)
+\begin{DoxyCompactList}\small\item\em Construct a new Plot object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}{set\+Domain}} (long double xmn=-\/10, long double xmx=10)
+\begin{DoxyCompactList}\small\item\em Set the Domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}{set\+Range}} (long double ymn=-\/10, long double ymx=10)
+\begin{DoxyCompactList}\small\item\em Set the Range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}{set\+Size}} (int h=140, int w=140)
+\begin{DoxyCompactList}\small\item\em Set the Size of figure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}{generate\+Domain}} (long double xmn=-\/10, long double xmx=10, int n=50)
+\begin{DoxyCompactList}\small\item\em Generates domain to plot function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}{plot\+Vect}} (std\+::vector$<$ long double $>$ \&x, std\+::vector$<$ long double $>$ \&y)
+\begin{DoxyCompactList}\small\item\em Plots vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename D $>$ }\\void \mbox{\hyperlink{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}{plot\+Fun}} (D fun)
+\begin{DoxyCompactList}\small\item\em Plots function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classmisc_1_1Plot_ae418d8c18c7e0a4682ac9258513ede5e}{height}}
+\item 
+size\+\_\+t \mbox{\hyperlink{classmisc_1_1Plot_ae5cb9d73243cfe0675f5bbebc095853f}{width}}
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Plot_acd15f49e99e22504cd79b7a673590244}{xmin}}
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Plot_ae31d12ae7f4cd55acf4273141585959d}{xmax}}
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Plot_aede35cac1221e7be48e067d10a6b5480}{ymin}}
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe}{ymax}}
+\item 
+const size\+\_\+t \mbox{\hyperlink{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}{cols}} = 2
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}{domain}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple terminal plot. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}\label{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}} 
+\index{misc::Plot@{misc::Plot}!Plot@{Plot}}
+\index{Plot@{Plot}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{Plot()}{Plot()}}
+{\footnotesize\ttfamily misc\+::\+Plot\+::\+Plot (\begin{DoxyParamCaption}\item[{int}]{h = {\ttfamily 145},  }\item[{int}]{w = {\ttfamily 145},  }\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10},  }\item[{long double}]{ymn = {\ttfamily -\/10},  }\item[{long double}]{ymx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Plot object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & height \\
+\hline
+{\em w} & width \\
+\hline
+{\em xmn} & min x \\
+\hline
+{\em xmx} & max x \\
+\hline
+{\em ymn} & min y \\
+\hline
+{\em ymx} & max y \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}\label{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}} 
+\index{misc::Plot@{misc::Plot}!generateDomain@{generateDomain}}
+\index{generateDomain@{generateDomain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{generateDomain()}{generateDomain()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::generate\+Domain (\begin{DoxyParamCaption}\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10},  }\item[{int}]{n = {\ttfamily 50} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates domain to plot function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xmn} & \\
+\hline
+{\em xmx} & \\
+\hline
+{\em n} & number of points \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}\label{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}} 
+\index{misc::Plot@{misc::Plot}!plotFun@{plotFun}}
+\index{plotFun@{plotFun}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{plotFun()}{plotFun()}}
+{\footnotesize\ttfamily template$<$typename D $>$ \\
+void misc\+::\+Plot\+::plot\+Fun (\begin{DoxyParamCaption}\item[{D}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots function. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fun} & lambda function \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}\label{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}} 
+\index{misc::Plot@{misc::Plot}!plotVect@{plotVect}}
+\index{plotVect@{plotVect}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{plotVect()}{plotVect()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::plot\+Vect (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{x,  }\item[{std\+::vector$<$ long double $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & vector for x \\
+\hline
+{\em y} & vector for y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}\label{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}} 
+\index{misc::Plot@{misc::Plot}!setDomain@{setDomain}}
+\index{setDomain@{setDomain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{setDomain()}{setDomain()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Domain (\begin{DoxyParamCaption}\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xmn} & \\
+\hline
+{\em xmx} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}\label{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}} 
+\index{misc::Plot@{misc::Plot}!setRange@{setRange}}
+\index{setRange@{setRange}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Range (\begin{DoxyParamCaption}\item[{long double}]{ymn = {\ttfamily -\/10},  }\item[{long double}]{ymx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ymn} & \\
+\hline
+{\em ymx} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}\label{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}} 
+\index{misc::Plot@{misc::Plot}!setSize@{setSize}}
+\index{setSize@{setSize}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{h = {\ttfamily 140},  }\item[{int}]{w = {\ttfamily 140} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Size of figure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & \\
+\hline
+{\em w} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}\label{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}} 
+\index{misc::Plot@{misc::Plot}!cols@{cols}}
+\index{cols@{cols}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily const size\+\_\+t misc\+::\+Plot\+::cols = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}\label{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}} 
+\index{misc::Plot@{misc::Plot}!domain@{domain}}
+\index{domain@{domain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{domain}{domain}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ misc\+::\+Plot\+::domain\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_ae418d8c18c7e0a4682ac9258513ede5e}\label{classmisc_1_1Plot_ae418d8c18c7e0a4682ac9258513ede5e}} 
+\index{misc::Plot@{misc::Plot}!height@{height}}
+\index{height@{height}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily size\+\_\+t misc\+::\+Plot\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_ae5cb9d73243cfe0675f5bbebc095853f}\label{classmisc_1_1Plot_ae5cb9d73243cfe0675f5bbebc095853f}} 
+\index{misc::Plot@{misc::Plot}!width@{width}}
+\index{width@{width}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily size\+\_\+t misc\+::\+Plot\+::width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_ae31d12ae7f4cd55acf4273141585959d}\label{classmisc_1_1Plot_ae31d12ae7f4cd55acf4273141585959d}} 
+\index{misc::Plot@{misc::Plot}!xmax@{xmax}}
+\index{xmax@{xmax}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{xmax}{xmax}}
+{\footnotesize\ttfamily long double misc\+::\+Plot\+::xmax\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_acd15f49e99e22504cd79b7a673590244}\label{classmisc_1_1Plot_acd15f49e99e22504cd79b7a673590244}} 
+\index{misc::Plot@{misc::Plot}!xmin@{xmin}}
+\index{xmin@{xmin}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{xmin}{xmin}}
+{\footnotesize\ttfamily long double misc\+::\+Plot\+::xmin\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe}\label{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe}} 
+\index{misc::Plot@{misc::Plot}!ymax@{ymax}}
+\index{ymax@{ymax}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{ymax}{ymax}}
+{\footnotesize\ttfamily long double misc\+::\+Plot\+::ymax\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Plot_aede35cac1221e7be48e067d10a6b5480}\label{classmisc_1_1Plot_aede35cac1221e7be48e067d10a6b5480}} 
+\index{misc::Plot@{misc::Plot}!ymin@{ymin}}
+\index{ymin@{ymin}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{ymin}{ymin}}
+{\footnotesize\ttfamily long double misc\+::\+Plot\+::ymin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/misc.\+hpp\end{DoxyCompactItemize}

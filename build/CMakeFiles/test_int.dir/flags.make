@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++-7
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test
+CXX_INCLUDES = -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/includes -I/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include -isystem /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest
 
 CXX_FLAGS = -g -std=gnu++14
 

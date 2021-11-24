@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classintp_1_1PolyInterp" kind="class" language="C++" prot="public">
+    <compoundname>intp::PolyInterp</compoundname>
+    <includes local="yes">int.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>intp::PolyInterp</label>
+        <link refid="classintp_1_1PolyInterp"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/int.hpp" line="9" column="5" bodyfile="include/int.hpp" bodystart="10" bodyend="12"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

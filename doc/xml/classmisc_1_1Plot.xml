@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classmisc_1_1Plot" kind="class" language="C++" prot="public">
+    <compoundname>misc::Plot</compoundname>
+    <includes local="yes">misc.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmisc_1_1Plot_1ae418d8c18c7e0a4682ac9258513ede5e" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t misc::Plot::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="211" column="20" bodyfile="include/misc.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1ae5cb9d73243cfe0675f5bbebc095853f" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t misc::Plot::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="212" column="20" bodyfile="include/misc.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1acd15f49e99e22504cd79b7a673590244" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double misc::Plot::xmin</definition>
+        <argsstring></argsstring>
+        <name>xmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="214" column="25" bodyfile="include/misc.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1ae31d12ae7f4cd55acf4273141585959d" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double misc::Plot::xmax</definition>
+        <argsstring></argsstring>
+        <name>xmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="215" column="25" bodyfile="include/misc.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1aede35cac1221e7be48e067d10a6b5480" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double misc::Plot::ymin</definition>
+        <argsstring></argsstring>
+        <name>ymin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="216" column="25" bodyfile="include/misc.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1a5ba170ac536e7d8399f8e4ecad64e1fe" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double misc::Plot::ymax</definition>
+        <argsstring></argsstring>
+        <name>ymax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="217" column="25" bodyfile="include/misc.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1a0741ab8b63e13d8a4252acf6e93defbe" prot="private" static="no" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t misc::Plot::cols</definition>
+        <argsstring></argsstring>
+        <name>cols</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="219" column="26" bodyfile="include/misc.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmisc_1_1Plot_1a2a9d2b16ea8c7f3138a5384a1ba923d8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; misc::Plot::domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="220" column="25" bodyfile="include/misc.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmisc_1_1Plot_1ad121e04781c92735596200df60b4ec7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>misc::Plot::Plot</definition>
+        <argsstring>(int h=145, int w=145, long double xmn=-10, long double xmx=10, long double ymn=-10, long double ymx=10)</argsstring>
+        <name>Plot</name>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+          <defval>145</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+          <defval>145</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>xmn</declname>
+          <defval>-10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>xmx</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>ymn</declname>
+          <defval>-10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>ymx</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Plot object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>height </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>min x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>max x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ymn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>min y </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ymx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>max y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="233" column="13" bodyfile="include/misc.hpp" bodystart="233" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1a3f92965f3826de471737a081164d4c00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Plot::setDomain</definition>
+        <argsstring>(long double xmn=-10, long double xmx=10)</argsstring>
+        <name>setDomain</name>
+        <param>
+          <type>long double</type>
+          <declname>xmn</declname>
+          <defval>-10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>xmx</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Set the Domain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="246" column="18" bodyfile="include/misc.hpp" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1a18ff734377adc641213aa132bc34063b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Plot::setRange</definition>
+        <argsstring>(long double ymn=-10, long double ymx=10)</argsstring>
+        <name>setRange</name>
+        <param>
+          <type>long double</type>
+          <declname>ymn</declname>
+          <defval>-10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>ymx</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+<para>Set the Range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ymn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ymx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="257" column="18" bodyfile="include/misc.hpp" bodystart="257" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1a03321a3f086b7b92f9b722176a8599dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Plot::setSize</definition>
+        <argsstring>(int h=140, int w=140)</argsstring>
+        <name>setSize</name>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+          <defval>140</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+          <defval>140</defval>
+        </param>
+        <briefdescription>
+<para>Set the Size of figure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="268" column="18" bodyfile="include/misc.hpp" bodystart="268" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1afe5d9755ead78c69a1ad1415a2ea532f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Plot::generateDomain</definition>
+        <argsstring>(long double xmn=-10, long double xmx=10, int n=50)</argsstring>
+        <name>generateDomain</name>
+        <param>
+          <type>long double</type>
+          <declname>xmn</declname>
+          <defval>-10</defval>
+        </param>
+        <param>
+          <type>long double</type>
+          <declname>xmx</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+<para>Generates domain to plot function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xmn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xmx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of points </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="281" column="18" bodyfile="include/misc.hpp" bodystart="281" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1a6f75f1a37636d3b36b0dc3a117278a38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void misc::Plot::plotVect</definition>
+        <argsstring>(std::vector&lt; long double &gt; &amp;x, std::vector&lt; long double &gt; &amp;y)</argsstring>
+        <name>plotVect</name>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; long double &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Plots vectors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector for x </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector for y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="294" column="18" bodyfile="include/misc.hpp" bodystart="294" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classmisc_1_1Plot_1a8bfdf81ac1f5abeb96fa359fc73d9d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename D</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void misc::Plot::plotFun</definition>
+        <argsstring>(D fun)</argsstring>
+        <name>plotFun</name>
+        <param>
+          <type>D</type>
+          <declname>fun</declname>
+        </param>
+        <briefdescription>
+<para>Plots function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>D</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fun</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lambda function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/misc.hpp" line="334" column="18" bodyfile="include/misc.hpp" bodystart="334" bodyend="341"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple terminal plot. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>misc::Plot</label>
+        <link refid="classmisc_1_1Plot"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/misc.hpp" line="208" column="5" bodyfile="include/misc.hpp" bodystart="209" bodyend="342"/>
+    <listofallmembers>
+      <member refid="classmisc_1_1Plot_1a0741ab8b63e13d8a4252acf6e93defbe" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>cols</name></member>
+      <member refid="classmisc_1_1Plot_1a2a9d2b16ea8c7f3138a5384a1ba923d8" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>domain</name></member>
+      <member refid="classmisc_1_1Plot_1afe5d9755ead78c69a1ad1415a2ea532f" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>generateDomain</name></member>
+      <member refid="classmisc_1_1Plot_1ae418d8c18c7e0a4682ac9258513ede5e" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>height</name></member>
+      <member refid="classmisc_1_1Plot_1ad121e04781c92735596200df60b4ec7a" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>Plot</name></member>
+      <member refid="classmisc_1_1Plot_1a8bfdf81ac1f5abeb96fa359fc73d9d31" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>plotFun</name></member>
+      <member refid="classmisc_1_1Plot_1a6f75f1a37636d3b36b0dc3a117278a38" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>plotVect</name></member>
+      <member refid="classmisc_1_1Plot_1a3f92965f3826de471737a081164d4c00" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>setDomain</name></member>
+      <member refid="classmisc_1_1Plot_1a18ff734377adc641213aa132bc34063b" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>setRange</name></member>
+      <member refid="classmisc_1_1Plot_1a03321a3f086b7b92f9b722176a8599dc" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>setSize</name></member>
+      <member refid="classmisc_1_1Plot_1ae5cb9d73243cfe0675f5bbebc095853f" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>width</name></member>
+      <member refid="classmisc_1_1Plot_1ae31d12ae7f4cd55acf4273141585959d" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>xmax</name></member>
+      <member refid="classmisc_1_1Plot_1acd15f49e99e22504cd79b7a673590244" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>xmin</name></member>
+      <member refid="classmisc_1_1Plot_1a5ba170ac536e7d8399f8e4ecad64e1fe" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>ymax</name></member>
+      <member refid="classmisc_1_1Plot_1aede35cac1221e7be48e067d10a6b5480" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>ymin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

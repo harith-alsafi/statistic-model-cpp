@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespaceregr" kind="namespace" language="C++">
+    <compoundname>regr</compoundname>
+    <innerclass refid="classregr_1_1LinearRegression" prot="public">regr::LinearRegression</innerclass>
+    <innerclass refid="classregr_1_1PolyRegression" prot="public">regr::PolyRegression</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/reg.hpp" line="2" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,270 @@
+\hypertarget{classmisc_1_1Table}{}\doxysection{misc\+::Table Class Reference}
+\label{classmisc_1_1Table}\index{misc::Table@{misc::Table}}
+
+
+Table class to contain the dataframe.  
+
+
+
+
+{\ttfamily \#include \char`\"{}misc.\+hpp\char`\"{}}
+
+
+
+Inheritance diagram for misc\+::Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classmisc_1_1Table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for misc\+::Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classmisc_1_1Table__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmisc_1_1Table_1_1QR}{QR}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmisc_1_1Table_ac69a4a70b5674acf1e81404b0f7e13d7}{Table}} ()
+\item 
+void \mbox{\hyperlink{classmisc_1_1Table_a067fc995824a17e51c0900b0114605e6}{check\+Size}} ()
+\item 
+bool \mbox{\hyperlink{classmisc_1_1Table_a4de8db30fe3f14355bf444c2c24a093a}{read\+CSV}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Reads from csv file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmisc_1_1Table_aea1f278838960dbc4eed3cfadd7176dd}{save\+CSV}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Reads from csv file. \end{DoxyCompactList}\item 
+std\+::vector$<$ long double $>$ \& \mbox{\hyperlink{classmisc_1_1Table_a9b2a1ba1bfa3946fd0b71a53061f7689}{operator\mbox{[}$\,$\mbox{]}}} (std\+::string headname)
+\begin{DoxyCompactList}\small\item\em Returns colum of certain header. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classmisc_1_1Table_a4553ac717bcf5482688d2e29c05c8b19}{get\+Min}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Table_a24471fff20c0a96eadf41531b2bcd923}{get\+Max}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Table_a1978b6ea40bacf28cab9a4dbee6fba74}{get\+Avg}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Table_a949aa45612aacbdc6709b0ba4c864207}{get\+Std}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+long double \mbox{\hyperlink{classmisc_1_1Table_ab194bb65153718986cb8bfff18526294}{get\+Var}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+\mbox{\hyperlink{structmisc_1_1Table_1_1QR}{QR}} \mbox{\hyperlink{classmisc_1_1Table_a6c43ec9c6d7e7d4ca414b92617f83881}{get\+QR}} (std\+::vector$<$ long double $>$ \&a)
+\item 
+void \mbox{\hyperlink{classmisc_1_1Table_af39df8b64a7353ae48f237186fc516c9}{show}} ()
+\item 
+\mbox{\hyperlink{classmisc_1_1Table}{Table}} \mbox{\hyperlink{classmisc_1_1Table_a36662d07cb040777cfe3974b4d234fac}{describe\+All}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmisc_1_1Table_a11154eddd2261171da35511d3afee138}{check\+Header}} (std\+::string head)
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classmisc_1_1Table_a6e5c955b60123e296e33d6438521b1e9}{get\+Avgs}} ()
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classmisc_1_1Table_a1e6b098ea88b59d0c26b24c5050d5843}{get\+Stds}} ()
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classmisc_1_1Table_ada09ad1dff1ef0d5d50cff347e9bbf70}{get\+Vars}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmisc_1_1Table_1_1QR}{QR}} $>$ \mbox{\hyperlink{classmisc_1_1Table_a1b42a09b9bc50afb69ce94bc40fe1d52}{get\+QRs}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmisc_1_1Table_aa920782e0a9185ee944d7b8e54b880aa}{headers}}
+\item 
+int \mbox{\hyperlink{classmisc_1_1Table_a39d2c3781309bd9d679735c67645c9c0}{row}}
+\item 
+int \mbox{\hyperlink{classmisc_1_1Table_a03025d4e255a14c2469ae5e6bbc9504b}{col}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Table class to contain the dataframe. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmisc_1_1Table_ac69a4a70b5674acf1e81404b0f7e13d7}\label{classmisc_1_1Table_ac69a4a70b5674acf1e81404b0f7e13d7}} 
+\index{misc::Table@{misc::Table}!Table@{Table}}
+\index{Table@{Table}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily misc\+::\+Table\+::\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmisc_1_1Table_a11154eddd2261171da35511d3afee138}\label{classmisc_1_1Table_a11154eddd2261171da35511d3afee138}} 
+\index{misc::Table@{misc::Table}!checkHeader@{checkHeader}}
+\index{checkHeader@{checkHeader}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{checkHeader()}{checkHeader()}}
+{\footnotesize\ttfamily int misc\+::\+Table\+::check\+Header (\begin{DoxyParamCaption}\item[{std\+::string}]{head }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a067fc995824a17e51c0900b0114605e6}\label{classmisc_1_1Table_a067fc995824a17e51c0900b0114605e6}} 
+\index{misc::Table@{misc::Table}!checkSize@{checkSize}}
+\index{checkSize@{checkSize}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{checkSize()}{checkSize()}}
+{\footnotesize\ttfamily void misc\+::\+Table\+::check\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a36662d07cb040777cfe3974b4d234fac}\label{classmisc_1_1Table_a36662d07cb040777cfe3974b4d234fac}} 
+\index{misc::Table@{misc::Table}!describeAll@{describeAll}}
+\index{describeAll@{describeAll}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{describeAll()}{describeAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{Table}} misc\+::\+Table\+::describe\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a1978b6ea40bacf28cab9a4dbee6fba74}\label{classmisc_1_1Table_a1978b6ea40bacf28cab9a4dbee6fba74}} 
+\index{misc::Table@{misc::Table}!getAvg@{getAvg}}
+\index{getAvg@{getAvg}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getAvg()}{getAvg()}}
+{\footnotesize\ttfamily long double misc\+::\+Table\+::get\+Avg (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a6e5c955b60123e296e33d6438521b1e9}\label{classmisc_1_1Table_a6e5c955b60123e296e33d6438521b1e9}} 
+\index{misc::Table@{misc::Table}!getAvgs@{getAvgs}}
+\index{getAvgs@{getAvgs}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getAvgs()}{getAvgs()}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ misc\+::\+Table\+::get\+Avgs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a24471fff20c0a96eadf41531b2bcd923}\label{classmisc_1_1Table_a24471fff20c0a96eadf41531b2bcd923}} 
+\index{misc::Table@{misc::Table}!getMax@{getMax}}
+\index{getMax@{getMax}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getMax()}{getMax()}}
+{\footnotesize\ttfamily long double misc\+::\+Table\+::get\+Max (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a4553ac717bcf5482688d2e29c05c8b19}\label{classmisc_1_1Table_a4553ac717bcf5482688d2e29c05c8b19}} 
+\index{misc::Table@{misc::Table}!getMin@{getMin}}
+\index{getMin@{getMin}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getMin()}{getMin()}}
+{\footnotesize\ttfamily long double misc\+::\+Table\+::get\+Min (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a6c43ec9c6d7e7d4ca414b92617f83881}\label{classmisc_1_1Table_a6c43ec9c6d7e7d4ca414b92617f83881}} 
+\index{misc::Table@{misc::Table}!getQR@{getQR}}
+\index{getQR@{getQR}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getQR()}{getQR()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmisc_1_1Table_1_1QR}{QR}} misc\+::\+Table\+::get\+QR (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a1b42a09b9bc50afb69ce94bc40fe1d52}\label{classmisc_1_1Table_a1b42a09b9bc50afb69ce94bc40fe1d52}} 
+\index{misc::Table@{misc::Table}!getQRs@{getQRs}}
+\index{getQRs@{getQRs}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getQRs()}{getQRs()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmisc_1_1Table_1_1QR}{QR}}$>$ misc\+::\+Table\+::get\+QRs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a949aa45612aacbdc6709b0ba4c864207}\label{classmisc_1_1Table_a949aa45612aacbdc6709b0ba4c864207}} 
+\index{misc::Table@{misc::Table}!getStd@{getStd}}
+\index{getStd@{getStd}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getStd()}{getStd()}}
+{\footnotesize\ttfamily long double misc\+::\+Table\+::get\+Std (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a1e6b098ea88b59d0c26b24c5050d5843}\label{classmisc_1_1Table_a1e6b098ea88b59d0c26b24c5050d5843}} 
+\index{misc::Table@{misc::Table}!getStds@{getStds}}
+\index{getStds@{getStds}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getStds()}{getStds()}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ misc\+::\+Table\+::get\+Stds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_ab194bb65153718986cb8bfff18526294}\label{classmisc_1_1Table_ab194bb65153718986cb8bfff18526294}} 
+\index{misc::Table@{misc::Table}!getVar@{getVar}}
+\index{getVar@{getVar}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getVar()}{getVar()}}
+{\footnotesize\ttfamily long double misc\+::\+Table\+::get\+Var (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_ada09ad1dff1ef0d5d50cff347e9bbf70}\label{classmisc_1_1Table_ada09ad1dff1ef0d5d50cff347e9bbf70}} 
+\index{misc::Table@{misc::Table}!getVars@{getVars}}
+\index{getVars@{getVars}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{getVars()}{getVars()}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ misc\+::\+Table\+::get\+Vars (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a9b2a1ba1bfa3946fd0b71a53061f7689}\label{classmisc_1_1Table_a9b2a1ba1bfa3946fd0b71a53061f7689}} 
+\index{misc::Table@{misc::Table}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$\& misc\+::\+Table\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{std\+::string}]{headname }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns colum of certain header. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em headname} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+D$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmisc_1_1Table_a4de8db30fe3f14355bf444c2c24a093a}\label{classmisc_1_1Table_a4de8db30fe3f14355bf444c2c24a093a}} 
+\index{misc::Table@{misc::Table}!readCSV@{readCSV}}
+\index{readCSV@{readCSV}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{readCSV()}{readCSV()}}
+{\footnotesize\ttfamily bool misc\+::\+Table\+::read\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads from csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\+: if read is success ~\newline
+ 
+
+false\+: if read did not complete 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmisc_1_1Table_aea1f278838960dbc4eed3cfadd7176dd}\label{classmisc_1_1Table_aea1f278838960dbc4eed3cfadd7176dd}} 
+\index{misc::Table@{misc::Table}!saveCSV@{saveCSV}}
+\index{saveCSV@{saveCSV}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{saveCSV()}{saveCSV()}}
+{\footnotesize\ttfamily bool misc\+::\+Table\+::save\+CSV (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads from csv file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true\+: if read is success ~\newline
+ 
+
+false\+: if read did not complete 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmisc_1_1Table_af39df8b64a7353ae48f237186fc516c9}\label{classmisc_1_1Table_af39df8b64a7353ae48f237186fc516c9}} 
+\index{misc::Table@{misc::Table}!show@{show}}
+\index{show@{show}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void misc\+::\+Table\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmisc_1_1Table_a03025d4e255a14c2469ae5e6bbc9504b}\label{classmisc_1_1Table_a03025d4e255a14c2469ae5e6bbc9504b}} 
+\index{misc::Table@{misc::Table}!col@{col}}
+\index{col@{col}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily int misc\+::\+Table\+::col\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_aa920782e0a9185ee944d7b8e54b880aa}\label{classmisc_1_1Table_aa920782e0a9185ee944d7b8e54b880aa}} 
+\index{misc::Table@{misc::Table}!headers@{headers}}
+\index{headers@{headers}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ misc\+::\+Table\+::headers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classmisc_1_1Table_a39d2c3781309bd9d679735c67645c9c0}\label{classmisc_1_1Table_a39d2c3781309bd9d679735c67645c9c0}} 
+\index{misc::Table@{misc::Table}!row@{row}}
+\index{row@{row}!misc::Table@{misc::Table}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int misc\+::\+Table\+::row\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/misc.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classregr_1_1LinearRegression" kind="class" language="C++" prot="public">
+    <compoundname>regr::LinearRegression</compoundname>
+    <includes local="yes">reg.hpp</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>regr::LinearRegression</label>
+        <link refid="classregr_1_1LinearRegression"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/reg.hpp" line="4" column="5" bodyfile="include/reg.hpp" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

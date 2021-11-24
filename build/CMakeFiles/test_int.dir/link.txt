@@ -1,1 +1,1 @@
-/usr/bin/g++-7 -g CMakeFiles/test_int.dir/test/int_test.cpp.o -o ../out/test_int 
+/usr/bin/g++-7 -g CMakeFiles/test_int.dir/test/int_test.cpp.o -o ../out/test_int  lib/libgtestd.a -lpthread -lpthread 

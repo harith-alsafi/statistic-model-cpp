@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="namespacemisc" kind="namespace" language="C++">
+    <compoundname>misc</compoundname>
+    <innerclass refid="classmisc_1_1Table" prot="public">misc::Table</innerclass>
+    <innerclass refid="classmisc_1_1Plot" prot="public">misc::Plot</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/misc.hpp" line="8" column="1"/>
+  </compounddef>
+</doxygen>
