@@ -102,11 +102,11 @@ namespace misc
 
             static std::string center(const string s, const int w) {
                 std::stringstream ss, spaces;
-                int padding = w - s.size();                 // count excess room to pad
+                int padding = w - s.size(); // count excess room to pad
                 for(int i=0; i<padding/2; ++i)
                     spaces << " ";
-                ss << spaces.str() << s << spaces.str();    // format with padding
-                if(padding>0 && padding%2!=0)               // if odd #, add 1 space
+                ss << spaces.str() << s << spaces.str(); // format with padding
+                if(padding>0 && padding%2!=0) // if odd #, add 1 space
                     ss << " ";
                 return ss.str();
             }
@@ -114,8 +114,8 @@ namespace misc
             static std::string prd(long double x, int width) {
                 std::stringstream ss;
                 ss << std::fixed << std::left;
-                ss.fill(' ');        // fill space around displayed #
-                ss.width(width);     // set  width around displayed #
+                ss.fill(' '); // fill space around displayed #
+                ss.width(width); // set  width around displayed #
                 ss.precision(2); // set # places after decimal
                 ss << x;
                 return center(ss.str(), width);
@@ -124,8 +124,8 @@ namespace misc
             static std::string prd(std::string x, int width) {
                 std::stringstream ss;
                 ss << std::left;
-                ss.fill(' ');        // fill space around displayed #
-                ss.width(width);     // set  width around displayed #
+                ss.fill(' '); // fill space around displayed #
+                ss.width(width); // set  width around displayed #
                 ss << x;
                 return center(ss.str(), width);
             }
