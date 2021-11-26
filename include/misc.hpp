@@ -4,7 +4,11 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <algorithm>
+#include <numeric>
+
 #include "graphs.hpp"
+
 namespace misc
 {
     /**
@@ -12,16 +16,32 @@ namespace misc
      */
     class Table: public std::vector<std::vector<long double>>
     {
-        struct QR
-        {
-            long double LQ; // lower quartile 
-            long double Q1; 
-            long double Q2; // median
-            long double Q3; 
-            long double UQ; // upper quartile 
-            long double IQR = Q3-Q1; // interquartile range
-        };
-        protected:
+        public:
+            struct QR
+            {
+                long double LQ; // lower quartile 
+                long double Q1; 
+                long double Q2; // median
+                long double Q3; 
+                long double UQ; // upper quartile 
+                std::string toString(){
+                    std::string str;
+                    str = Table::prd("LQ", 10)
+                        + Table::prd("Q1", 10)
+                        + Table::prd("Q2", 10)
+                        + Table::prd("Q3", 10)
+                        + Table::prd("UQ", 10)
+                        + "\n";
+                    str += "--------------------------------------------- \n";
+                    str += Table::prd(LQ, 10)  
+                        +  Table::prd(Q1, 10)  
+                        +  Table::prd(Q2, 10)  
+                        +  Table::prd(Q3, 10)  
+                        +  Table::prd(UQ, 10);
+                    return str;
+                }
+            };
+        private:
             int checkHeader(std::string head){
                 for(int i = 0; i < headers.size(); i++){
                     if(headers[i] == head){
@@ -31,35 +51,114 @@ namespace misc
                 return -1;
             }
 
-            std::vector<long double> getAvgs(){
+            std::vector<long double> getCol(std::string headname){
+                int j = checkHeader(headname);
+                std::vector<long double> a;
+                for(int i = 0; i < size(); i++){
+                    a.push_back(at(i).at(j));
+                }
+                return a;                
+            }
 
+            std::vector<long double> getAvgs(){
+                std::vector<long double> a;
+                for(int j = 0; j < headers.size(); j++){
+                    a.push_back(getAvg(getCol(headers[j])));
+                }
+                return a;
             }
 
             std::vector<long double> getStds(){
-                
+                std::vector<long double> a;
+                for(int j = 0; j < headers.size(); j++){
+                    a.push_back(getStd(getCol(headers[j])));
+                }
+                return a;             
             }
 
             std::vector<long double> getVars(){
-                
+                std::vector<long double> a;
+                for(int j = 0; j < headers.size(); j++){
+                    a.push_back(getVar(getCol(headers[j])));
+                }
+                return a;
             }
 
             std::vector<QR> getQRs(){
-                
+                std::vector<QR> a;
+                for(int j = 0; j < headers.size(); j++){
+                    a.push_back(getQR(getCol(headers[j])));
+                }
+                return a;
             }
 
+            std::vector<long double> getSums(){
+                std::vector<long double> a;
+                for(int j = 0; j < headers.size(); j++){
+                    a.push_back(getSum(getCol(headers[j])));
+                }
+                return a;             
+            }
 
-        private:
-            std::vector<std::string> headers;
-            int row;
-            int col;
+            static std::string center(const string s, const int w) {
+                std::stringstream ss, spaces;
+                int padding = w - s.size();                 // count excess room to pad
+                for(int i=0; i<padding/2; ++i)
+                    spaces << " ";
+                ss << spaces.str() << s << spaces.str();    // format with padding
+                if(padding>0 && padding%2!=0)               // if odd #, add 1 space
+                    ss << " ";
+                return ss.str();
+            }
 
-        public:
-            Table(){}
+            static std::string prd(long double x, int width) {
+                std::stringstream ss;
+                ss << std::fixed << std::left;
+                ss.fill(' ');        // fill space around displayed #
+                ss.width(width);     // set  width around displayed #
+                ss.precision(2); // set # places after decimal
+                ss << x;
+                return center(ss.str(), width);
+            }
 
+            static std::string prd(std::string x, int width) {
+                std::stringstream ss;
+                ss << std::left;
+                ss.fill(' ');        // fill space around displayed #
+                ss.width(width);     // set  width around displayed #
+                ss << x;
+                return center(ss.str(), width);
+            }
+
+            void generateRows(){
+                rows.clear();
+                for(int i = 0; i < size(); i++){
+                    rows.push_back("Row-"+std::to_string(i));
+                }
+            }
+            
             void checkSize(){
                 col = at(0).size();
                 row = size();
             }
+
+            std::string generateLine(int l){
+                string line;
+                for(int i = 0; i < l; i++){
+                    line+="―";
+                }
+                return line;
+            }
+
+            std::vector<std::string> headers;
+            std::vector<std::string> rows;
+            int row;
+            int col;
+            int sz = 10;
+
+        public:
+            Table(){}
+            ~Table(){}
 
             /**
              * @brief Reads from csv file
@@ -100,6 +199,7 @@ namespace misc
                         push_back(r);
                     }
                     checkSize();
+                    file.close();
                     return true;
                 }
                 file.close();
@@ -136,10 +236,19 @@ namespace misc
                             }
                         }
                     }
+                    file.close();
                     return true;
                 }
                 file.close();
                 return false;
+            }
+
+            int getRow(){
+                return size();                
+            }
+
+            int getCol(){
+                return at(0).size();
             }
 
             /**
@@ -148,54 +257,145 @@ namespace misc
              * @param headname 
              * @return std::vector<D>& 
              */
-            std::vector<long double>& operator[](std::string headname){
-                int i = checkHeader(headname);
-                return at(i);
+            std::vector<long double> operator[](std::string headname){
+                return getCol(headname);
             }
 
-            long double getMin(std::vector<long double>& a){
-
+            static std::vector<long double> sortAsc(std::vector<long double> & a){
+                std::vector<long double> v_sorted(a.size());
+                std::partial_sort_copy(a.begin(), a.end(), 
+                v_sorted.begin(), v_sorted.end());
+                return v_sorted;
             }
 
-            long double getMax(std::vector<long double>& a){
-                
+            static long double getMin(std::vector<long double> a){
+                return *std::min_element(a.begin(), a.end());
             }
 
-            long double getAvg(std::vector<long double>& a){
+            static long double getMax(std::vector<long double> a){
+                return *std::max_element(a.begin(), a.end());
+            }
 
+            static long double getSum(std::vector<long double> a){
+                return std::accumulate(a.begin(), a.end(), 0);
+            }
+
+            static long double getAvg(std::vector<long double> a){
+                return getSum(a)/a.size();
             } 
 
-            long double getStd(std::vector<long double>& a){
-
+            static long double getVar(std::vector<long double> a){
+                long double mean = getAvg(a);
+                int N = a.size();
+                long double sum = 0;
+                for(int i = 0; i < N; i++){
+                    sum+=pow((a[i]-mean), 2);
+                }
+                return (long double) sum/N;            
             }
 
-            long double getVar(std::vector<long double>& a){
+            static long double getStd(std::vector<long double> a){
+                return sqrt(getVar(a));
+            }   
 
+            static QR getQR(std::vector<long double> a){
+                QR qr; 
+                qr.LQ = getMin(a);
+                qr.UQ = getMax(a);
+                auto a_sorted = sortAsc(a);
+                qr.Q1 = a_sorted.at((int) (a_sorted.size())/4);
+                qr.Q2 = a_sorted.at((int) (a_sorted.size())/2);
+                qr.Q3 = a_sorted.at((int) (3*(a_sorted.size()))/4);
+                return qr;
             }
 
-
-
-            QR getQR(std::vector<long double>& a){
-
+            void show(int r){
+                if(rows.empty()){
+                    generateRows();
+                }
+                checkSize();
+                std::string line = generateLine(1.2*sz*col);
+                for(int i = -1; i < r; i++){
+                    for(int j = 0; j < col; j++){
+                        if(i == -1){
+                            if (j == 0){
+                                std::cout << prd("     ", sz) << "│"
+                                          << prd(headers[j], sz) << "│";
+                            }
+                            else if(j != col-1){
+                                std::cout << prd(headers[j], sz) << "│";
+                            }
+                            else{
+                                std::cout << prd(headers[j], sz) << "\n";
+                                std::cout << line << "\n";
+                            }                            
+                        }
+                        else{
+                            if(j == 0){
+                                std::cout << prd(rows[i], sz) << "│"
+                                          << prd(getCol(headers[j]).at(i), sz) << "│";
+                            }
+                            else if(j != col-1){
+                                std::cout << prd(getCol(headers[j]).at(i), sz) << "│";
+                            }
+                            else{
+                                std::cout << prd(getCol(headers[j]).at(i), sz) << "\n";
+                                std::cout << line << "\n";
+                            }                           
+                        }
+                    }
+                }
             }
 
             void show(){
-
+                checkSize();
+                show(row);
             }
 
             Table describeAll(){
                 Table t;
-                t.headers.push_back("Colum Name");
-                t.headers.push_back("Average");
-                t.headers.push_back("Standard diviation");
-                t.headers.push_back("Variance");
+                auto avg = getAvgs();
+                auto std = getStds();
+                auto var = getVars();
+                auto qrs = getQRs();
+                auto sms = getSums();
+                checkSize();
+                // loading row names
+                for(int i = 0; i < col; i++){
+                    t.rows.push_back(headers[i]);
+                }
+                // loading col names 
+                t.headers.push_back("Mean");
+                t.headers.push_back("STD");
+                t.headers.push_back("VAR");
+                t.headers.push_back("Min");
+                t.headers.push_back("Q1");
+                t.headers.push_back("Q2");
+                t.headers.push_back("Q3");
+                t.headers.push_back("Max");
                 t.headers.push_back("IQR");
-                t.col = headers.size();
-                t.row = col;
-                
-
-
-
+                t.headers.push_back("Sum");
+    
+                // loading values 
+                t.row = t.rows.size();
+                t.col = t.headers.size();
+                for(int i = 0; i < t.row; i++){
+                    std::vector<long double> rr;
+                    rr.push_back(avg[i]);
+                    rr.push_back(std[i]);
+                    rr.push_back(var[i]);
+                    rr.push_back(qrs[i].LQ);
+                    rr.push_back(qrs[i].Q1);
+                    rr.push_back(qrs[i].Q2);
+                    rr.push_back(qrs[i].Q3);
+                    rr.push_back(qrs[i].UQ); 
+                    rr.push_back(qrs[i].Q3-qrs[i].Q1);  
+                    rr.push_back(sms[i]);         
+                    t.push_back(rr);
+                }
+                t.checkSize();
+                t.sz = 11;
+                return t;
             }
             
 

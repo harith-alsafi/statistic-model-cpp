@@ -26,6 +26,44 @@ TEST(misc, table_read_csv)
 	ASSERT_TRUE(t.saveCSV("test.csv"));
 }
 
+TEST(misc, table_header)
+{
+	Table t;
+	t.readCSV("home.csv");
+	std::vector<long double> sold = t["Sell"];
+	ASSERT_TRUE(t.size() == sold.size());
+	for(int i = 0; i < sold.size(); i++){
+		ASSERT_TRUE(t.at(i).at(0) == sold[i]);
+	}
+}
+
+TEST(misc, table_qr_sort_asc)
+{
+	// to string 
+	auto qr = Table::getQR(
+		{5.0, 8.2, 10.3, 10.3, 15.2, 18.2, 23.1});
+	Table::QR qr_answer = {5.0, 8.2, 10.3, 18.2, 23.1};
+	ASSERT_TRUE(qr_answer.LQ == qr.LQ);
+	ASSERT_TRUE(qr_answer.Q1 == qr.Q1);
+	ASSERT_TRUE(qr_answer.Q2 == qr.Q2);
+	ASSERT_TRUE(qr_answer.Q3 == qr.Q3);
+	ASSERT_TRUE(qr_answer.UQ == qr.UQ);
+	std::cout << qr.toString();
+}
+
+TEST(misc, table_mean_std_var_sum)
+{
+	std::vector<long double> a = {10.0, 8.0, 10.0, 8.0, 8.0, 4.0};  
+	ASSERT_DOUBLE_EQ(Table::getStd(a), 2.0);
+}
+
+TEST(misc, table_describe_all)
+{
+	Table t;
+	t.readCSV("homes.csv");
+	auto t2 = t.describeAll();
+	t2.show();
+}
 
 int main(int argc, char **argv) 
 {

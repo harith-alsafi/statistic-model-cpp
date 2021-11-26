@@ -369,6 +369,10 @@ iostream
 -
 fstream
 -
+algorithm
+-
+numeric
+-
 graphs.hpp
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/graphs.hpp
 
