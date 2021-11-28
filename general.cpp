@@ -17,7 +17,7 @@ void CaseInsensitiveSort(vector<string>& strs)
     );
 }
 
-std::vector<std::string> sortAsc(std::vector<std::string> a, bool len)
+std::vector<std::string> sort_asc(std::vector<std::string> a, bool len)
 {
     std::vector<std::string> entries = a;
     std::sort(entries.begin(), entries.end(), [&](const std::string& a, const std::string& b) -> bool {
@@ -67,7 +67,7 @@ int main(int argc, char const *argv[])
 {
     vector<string> a = {"02:40:03", "00:45:02", "00:48:07", "00:45:01"};
     // sortDes(a);
-    auto b = sortAsc(a, true);
+    auto b = sort_asc(a, true);
     for(int i =0; i < a.size(); i++){
         cout << b[i] << "\n";
     }

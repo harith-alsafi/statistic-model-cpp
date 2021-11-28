@@ -6,9 +6,9 @@ TEST(misc, plots_fun)
 {
 	Plot p;
 	auto f = [](long double x)->long double{return x*x;};
-	p.setRange(-2, 15);
-	p.generateDomain(-5, 5, 100);
-	p.plotFun(f);
+	p.set_range(-2, 15);
+	p.generate_domain(-5, 5, 100);
+	p.plot_fun(f);
 }
 
 TEST(misc, plot_arr)
@@ -16,20 +16,20 @@ TEST(misc, plot_arr)
 	Plot p;
 	std::vector<long double> x = {-2, -1, 0, 1, 2, 3};
 	std::vector<long double> y = {-4, -2, 0, 2, 4, 6};
-	p.plotVect(x, y);
+	p.plot_vect(x, y);
 }
 
 TEST(misc, table_read_csv)
 {
 	Table t;
-	ASSERT_TRUE(t.readCSV("homes.csv"));
-	ASSERT_TRUE(t.saveCSV("test.csv"));
+	ASSERT_TRUE(t.read_csv("homes.csv"));
+	ASSERT_TRUE(t.save_csv("test.csv"));
 }
 
 TEST(misc, table_header)
 {
 	Table t;
-	t.readCSV("home.csv");
+	t.read_csv("home.csv");
 	std::vector<long double> sold = t["Sell"];
 	ASSERT_TRUE(t.size() == sold.size());
 	for(int i = 0; i < sold.size(); i++){
@@ -40,7 +40,7 @@ TEST(misc, table_header)
 TEST(misc, table_qr_sort_asc)
 {
 	// to string 
-	auto qr = Table::getQR(
+	auto qr = Table::get_qr(
 		{5.0, 8.2, 10.3, 10.3, 15.2, 18.2, 23.1});
 	Table::QR qr_answer = {5.0, 8.2, 10.3, 18.2, 23.1};
 	ASSERT_TRUE(qr_answer.LQ == qr.LQ);
@@ -54,14 +54,14 @@ TEST(misc, table_qr_sort_asc)
 TEST(misc, table_mean_std_var_sum)
 {
 	std::vector<long double> a = {10.0, 8.0, 10.0, 8.0, 8.0, 4.0};  
-	ASSERT_DOUBLE_EQ(Table::getStd(a), 2.0);
+	ASSERT_DOUBLE_EQ(Table::get_std(a), 2.0);
 }
 
 TEST(misc, table_describe_all)
 {
 	Table t;
-	t.readCSV("homes.csv");
-	auto t2 = t.describeAll();
+	t.read_csv("homes.csv");
+	auto t2 = t.describe_all();
 	t2.show();
 }
 
@@ -69,15 +69,15 @@ TEST(misc, table_describe_all)
 TEST(misc, table_show_row)
 {
 	Table t;
-	t.readCSV("homes.csv");
-	t.showRow(2);
+	t.read_csv("homes.csv");
+	t.show_row(2);
 }
 
 TEST(misc, table_show_col)
 {
 	Table t;
-	t.readCSV("homes.csv");
-	t.showCol("Sell");
+	t.read_csv("homes.csv");
+	t.show_col("Sell");
 }
 
 int main(int argc, char **argv) 

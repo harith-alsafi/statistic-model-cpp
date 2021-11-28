@@ -42,7 +42,7 @@ namespace misc
                 }
             };
         private:
-            int checkHeader(std::string head){
+            int check_header(std::string head){
                 for(int i = 0; i < headers.size(); i++){
                     if(headers[i] == head){
                         return i;
@@ -51,8 +51,8 @@ namespace misc
                 return -1;
             }
 
-            std::vector<long double> getCol(std::string headname){
-                int j = checkHeader(headname);
+            std::vector<long double> get_col(std::string headname){
+                int j = check_header(headname);
                 std::vector<long double> a;
                 for(int i = 0; i < size(); i++){
                     a.push_back(at(i).at(j));
@@ -60,42 +60,42 @@ namespace misc
                 return a;                
             }
 
-            std::vector<long double> getAvgs(){
+            std::vector<long double> get_avgs(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(getAvg(getCol(headers[j])));
+                    a.push_back(get_avg(get_col(headers[j])));
                 }
                 return a;
             }
 
-            std::vector<long double> getStds(){
+            std::vector<long double> get_stds(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(getStd(getCol(headers[j])));
+                    a.push_back(get_std(get_col(headers[j])));
                 }
                 return a;             
             }
 
-            std::vector<long double> getVars(){
+            std::vector<long double> get_vars(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(getVar(getCol(headers[j])));
+                    a.push_back(get_var(get_col(headers[j])));
                 }
                 return a;
             }
 
-            std::vector<QR> getQRs(){
+            std::vector<QR> get_qrs(){
                 std::vector<QR> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(getQR(getCol(headers[j])));
+                    a.push_back(get_qr(get_col(headers[j])));
                 }
                 return a;
             }
 
-            std::vector<long double> getSums(){
+            std::vector<long double> get_sums(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(getSum(getCol(headers[j])));
+                    a.push_back(get_sum(get_col(headers[j])));
                 }
                 return a;             
             }
@@ -130,19 +130,19 @@ namespace misc
                 return center(ss.str(), width);
             }
 
-            void generateRows(){
+            void generate_rows(){
                 rows.clear();
                 for(int i = 0; i < size(); i++){
                     rows.push_back("Row-"+std::to_string(i));
                 }
             }
             
-            void checkSize(){
+            void check_size(){
                 col = at(0).size();
                 row = size();
             }
 
-            std::string generateLine(int l){
+            std::string generate_line(int l){
                 string line;
                 for(int i = 0; i < l; i++){
                     line+="―";
@@ -167,7 +167,7 @@ namespace misc
              * @return true: if read is success   
              * @return false: if read did not complete 
              */
-            bool readCSV(std::string filename){
+            bool read_csv(std::string filename){
                 ifstream file(filename);
                 if(file.is_open()){
                     clear();
@@ -198,7 +198,7 @@ namespace misc
                         }
                         push_back(r);
                     }
-                    checkSize();
+                    check_size();
                     file.close();
                     return true;
                 }
@@ -213,7 +213,7 @@ namespace misc
              * @return true: if read is success   
              * @return false: if read did not complete 
              */
-            bool saveCSV(std::string filename)
+            bool save_csv(std::string filename)
             {
                 ofstream file(filename);
                 if(file.is_open()){
@@ -225,7 +225,7 @@ namespace misc
                             file << headers[i] << "\n";
                         }
                     }
-                    checkSize();
+                    check_size();
                     for(int i = 0; i < row; i++){
                         for(int j = 0; j < col; j++){
                             if(j != col-1){
@@ -243,11 +243,11 @@ namespace misc
                 return false;
             }
 
-            int getRow(){
+            int get_row(){
                 return size();                
             }
 
-            int getCol(){
+            int get_col(){
                 return at(0).size();
             }
 
@@ -258,34 +258,34 @@ namespace misc
              * @return std::vector<D>& 
              */
             std::vector<long double> operator[](std::string headname){
-                return getCol(headname);
+                return get_col(headname);
             }
 
-            static std::vector<long double> sortAsc(std::vector<long double> & a){
+            static std::vector<long double> sort_asc(std::vector<long double> & a){
                 std::vector<long double> v_sorted(a.size());
                 std::partial_sort_copy(a.begin(), a.end(), 
                 v_sorted.begin(), v_sorted.end());
                 return v_sorted;
             }
 
-            static long double getMin(std::vector<long double> a){
+            static long double get_min(std::vector<long double> a){
                 return *std::min_element(a.begin(), a.end());
             }
 
-            static long double getMax(std::vector<long double> a){
+            static long double get_max(std::vector<long double> a){
                 return *std::max_element(a.begin(), a.end());
             }
 
-            static long double getSum(std::vector<long double> a){
+            static long double get_sum(std::vector<long double> a){
                 return std::accumulate(a.begin(), a.end(), 0);
             }
 
-            static long double getAvg(std::vector<long double> a){
-                return getSum(a)/a.size();
+            static long double get_avg(std::vector<long double> a){
+                return get_sum(a)/a.size();
             } 
 
-            static long double getVar(std::vector<long double> a){
-                long double mean = getAvg(a);
+            static long double get_var(std::vector<long double> a){
+                long double mean = get_avg(a);
                 int N = a.size();
                 long double sum = 0;
                 for(int i = 0; i < N; i++){
@@ -294,15 +294,15 @@ namespace misc
                 return (long double) sum/N;            
             }
 
-            static long double getStd(std::vector<long double> a){
-                return sqrt(getVar(a));
+            static long double get_std(std::vector<long double> a){
+                return sqrt(get_var(a));
             }   
 
-            static QR getQR(std::vector<long double> a){
+            static QR get_qr(std::vector<long double> a){
                 QR qr; 
-                qr.LQ = getMin(a);
-                qr.UQ = getMax(a);
-                auto a_sorted = sortAsc(a);
+                qr.LQ = get_min(a);
+                qr.UQ = get_max(a);
+                auto a_sorted = sort_asc(a);
                 qr.Q1 = a_sorted.at((int) (a_sorted.size())/4);
                 qr.Q2 = a_sorted.at((int) (a_sorted.size())/2);
                 qr.Q3 = a_sorted.at((int) (3*(a_sorted.size()))/4);
@@ -311,10 +311,10 @@ namespace misc
 
             void show(int r){
                 if(rows.empty()){
-                    generateRows();
+                    generate_rows();
                 }
-                checkSize();
-                std::string line = generateLine((std::pow(2, 1/col)+0.2)*sz*col);
+                check_size();
+                std::string line = generate_line((std::pow(2, 1/col)+0.2)*sz*col);
                 for(int i = -1; i < r; i++){
                     for(int j = 0; j < col; j++){
                         // to print header 
@@ -336,19 +336,19 @@ namespace misc
                             // row name + val
                             if(j == 0 && col > 1){
                                 std::cout << prd(rows[i], sz) << "│"
-                                          << prd(getCol(headers[j]).at(i), sz) << "│";
+                                          << prd(get_col(headers[j]).at(i), sz) << "│";
                             }
                             else if(j == 0 && col == 1){
                                 std::cout << prd(rows[i], sz) << "│"
-                                          << prd(getCol(headers[j]).at(i), sz) << "│" << "\n";
+                                          << prd(get_col(headers[j]).at(i), sz) << "│" << "\n";
                                 std::cout << line << "\n";
                             }
                             else if(j != col-1){
-                                std::cout << prd(getCol(headers[j]).at(i), sz) << "│";
+                                std::cout << prd(get_col(headers[j]).at(i), sz) << "│";
                             }
 
                             else{
-                                std::cout << prd(getCol(headers[j]).at(i), sz) << "\n";
+                                std::cout << prd(get_col(headers[j]).at(i), sz) << "\n";
                                 std::cout << line << "\n";
                             }                           
                         }
@@ -357,18 +357,18 @@ namespace misc
             }
 
             void show(){
-                checkSize();
+                check_size();
                 show(row);
             }
 
-            Table describeAll(){
+            Table describe_all(){
                 Table t;
-                auto avg = getAvgs();
-                auto std = getStds();
-                auto var = getVars();
-                auto qrs = getQRs();
-                auto sms = getSums();
-                checkSize();
+                auto avg = get_avgs();
+                auto std = get_stds();
+                auto var = get_vars();
+                auto qrs = get_qrs();
+                auto sms = get_sums();
+                check_size();
                 // loading row names
                 for(int i = 0; i < col; i++){
                     t.rows.push_back(headers[i]);
@@ -402,37 +402,35 @@ namespace misc
                     rr.push_back(sms[i]);         
                     t.push_back(rr);
                 }
-                t.checkSize();
+                t.check_size();
                 t.sz = 11;
                 return t;
             }
             
-            void showRow(int r){
+            void show_row(int r){
                 Table t; 
                 t.push_back(at(r));
                 t.headers = headers;
                 if(rows.empty()){
-                    generateRows();
+                    generate_rows();
                 }
                 t.rows.push_back(rows[r]);
                 
                 t.show();
             }
 
-            void showCol(std::string name){
+            void show_col(std::string name){
                 Table t;
-                auto a = getCol(name);
+                auto a = get_col(name);
                 for(int i = 0; i < a.size(); i++){
                     t.push_back({a[i]});
                 }
                 if(rows.empty()){
-                    generateRows();
+                    generate_rows();
                 }
-                t.headers.push_back(headers[checkHeader(name)]);
+                t.headers.push_back(headers[check_header(name)]);
                 
-                t.show();
-                std::cout << t.row << t.col << "\n";
-                                
+                t.show();       
             }
 
             
@@ -481,7 +479,7 @@ namespace misc
              * @param xmn 
              * @param xmx 
              */
-            void setDomain(long double xmn = -10, long double xmx = 10){
+            void set_domain(long double xmn = -10, long double xmx = 10){
                 xmin = xmn;
                 xmax = xmx;
             }
@@ -492,7 +490,7 @@ namespace misc
              * @param ymn
              * @param ymx
              */
-            void setRange(long double ymn = -10, long double ymx = 10){
+            void set_range(long double ymn = -10, long double ymx = 10){
                 ymin = ymn;
                 ymax = ymx;
             }
@@ -503,7 +501,7 @@ namespace misc
              * @param h 
              * @param w
              */
-            void setSize(int h = 140, int w = 140){
+            void set_size(int h = 140, int w = 140){
                 height = h;
                 width = w;
 
@@ -516,7 +514,7 @@ namespace misc
              * @param xmx 
              * @param n number of points
              */
-            void generateDomain(long double xmn = -10, long double xmx = 10, int n = 50){
+            void generate_domain(long double xmn = -10, long double xmx = 10, int n = 50){
                 domain.clear();
                 for(long double x = xmn; x < xmax; x+=(long double)(xmx-xmn)/n){
                     domain.push_back(x);
@@ -529,10 +527,10 @@ namespace misc
              * @param x vector for x
              * @param y vector for y
              */
-            void plotVect(std::vector<long double> &x, std::vector<long double> &y)
+            void plot_vect(std::vector<long double> &x, std::vector<long double> &y)
             {
                 if(x.size() != y.size()){
-                    std::cerr << "plotVect->Ivalid input \n";
+                    std::cerr << "plot_vect->Ivalid input \n";
                     return;
                 }
                 long double **array;
@@ -569,13 +567,13 @@ namespace misc
              * @param fun lambda function 
              */
             template<typename D>
-            void plotFun(D fun)
+            void plot_fun(D fun)
             {
                 std::vector<long double> y; 
                 for(int i = 0; i < domain.size(); i++){
                     y.push_back(fun(domain[i]));
                 }
-                plotVect(domain, y);
+                plot_vect(domain, y);
             }
     };
 } 
