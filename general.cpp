@@ -1,38 +1,75 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-int factorial(int n){
-    int fa = n;
-    for(int i = n-1; i >= 1; i--){
-        fa *= i;
-    }
-    return fa;
-}
-
-int combination(int n, int k){
-    return factorial(n)/(factorial(k)*factorial(n-k));
-}
-
-string get_pascal(int n){
-    string str;
-    int coef = 1;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j <= i; j++){
-            if(j == 0 || j == i || i == 0){
-                coef = 1;
-            }
-            else{
-                coef = combination(i, j);
-            }
-            str = str + to_string(coef) + " ";
+void CaseInsensitiveSort(vector<string>& strs)
+{
+    std::sort(
+        strs.begin(),
+        strs.end(),
+        [](const std::string& str1, const std::string& str2){
+            return std::lexicographical_compare(
+                str1.begin(), str1.end(),
+                str2.begin(), str2.end(),
+                [](const char& char1, const char& char2) {
+                    return std::tolower(char1) < std::tolower(char2);
+                }
+            );
         }
-    }
-    return str;
+    );
+}
+
+std::vector<std::string> sortAsc(std::vector<std::string> a, bool len)
+{
+    std::vector<std::string> entries = a;
+    std::sort(entries.begin(), entries.end(), [&](const std::string& a, const std::string& b) -> bool {
+        for (size_t c = 0; c < a.size() and c < b.size(); c++) {
+            if(!len){
+                if (std::tolower(a[c]) != std::tolower(b[c])){
+                    return (std::tolower(a[c]) < std::tolower(b[c]));
+                }
+                else{
+                    return a[c] < b[c];
+                }
+            }
+            else if (std::tolower(a[c]) != std::tolower(b[c])){
+                return ((int) a[c]-48) < ((int) b[c]-48);
+            }
+        }
+        return a.size() < b.size();
+    });
+    return entries;
+}
+
+std::vector<std::string> sortDes(std::vector<std::string> a, bool len)
+{
+    std::vector<std::string> entries = a;
+    std::sort(entries.begin(), entries.end(), [&](const std::string& a, const std::string& b) -> bool {
+        for (size_t c = 0; c < a.size() and c < b.size(); c++) {
+            if(!len){
+                if (std::tolower(a[c]) != std::tolower(b[c])){
+                    return (std::tolower(a[c]) > std::tolower(b[c]));
+                }
+                else{
+                    return a[c] > b[c];
+                }
+            }
+            else if (std::tolower(a[c]) != std::tolower(b[c])){
+                return ((int) a[c]-48) > ((int) b[c]-48);
+                
+            }
+                
+        }
+        return a.size() > b.size();
+    });
+    return entries;
 }
 
 int main(int argc, char const *argv[])
 {
-    cout << get_pascal(6);
-    // cout << fact(3);
+    vector<string> a = {"02:40:03", "00:45:02", "00:48:07", "00:45:01"};
+    // sortDes(a);
+    auto b = sortAsc(a, true);
+    for(int i =0; i < a.size(); i++){
+        cout << b[i] << "\n";
+    }
     return 0;
 }

@@ -314,11 +314,12 @@ namespace misc
                     generateRows();
                 }
                 checkSize();
-                std::string line = generateLine(1.2*sz*col);
+                std::string line = generateLine((std::pow(2, 1/col)+0.2)*sz*col);
                 for(int i = -1; i < r; i++){
                     for(int j = 0; j < col; j++){
+                        // to print header 
                         if(i == -1){
-                            if (j == 0){
+                            if (j == 0 && col > 1){
                                 std::cout << prd("     ", sz) << "│"
                                           << prd(headers[j], sz) << "│";
                             }
@@ -330,14 +331,22 @@ namespace misc
                                 std::cout << line << "\n";
                             }                            
                         }
+                        // printing values 
                         else{
-                            if(j == 0){
+                            // row name + val
+                            if(j == 0 && col > 1){
                                 std::cout << prd(rows[i], sz) << "│"
                                           << prd(getCol(headers[j]).at(i), sz) << "│";
+                            }
+                            else if(j == 0 && col == 1){
+                                std::cout << prd(rows[i], sz) << "│"
+                                          << prd(getCol(headers[j]).at(i), sz) << "│" << "\n";
+                                std::cout << line << "\n";
                             }
                             else if(j != col-1){
                                 std::cout << prd(getCol(headers[j]).at(i), sz) << "│";
                             }
+
                             else{
                                 std::cout << prd(getCol(headers[j]).at(i), sz) << "\n";
                                 std::cout << line << "\n";
@@ -397,6 +406,35 @@ namespace misc
                 t.sz = 11;
                 return t;
             }
+            
+            void showRow(int r){
+                Table t; 
+                t.push_back(at(r));
+                t.headers = headers;
+                if(rows.empty()){
+                    generateRows();
+                }
+                t.rows.push_back(rows[r]);
+                
+                t.show();
+            }
+
+            void showCol(std::string name){
+                Table t;
+                auto a = getCol(name);
+                for(int i = 0; i < a.size(); i++){
+                    t.push_back({a[i]});
+                }
+                if(rows.empty()){
+                    generateRows();
+                }
+                t.headers.push_back(headers[checkHeader(name)]);
+                
+                t.show();
+                std::cout << t.row << t.col << "\n";
+                                
+            }
+
             
 
     };

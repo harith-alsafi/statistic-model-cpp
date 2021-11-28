@@ -252,17 +252,17 @@ int graph(const size_t height, const size_t width, const long double xmin, const
 	const int aheight = height / 4;
 	const int awidth = width / 2;
 
-	if (aheight > w.ws_row)
-	{
-		cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
-		return 1;
-	}
+	// if (aheight > w.ws_row)
+	// {
+	// 	cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
+	// 	return 1;
+	// }
 
-	if (awidth > w.ws_col)
-	{
-		cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
-		return 1;
-	}
+	// if (awidth > w.ws_col)
+	// {
+	// 	cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
+	// 	return 1;
+	// }
 
 	if (xmin >= xmax)
 	{
@@ -528,17 +528,17 @@ int graph(size_t height, size_t width, long double xmin, long double xmax, long 
 	const int aheight = height / 4;
 	const int awidth = width / 2;
 
-	if (aheight > w.ws_row)
-	{
-		cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
-		return 1;
-	}
+	// if (aheight > w.ws_row)
+	// {
+	// 	cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
+	// 	return 1;
+	// }
 
-	if (awidth > w.ws_col)
-	{
-		cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
-		return 1;
-	}
+	// if (awidth > w.ws_col)
+	// {
+	// 	cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
+	// 	return 1;
+	// }
 
 	if (xmin == 0 and xmax == 0)
 	{
@@ -644,17 +644,17 @@ int graph(size_t height, size_t width, const long double xmin, const long double
 	const int aheight = height / 4;
 	const int awidth = width / 2;
 
-	if (aheight > w.ws_row)
-	{
-		cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
-		return 1;
-	}
+	// if (aheight > w.ws_row)
+	// {
+	// 	cerr << "The height of the graph (" << aheight << ") is greater then the height of the terminal (" << w.ws_row << ").\n";
+	// 	return 1;
+	// }
 
-	if (awidth > w.ws_col)
-	{
-		cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
-		return 1;
-	}
+	// if (awidth > w.ws_col)
+	// {
+	// 	cerr << "The width of the graph (" << awidth << ") is greater then the width of the terminal (" << w.ws_col << ").\n";
+	// 	return 1;
+	// }
 
 	if (xmin >= xmax)
 	{

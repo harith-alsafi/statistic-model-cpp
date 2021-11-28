@@ -65,6 +65,21 @@ TEST(misc, table_describe_all)
 	t2.show();
 }
 
+
+TEST(misc, table_show_row)
+{
+	Table t;
+	t.readCSV("homes.csv");
+	t.showRow(2);
+}
+
+TEST(misc, table_show_col)
+{
+	Table t;
+	t.readCSV("homes.csv");
+	t.showCol("Sell");
+}
+
 int main(int argc, char **argv) 
 {
    testing::InitGoogleTest(&argc, argv);
