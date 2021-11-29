@@ -70,14 +70,26 @@ TEST(misc, table_show_row)
 {
 	Table t;
 	t.read_csv("homes.csv");
-	t.show_row(2);
+	auto tt = t.get_row(2);
+	tt.show();
 }
 
 TEST(misc, table_show_col)
 {
 	Table t;
 	t.read_csv("homes.csv");
-	t.show_col("Sell");
+	auto tt = t.get_col("Sell");
+	tt.show();
+}
+
+TEST(misc, table_add_col)
+{
+	Table t;
+	t.add_col("x1", {1, 2, 3, 4});
+	t.add_col("x2", {5, 6, 7, 8});
+	t.add_col("x3", {9, 10, 11, 12});
+	t.show();
+
 }
 
 int main(int argc, char **argv) 

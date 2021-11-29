@@ -9,6 +9,18 @@
 
 #include "graphs.hpp"
 
+template<typename D>
+std::vector<D> operator *(std::vector<D> first, std::vector<D> second){
+    if(first.size() != second.size()){
+        throw std::invalid_argument("Invalid size");
+    }
+    std::vector<D> temp;
+    for(int i = 0; i < first.size(); i++){
+        temp.push_back(first[i]*second[i]);
+    }
+    return temp;
+}
+
 namespace misc
 {
     /**
@@ -51,7 +63,7 @@ namespace misc
                 return -1;
             }
 
-            std::vector<long double> get_col(std::string headname){
+            std::vector<long double> get_col_(std::string headname){
                 int j = check_header(headname);
                 std::vector<long double> a;
                 for(int i = 0; i < size(); i++){
@@ -63,7 +75,7 @@ namespace misc
             std::vector<long double> get_avgs(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(get_avg(get_col(headers[j])));
+                    a.push_back(get_avg(get_col_(headers[j])));
                 }
                 return a;
             }
@@ -71,7 +83,7 @@ namespace misc
             std::vector<long double> get_stds(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(get_std(get_col(headers[j])));
+                    a.push_back(get_std(get_col_(headers[j])));
                 }
                 return a;             
             }
@@ -79,7 +91,7 @@ namespace misc
             std::vector<long double> get_vars(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(get_var(get_col(headers[j])));
+                    a.push_back(get_var(get_col_(headers[j])));
                 }
                 return a;
             }
@@ -87,7 +99,7 @@ namespace misc
             std::vector<QR> get_qrs(){
                 std::vector<QR> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(get_qr(get_col(headers[j])));
+                    a.push_back(get_qr(get_col_(headers[j])));
                 }
                 return a;
             }
@@ -95,7 +107,7 @@ namespace misc
             std::vector<long double> get_sums(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
-                    a.push_back(get_sum(get_col(headers[j])));
+                    a.push_back(get_sum(get_col_(headers[j])));
                 }
                 return a;             
             }
@@ -138,6 +150,11 @@ namespace misc
             }
             
             void check_size(){
+                if(empty()){
+                    row = 0;
+                    col = 0;
+                    return;
+                }
                 col = at(0).size();
                 row = size();
             }
@@ -243,11 +260,11 @@ namespace misc
                 return false;
             }
 
-            int get_row(){
+            int get_row_size(){
                 return size();                
             }
 
-            int get_col(){
+            int get_col__size(){
                 return at(0).size();
             }
 
@@ -258,7 +275,7 @@ namespace misc
              * @return std::vector<D>& 
              */
             std::vector<long double> operator[](std::string headname){
-                return get_col(headname);
+                return get_col_(headname);
             }
 
             static std::vector<long double> sort_asc(std::vector<long double> & a){
@@ -314,7 +331,13 @@ namespace misc
                     generate_rows();
                 }
                 check_size();
-                std::string line = generate_line((std::pow(2, 1/col)+0.2)*sz*col);
+                std::string line;
+                if(col == 1){
+                    line = generate_line((std::pow(2, 1/col)+0.2)*sz*col);
+                }
+                else{
+                    line = generate_line((std::pow(1.05, 1/col)+1.9/col)*sz*col);
+                }
                 for(int i = -1; i < r; i++){
                     for(int j = 0; j < col; j++){
                         // to print header 
@@ -322,6 +345,11 @@ namespace misc
                             if (j == 0 && col > 1){
                                 std::cout << prd("     ", sz) << "│"
                                           << prd(headers[j], sz) << "│";
+                            }
+                            else if(j == 0 && col == 1){
+                                std::cout << prd("     ", sz) << "│"
+                                          << prd(headers[j], sz) << "\n";    
+                                std::cout << line << "\n";                            
                             }
                             else if(j != col-1){
                                 std::cout << prd(headers[j], sz) << "│";
@@ -336,19 +364,19 @@ namespace misc
                             // row name + val
                             if(j == 0 && col > 1){
                                 std::cout << prd(rows[i], sz) << "│"
-                                          << prd(get_col(headers[j]).at(i), sz) << "│";
+                                          << prd(get_col_(headers[j]).at(i), sz) << "│";
                             }
                             else if(j == 0 && col == 1){
                                 std::cout << prd(rows[i], sz) << "│"
-                                          << prd(get_col(headers[j]).at(i), sz) << "│" << "\n";
+                                          << prd(get_col_(headers[j]).at(i), sz) << "│" << "\n";
                                 std::cout << line << "\n";
                             }
                             else if(j != col-1){
-                                std::cout << prd(get_col(headers[j]).at(i), sz) << "│";
+                                std::cout << prd(get_col_(headers[j]).at(i), sz) << "│";
                             }
 
                             else{
-                                std::cout << prd(get_col(headers[j]).at(i), sz) << "\n";
+                                std::cout << prd(get_col_(headers[j]).at(i), sz) << "\n";
                                 std::cout << line << "\n";
                             }                           
                         }
@@ -407,7 +435,7 @@ namespace misc
                 return t;
             }
             
-            void show_row(int r){
+            Table get_row(int r){
                 Table t; 
                 t.push_back(at(r));
                 t.headers = headers;
@@ -415,13 +443,12 @@ namespace misc
                     generate_rows();
                 }
                 t.rows.push_back(rows[r]);
-                
-                t.show();
+                return t;
             }
 
-            void show_col(std::string name){
+            Table get_col(std::string name){
                 Table t;
-                auto a = get_col(name);
+                auto a = get_col_(name);
                 for(int i = 0; i < a.size(); i++){
                     t.push_back({a[i]});
                 }
@@ -429,8 +456,24 @@ namespace misc
                     generate_rows();
                 }
                 t.headers.push_back(headers[check_header(name)]);
-                
-                t.show();       
+                return t;
+            }
+
+            bool add_col(std::string col_name, std::vector<long double> col_data){
+                check_size();
+                if(col_data.size() != row && row != 0){
+                    return false;
+                }
+                headers.push_back(col_name);
+                for(int i = 0; i < col_data.size(); i++){
+                    if(row == 0){
+                        push_back({col_data[i]});
+                    }
+                    else{
+                        at(i).push_back(col_data[i]);
+                    }
+                }
+                return true;
             }
 
             
@@ -507,6 +550,10 @@ namespace misc
 
             }
 
+            void generate_domain(int n = 50){
+                generate_domain(xmin, xmax, n);
+            }
+
             /**
              * @brief Generates domain to plot function 
              * 
@@ -514,7 +561,7 @@ namespace misc
              * @param xmx 
              * @param n number of points
              */
-            void generate_domain(long double xmn = -10, long double xmx = 10, int n = 50){
+            void generate_domain(long double xmn, long double xmx, int n){
                 domain.clear();
                 for(long double x = xmn; x < xmax; x+=(long double)(xmx-xmn)/n){
                     domain.push_back(x);
