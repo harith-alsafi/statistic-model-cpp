@@ -21,6 +21,15 @@ std::vector<D> operator *(std::vector<D> first, std::vector<D> second){
     return temp;
 }
 
+template<typename D>
+D round(D a, int dp = 0){
+    if(a < D(0)){
+        return D((int)(a*pow(10, dp)-.5)/pow(10, dp));
+    }
+    return D((int)(a*pow(10, dp)+.5)/pow(10, dp));
+}
+
+
 namespace misc
 {
     /**
@@ -160,7 +169,7 @@ namespace misc
             }
 
             std::string generate_line(int l){
-                string line;
+                std::string line;
                 for(int i = 0; i < l; i++){
                     line+="―";
                 }
@@ -486,6 +495,17 @@ namespace misc
      */
     class Plot
     {
+        public:
+            enum Color
+            {
+                red = 10,
+                green = 11,
+                yellow = 12,
+                purple = 14,
+                blue = 15,
+                white = 16
+            };
+
         private:
             size_t height;
             size_t width; 
@@ -497,8 +517,11 @@ namespace misc
 
             const size_t cols = 2;
             std::vector<long double> domain;
-        public:
+            graphoptions aoptions;
+            Color c;
+            std::string title;
 
+        public:
             /**
              * @brief Construct a new Plot object
              * 
@@ -550,6 +573,14 @@ namespace misc
 
             }
 
+            void set_color(Color cc = Color::blue){
+                c = cc;
+            }
+
+            void set_title(std::string tt){
+                title = tt;
+            }
+
             void generate_domain(int n = 50){
                 generate_domain(xmin, xmax, n);
             }
@@ -597,7 +628,11 @@ namespace misc
                         }
                     }
                 }
-                graphoptions aoptions;
+                aoptions.color = c;
+                std::cout << 
+                colors[c] 
+                << title << "\n"
+                << colors[Color::white];
                 graph(height, width, xmin, xmax, ymin, ymax, x.size(), array, aoptions);
                 if(array != NULL){
                     for (unsigned int i = 0; i < x.size(); ++i){

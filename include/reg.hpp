@@ -20,12 +20,17 @@ namespace regr
             long double sumyy; // sum of y*y
             int n; // size of vetors 
             // function 
-            long double fun(long double x){
-                return (long double)m*x+c;
+            long double fun(long double xx){
+                return (long double)m*xx+c;
             }
+            void calculate_r(){
+                r = (n*sumxy-(sumx*sumy))/
+                (sqrt((n*sumxx-pow(sumx, 2))*(n*sumyy-pow(sumy, 2))));
+            }
+        
         public:
-            LinearRegression(){};
-            ~LinearRegression(){};
+            LinearRegression(){}
+
 
             long double get_slope(){return m;}
 
@@ -58,18 +63,17 @@ namespace regr
                     yfit.push_back(fun(x[i]));
                 }
                 sumyy = misc::Table::get_sum(y*y);
-                r = (n*sumxy-(sumx*sumy))/
-                (sqrt((n*sumxx-pow(sumx, 2))*(n*sumyy-pow(sumy, 2))));
+                calculate_r();
             }
 
             void show_equation(){
                 std::cout << std::fixed;
                 std::cout << std::setprecision(3);
-                std::cout << "y = " << m << "⋅" << "x" << " + " << c 
-                << "\t r: " << r << "\t r²: " << std::pow(r, 2) << "\n";
+                std::cout << "y = " << m << "⋅" << "x" << " + " << c << "\n"
+                << "r: " << r << "    r²: " << std::pow(r, 2) << "\n";
             }
 
-            void plot_equation(){
+            void plot_equation(int nn=100){
                 auto f = [&](long double xx)->long double{return fun(xx);};
                 misc::Plot p;
                 p.set_domain(
@@ -79,11 +83,13 @@ namespace regr
                 misc::Table::get_min(yfit)-2, misc::Table::get_max(yfit)+2
                 );
                 p.generate_domain(
-                misc::Table::get_min(x), misc::Table::get_max(x), x.size()+50);
+                misc::Table::get_min(x), misc::Table::get_max(x), x.size()+nn);
+                p.set_title("Equation with " + to_string(nn) + " data points");
+                p.set_color(misc::Plot::Color::blue);
                 p.plot_fun(f);
             }
 
-            void plot_original_data(){
+            void plot_data(){
                 misc::Plot p;
                 p.set_domain(
                 misc::Table::get_min(x)-2, misc::Table::get_max(x)+2
@@ -91,7 +97,14 @@ namespace regr
                 p.set_range(
                 misc::Table::get_min(y)-2, misc::Table::get_max(y)+2
                 );     
-                p.plot_vect(x, y);           
+
+                p.set_title("Original data");
+                p.set_color(misc::Plot::Color::yellow);
+                p.plot_vect(x, y);         
+
+                p.set_title("Fitted data");
+                p.set_color(misc::Plot::Color::green);
+                p.plot_vect(x, yfit);           
             }
 
             misc::Table get_data(){
@@ -101,10 +114,70 @@ namespace regr
                 t.add_col("yfit-data", yfit);
                 return t;
             }
+            friend class PolyRegression; 
     };
 
-    class PolyRegression
+    class PolyRegression: public LinearRegression
     {
+        private:   
+            using LinearRegression::get_y_intersept;
+            using LinearRegression::get_slope;
+
+            long double fun(long double xx){
+                long double sm = 0;
+                for(int i = 0; i < coef.size(); i++){
+                    sm += coef[i]*pow(xx, i);
+                }
+                return sm;
+            }
+
+            std::vector<long double> coef;
+            int degree; 
+            const std::vector<std::string> powers = 
+            {"", "", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
+
+            std::string get_power(int i){
+                std::string str;
+                if(i > 9){
+                    while (i > 0)
+                    {
+                        int digit = i%10;
+                        i /= 10;
+                        str += powers[i];
+                    }
+                }
+                else if(i == 0){
+                    return "";
+                }
+                else{
+                    str = powers[i];
+                }
+                return "⋅x"+str;
+            }
+
+
+        public:
+            PolyRegression(){}
+
+            void set_degree(int deg = 3){
+                degree = deg;
+            }
+
+            void show_equation(){ 
+                std::cout << std::fixed;
+                std::cout << std::setprecision(3);
+                std::cout << "y = ";
+                for(int i = coef.size()-1; i >= 0; i--){
+                    if(i != 0){
+                        std::cout << coef[i] << get_power(i) << " + ";
+                    }
+                    else{
+                        std::cout << coef[i] << get_power(i);
+                    }
+                }
+                std::cout << "\n";
+                std::cout << "r: " << r << "    r²: " << std::pow(r, 2) << "\n";
+            }
 
     };
 } 
