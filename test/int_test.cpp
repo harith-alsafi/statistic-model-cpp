@@ -1,7 +1,12 @@
-#include "../include/int.hpp"
+#include "../include/intp.hpp"
 #include "../lib/googletest/googletest/include/gtest/gtest.h"
 
 using namespace intp; 
+
+TEST(intp, linear_show)
+{
+   
+}
 
 int main(int argc, char **argv) 
 {

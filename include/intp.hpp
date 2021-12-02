@@ -8,13 +8,16 @@ namespace intp
     class LinearInterp
     {
         private:
+            // original 
             std::vector<long double> x;
             std::vector<long double> y;
+            // interpolated only 
             std::vector<long double> x_in;
             std::vector<long double> y_in;
+            // original + interpolated 
             std::vector<long double> x_comb;
             std::vector<long double> y_comb;
-            int n; // size 
+            int n; // size of original 
 
             long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
@@ -57,6 +60,18 @@ namespace intp
                 y_in.push_back(yy);
                 return yy;
             }
+
+            long double get_r(
+            std::vector<long double> _x, std::vector<long double> _y){
+                long double sumx = misc::Table::get_sum(_x);
+                long double sumy = misc::Table::get_sum(_y);
+                long double sumxx = misc::Table::get_sum(_x*_x);
+                long double sumxy = misc::Table::get_sum(_x*_y);
+                long double sumyy = misc::Table::get_sum(_y*_y);
+                return (n*sumxy-(sumx*sumy))/
+                (sqrt((n*sumxx-pow(sumx, 2))*(_x.size()*sumyy-pow(sumy, 2))));
+            }
+            
         public:
             LinearInterp(){}
 
@@ -101,11 +116,13 @@ namespace intp
                 p.set_range(
                 misc::Table::get_min(y)-2, misc::Table::get_max(y)+2
                 );     
-
                 p.set_title("Original data");
                 p.set_color(misc::Plot::Color::yellow);
                 p.plot_vect(x, y);         
+            }
 
+            void plot_interpolated_data(){
+                misc::Plot p;
                 p.set_domain(
                 misc::Table::get_min(x_in)-2, misc::Table::get_max(x_in)+2
                 );
@@ -114,7 +131,7 @@ namespace intp
                 );  
                 p.set_title("Interpolated data");
                 p.set_color(misc::Plot::Color::green);
-                p.plot_vect(x_in, y_in);           
+                p.plot_vect(x_in, y_in);                  
             }
 
             void plot_combined_data(){
@@ -149,7 +166,15 @@ namespace intp
                 t.add_col("x-data", x_comb);
                 t.add_col("y-data", y_comb);
                 return t;
-            }       
+            }   
+
+            long double get_r_original_data(){
+                return get_r(x, y);
+            }
+
+            long double get_r_combined_data(){
+                return get_r(x_comb, y_comb);
+            }    
     };
 
     class PolyInterp
