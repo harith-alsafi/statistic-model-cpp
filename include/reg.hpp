@@ -130,13 +130,12 @@ namespace regr
                 }
                 return sm;
             }
-
             std::vector<long double> coef;
             int degree; 
-            const std::vector<std::string> powers = 
-            {"", "", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
 
             std::string get_power(int i){
+                const std::vector<std::string> powers = 
+                {"", "", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
                 std::string str;
                 if(i > 9){
                     while (i > 0)
