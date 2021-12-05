@@ -360,7 +360,7 @@ sys/ioctl.h
 unistd.h
 -
 
-/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/int.hpp
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/intp.hpp
 vector
 -
 iterator
@@ -423,8 +423,8 @@ gtest/gtest_pred_impl.h
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include/gtest/gtest/gtest_pred_impl.h
 
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/int_test.cpp
-../include/int.hpp
-/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/int.hpp
+../include/intp.hpp
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/intp.hpp
 ../lib/googletest/googletest/include/gtest/gtest.h
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include/gtest/gtest.h
 

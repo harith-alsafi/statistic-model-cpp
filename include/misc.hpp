@@ -335,6 +335,20 @@ namespace misc
                 return qr;
             }
 
+            static long double get_r(
+            std::vector<long double> _x, std::vector<long double> _y){
+                if(_x.size() != _y.size()){
+                    throw std::invalid_argument("misc::Table::get_r -> Size mismatch");
+                }
+                long double sumx = misc::Table::get_sum(_x);
+                long double sumy = misc::Table::get_sum(_y);
+                long double sumxx = misc::Table::get_sum(_x*_x);
+                long double sumxy = misc::Table::get_sum(_x*_y);
+                long double sumyy = misc::Table::get_sum(_y*_y);
+                return (_x.size()*sumxy-(sumx*sumy))/
+                (sqrt((_x.size()*sumxx-pow(sumx, 2))*(_x.size()*sumyy-pow(sumy, 2))));
+            }
+
             void show(int r){
                 if(rows.empty()){
                     generate_rows();

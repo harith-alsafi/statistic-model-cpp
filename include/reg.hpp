@@ -12,25 +12,18 @@ namespace regr
             std::vector<long double> yfit; // fitted values 
             long double m; // slope
             long double c; // y intersept 
-            long double r; // corelation coefficient
             long double sumx; // sum of x's
             long double sumy; // sum of y's
             long double sumxx; // sum of x^2
             long double sumxy; // sum of x*y
-            long double sumyy; // sum of y*y
             int n; // size of vetors 
             // function 
             long double fun(long double xx){
                 return (long double)m*xx+c;
             }
-            void calculate_r(){
-                r = (n*sumxy-(sumx*sumy))/
-                (sqrt((n*sumxx-pow(sumx, 2))*(n*sumyy-pow(sumy, 2))));
-            }
         
         public:
             LinearRegression(){}
-
 
             long double get_slope(){return m;}
 
@@ -38,9 +31,9 @@ namespace regr
 
             std::vector<long double> get_fit_data(){return yfit;}
 
-            long double get_r(){
-                return r;   
-            }
+            long double get_original_r(){return misc::Table::get_r(x, y);}
+
+            long double get_fitted_r(){return misc::Table::get_r(x, yfit);}
 
             long double load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
@@ -62,25 +55,26 @@ namespace regr
                 for(int i = 0; i < n; i++){
                     yfit.push_back(fun(x[i]));
                 }
-                sumyy = misc::Table::get_sum(y*y);
-                calculate_r();
             }
 
             void show_equation(){
                 std::cout << std::fixed;
                 std::cout << std::setprecision(3);
                 std::cout << "y = " << m << "⋅" << "x" << " + " << c << "\n"
-                << "r: " << r << "    r²: " << std::pow(r, 2) << "\n";
+                << "r: " << get_original_r() << "    r²: " 
+                << std::pow(get_original_r(), 2) << "\n";
             }
 
             void plot_equation(int nn=100){
                 auto f = [&](long double xx)->long double{return fun(xx);};
                 misc::Plot p;
                 p.set_domain(
-                misc::Table::get_min(x)-2, misc::Table::get_max(x)+2
+                std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
                 );
                 p.set_range(
-                misc::Table::get_min(yfit)-2, misc::Table::get_max(yfit)+2
+                std::min(misc::Table::get_min(yfit)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(yfit)+2.0, (long double) 1.0)
                 );
                 p.generate_domain(
                 misc::Table::get_min(x), misc::Table::get_max(x), x.size()+nn);
@@ -92,12 +86,13 @@ namespace regr
             void plot_data(){
                 misc::Plot p;
                 p.set_domain(
-                misc::Table::get_min(x)-2, misc::Table::get_max(x)+2
+                std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
                 );
                 p.set_range(
-                misc::Table::get_min(y)-2, misc::Table::get_max(y)+2
-                );     
-
+                std::min(misc::Table::get_min(y)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(y)+2.0, (long double) 1.0)
+                );    
                 p.set_title("Original data");
                 p.set_color(misc::Plot::Color::yellow);
                 p.plot_vect(x, y);         
@@ -114,6 +109,7 @@ namespace regr
                 t.add_col("yfit-data", yfit);
                 return t;
             }
+            
             friend class PolyRegression; 
     };
 
@@ -175,7 +171,8 @@ namespace regr
                     }
                 }
                 std::cout << "\n";
-                std::cout << "r: " << r << "    r²: " << std::pow(r, 2) << "\n";
+                std::cout << "r: " << get_fitted_r() << "    r²: " 
+                << std::pow(get_fitted_r(), 2) << "\n";
             }
 
     };

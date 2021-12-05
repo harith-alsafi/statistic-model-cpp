@@ -60,17 +60,6 @@ namespace intp
                 y_in.push_back(yy);
                 return yy;
             }
-
-            long double get_r(
-            std::vector<long double> _x, std::vector<long double> _y){
-                long double sumx = misc::Table::get_sum(_x);
-                long double sumy = misc::Table::get_sum(_y);
-                long double sumxx = misc::Table::get_sum(_x*_x);
-                long double sumxy = misc::Table::get_sum(_x*_y);
-                long double sumyy = misc::Table::get_sum(_y*_y);
-                return (n*sumxy-(sumx*sumy))/
-                (sqrt((n*sumxx-pow(sumx, 2))*(_x.size()*sumyy-pow(sumy, 2))));
-            }
             
         public:
             LinearInterp(){}
@@ -111,10 +100,12 @@ namespace intp
             void plot_data(){
                 misc::Plot p;
                 p.set_domain(
-                misc::Table::get_min(x)-2, misc::Table::get_max(x)+2
+                std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
                 );
                 p.set_range(
-                misc::Table::get_min(y)-2, misc::Table::get_max(y)+2
+                std::min(misc::Table::get_min(y)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(y)+2.0, (long double) 1.0)
                 );     
                 p.set_title("Original data");
                 p.set_color(misc::Plot::Color::yellow);
@@ -124,11 +115,13 @@ namespace intp
             void plot_interpolated_data(){
                 misc::Plot p;
                 p.set_domain(
-                misc::Table::get_min(x_in)-2, misc::Table::get_max(x_in)+2
+                std::min(misc::Table::get_min(x_in)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x_in)+2.0, (long double) 1.0)
                 );
                 p.set_range(
-                misc::Table::get_min(y_in)-2, misc::Table::get_max(y_in)+2
-                );  
+                std::min(misc::Table::get_min(y_in)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(y_in)+2.0, (long double) 1.0)
+                ); 
                 p.set_title("Interpolated data");
                 p.set_color(misc::Plot::Color::green);
                 p.plot_vect(x_in, y_in);                  
@@ -137,13 +130,15 @@ namespace intp
             void plot_combined_data(){
                 misc::Plot p;
                 p.set_domain(
-                misc::Table::get_min(x_comb)-2, misc::Table::get_max(x_comb)+2
+                std::min(misc::Table::get_min(x_comb)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x_comb)+2.0, (long double) 1.0)
                 );
                 p.set_range(
-                misc::Table::get_min(y_comb)-2, misc::Table::get_max(y_comb)+2
+                std::min(misc::Table::get_min(y_comb)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(y_comb)+2.0, (long double) 1.0)
                 );     
                 p.set_title("Combined data");
-                p.set_color(misc::Plot::Color::yellow);
+                p.set_color(misc::Plot::Color::blue);
                 p.plot_vect(x_comb, y_comb);                   
             }
 
@@ -169,17 +164,54 @@ namespace intp
             }   
 
             long double get_r_original_data(){
-                return get_r(x, y);
+                return misc::Table::get_r(x, y);
             }
 
             long double get_r_combined_data(){
-                return get_r(x_comb, y_comb);
+                return misc::Table::get_r(x_comb, y_comb);
             }    
+
+            friend class PolyInterp;
     };
 
-    class PolyInterp
+    class PolyInterp : public LinearInterp
     {
+        private:
+            long double _find_value(long double xx, 
+            std::vector<long double> _x, std::vector<long double> _y){
+                auto lessThan =
+                    [](long double x1, long double x2)
+                    ->bool{return x1 < x2;};
 
+                //Find the first table entry whose value is >= caller's x value
+                auto iter = std::lower_bound(_x.cbegin(), _x.cend(), xx, lessThan);
+
+                //If the caller's X value is greater than the largest
+                //X value in the table, we can't interpolate.
+                if(iter == _x.cend()) {
+                    return _y.at(_x.size()-1);
+                }
+                
+                //If the caller's X value is less than the smallest X value in the table,
+                //we can't interpolate.
+                if(iter == _x.cbegin() && xx <= _x.at(0)) {
+                    return _y.at(0);
+                }
+
+                // Implementing Lagrange Interpolation 
+                long double p;
+                long double yy;
+                for(int i = 0; i < n; i++){ 
+                    p = 1.0;
+                    for(int j = 0; j < n; j++){
+                        if(i!=j){
+                            p = p* (xx - x[j])/(x[i] - x[j]);
+                        }
+                    }
+                    yy = yy + p * y[i];
+                }
+                return yy;            
+            }
     };   
     
 } // namespace Int

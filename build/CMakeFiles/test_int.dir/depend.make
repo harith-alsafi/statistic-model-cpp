@@ -22,7 +22,7 @@ CMakeFiles/test_int.dir/test/int_test.cpp.o: ../lib/googletest/googletest/includ
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-string.h
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../include/graphs.hpp
-CMakeFiles/test_int.dir/test/int_test.cpp.o: ../include/int.hpp
+CMakeFiles/test_int.dir/test/int_test.cpp.o: ../include/intp.hpp
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../include/misc.hpp
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../lib/googletest/googletest/include/gtest/gtest.h
 CMakeFiles/test_int.dir/test/int_test.cpp.o: ../test/int_test.cpp
