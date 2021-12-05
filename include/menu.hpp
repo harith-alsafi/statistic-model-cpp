@@ -10,7 +10,10 @@ class Menu
         {
             running,
             exit,
-            error_csv
+            error_csv,
+            show_data,
+            regression,
+            interpolation
         };
 
         State menu_state;
@@ -25,43 +28,90 @@ class Menu
         intp::PolyInterp pip;
 
         int choice;
+        std::string filename;
 
-        void check_choice(int min, int max, int ch){
-            if(ch > max || ch < min){
+        void check_choice(int max, int ch){
+            if(ch > max || ch < 1){
                 std::cout << 
                 "Choice " + to_string(ch) + " doesn't exist, please try again \n"; 
             }
         }
 
-        void main_options(int &ch){
-            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+        void main_options(){
+            std::cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○ \n";
             std::cout << "[1] Load CSV file \n";
             std::cout << "[2] Show data of loaded CSV \n";
             std::cout << "[3] Statistical analysis of all columns in loaded CSV \n";
             std::cout << "[4] Regression on loaded CSV \n";
             std::cout << "[5] Interpolation on loaded CSV \n";
-            std::cout << "[6] Exit \n";
-            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "[6] Interpolation on loaded CSV \n";
+            std::cout << "[7] Exit \n";
+            std::cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○ \n";
             std::cout << "Enter your choice: ";    
-            std::cin >> ch;
+            std::cin >> choice;
             std::cout << "------------------------------------------------------- \n";
-            check_choice(1, 6, ch);
+            check_choice(7, choice);
         }
 
         void load_csv(){
             std::cout << "Enter CSV file name (with .csv extension): ";
-            std::string name;
-            std::cin >> name;
-            if(!table.read_csv(name)){
-                std::cout << "File: " + name + " could not be open \n";
+            
+            std::cin >> filename;
+            if(!table.read_csv(filename)){
+                std::cout << "File: " + filename + " could not be open \n";
                 menu_state = State::error_csv;
             }
-            std::cout << "File: " + name + " was loaded \n";
+            std::cout << "File: " + filename + " was loaded \n";
             menu_state = State::running;
         }
 
-        void check_errors(){
+        bool check_errors(){
+            if(menu_state != State::error_csv){
+                return true;
+            }
+            std::cout << "No CSV file was loaded please try again \n";
+            return false;
+        }
 
+        void show_data_options(){
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "[1] Show all data \n";
+            std::cout << "[2] Show n-rows \n";
+            std::cout << "[3] Show specefic column \n";
+            std::cout << "[4] Show specefic row \n";
+            std::cout << "[5] Go back \n";
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "Enter your choice: ";    
+            std::cin >> choice;
+            std::cout << "------------------------------------------------------- \n";
+            if(choice == 1){
+                table.show();
+            }
+            else if(choice == 2){
+                int n = 0;
+                std::cout << "Enter number of rows: ";
+                std::cin >> n; 
+                if( n >= table.size() || n < 0){
+                    std::cout << "Invalid number of rows please try again \n ";
+                    menu_state = State::show_data;
+                    return;
+                }
+                table.show(n);
+            }
+            else if(choice == 3){
+                std::string colname;
+                std::cout << "Enter column name: ";
+                std::cin >> colname;
+
+
+            }
+            else if (choice == 4){
+
+            }
+            else if(choice == 5){
+                menu_state = State::running;
+            }
+            check_choice(5, choice);
         }
 
     public:
@@ -73,37 +123,54 @@ class Menu
         void run(){
             while(menu_state != exit)
             {
-                main_options(choice);
+                main_options();
 
                 if(choice == 1)
                 {
-
-                }
-                
-                else if (choice == 2)
-                {
-
-                }
-                
-                else if (choice == 3)
-                {
-
-                }
-                
-                else if (choice == 4)
-                {
-
+                    load_csv();
                 }
 
-                else if (choice == 5)
-                {
+                if(check_errors()){
+                    if(choice == 2)
+                    {
+                        while (menu_state == State::show_data)
+                        {
+                            show_data_options();
+                        }
+                    }
 
+                    
+                    if (choice == 3)
+                    {
+                        table.describe_all().show();
+                    }
+                    
+                    else if (choice == 4)
+                    {
+                        while(menu_state == State::regression)
+                        {
+
+                        }
+                    }
+
+                    else if (choice == 5)
+                    {
+                        while(menu_state == State::interpolation)
+                        {
+
+                        }
+                    }
+                    else if (choice == 6)
+                    {
+                        
+                    }
                 }
 
-                else if (choice == 6)
+                if (choice == 7)
                 {
                     menu_state = State::exit;
                 }
+
             }
         }
 
