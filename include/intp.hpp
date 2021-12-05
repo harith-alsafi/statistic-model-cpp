@@ -2,6 +2,8 @@
 #include <vector>
 #include <iterator>
 #include <iostream>
+#include <utility>
+
 #include "misc.hpp"
 namespace intp
 {
@@ -18,42 +20,52 @@ namespace intp
             std::vector<long double> x_comb;
             std::vector<long double> y_comb;
             int n; // size of original 
+            misc::Plot p;
 
-            long double _find_value(long double xx, 
+            virtual long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
+                std::vector<std::pair<long double, long double>> _points;
+                for(int i = 0; i < _x.size(); i++){
+                    _points.push_back({_x[i], _y[i]});
+                }
+                std::sort(_points.begin(), _points.end());
+                
+                // std::sort(_x.begin(), _x.end());
+                // std::sort(_y.begin(), _y.end());
+
+                //Define a lambda that returns true if the x value
+                //of a point pair is < the caller's x value
                 auto lessThan =
-                    [](long double x1, long double x2)
-                    ->bool{return x1 < x2;};
-
+                    [](std::pair<double, double> point, double xxx)
+                    {return point.first < xxx;};
+                
                 //Find the first table entry whose value is >= caller's x value
-                auto iter = std::lower_bound(_x.cbegin(), _x.cend(), xx, lessThan);
-
+                auto iter =
+                    std::lower_bound(_points.cbegin(), _points.cend(), xx, lessThan);
+                
                 //If the caller's X value is greater than the largest
                 //X value in the table, we can't interpolate.
-                if(iter == _x.cend()) {
-                    return _y.at(_x.size()-1);
+                if(iter == _points.cend()) {
+                    return (_points.cend() - 1)->second;
                 }
                 
                 //If the caller's X value is less than the smallest X value in the table,
                 //we can't interpolate.
-                if(iter == _x.cbegin() && xx <= _x.at(0)) {
-                    return _y.at(0);
+                if(iter == _points.cbegin() && xx <= _points.cbegin()->first) {
+                    return _points.cbegin()->second;
                 }
-                auto indxL = std::distance
-                <std::vector<long double>::const_iterator>(_x.begin(), iter);
-                auto indxU = std::distance
-                <std::vector<long double>::const_iterator>(_x.begin(), (iter-1));
                 
                 //We can interpolate!
-                long double upperX = _x[indxL];
-                long double upperY = _y[indxL];
-                long double lowerX = _x[indxU];
-                long double lowerY = _y[indxU];
+                long double upperX = iter->first;
+                long double upperY = iter->second;
+                long double lowerX = (iter - 1)->first;
+                long double lowerY = (iter - 1)->second;
                 
                 long double deltaY = upperY - lowerY;
                 long double deltaX = upperX - lowerX;
                 
-                long double yy = lowerY + ((xx - lowerX)/ deltaX) * deltaY;
+                long double yy  = lowerY + ((xx - lowerX)/ deltaX) * deltaY;
+
                 x_comb.push_back(xx);
                 y_comb.push_back(yy);
                 x_in.push_back(xx);
@@ -66,7 +78,7 @@ namespace intp
 
             void load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
-                    throw std::invalid_argument("Invalid size");
+                    throw std::invalid_argument("intp::LinearInterp::load_data -> Size mismatch");
                 }
                 x = xx;
                 y = yy;
@@ -84,8 +96,6 @@ namespace intp
                         throw std::range_error(err);
                     }
                 }
-                std::sort(x.begin(), x.end());
-                std::sort(y.begin(), y.end());
                 x_in.clear();
                 y_in.clear();
             }
@@ -97,8 +107,27 @@ namespace intp
                 return _find_value(xx, x, y);
             }
 
+            void reset_interpolated(){
+                x_in.clear();
+                y_in.clear();
+                x_comb.clear();
+                y_comb.clear();
+                x_comb = x;
+                y_comb = y;
+            }
+
+            void plot_all_interpolation(int nn = 400){
+                auto dmn = misc::generate_vector(
+                misc::Table::get_min(x), misc::Table::get_max(x),
+                400);
+                for(int i = 0; i < dmn.size(); i++){
+                    find_value(dmn[i]);
+                }
+                plot_combined_data();
+                reset_interpolated();
+            }
+
             void plot_data(){
-                misc::Plot p;
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
                 std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
@@ -113,22 +142,22 @@ namespace intp
             }
 
             void plot_interpolated_data(){
-                misc::Plot p;
-                p.set_domain(
-                std::min(misc::Table::get_min(x_in)-2.0, (long double) -1.0), 
-                std::max(misc::Table::get_max(x_in)+2.0, (long double) 1.0)
-                );
-                p.set_range(
-                std::min(misc::Table::get_min(y_in)-2.0, (long double) -1.0), 
-                std::max(misc::Table::get_max(y_in)+2.0, (long double) 1.0)
-                ); 
-                p.set_title("Interpolated data");
-                p.set_color(misc::Plot::Color::green);
-                p.plot_vect(x_in, y_in);                  
+                if(!x_in.empty()){
+                    p.set_domain(
+                    std::min(misc::Table::get_min(x_in)-2.0, (long double) -1.0), 
+                    std::max(misc::Table::get_max(x_in)+2.0, (long double) 1.0)
+                    );
+                    p.set_range(
+                    std::min(misc::Table::get_min(y_in)-2.0, (long double) -1.0), 
+                    std::max(misc::Table::get_max(y_in)+2.0, (long double) 1.0)
+                    ); 
+                    p.set_title("Interpolated data");
+                    p.set_color(misc::Plot::Color::green);
+                    p.plot_vect(x_in, y_in);    
+                }             
             }
 
             void plot_combined_data(){
-                misc::Plot p;
                 p.set_domain(
                 std::min(misc::Table::get_min(x_comb)-2.0, (long double) -1.0), 
                 std::max(misc::Table::get_max(x_comb)+2.0, (long double) 1.0)
@@ -176,7 +205,7 @@ namespace intp
 
     class PolyInterp : public LinearInterp
     {
-        private:
+        private:            
             long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
                 auto lessThan =
@@ -199,17 +228,21 @@ namespace intp
                 }
 
                 // Implementing Lagrange Interpolation 
-                long double p;
-                long double yy;
+                long double p = 1.0;
+                long double yy = 0.0;
                 for(int i = 0; i < n; i++){ 
                     p = 1.0;
                     for(int j = 0; j < n; j++){
-                        if(i!=j){
+                        if(i != j){
                             p = p* (xx - x[j])/(x[i] - x[j]);
                         }
                     }
                     yy = yy + p * y[i];
                 }
+                x_comb.push_back(xx);
+                y_comb.push_back(yy);
+                x_in.push_back(xx);
+                y_in.push_back(yy);
                 return yy;            
             }
     };   

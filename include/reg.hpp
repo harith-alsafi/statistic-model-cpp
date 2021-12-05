@@ -18,7 +18,7 @@ namespace regr
             long double sumxy; // sum of x*y
             int n; // size of vetors 
             // function 
-            long double fun(long double xx){
+            virtual long double fun(long double xx){
                 return (long double)m*xx+c;
             }
         
@@ -37,7 +37,7 @@ namespace regr
 
             long double load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
-                    throw std::invalid_argument("Invalid size");
+                    throw std::invalid_argument("regr::LinearRegression::load_data -> Size mismatch");
                 }
                 x = xx;
                 y = yy;
@@ -48,7 +48,7 @@ namespace regr
                 sumxy = misc::Table::get_sum(x*y);
             }
 
-            long double fit_data(){
+            virtual long double fit_data(){
                 m = (n*sumxy-sumx*sumy)/(n*sumxx-sumx*sumx);
                 c = (sumy-m*sumx)/n;
                 yfit.clear();
@@ -57,7 +57,7 @@ namespace regr
                 }
             }
 
-            void show_equation(){
+            virtual void show_equation(){
                 std::cout << std::fixed;
                 std::cout << std::setprecision(3);
                 std::cout << "y = " << m << "⋅" << "x" << " + " << c << "\n"
@@ -126,6 +126,7 @@ namespace regr
                 }
                 return sm;
             }
+            
             std::vector<long double> coef;
             int degree; 
 
@@ -173,6 +174,10 @@ namespace regr
                 std::cout << "\n";
                 std::cout << "r: " << get_fitted_r() << "    r²: " 
                 << std::pow(get_fitted_r(), 2) << "\n";
+            }
+
+            void fit_data(){
+
             }
 
     };

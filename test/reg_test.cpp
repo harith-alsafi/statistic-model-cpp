@@ -23,7 +23,7 @@ TEST(reg, lr_values)
       {0, 2, 5, 7},
       {-1, 5, 12, 20});
    lr.fit_data();
-   ASSERT_DOUBLE_EQ(round(lr.get_r(), 4), 0.9945);
+   ASSERT_DOUBLE_EQ(round(lr.get_original_r(), 4), 0.9945);
    ASSERT_DOUBLE_EQ(round(lr.get_slope(), 3), 2.897);
    ASSERT_DOUBLE_EQ(round(lr.get_y_intersept(), 3), -1.138);
 

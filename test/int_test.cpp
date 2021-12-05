@@ -21,19 +21,16 @@ TEST(intp, linear_data_test)
 
 TEST(intp, linear_show_plots)
 {
-   std::vector<long double> x = {7.5, 1.5, 0.5, 3.5};
-   std::vector<long double> y = {32.0, 20.0, 10.0, 28.0};
+   std::vector<long double> x = {6.0, 2.0, 1.0, 5.0, 4.0, 3.0};
+   std::vector<long double> y = {3.0, 3.0, 2.0, 1.0, -2.0, 1.0};
 
    LinearInterp lip;
    lip.load_data(x, y);
 
-   lip.find_value(2.5);
-   lip.find_value(5.5);
-   lip.find_value(1.0);
-
    lip.plot_data();
    lip.plot_combined_data();
    lip.plot_interpolated_data(); 
+   lip.plot_all_interpolation();
 }
 
 TEST(intp, linear_show_table)
@@ -55,7 +52,29 @@ TEST(intp, linear_show_table)
    lip.get_interpolated_data().show(); 
 }
 
+TEST(intp, poly_data_test)
+{
+   std::vector<long double> x = {5.0, 7.0, 11.0, 13.0, 17.0};
+   std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
 
+   PolyInterp pip;
+   pip.load_data(x, y);
+
+
+   ASSERT_DOUBLE_EQ(pip.find_value(9.0), 810.0);
+}
+
+TEST(intp, poly_plots)
+{
+   std::vector<long double> x = {5.0, 7.0, 11.0, 13.0, 17.0};
+   std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
+
+   PolyInterp pip;
+   pip.load_data(x, y);
+   
+   pip.plot_combined_data();
+   pip.plot_all_interpolation();
+}
 
 int main(int argc, char **argv) 
 {

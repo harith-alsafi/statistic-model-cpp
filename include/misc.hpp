@@ -32,6 +32,15 @@ D round(D a, int dp = 0){
 
 namespace misc
 {
+    template<typename D>
+    std::vector<D>generate_vector(D mn, D mx, int n){
+        std::vector<D> v;
+        for(D i = mn; i <= mx; i+=(D)(mx-mn)/n){
+            v.push_back(i);
+        }
+        return v;
+    }
+
     /**
      * @brief Table class to contain the dataframe 
      */
@@ -45,22 +54,6 @@ namespace misc
                 long double Q2; // median
                 long double Q3; 
                 long double UQ; // upper quartile 
-                std::string toString(){
-                    std::string str;
-                    str = Table::prd("LQ", 10)
-                        + Table::prd("Q1", 10)
-                        + Table::prd("Q2", 10)
-                        + Table::prd("Q3", 10)
-                        + Table::prd("UQ", 10)
-                        + "\n";
-                    str += "--------------------------------------------- \n";
-                    str += Table::prd(LQ, 10)  
-                        +  Table::prd(Q1, 10)  
-                        +  Table::prd(Q2, 10)  
-                        +  Table::prd(Q3, 10)  
-                        +  Table::prd(UQ, 10);
-                    return str;
-                }
             };
         private:
             int check_header(std::string head){
@@ -484,7 +477,7 @@ namespace misc
 
             bool add_col(std::string col_name, std::vector<long double> col_data){
                 check_size();
-                if(col_data.size() != row && row != 0){
+                if((col_data.size() != row && row != 0) || col_data.empty()){
                     return false;
                 }
                 headers.push_back(col_name);
@@ -607,10 +600,7 @@ namespace misc
              * @param n number of points
              */
             void generate_domain(long double xmn, long double xmx, int n){
-                domain.clear();
-                for(long double x = xmn; x < xmax; x+=(long double)(xmx-xmn)/n){
-                    domain.push_back(x);
-                }
+                domain = generate_vector(xmn, xmx, n);
             }
 
             /**
