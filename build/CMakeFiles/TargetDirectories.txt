@@ -1,12 +1,13 @@
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/install/strip.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/install.dir
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/list_install_components.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/test_misc.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/install/local.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/test_reg.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/test_int.dir
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/test_menu.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/rebuild_cache.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/edit_cache.dir
-/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles/list_install_components.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/lib/googletest/CMakeFiles/install/strip.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/lib/googletest/CMakeFiles/install.dir
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/lib/googletest/CMakeFiles/install/local.dir

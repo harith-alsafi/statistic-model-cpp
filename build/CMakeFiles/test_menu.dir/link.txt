@@ -1,0 +1,1 @@
+/usr/bin/g++-7 -g CMakeFiles/test_menu.dir/test/menu_test.cpp.o -o ../out/test_menu 

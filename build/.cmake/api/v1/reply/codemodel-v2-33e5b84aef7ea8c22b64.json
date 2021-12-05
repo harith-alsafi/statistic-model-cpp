@@ -21,7 +21,8 @@
 					[
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				},
 				{
@@ -73,7 +74,8 @@
 					[
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				},
 				{
@@ -121,21 +123,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "test_int::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_int-Debug-55ee93ab0d3e5306e89f.json",
+					"jsonFile" : "target-test_int-Debug-9f8f8ad8ea1b24e48fca.json",
 					"name" : "test_int",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "test_menu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_menu-Debug-cb6b10ea354611bf4904.json",
+					"name" : "test_menu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "test_misc::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_misc-Debug-9cbdc7b48151cecead56.json",
+					"jsonFile" : "target-test_misc-Debug-79efc4bcddf3f2f5ba71.json",
 					"name" : "test_misc",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test_reg::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_reg-Debug-aeff3a6ff299f4832cc0.json",
+					"jsonFile" : "target-test_reg-Debug-22f680c9a5a90794f903.json",
 					"name" : "test_reg",
 					"projectIndex" : 0
 				}

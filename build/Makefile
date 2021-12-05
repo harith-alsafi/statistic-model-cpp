@@ -99,6 +99,16 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,16 +142,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -215,6 +215,19 @@ test_int/fast:
 .PHONY : test_int/fast
 
 #=============================================================================
+# Target rules for targets named test_menu
+
+# Build rule for target.
+test_menu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_menu
+.PHONY : test_menu
+
+# fast build rule for target.
+test_menu/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/build
+.PHONY : test_menu/fast
+
+#=============================================================================
 # Target rules for targets named gtest_main
 
 # Build rule for target.
@@ -266,6 +279,33 @@ test/int_test.s: test/int_test.cpp.s
 test/int_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_int.dir/build.make CMakeFiles/test_int.dir/test/int_test.cpp.s
 .PHONY : test/int_test.cpp.s
+
+test/menu_test.o: test/menu_test.cpp.o
+
+.PHONY : test/menu_test.o
+
+# target to build an object file
+test/menu_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/test/menu_test.cpp.o
+.PHONY : test/menu_test.cpp.o
+
+test/menu_test.i: test/menu_test.cpp.i
+
+.PHONY : test/menu_test.i
+
+# target to preprocess a source file
+test/menu_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/test/menu_test.cpp.i
+.PHONY : test/menu_test.cpp.i
+
+test/menu_test.s: test/menu_test.cpp.s
+
+.PHONY : test/menu_test.s
+
+# target to generate assembly for a file
+test/menu_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/test/menu_test.cpp.s
+.PHONY : test/menu_test.cpp.s
 
 test/misc_test.o: test/misc_test.cpp.o
 
@@ -336,11 +376,15 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... test_int"
+	@echo "... test_menu"
 	@echo "... test_misc"
 	@echo "... test_reg"
 	@echo "... test/int_test.o"
 	@echo "... test/int_test.i"
 	@echo "... test/int_test.s"
+	@echo "... test/menu_test.o"
+	@echo "... test/menu_test.i"
+	@echo "... test/menu_test.s"
 	@echo "... test/misc_test.o"
 	@echo "... test/misc_test.i"
 	@echo "... test/misc_test.s"

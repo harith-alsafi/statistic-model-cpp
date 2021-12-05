@@ -72,6 +72,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_misc.dir/DependInfo.cmake"
   "CMakeFiles/test_reg.dir/DependInfo.cmake"
   "CMakeFiles/test_int.dir/DependInfo.cmake"
+  "CMakeFiles/test_menu.dir/DependInfo.cmake"
   "lib/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "lib/googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )

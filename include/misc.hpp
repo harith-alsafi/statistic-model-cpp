@@ -68,10 +68,12 @@ namespace misc
             std::vector<long double> get_col_(std::string headname){
                 int j = check_header(headname);
                 std::vector<long double> a;
-                for(int i = 0; i < size(); i++){
-                    a.push_back(at(i).at(j));
+                if(j >= 0){
+                    for(int i = 0; i < size(); i++){
+                        a.push_back(at(i).at(j));
+                    }
                 }
-                return a;                
+                return a;  
             }
 
             std::vector<long double> get_avgs(){

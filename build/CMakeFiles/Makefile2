@@ -75,6 +75,7 @@ CMAKE_BINARY_DIR = /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/
 all: CMakeFiles/test_misc.dir/all
 all: CMakeFiles/test_reg.dir/all
 all: CMakeFiles/test_int.dir/all
+all: CMakeFiles/test_menu.dir/all
 
 .PHONY : all
 
@@ -87,6 +88,7 @@ preinstall:
 clean: CMakeFiles/test_misc.dir/clean
 clean: CMakeFiles/test_reg.dir/clean
 clean: CMakeFiles/test_int.dir/clean
+clean: CMakeFiles/test_menu.dir/clean
 clean: lib/googletest/clean
 
 .PHONY : clean
@@ -136,7 +138,7 @@ lib/googletest/googletest/clean: lib/googletest/googletest/CMakeFiles/gtest.dir/
 CMakeFiles/test_misc.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_misc.dir/build.make CMakeFiles/test_misc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_misc.dir/build.make CMakeFiles/test_misc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=7,8 "Built target test_misc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=9,10 "Built target test_misc"
 .PHONY : CMakeFiles/test_misc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -163,7 +165,7 @@ CMakeFiles/test_misc.dir/clean:
 CMakeFiles/test_reg.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_reg.dir/build.make CMakeFiles/test_reg.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_reg.dir/build.make CMakeFiles/test_reg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=9,10 "Built target test_reg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=11,12 "Built target test_reg"
 .PHONY : CMakeFiles/test_reg.dir/all
 
 # Build rule for subdir invocation for target.
@@ -209,6 +211,33 @@ test_int: CMakeFiles/test_int.dir/rule
 CMakeFiles/test_int.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_int.dir/build.make CMakeFiles/test_int.dir/clean
 .PHONY : CMakeFiles/test_int.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_menu.dir
+
+# All Build rule for target.
+CMakeFiles/test_menu.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles --progress-num=7,8 "Built target test_menu"
+.PHONY : CMakeFiles/test_menu.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_menu.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_menu.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_menu.dir/rule
+
+# Convenience name for target.
+test_menu: CMakeFiles/test_menu.dir/rule
+
+.PHONY : test_menu
+
+# clean rule for target.
+CMakeFiles/test_menu.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_menu.dir/build.make CMakeFiles/test_menu.dir/clean
+.PHONY : CMakeFiles/test_menu.dir/clean
 
 #=============================================================================
 # Target rules for target lib/googletest/googletest/CMakeFiles/gtest_main.dir

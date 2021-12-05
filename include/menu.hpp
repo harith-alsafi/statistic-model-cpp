@@ -38,7 +38,7 @@ class Menu
         }
 
         void main_options(){
-            std::cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○ \n";
+            std::cout << "―――――――――――――――――――――Main Window―――――――――――――――――――――――― \n";
             std::cout << "[1] Load CSV file \n";
             std::cout << "[2] Show data of loaded CSV \n";
             std::cout << "[3] Statistical analysis of all columns in loaded CSV \n";
@@ -46,7 +46,7 @@ class Menu
             std::cout << "[5] Interpolation on loaded CSV \n";
             std::cout << "[6] Interpolation on loaded CSV \n";
             std::cout << "[7] Exit \n";
-            std::cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○ \n";
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
             std::cout << "Enter your choice: ";    
             std::cin >> choice;
             std::cout << "------------------------------------------------------- \n";
@@ -74,6 +74,7 @@ class Menu
         }
 
         void show_data_options(){
+            menu_state = State::show_data;
             std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
             std::cout << "[1] Show all data \n";
             std::cout << "[2] Show n-rows \n";
@@ -92,7 +93,7 @@ class Menu
                 std::cout << "Enter number of rows: ";
                 std::cin >> n; 
                 if( n >= table.size() || n < 0){
-                    std::cout << "Invalid number of rows please try again \n ";
+                    std::cout << "Invalid number of rows, please try again \n ";
                     menu_state = State::show_data;
                     return;
                 }
@@ -102,7 +103,10 @@ class Menu
                 std::string colname;
                 std::cout << "Enter column name: ";
                 std::cin >> colname;
-
+                auto vcol = table[colname];
+                if(vcol.empty()){
+                    std::cout << "Wrong column name, please try again \n ";
+                }
 
             }
             else if (choice == 4){
@@ -110,8 +114,21 @@ class Menu
             }
             else if(choice == 5){
                 menu_state = State::running;
+                choice = 0;
             }
             check_choice(5, choice);
+        }
+
+        void save_csv(){
+            std::string outname;
+            std::cout << "Enter file name: ";
+            std::cin >> outname;
+            if(!table.save_csv(outname)){
+                menu_state = State::running;
+                std::cout << "Error in saving the file \n";
+                return; 
+            }
+            std::cout << "File saved! \n";
         }
 
     public:
@@ -133,6 +150,7 @@ class Menu
                 if(check_errors()){
                     if(choice == 2)
                     {
+                        show_data_options();
                         while (menu_state == State::show_data)
                         {
                             show_data_options();
@@ -162,7 +180,7 @@ class Menu
                     }
                     else if (choice == 6)
                     {
-                        
+                        save_csv();
                     }
                 }
 
