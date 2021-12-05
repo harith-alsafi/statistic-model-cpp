@@ -48,7 +48,7 @@ namespace regr
                 sumxy = misc::Table::get_sum(x*y);
             }
 
-            virtual long double fit_data(){
+            virtual void fit_data(){
                 m = (n*sumxy-sumx*sumy)/(n*sumxx-sumx*sumx);
                 c = (sumy-m*sumx)/n;
                 yfit.clear();

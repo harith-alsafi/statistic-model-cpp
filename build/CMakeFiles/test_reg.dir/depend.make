@@ -23,7 +23,7 @@ CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../lib/googletest/googletest/includ
 CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../lib/googletest/googletest/include/gtest/internal/gtest-type-util.h
 CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../include/graphs.hpp
 CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../include/misc.hpp
-CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../include/reg.hpp
+CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../include/regr.hpp
 CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../lib/googletest/googletest/include/gtest/gtest.h
 CMakeFiles/test_reg.dir/test/reg_test.cpp.o: ../test/reg_test.cpp
 

@@ -376,7 +376,7 @@ numeric
 graphs.hpp
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/graphs.hpp
 
-/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/reg.hpp
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/regr.hpp
 vector
 -
 iostream
@@ -421,8 +421,8 @@ gtest/gtest_pred_impl.h
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include/gtest/gtest/gtest_pred_impl.h
 
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/test/reg_test.cpp
-../include/reg.hpp
-/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/reg.hpp
+../include/regr.hpp
+/media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/regr.hpp
 ../lib/googletest/googletest/include/gtest/gtest.h
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/lib/googletest/googletest/include/gtest/gtest.h
 

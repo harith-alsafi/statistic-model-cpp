@@ -110,8 +110,6 @@ namespace intp
             void reset_interpolated(){
                 x_in.clear();
                 y_in.clear();
-                x_comb.clear();
-                y_comb.clear();
                 x_comb = x;
                 y_comb = y;
             }

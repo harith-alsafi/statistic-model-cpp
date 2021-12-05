@@ -1,4 +1,4 @@
-#include "../include/reg.hpp"
+#include "../include/regr.hpp"
 #include "../lib/googletest/googletest/include/gtest/gtest.h"
 
 using namespace regr; 
@@ -32,7 +32,8 @@ TEST(reg, lr_values)
 TEST(reg, pr_showing)
 {
    PolyRegression pr;
-   pr.show_equation();
+
+   
 }
 
 int main(int argc, char **argv) 
