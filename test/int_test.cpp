@@ -66,13 +66,14 @@ TEST(intp, poly_data_test)
 
 TEST(intp, poly_plots)
 {
+   misc::Table t;
+   t.read_csv("homes.csv");
    std::vector<long double> x = {5.0, 7.0, 11.0, 13.0, 17.0};
    std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
 
    PolyInterp pip;
-   pip.load_data(x, y);
-   
-   pip.plot_combined_data();
+   pip.load_data(t["Sell"], t["Rooms"]);
+   pip.plot_data();
    pip.plot_all_interpolation();
 }
 

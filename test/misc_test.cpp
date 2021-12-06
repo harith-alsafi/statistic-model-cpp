@@ -48,7 +48,6 @@ TEST(misc, table_qr_sort_asc)
 	ASSERT_TRUE(qr_answer.Q2 == qr.Q2);
 	ASSERT_TRUE(qr_answer.Q3 == qr.Q3);
 	ASSERT_TRUE(qr_answer.UQ == qr.UQ);
-	std::cout << qr.toString();
 }
 
 TEST(misc, table_mean_std_var_sum)

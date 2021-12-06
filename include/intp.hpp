@@ -243,6 +243,8 @@ namespace intp
                 y_in.push_back(yy);
                 return yy;            
             }
+        public:
+            PolyInterp(){}
     };   
     
 } // namespace Int

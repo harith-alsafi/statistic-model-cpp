@@ -30,6 +30,8 @@ class Menu
 
         int choice;
         std::string filename;
+        bool linear_intp;
+        bool linear_reg;
 
         void check_choice(int max, int ch){
             if(ch > max || ch < 1){
@@ -134,6 +136,7 @@ class Menu
             else if(choice == 5){
                 menu_state = State::running;
                 choice = 0;
+                return;
             }
             check_choice(5, choice);
         }
@@ -148,6 +151,13 @@ class Menu
                 return; 
             }
             std::cout << "File saved! \n";
+        }
+
+        void show_poly_lin(std::string str){
+            std::cout << "[1] Linear "+str+" \n";
+            std::cout << "[2] Polynomial "+str+" \n";
+            std::cout << "Enter your choice: ";
+            std::cin >> choice;
         }
 
         void show_regression_options(){
@@ -180,31 +190,146 @@ class Menu
                     menu_state = State::error_unloaded_data;
                     return;
                 } 
-                lr.load_data(x, y);
-                lr.fit_data();
-                std::cout << "Data is fitted correctly \n ";
+                show_poly_lin("regression");
+                if(choice == 1){
+                    linear_reg = true;
+                    lr.load_data(x, y);
+                    lr.fit_data();   
+                    std::cout << "Data is fitted correctly \n ";
+                    return;
+                }
+                else if(choice == 2){
+                    linear_reg = false;
+                    pr.load_data(x, y);
+                    pr.fit_data();   
+                    std::cout << "Data is fitted correctly \n ";
+                    return;
+                }
+                check_choice(2, choice);
             }
             if(check_unloaded_errors()){
                 if(choice == 2){
-                    lr.show_equation();
-                    lr.plot_data();
-                    lr.plot_equation();
+                    if(linear_reg){
+                        lr.show_equation();
+                        lr.plot_data();
+                        lr.plot_equation();
+                    }
+                    else{
+                        pr.show_equation();
+                        pr.plot_data();
+                        pr.plot_equation();                     
+                    }
                 }
                 else if (choice == 3){
-                    lr.get_data().show();
+                    if(linear_reg){
+                        lr.get_data().show();
+                    }
+                    else{
+                        pr.get_data().show();
+                    }
                 }
             }
             if(choice == 4){
                 menu_state = State::running;
                 choice = 0;
+                return;
             }
             check_choice(4, choice);                  
+        }
+
+        void show_interpolation_option(){
+            menu_state = State::interpolation;
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "[1] Load the data \n";
+            std::cout << "[2] Predict using x input \n";
+            std::cout << "[3] Plot all possible interpolations \n";
+            std::cout << "[4] Show table with all data from option[2] \n";
+            std::cout << "[5] Go back \n";
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "Enter your choice: ";    
+            std::cin >> choice;
+            std::cout << "------------------------------------------------------- \n";
+            if(choice == 1){
+                table.show_header();
+                std::string colname;
+                std::cout << "Chose column name for x-data: ";
+                std::cin >> colname;
+                std::vector<long double> x = table[colname];
+                if(x.empty()){
+                    std::cout << "Wrong column name, please try again \n";
+                    menu_state = State::error_unloaded_data;
+                    return;
+                }
+                std::cout << "Chose column name for y-data: ";
+                std::cin >> colname;
+                std::vector<long double> y = table[colname];
+                if(y.empty()){
+                    std::cout << "Wrong column name, please try again \n";
+                    menu_state = State::error_unloaded_data;
+                    return;
+                } 
+                show_poly_lin("interpolation");
+                if(choice == 1){
+                    linear_intp = true;
+                    lip.load_data(x, y);
+                    std::cout << "Data is fitted correctly \n";
+                    return;
+                }
+                else if(choice == 2){
+                    linear_intp = false;
+                    pip.load_data(x, y);
+                    std::cout << "Data is fitted correctly \n";
+                    return;
+                }
+                check_choice(2, choice);
+            }
+            if(check_unloaded_errors()){
+                if(choice == 2){
+                    long double xx;
+                    std::cout << "Enter x-value: ";
+                    std::cin >> xx;
+                    if(linear_intp){
+                        xx = lip.find_value(xx);
+                    }
+                    else{
+                        xx = pip.find_value(xx);
+                    }
+                    std::cout << "Predicted y-value: " << xx << "\n";
+                }
+                else if (choice == 3){
+                    if(linear_intp){
+                        lip.plot_data();
+                        lip.plot_all_interpolation();
+                    }
+                    else{
+                        std::cout << "hile \n";
+                        pip.plot_data();
+                        pip.plot_all_interpolation();
+                    }
+                }
+                else if(choice == 4){
+                    if(linear_intp){
+                        lip.get_interpolated_data().show();
+                    }
+                    else{
+                        pip.get_interpolated_data().show();
+                    }
+                }
+            }
+            if(choice == 5){
+                menu_state = State::running;
+                choice = 0;
+                return;
+            }
+            check_choice(4, choice); 
         }
 
     public:
         Menu(){
             menu_state = running;
             choice = 0;
+            linear_intp = true;
+            linear_reg = true;
         }
 
         void run(){
@@ -244,9 +369,10 @@ class Menu
 
                     else if (choice == 5)
                     {
+                        show_interpolation_option();
                         while(menu_state == State::interpolation)
                         {
-
+                            show_interpolation_option();
                         }
                     }
                     else if (choice == 6)
