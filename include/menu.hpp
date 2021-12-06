@@ -11,6 +11,7 @@ class Menu
             running,
             exit,
             error_csv,
+            error_unloaded_data,
             show_data,
             regression,
             interpolation
@@ -44,8 +45,8 @@ class Menu
             std::cout << "[3] Statistical analysis of all columns in loaded CSV \n";
             std::cout << "[4] Regression on loaded CSV \n";
             std::cout << "[5] Interpolation on loaded CSV \n";
-            std::cout << "[6] Interpolation on loaded CSV \n";
-            std::cout << "[7] Exit \n";
+            std::cout << "[6] Save CSV file \n";
+            std::cout << "[7] Go back \n";
             std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
             std::cout << "Enter your choice: ";    
             std::cin >> choice;
@@ -60,16 +61,25 @@ class Menu
             if(!table.read_csv(filename)){
                 std::cout << "File: " + filename + " could not be open \n";
                 menu_state = State::error_csv;
+                return;
             }
             std::cout << "File: " + filename + " was loaded \n";
             menu_state = State::running;
         }
 
-        bool check_errors(){
+        bool check_csv_errors(){
             if(menu_state != State::error_csv){
                 return true;
             }
             std::cout << "No CSV file was loaded please try again \n";
+            return false;
+        }
+
+        bool check_unloaded_errors(){
+            if(menu_state != State::error_unloaded_data){
+                return true;
+            }
+            std::cout << "No data was loaded please try again \n";
             return false;
         }
 
@@ -103,14 +113,23 @@ class Menu
                 std::string colname;
                 std::cout << "Enter column name: ";
                 std::cin >> colname;
-                auto vcol = table[colname];
+                misc::Table vcol = table.get_col(colname);
                 if(vcol.empty()){
                     std::cout << "Wrong column name, please try again \n ";
+                    return;
                 }
-
+                vcol.show();
             }
             else if (choice == 4){
-
+                int rownum;
+                std::cout << "Enter row number: ";
+                std::cin >> rownum;
+                misc::Table vrow = table.get_row(rownum);
+                if(vrow.empty()){
+                    std::cout << "Wrong row number, please try again \n ";
+                    return;
+                }
+                vrow.show();
             }
             else if(choice == 5){
                 menu_state = State::running;
@@ -131,6 +150,57 @@ class Menu
             std::cout << "File saved! \n";
         }
 
+        void show_regression_options(){
+            menu_state = State::regression;
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "[1] Load and fit the data \n";
+            std::cout << "[2] Show and plot equation \n";
+            std::cout << "[3] Show the table \n";
+            std::cout << "[4] Go back \n";
+            std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
+            std::cout << "Enter your choice: ";    
+            std::cin >> choice;
+            std::cout << "------------------------------------------------------- \n";
+            if(choice == 1){
+                table.show_header();
+                std::string colname;
+                std::cout << "Chose column name for x-data: ";
+                std::cin >> colname;
+                std::vector<long double> x = table[colname];
+                if(x.empty()){
+                    std::cout << "Wrong column name, please try again \n ";
+                    menu_state = State::error_unloaded_data;
+                    return;
+                }
+                std::cout << "Chose column name for y-data: ";
+                std::cin >> colname;
+                std::vector<long double> y = table[colname];
+                if(y.empty()){
+                    std::cout << "Wrong column name, please try again \n ";
+                    menu_state = State::error_unloaded_data;
+                    return;
+                } 
+                lr.load_data(x, y);
+                lr.fit_data();
+                std::cout << "Data is fitted correctly \n ";
+            }
+            if(check_unloaded_errors()){
+                if(choice == 2){
+                    lr.show_equation();
+                    lr.plot_data();
+                    lr.plot_equation();
+                }
+                else if (choice == 3){
+                    lr.get_data().show();
+                }
+            }
+            if(choice == 4){
+                menu_state = State::running;
+                choice = 0;
+            }
+            check_choice(4, choice);                  
+        }
+
     public:
         Menu(){
             menu_state = running;
@@ -147,7 +217,7 @@ class Menu
                     load_csv();
                 }
 
-                if(check_errors()){
+                if(check_csv_errors()){
                     if(choice == 2)
                     {
                         show_data_options();
@@ -165,9 +235,10 @@ class Menu
                     
                     else if (choice == 4)
                     {
+                        show_regression_options();
                         while(menu_state == State::regression)
                         {
-
+                            show_regression_options();
                         }
                     }
 

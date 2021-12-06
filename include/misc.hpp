@@ -494,6 +494,10 @@ namespace misc
                 return true;
             }
 
+            void show_header(){
+                show(0);
+            }
+
             
 
     };
