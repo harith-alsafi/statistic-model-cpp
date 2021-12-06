@@ -73,9 +73,12 @@ namespace intp
         public:
             LinearInterp(){}
 
-            void load_data(std::vector<long double> xx, std::vector<long double> yy){
+            virtual void load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
                     throw std::invalid_argument("intp::LinearInterp::load_data -> Size mismatch");
+                }
+                if (xx.size() == 0 || yy.size() == 0) {
+                    throw std::invalid_argument("intp::LinearInterp::load_data -> Input is size = 0" );
                 }
                 x = xx;
                 y = yy;
@@ -88,8 +91,8 @@ namespace intp
                     long double deltaX{std::abs(x[i] - x[i-1])};
                     if(deltaX < EPSILON ) {
                         std::string err{"Potential Divide By Zero: Points " +
-                            std::to_string(i-1) + " And " +
-                            std::to_string(i) + " Are Too Close In Value"};
+                            std::to_string(x[i-1]) + " And " +
+                            std::to_string(x[i]) + " Are Too Close In Value"};
                         throw std::range_error(err);
                     }
                 }
@@ -251,6 +254,18 @@ namespace intp
             }
         public:
             PolyInterp(){}
+            void load_data(std::vector<long double> xx, std::vector<long double> yy){
+                if(xx.size() != yy.size()){
+                    throw std::invalid_argument("intp::LinearInterp::load_data -> Size mismatch");
+                }
+                x = xx;
+                y = yy;
+                x_comb = xx;
+                y_comb = yy;
+                n = xx.size();
+                x_in.clear();
+                y_in.clear();
+            }
     };   
     
 } // namespace Int

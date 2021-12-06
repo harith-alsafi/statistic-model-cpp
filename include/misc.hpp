@@ -618,7 +618,7 @@ namespace misc
             void plot_vect(std::vector<long double> &x, std::vector<long double> &y)
             {
                 if(x.size() != y.size()){
-                    std::cerr << "plot_vect->Ivalid input \n";
+                    std::cerr << "misc::Plot::plot_vect-> Size mismatch \n";
                     return;
                 }
                 long double **array;

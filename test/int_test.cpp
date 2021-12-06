@@ -74,7 +74,8 @@ TEST(intp, poly_plots)
    PolyInterp pip;
    pip.load_data(x, y);
    pip.plot_data();
-   pip.plot_all_interpolation(5000);
+   pip.plot_all_interpolation(100);
+   std::cout << pip.find_value(185) << "\n";
 }
 
 int main(int argc, char **argv) 

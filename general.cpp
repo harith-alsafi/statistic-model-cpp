@@ -1,147 +1,76 @@
-#include <bits/stdc++.h>
-#include <dirent.h>
+//Polynomial Fit
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include <vector>
+
 using namespace std;
-void CaseInsensitiveSort(vector<string>& strs)
+int main()
 {
-    std::sort(
-        strs.begin(),
-        strs.end(),
-        [](const std::string& str1, const std::string& str2){
-            return std::lexicographical_compare(
-                str1.begin(), str1.end(),
-                str2.begin(), str2.end(),
-                [](const char& char1, const char& char2) {
-                    return std::tolower(char1) < std::tolower(char2);
-                }
-            );
-        }
-    );
-}
+    int i,j,k,n,N;
+    cout.precision(4);                        //set precision
+    cout.setf(ios::fixed);
+    std::vector<long double> x = 
+    {0.0, 1.0, 2.0, 3.0, 4.0};
 
-std::vector<std::string> sort_asc(std::vector<std::string> a, bool len)
-{
-    std::vector<std::string> entries = a;
-    std::sort(entries.begin(), entries.end(), [&](const std::string& a, const std::string& b) -> bool {
-        for (size_t c = 0; c < a.size() and c < b.size(); c++) {
-            if(!len){
-                if (std::tolower(a[c]) != std::tolower(b[c])){
-                    return (std::tolower(a[c]) < std::tolower(b[c]));
-                }
-                else{
-                    return a[c] < b[c];
-                }
-            }
-            else if (std::tolower(a[c]) != std::tolower(b[c])){
-                return ((int) a[c]-48) < ((int) b[c]-48);
-            }
-        }
-        return a.size() < b.size();
-    });
-    return entries;
-}
+    std::vector<long double> y = 
+    {1.0, 1.8, 1.3, 2.5, 6.3};
 
-std::vector<std::string> sortDes(std::vector<std::string> a, bool len)
-{
-    std::vector<std::string> entries = a;
-    std::sort(entries.begin(), entries.end(), [&](const std::string& a, const std::string& b) -> bool {
-        for (size_t c = 0; c < a.size() and c < b.size(); c++) {
-            if(!len){
-                if (std::tolower(a[c]) != std::tolower(b[c])){
-                    return (std::tolower(a[c]) > std::tolower(b[c]));
-                }
-                else{
-                    return a[c] > b[c];
-                }
-            }
-            else if (std::tolower(a[c]) != std::tolower(b[c])){
-                return ((int) a[c]-48) > ((int) b[c]-48);
-                
-            }
-                
-        }
-        return a.size() > b.size();
-    });
-    return entries;
-}
-
-void readFolder(std::string f)
-{
-    const std::vector<std::string> vid_formats =
-    {"mp4", "wmv", "MOV", "avi"};
-    const std::vector<std::string> pic_formats =
-    {"png", "jpeg", "jpg"};
-    std::vector<std::string> vid_names;
-    std::vector<std::string> image_names;
-    auto get_name =
-    [&](std::string name)->std::string{
-        size_t lastindex = name.find_last_of(".");
-        return name.substr(0, lastindex);
-    };
-    auto get_prefix =
-    [&](std::string name)->std::string{
-        size_t lastindex = name.find_last_of(".");
-        return name.substr(lastindex+1);
-    };
-
-    /**
-     * return 1 -> vid
-     * return 0 -> image
-     * return -1 -> neither
-    **/
-    auto check_file =
-    [&](std::string name)->int{
-        for(int i = 0; i < (int) vid_formats.size(); i++){
-            if (vid_formats[i] == get_prefix(name)){
-                return 1;
-            }
-        }
-        for(int i = 0; i < (int) pic_formats.size(); i++){
-            if (pic_formats[i] == get_prefix(name)){
-                return 0;
-            }
-        }
-        return -1;
-    };
-
-    auto check_file_image =
-    [&](std::string name1, std::string name2)->bool{
-        return get_name(name1) == get_name(name2);
-    };
-
-    DIR *dir; struct dirent *diread;
-
-    if ((dir = opendir(f.c_str())) != NULL) {
-        while ((diread = readdir(dir)) != NULL) {
-            if(strcmp(diread->d_name, ".") != 0 && strcmp(diread->d_name, "..") != 0 ){
-                if(check_file(diread->d_name) == 1){
-                    cout << "shgs \n";
-                    vid_names.push_back(diread->d_name);
-                }
-                else if(check_file(diread->d_name) == 0){
-                    image_names.push_back(diread->d_name);
-                }
-            }
-
-        }
-        closedir (dir);
-    } else {
-        cout << "opendir";
-
+    N = x.size();
+    
+    n = 2;                                // n is the degree of Polynomial 
+    double X[2*n+1];                        //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+    for (i=0;i<2*n+1;i++)
+    {
+        X[i]=0;
+        for (j=0;j<N;j++)
+            X[i]=X[i]+pow(x[j],i);        //consecutive positions of the array will store N,sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
     }
-    for(int i = 0; i < (int) vid_names.size(); i++){
-        for(int j = 0; j < (int) image_names.size(); j++){
-            if(check_file_image(vid_names[i], image_names[j])){
-                cout << 
-                f+vid_names[i] << "\t" << f+image_names[j] << "\n";
-            }
-        }
+    double B[n+1][n+2],a[n+1];            //B is the Normal matrix(augmented) that will store the equations, 'a' is for value of the final coefficients
+    for (i=0;i<=n;i++)
+        for (j=0;j<=n;j++)
+            B[i][j]=X[i+j];            //Build the Normal matrix by storing the corresponding coefficients at the right positions except the last column of the matrix
+    double Y[n+1];                    //Array to store the values of sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
+    for (i=0;i<n+1;i++)
+    {    
+        Y[i]=0;
+        for (j=0;j<N;j++)
+        Y[i]=Y[i]+pow(x[j],i)*y[j];        //consecutive positions will store sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
     }
-}
-
-int main(int argc, char const *argv[])
-{
-    readFolder("/media/harithalsafi/DATA/Education/University/University-Year-2/User Interfaces/cw3/tomeo/videos/");
-
-
+    for (i=0;i<=n;i++)
+        B[i][n+1]=Y[i];                //load the values of Y as the last column of B(Normal Matrix but augmented)
+    n=n+1;                //n is made n+1 because the Gaussian Elimination part below was for n equations, but here n is the degree of polynomial and for n degree we get n+1 equations    
+    for (i=0;i<n;i++)                    //From now Gaussian Elimination starts(can be ignored) to solve the set of linear equations (Pivotisation)
+        for (k=i+1;k<n;k++)
+            if (B[i][i]<B[k][i])
+                for (j=0;j<=n;j++)
+                {
+                    double temp=B[i][j];
+                    B[i][j]=B[k][j];
+                    B[k][j]=temp;
+                }
+     
+    for (i=0;i<n-1;i++)            //loop to perform the gauss elimination
+        for (k=i+1;k<n;k++)
+            {
+                double t=B[k][i]/B[i][i];
+                for (j=0;j<=n;j++)
+                    B[k][j]=B[k][j]-t*B[i][j];    //make the elements below the pivot elements equal to zero or elimnate the variables
+            }
+    for (i=n-1;i>=0;i--)                //back-substitution
+    {                        //x is an array whose values correspond to the values of x,y,z..
+        a[i]=B[i][n];                //make the variable to be calculated equal to the rhs of the last equation
+        for (j=0;j<n;j++)
+            if (j!=i)            //then subtract all the lhs values except the coefficient of the variable whose value                                   is being calculated
+                a[i]=a[i]-B[i][j]*a[j];
+        a[i]=a[i]/B[i][i];            //now finally divide the rhs by the coefficient of the variable to be calculated
+    }
+    cout<<"\nThe values of the coefficients are as follows:\n";
+    for (i=0;i<n;i++)
+        cout<<"x^"<<i<<"="<<a[i]<<endl;            // Print the values of x^0,x^1,x^2,x^3,....    
+    cout<<"\nHence the fitted Polynomial is given by:\ny=";
+    for (i=0;i<n;i++)
+        cout<<" + ("<<a[i]<<")"<<"x^"<<i;
+    cout<<"\n";
     return 0;
-}
+}//output attached as .jpg
