@@ -72,9 +72,9 @@ TEST(intp, poly_plots)
    std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
 
    PolyInterp pip;
-   pip.load_data(t["Sell"], t["Rooms"]);
+   pip.load_data(x, y);
    pip.plot_data();
-   pip.plot_all_interpolation();
+   pip.plot_all_interpolation(5000);
 }
 
 int main(int argc, char **argv) 

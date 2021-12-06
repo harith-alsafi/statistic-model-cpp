@@ -29,9 +29,6 @@ namespace intp
                     _points.push_back({_x[i], _y[i]});
                 }
                 std::sort(_points.begin(), _points.end());
-                
-                // std::sort(_x.begin(), _x.end());
-                // std::sort(_y.begin(), _y.end());
 
                 //Define a lambda that returns true if the x value
                 //of a point pair is < the caller's x value
@@ -117,7 +114,7 @@ namespace intp
             void plot_all_interpolation(int nn = 400){
                 auto dmn = misc::generate_vector(
                 misc::Table::get_min(x), misc::Table::get_max(x),
-                400);
+                nn);
                 for(int i = 0; i < dmn.size(); i++){
                     find_value(dmn[i]);
                 }
@@ -206,37 +203,46 @@ namespace intp
         private:            
             long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
+                std::vector<std::pair<long double, long double>> _points;
+                for(int i = 0; i < _x.size(); i++){
+                    _points.push_back({_x[i], _y[i]});
+                }
+                std::sort(_points.begin(), _points.end());
+
+                //Define a lambda that returns true if the x value
+                //of a point pair is < the caller's x value
                 auto lessThan =
-                    [](long double x1, long double x2)
-                    ->bool{return x1 < x2;};
-
+                    [](std::pair<double, double> point, double xxx)
+                    {return point.first < xxx;};
+                
                 //Find the first table entry whose value is >= caller's x value
-                auto iter = std::lower_bound(_x.cbegin(), _x.cend(), xx, lessThan);
-
+                auto iter =
+                    std::lower_bound(_points.cbegin(), _points.cend(), xx, lessThan);
+                
                 //If the caller's X value is greater than the largest
                 //X value in the table, we can't interpolate.
-                if(iter == _x.cend()) {
-                    return _y.at(_x.size()-1);
+                if(iter == _points.cend()) {
+                    return (_points.cend() - 1)->second;
                 }
                 
                 //If the caller's X value is less than the smallest X value in the table,
                 //we can't interpolate.
-                if(iter == _x.cbegin() && xx <= _x.at(0)) {
-                    return _y.at(0);
+                if(iter == _points.cbegin() && xx <= _points.cbegin()->first) {
+                    return _points.cbegin()->second;
                 }
 
                 // Implementing Lagrange Interpolation 
-                long double p = 1.0;
-                long double yy = 0.0;
-                for(int i = 0; i < n; i++){ 
-                    p = 1.0;
-                    for(int j = 0; j < n; j++){
-                        if(i != j){
-                            p = p* (xx - x[j])/(x[i] - x[j]);
-                        }
+                long double yy = 0;
+                for (int i = 0; i < n; i++){
+                    long double m = 1;
+                    for (int j = 0; j < n; j++){
+                        if (i != j)
+                            m = m * (xx - _points[j].first) / (_points[i].first - _points[j].first);
                     }
-                    yy = yy + p * y[i];
+                    m = m * _points[i].second;
+                    yy = yy + m;
                 }
+
                 x_comb.push_back(xx);
                 y_comb.push_back(yy);
                 x_in.push_back(xx);
