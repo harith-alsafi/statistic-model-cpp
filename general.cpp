@@ -1,76 +1,69 @@
-//Polynomial Fit
-#include<iostream>
-#include<iomanip>
-#include<cmath>
-#include <vector>
-
+#include <curl/curl.h>
+#include <bits/stdc++.h>
+#include <sstream>
 using namespace std;
-int main()
+
+class CURLplusplus
 {
-    int i,j,k,n,N;
-    cout.precision(4);                        //set precision
-    cout.setf(ios::fixed);
-    std::vector<long double> x = 
-    {0.0, 1.0, 2.0, 3.0, 4.0};
-
-    std::vector<long double> y = 
-    {1.0, 1.8, 1.3, 2.5, 6.3};
-
-    N = x.size();
-    
-    n = 2;                                // n is the degree of Polynomial 
-    double X[2*n+1];                        //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
-    for (i=0;i<2*n+1;i++)
+private:
+    CURL* curl;
+    stringstream ss;
+    long http_code;
+    string response;
+public:
+    CURLplusplus()
+            : curl(curl_easy_init())
+    , http_code(0)
     {
-        X[i]=0;
-        for (j=0;j<N;j++)
-            X[i]=X[i]+pow(x[j],i);        //consecutive positions of the array will store N,sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+
     }
-    double B[n+1][n+2],a[n+1];            //B is the Normal matrix(augmented) that will store the equations, 'a' is for value of the final coefficients
-    for (i=0;i<=n;i++)
-        for (j=0;j<=n;j++)
-            B[i][j]=X[i+j];            //Build the Normal matrix by storing the corresponding coefficients at the right positions except the last column of the matrix
-    double Y[n+1];                    //Array to store the values of sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
-    for (i=0;i<n+1;i++)
-    {    
-        Y[i]=0;
-        for (j=0;j<N;j++)
-        Y[i]=Y[i]+pow(x[j],i)*y[j];        //consecutive positions will store sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
+    ~CURLplusplus()
+    {
+        if (curl) curl_easy_cleanup(curl);
     }
-    for (i=0;i<=n;i++)
-        B[i][n+1]=Y[i];                //load the values of Y as the last column of B(Normal Matrix but augmented)
-    n=n+1;                //n is made n+1 because the Gaussian Elimination part below was for n equations, but here n is the degree of polynomial and for n degree we get n+1 equations    
-    for (i=0;i<n;i++)                    //From now Gaussian Elimination starts(can be ignored) to solve the set of linear equations (Pivotisation)
-        for (k=i+1;k<n;k++)
-            if (B[i][i]<B[k][i])
-                for (j=0;j<=n;j++)
-                {
-                    double temp=B[i][j];
-                    B[i][j]=B[k][j];
-                    B[k][j]=temp;
-                }
-     
-    for (i=0;i<n-1;i++)            //loop to perform the gauss elimination
-        for (k=i+1;k<n;k++)
-            {
-                double t=B[k][i]/B[i][i];
-                for (j=0;j<=n;j++)
-                    B[k][j]=B[k][j]-t*B[i][j];    //make the elements below the pivot elements equal to zero or elimnate the variables
-            }
-    for (i=n-1;i>=0;i--)                //back-substitution
-    {                        //x is an array whose values correspond to the values of x,y,z..
-        a[i]=B[i][n];                //make the variable to be calculated equal to the rhs of the last equation
-        for (j=0;j<n;j++)
-            if (j!=i)            //then subtract all the lhs values except the coefficient of the variable whose value                                   is being calculated
-                a[i]=a[i]-B[i][j]*a[j];
-        a[i]=a[i]/B[i][i];            //now finally divide the rhs by the coefficient of the variable to be calculated
+    std::string Get(const std::string& url)
+    {
+        CURLcode res;
+        curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+        curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, this);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, response);
+        ss.str("");
+        http_code = 0;
+        res = curl_easy_perform(curl);
+        if (res != CURLE_OK)
+        {
+            throw std::runtime_error(curl_easy_strerror(res));
+        }
+        curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_code);
+        return ss.str();
     }
-    cout<<"\nThe values of the coefficients are as follows:\n";
-    for (i=0;i<n;i++)
-        cout<<"x^"<<i<<"="<<a[i]<<endl;            // Print the values of x^0,x^1,x^2,x^3,....    
-    cout<<"\nHence the fitted Polynomial is given by:\ny=";
-    for (i=0;i<n;i++)
-        cout<<" + ("<<a[i]<<")"<<"x^"<<i;
-    cout<<"\n";
+    long GetHttpCode()
+    {
+        return http_code;
+    }
+    string get_response(){
+        return response;
+    }
+private:
+    static size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp)
+    {
+        return static_cast<CURLplusplus*>(userp)->Write(buffer,size,nmemb);
+    }
+    size_t Write(void *buffer, size_t size, size_t nmemb)
+    {
+        ss.write((const char*)buffer,size*nmemb);
+        return size*nmemb;
+    }
+};
+int main(int argc, char const *argv[])
+{
+    string city = "leeds";
+    string api = "e84f587b3544442fbe13ca10af139a5b";
+    string link = "https://api.opencagedata.com/geocode/v1/json?q="+city+"&key="+api;
+    CURLplusplus crl;
+    crl.Get(link);
+    cout << crl.GetHttpCode();
     return 0;
-}//output attached as .jpg
+}

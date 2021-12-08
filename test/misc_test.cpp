@@ -16,6 +16,10 @@ TEST(misc, plot_arr)
 	Plot p;
 	std::vector<long double> x = {-2, -1, 0, 1, 2, 3};
 	std::vector<long double> y = {-4, -2, 0, 2, 4, 6};
+	p.set_range(-5.0, 7.0);
+	p.set_domain(-3.0, 4.0);
+	p.set_title("Original data");
+	p.set_color(Plot::Color::yellow);
 	p.plot_vect(x, y);
 }
 

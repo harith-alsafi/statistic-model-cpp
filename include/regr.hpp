@@ -17,6 +17,7 @@ namespace regr
             long double sumxx; // sum of x^2
             long double sumxy; // sum of x*y
             int n; // size of vetors 
+            misc::Plot p;
             // function 
             virtual long double fun(long double xx){
                 return (long double)m*xx+c;
@@ -68,9 +69,8 @@ namespace regr
                 << std::pow(get_original_r(), 2) << "\n";
             }
 
-            void plot_equation(int nn=100){
+            void plot_equation(int nn=200){
                 auto f = [&](long double xx)->long double{return fun(xx);};
-                misc::Plot p;
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
                 std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
@@ -80,14 +80,16 @@ namespace regr
                 std::max(misc::Table::get_max(y)+2.0, (long double) 1.0)
                 );
                 p.generate_domain(
-                misc::Table::get_min(x), misc::Table::get_max(x), x.size()+nn);
+                std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
+                std::max(misc::Table::get_max(x)+2.0, (long double) 1.0),
+                x.size()+nn
+                );
                 p.set_title("Equation with " + to_string(nn) + " data points");
                 p.set_color(misc::Plot::Color::blue);
                 p.plot_fun(f);
             }
 
             void plot_data(){
-                misc::Plot p;
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
                 std::max(misc::Table::get_max(x)+2.0, (long double) 1.0)
@@ -183,58 +185,83 @@ namespace regr
 
             void fit_data(){            
                 int i,j,k;
-                double X[2*degree+1];                        //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
-                for (i=0;i<2*degree+1;i++)
-                {
+                //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+                double X[2*degree+1];                        
+                for (i = 0; i < 2*degree+1; i++){
                     X[i]=0;
-                    for (j=0;j<n;j++)
-                        X[i]=X[i]+pow(x[j],i);        //consecutive positions of the array will store N,sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+                    //consecutive positions of the array will store N,sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+                    for (j=0;j<n;j++){
+                        X[i]=X[i]+pow(x[j],i);
+                    }
                 }
-                double B[degree+1][degree+2],a[degree+1];            //B is the Normal matrix(augmented) that will store the equations, 'a' is for value of the final coefficients
-                for (i=0;i<=degree;i++)
-                    for (j=0;j<=degree;j++)
-                        B[i][j]=X[i+j];            //Build the Normal matrix by storing the corresponding coefficients at the right positions except the last column of the matrix
-                double Y[degree+1];                    //Array to store the values of sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
-                for (i=0;i<degree+1;i++)
-                {    
+                //B is the Normal matrix(augmented) that will store the equations, 'a' is for value of the final coefficients
+                double B[degree+1][degree+2],a[degree+1];
+                 //Build the Normal matrix by storing the corresponding coefficients at the right positions except the last column of the matrix            
+                for (i = 0; i <= degree; i++){
+                    for (j=0;j<=degree;j++){
+                        B[i][j]=X[i+j];
+                    }
+                }
+                //Array to store the values of sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
+                double Y[degree+1];
+                //consecutive positions will store sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)                    
+                for (i = 0; i < degree+1; i++){    
                     Y[i]=0;
-                    for (j=0;j<n;j++)
-                    Y[i]=Y[i]+pow(x[j],i)*y[j];        //consecutive positions will store sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
+                    for (j = 0; j < n; j++){
+                        Y[i]=Y[i]+pow(x[j],i)*y[j];
+                    }       
                 }
-                for (i=0;i<=degree;i++)
-                    B[i][degree+1]=Y[i];                //load the values of Y as the last column of B(Normal Matrix but augmented)
-                degree=degree+1;                //n is made n+1 because the Gaussian Elimination part below was for n equations, but here n is the degree of polynomial and for n degree we get n+1 equations    
-                for (i=0;i<degree;i++)                    //From now Gaussian Elimination starts(can be ignored) to solve the set of linear equations (Pivotisation)
-                    for (k=i+1;k<degree;k++)
-                        if (B[i][i]<B[k][i])
-                            for (j=0;j<=degree;j++)
-                            {
+                 //load the values of Y as the last column of B(Normal Matrix but augmented)
+                for (i = 0; i <= degree; i++){
+                    B[i][degree+1]=Y[i];               
+                }
+                //n is made n+1 because the Gaussian Elimination part below was for n equations, but here n is the degree of polynomial and for n degree we get n+1 equations 
+                degree=degree+1; 
+                 //From now Gaussian Elimination starts(can be ignored) to solve the set of linear equations (Pivotisation)               
+                for (i = 0; i < degree; i++){
+                    for (k = i+1; k < degree; k++){
+                       if (B[i][i]<B[k][i]){
+                            for (j = 0; j <= degree; j++){
                                 double temp=B[i][j];
                                 B[i][j]=B[k][j];
                                 B[k][j]=temp;
                             }
-                
-                for (i=0;i<degree-1;i++)            //loop to perform the gauss elimination
-                    for (k=i+1;k<degree;k++)
-                        {
-                            double t=B[k][i]/B[i][i];
-                            for (j=0;j<=degree;j++)
-                                B[k][j]=B[k][j]-t*B[i][j];    //make the elements below the pivot elements equal to zero or elimnate the variables
-                        }
-                for (i=degree-1;i>=0;i--)                //back-substitution
-                {                        //x is an array whose values correspond to the values of x,y,z..
-                    a[i]=B[i][degree];                //make the variable to be calculated equal to the rhs of the last equation
-                    for (j=0;j<degree;j++)
-                        if (j!=i)            //then subtract all the lhs values except the coefficient of the variable whose value                                   is being calculated
+                       }
+                    }
+                }
+
+                //loop to perform the gauss elimination
+                for (i = 0; i < degree-1; i++) {
+                    for (k= i+1; k < degree; k++){
+                        double t=B[k][i]/B[i][i];
+                        //make the elements below the pivot elements equal to zero or elimnate the variables
+                        for (j = 0; j <= degree; j++){
+                            B[k][j]=B[k][j]-t*B[i][j];
+                        }            
+                    }
+                }  
+
+                //back-substitution
+                for (i = degree-1; i >= 0; i--){                        
+                     //make the variable to be calculated equal to the rhs of the last equation
+                    a[i]=B[i][degree];               
+                    for (j = 0; j < degree; j++){
+                        if (j!=i){
+                            //then subtract all the lhs values except the coefficient of the variable whose value is being calculated
                             a[i]=a[i]-B[i][j]*a[j];
-                    a[i]=a[i]/B[i][i];            //now finally divide the rhs by the coefficient of the variable to be calculated
+                        }
+                    }
+                    //now finally divide the rhs by the coefficient of the variable to be calculated
+                    a[i]=a[i]/B[i][i];            
                 }
                 coeff.clear();
                 for(i = 0; i < degree; i++){
                     coeff.push_back(a[i]);
-                }
-                
+                }    
+                yfit.clear();
+                for(int i = 0; i < n; i++){
+                    yfit.push_back(fun(x[i]));
+                }        
             }
-
     };
 } 

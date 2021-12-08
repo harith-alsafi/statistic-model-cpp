@@ -30,37 +30,32 @@ namespace intp
                 }
                 std::sort(_points.begin(), _points.end());
 
-                //Define a lambda that returns true if the x value
-                //of a point pair is < the caller's x value
+                //point pair is < xx 
                 auto lessThan =
                     [](std::pair<double, double> point, double xxx)
                     {return point.first < xxx;};
                 
-                //Find the first table entry whose value is >= caller's x value
+                //Find the first value >= xx
                 auto iter =
                     std::lower_bound(_points.cbegin(), _points.cend(), xx, lessThan);
                 
-                //If the caller's X value is greater than the largest
-                //X value in the table, we can't interpolate.
+                //xx > than the largest val in the x, we can't interpolate.
                 if(iter == _points.cend()) {
                     return (_points.cend() - 1)->second;
                 }
                 
-                //If the caller's X value is less than the smallest X value in the table,
-                //we can't interpolate.
+                //xx < than the smallest val in the x, we can't interpolate.
                 if(iter == _points.cbegin() && xx <= _points.cbegin()->first) {
                     return _points.cbegin()->second;
                 }
                 
-                //We can interpolate!
+                // interpolating 
                 long double upperX = iter->first;
                 long double upperY = iter->second;
                 long double lowerX = (iter - 1)->first;
                 long double lowerY = (iter - 1)->second;
-                
                 long double deltaY = upperY - lowerY;
                 long double deltaX = upperX - lowerX;
-                
                 long double yy  = lowerY + ((xx - lowerX)/ deltaX) * deltaY;
 
                 x_comb.push_back(xx);
@@ -88,7 +83,7 @@ namespace intp
                 // checking validty of points 
                 const long double EPSILON{1.0E-8};
                 for(std::size_t i=1; i< n; ++i) {
-                    long double deltaX{std::abs(x[i] - x[i-1])};
+                    long double deltaX = std::abs(x[i] - x[i-1]);
                     if(deltaX < EPSILON ) {
                         std::string err{"Potential Divide By Zero: Points " +
                             std::to_string(x[i-1]) + " And " +

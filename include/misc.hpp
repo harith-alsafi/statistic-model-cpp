@@ -618,6 +618,7 @@ namespace misc
             void plot_vect(std::vector<long double> &x, std::vector<long double> &y)
             {
                 if(x.size() != y.size()){
+                    std::cerr << x.size() << "\t" << y.size() << "\n";
                     std::cerr << "misc::Plot::plot_vect-> Size mismatch \n";
                     return;
                 }
