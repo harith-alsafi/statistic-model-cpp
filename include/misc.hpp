@@ -120,7 +120,7 @@ namespace misc
             /**
              * @brief Get the return average of all colums in vector 
              * 
-             * Used in 
+             * Used in describe_all()
              * 
              * @return std::vector<long double> 
              */
@@ -132,6 +132,13 @@ namespace misc
                 return a;
             }
 
+            /**
+             * @brief Get the return std of all colums in vector 
+             * 
+             * Used in describe_all()
+             * 
+             * @return std::vector<long double> 
+             */
             std::vector<long double> get_stds(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
@@ -140,6 +147,13 @@ namespace misc
                 return a;             
             }
 
+            /**
+             * @brief Get the return variance of all colums in vector 
+             * 
+             * Used in describe_all()
+             * 
+             * @return std::vector<long double> 
+             */            
             std::vector<long double> get_vars(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
@@ -148,6 +162,13 @@ namespace misc
                 return a;
             }
 
+            /**
+             * @brief Get the return quartile range of all colums in vector 
+             * 
+             * Used in describe_all()
+             * 
+             * @return std::vector<long double> 
+             */
             std::vector<QR> get_qrs(){
                 std::vector<QR> a;
                 for(int j = 0; j < headers.size(); j++){
@@ -156,6 +177,13 @@ namespace misc
                 return a;
             }
 
+            /**
+             * @brief Get the return sums of all colums in vector 
+             * 
+             * Used in describe_all()
+             * 
+             * @return std::vector<long double> 
+             */
             std::vector<long double> get_sums(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
@@ -164,6 +192,13 @@ namespace misc
                 return a;             
             }
 
+            /**
+             * @brief Re-centers a string based on given width 
+             * 
+             * @param s 
+             * @param w 
+             * @return std::string 
+             */
             static std::string center(const string s, const int w) {
                 std::stringstream ss, spaces;
                 int padding = w - s.size(); // count excess room to pad
@@ -175,6 +210,13 @@ namespace misc
                 return ss.str();
             }
 
+            /**
+             * @brief converts double to a string with white space 
+             * 
+             * @param x 
+             * @param width 
+             * @return std::string 
+             */
             static std::string prd(long double x, int width) {
                 std::stringstream ss;
                 ss << std::fixed << std::left;
@@ -185,6 +227,13 @@ namespace misc
                 return center(ss.str(), width);
             }
 
+            /**
+             * @brief Gives spacing to a string 
+             * 
+             * @param x 
+             * @param width 
+             * @return std::string 
+             */
             static std::string prd(std::string x, int width) {
                 std::stringstream ss;
                 ss << std::left;
@@ -194,6 +243,10 @@ namespace misc
                 return center(ss.str(), width);
             }
 
+            /**
+             * @brief Generates row names 
+             * 
+             */
             void generate_rows(){
                 rows.clear();
                 for(int i = 0; i < size(); i++){
@@ -201,6 +254,10 @@ namespace misc
                 }
             }
             
+            /**
+             * @brief Checks size of current class
+             * 
+             */
             void check_size(){
                 if(empty()){
                     row = 0;
@@ -211,6 +268,12 @@ namespace misc
                 row = size();
             }
 
+            /**
+             * @brief Generates line to seperate rows 
+             * 
+             * @param l 
+             * @return std::string 
+             */
             std::string generate_line(int l){
                 std::string line;
                 for(int i = 0; i < l; i++){
@@ -223,10 +286,19 @@ namespace misc
             std::vector<std::string> rows;
             int row;
             int col;
-            int sz = 10;
+            int sz = 10; // size for 
 
         public:
+            /**
+             * @brief Construct a new Table object
+             * 
+             */
             Table(){}
+
+            /**
+             * @brief Destroy the Table object
+             * 
+             */
             ~Table(){}
 
             /**
@@ -312,11 +384,21 @@ namespace misc
                 return false;
             }
 
+            /**
+             * @brief Get the row size object
+             * 
+             * @return int 
+             */
             int get_row_size(){
                 return size();                
             }
 
-            int get_col__size(){
+            /**
+             * @brief Get the col size object
+             * 
+             * @return int 
+             */
+            int get_col_size(){
                 return at(0).size();
             }
 
@@ -330,6 +412,12 @@ namespace misc
                 return get_col_(headname);
             }
 
+            /**
+             * @brief Sorts data ascending 
+             * 
+             * @param a 
+             * @return std::vector<long double> 
+             */
             static std::vector<long double> sort_asc(std::vector<long double> & a){
                 std::vector<long double> v_sorted(a.size());
                 std::partial_sort_copy(a.begin(), a.end(), 
@@ -337,22 +425,52 @@ namespace misc
                 return v_sorted;
             }
 
+            /**
+             * @brief Get the min value of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_min(std::vector<long double> a){
                 return *std::min_element(a.begin(), a.end());
             }
 
+            /**
+             * @brief Get the max value of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_max(std::vector<long double> a){
                 return *std::max_element(a.begin(), a.end());
             }
 
+            /**
+             * @brief Get the sum of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_sum(std::vector<long double> a){
                 return std::accumulate(a.begin(), a.end(), 0);
             }
 
+            /**
+             * @brief Get the avg of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_avg(std::vector<long double> a){
                 return get_sum(a)/a.size();
             } 
 
+            /**
+             * @brief Get the variance of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_var(std::vector<long double> a){
                 long double mean = get_avg(a);
                 int N = a.size();
@@ -363,10 +481,22 @@ namespace misc
                 return (long double) sum/N;            
             }
 
+            /**
+             * @brief Get the standard diviation of vector 
+             * 
+             * @param a 
+             * @return long double 
+             */
             static long double get_std(std::vector<long double> a){
                 return sqrt(get_var(a));
             }   
 
+            /**
+             * @brief Get the quartile range of a vector 
+             * 
+             * @param a 
+             * @return QR 
+             */
             static QR get_qr(std::vector<long double> a){
                 QR qr; 
                 qr.LQ = get_min(a);
@@ -378,6 +508,13 @@ namespace misc
                 return qr;
             }
 
+            /**
+             * @brief Get the relation coefficient of two vectors 
+             * 
+             * @param _x 
+             * @param _y 
+             * @return long double 
+             */
             static long double get_r(
             std::vector<long double> _x, std::vector<long double> _y){
                 if(_x.size() != _y.size()){
@@ -392,6 +529,11 @@ namespace misc
                 (sqrt((_x.size()*sumxx-pow(sumx, 2))*(_x.size()*sumyy-pow(sumy, 2))));
             }
 
+            /**
+             * @brief Shows a certain number of rows in table 
+             * 
+             * @param r 
+             */
             void show(int r){
                 if(rows.empty()){
                     generate_rows();
@@ -450,11 +592,20 @@ namespace misc
                 }
             }
 
+            /**
+             * @brief shows all of the table 
+             * 
+             */
             void show(){
                 check_size();
                 show(row);
             }
 
+            /**
+             * @brief Statistical summary of all colums in table 
+             * 
+             * @return Table 
+             */
             Table describe_all(){
                 Table t;
                 auto avg = get_avgs();
@@ -501,6 +652,12 @@ namespace misc
                 return t;
             }
             
+            /**
+             * @brief Get the row as table 
+             * 
+             * @param r 
+             * @return Table 
+             */
             Table get_row(int r){
                 Table t; 
                 t.push_back(at(r));
@@ -512,6 +669,12 @@ namespace misc
                 return t;
             }
 
+            /**
+             * @brief Get the col as table 
+             * 
+             * @param name 
+             * @return Table 
+             */
             Table get_col(std::string name){
                 Table t;
                 auto a = get_col_(name);
@@ -525,6 +688,14 @@ namespace misc
                 return t;
             }
 
+            /**
+             * @brief Adds new colum 
+             * 
+             * @param col_name 
+             * @param col_data 
+             * @return true 
+             * @return false 
+             */
             bool add_col(std::string col_name, std::vector<long double> col_data){
                 check_size();
                 if((col_data.size() != row && row != 0) || col_data.empty()){
@@ -542,12 +713,13 @@ namespace misc
                 return true;
             }
 
+            /**
+             * @brief Shows headers only 
+             * 
+             */
             void show_header(){
                 show(0);
             }
-
-            
-
     };
 
     /**
@@ -557,6 +729,10 @@ namespace misc
     class Plot
     {
         public:
+            /**
+             * @brief Colors for plots 
+             * 
+             */
             enum Color
             {
                 red = 10,
@@ -634,14 +810,29 @@ namespace misc
 
             }
 
+            /**
+             * @brief Set the color 
+             * 
+             * @param cc 
+             */
             void set_color(Color cc = Color::blue){
                 c = cc;
             }
 
+            /**
+             * @brief Set the title 
+             * 
+             * @param tt 
+             */
             void set_title(std::string tt){
                 title = tt;
             }
 
+            /**
+             * @brief Generates domain 
+             * 
+             * @param n 
+             */
             void generate_domain(int n = 50){
                 generate_domain(xmin, xmax, n);
             }
