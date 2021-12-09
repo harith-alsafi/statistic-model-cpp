@@ -69,7 +69,7 @@ namespace regr
                 << std::pow(get_original_r(), 2) << "\n";
             }
 
-            void plot_equation(int nn=200){
+            void plot_equation(int nn=500){
                 auto f = [&](long double xx)->long double{return fun(xx);};
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
@@ -84,7 +84,7 @@ namespace regr
                 std::max(misc::Table::get_max(x)+2.0, (long double) 1.0),
                 x.size()+nn
                 );
-                p.set_title("Equation with " + to_string(nn) + " data points");
+                p.set_title("Regression equation with " + to_string(nn) + " data points");
                 p.set_color(misc::Plot::Color::blue);
                 p.plot_fun(f);
             }
@@ -102,7 +102,7 @@ namespace regr
                 p.set_color(misc::Plot::Color::yellow);
                 p.plot_vect(x, y);         
 
-                p.set_title("Fitted data");
+                p.set_title("Predicted data from original x-input");
                 p.set_color(misc::Plot::Color::green);
                 p.plot_vect(x, yfit);           
             }
@@ -183,7 +183,7 @@ namespace regr
                 }
             }
 
-            void fit_data(){            
+            void fit_data(){   
                 int i,j,k;
                 //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
                 double X[2*degree+1];                        

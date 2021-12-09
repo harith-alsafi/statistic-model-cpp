@@ -1,41 +1,64 @@
 #pragma once 
-
 #include <vector>
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <algorithm>
 #include <numeric>
-
 #include "graphs.hpp"
 
-template<typename D>
-std::vector<D> operator *(std::vector<D> first, std::vector<D> second){
+/**
+ * @brief Operator to multiply two vectors 
+ * 
+ * @tparam TYPE 
+ * @param first 
+ * @param second 
+ * @return std::vector<TYPE> 
+ */
+template<typename TYPE>
+std::vector<TYPE> operator *(std::vector<TYPE> first, std::vector<TYPE> second){
     if(first.size() != second.size()){
         throw std::invalid_argument("Invalid size");
     }
-    std::vector<D> temp;
+    std::vector<TYPE> temp;
     for(int i = 0; i < first.size(); i++){
         temp.push_back(first[i]*second[i]);
     }
     return temp;
 }
 
-template<typename D>
-D round(D a, int dp = 0){
-    if(a < D(0)){
-        return D((int)(a*pow(10, dp)-.5)/pow(10, dp));
+/**
+ * @brief Overloads the round function 
+ * 
+ * @tparam TYPE 
+ * @param a the value itself
+ * @param dp number of decimal places
+ * @return TYPE 
+ */
+template<typename TYPE>
+TYPE round(TYPE a, int dp = 0){
+    if(a < TYPE(0)){
+        return TYPE((int)(a*pow(10, dp)-.5)/pow(10, dp));
     }
-    return D((int)(a*pow(10, dp)+.5)/pow(10, dp));
+    return TYPE((int)(a*pow(10, dp)+.5)/pow(10, dp));
 }
 
 
 namespace misc
 {
-    template<typename D>
-    std::vector<D>generate_vector(D mn, D mx, int n){
-        std::vector<D> v;
-        for(D i = mn; i <= mx; i+=(D)(mx-mn)/n){
+    /**
+     * @brief Genarate vector from min, max andn number of points
+     * 
+     * @tparam TYPE 
+     * @param mn min val
+     * @param mx max val
+     * @param n number of points
+     * @return std::vector<TYPE> 
+     */
+    template<typename TYPE>
+    std::vector<TYPE> generate_vector(TYPE mn, TYPE mx, int n){
+        std::vector<TYPE> v;
+        for(TYPE i = mn; i <= mx; i+=(TYPE)(mx-mn)/n){
             v.push_back(i);
         }
         return v;
@@ -47,6 +70,11 @@ namespace misc
     class Table: public std::vector<std::vector<long double>>
     {
         public:
+
+            /**
+             * @brief Struct to contain the quartile range 
+             * 
+             */
             struct QR
             {
                 long double LQ; // lower quartile 
@@ -56,6 +84,13 @@ namespace misc
                 long double UQ; // upper quartile 
             };
         private:
+
+            /**
+             * @brief Checks the header and returns index
+             * 
+             * @param head 
+             * @return int 
+             */
             int check_header(std::string head){
                 for(int i = 0; i < headers.size(); i++){
                     if(headers[i] == head){
@@ -65,6 +100,12 @@ namespace misc
                 return -1;
             }
 
+            /**
+             * @brief Get the col vector based on header name
+             * 
+             * @param headname 
+             * @return std::vector<long double> 
+             */
             std::vector<long double> get_col_(std::string headname){
                 int j = check_header(headname);
                 std::vector<long double> a;
@@ -76,6 +117,13 @@ namespace misc
                 return a;  
             }
 
+            /**
+             * @brief Get the return average of all colums in vector 
+             * 
+             * Used in 
+             * 
+             * @return std::vector<long double> 
+             */
             std::vector<long double> get_avgs(){
                 std::vector<long double> a;
                 for(int j = 0; j < headers.size(); j++){
@@ -276,7 +324,7 @@ namespace misc
              * @brief Returns colum of certain header 
              * 
              * @param headname 
-             * @return std::vector<D>& 
+             * @return std::vector<TYPE>& 
              */
             std::vector<long double> operator[](std::string headname){
                 return get_col_(headname);
@@ -656,11 +704,11 @@ namespace misc
             /**
              * @brief Plots function 
              * 
-             * @tparam D 
+             * @tparam LAMBDA 
              * @param fun lambda function 
              */
-            template<typename D>
-            void plot_fun(D fun)
+            template<typename LAMBDA>
+            void plot_fun(LAMBDA fun)
             {
                 std::vector<long double> y; 
                 for(int i = 0; i < domain.size(); i++){

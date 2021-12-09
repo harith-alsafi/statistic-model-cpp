@@ -68,14 +68,19 @@ TEST(intp, poly_plots)
 {
    misc::Table t;
    t.read_csv("homes.csv");
-   std::vector<long double> x = {5.0, 7.0, 11.0, 13.0, 17.0};
-   std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
+   // std::vector<long double> x = {5.0, 7.0, 11.0, 13.0, 17.0};
+   // std::vector<long double> y = {150.0, 392.0, 1452.0, 2366.0, 5202.0 };
+
+   // std::vector<long double> x = {7.5, 1.5, 0.5, 3.5};
+   // std::vector<long double> y = {32.0, 20.0, 10.0, 28.0};
+
+   std::vector<long double> x = {6.0, 2.0, 1.0, 5.0, 4.0, 3.0, 7.0, 8.0, 9.0};
+   std::vector<long double> y = {3.0, 3.0, 2.0, 1.0, -2.0, 1.0, 3.5, 4.5, 3.0};
 
    PolyInterp pip;
    pip.load_data(x, y);
    pip.plot_data();
-   pip.plot_all_interpolation(100);
-   std::cout << pip.find_value(185) << "\n";
+   pip.plot_all_interpolation();
 }
 
 int main(int argc, char **argv) 

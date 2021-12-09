@@ -57,6 +57,11 @@ class Menu
         }
 
         void load_csv(){
+            std::cout <<"Pre-existing csv files (Note: all options will work with any csv file): \n ";
+            std::cout <<"statistics.csv [for all options] \n ";
+            std::cout <<"regression.csv [shows true demonstration of regression] \n ";
+            std::cout <<"interpolation.csv [shows true demonstration of interpolation] \n ";
+            std::cout << "----------------------------------------------------------------------- \n";
             std::cout << "Enter CSV file name (with .csv extension): ";
             
             std::cin >> filename;
@@ -201,6 +206,10 @@ class Menu
                 else if(choice == 2){
                     linear_reg = false;
                     pr.load_data(x, y);
+                    int n;
+                    std::cout << "Enter dgree of equation (ex: 2 will give a max x²): ";
+                    std::cin >> n;
+                    pr.set_degree(n);
                     pr.fit_data();   
                     std::cout << "Data is fitted correctly \n ";
                     return;

@@ -109,7 +109,7 @@ namespace intp
                 y_comb = y;
             }
 
-            void plot_all_interpolation(int nn = 400){
+            void plot_all_interpolation(int nn = 500){
                 auto dmn = misc::generate_vector(
                 misc::Table::get_min(x), misc::Table::get_max(x),
                 nn);
