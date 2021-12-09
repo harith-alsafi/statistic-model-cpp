@@ -152,6 +152,7 @@ class Menu
             }
             else if(choice == 3){
                 std::string colname;
+                
                 std::cout << "Enter column name: ";
                 std::cin >> colname;
                 misc::Table vcol = table.get_col(colname);
