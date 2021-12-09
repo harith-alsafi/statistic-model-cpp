@@ -6,9 +6,13 @@
 class Menu
 {
     private:
+        /**
+         * @brief State of the program 
+         * 
+         */
         enum State
         {
-            running,
+            running, 
             exit,
             error_csv,
             error_unloaded_data,
@@ -33,6 +37,12 @@ class Menu
         bool linear_intp;
         bool linear_reg;
 
+        /**
+         * @brief Checks the choices 
+         * 
+         * @param max 
+         * @param ch 
+         */
         void check_choice(int max, int ch){
             if(ch > max || ch < 1){
                 std::cout << 
@@ -40,6 +50,10 @@ class Menu
             }
         }
 
+        /**
+         * @brief Showcase main options 
+         * 
+         */
         void main_options(){
             std::cout << "―――――――――――――――――――――Main Window―――――――――――――――――――――――― \n";
             std::cout << "[1] Load CSV file \n";
@@ -56,6 +70,10 @@ class Menu
             check_choice(7, choice);
         }
 
+        /**
+         * @brief load csv options 
+         * 
+         */
         void load_csv(){
             std::cout <<"Pre-existing csv files (Note: all options will work with any csv file): \n ";
             std::cout <<"statistics.csv [for all options] \n ";
@@ -74,6 +92,12 @@ class Menu
             menu_state = State::running;
         }
 
+        /**
+         * @brief Checks if csv was loaded correctly 
+         * 
+         * @return true 
+         * @return false 
+         */
         bool check_csv_errors(){
             if(menu_state != State::error_csv){
                 return true;
@@ -82,6 +106,12 @@ class Menu
             return false;
         }
 
+        /**
+         * @brief Checks if data was loaded correctly 
+         * 
+         * @return true 
+         * @return false 
+         */
         bool check_unloaded_errors(){
             if(menu_state != State::error_unloaded_data){
                 return true;
@@ -90,6 +120,10 @@ class Menu
             return false;
         }
 
+        /**
+         * @brief show data options 
+         * 
+         */
         void show_data_options(){
             menu_state = State::show_data;
             std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
@@ -146,6 +180,10 @@ class Menu
             check_choice(5, choice);
         }
 
+        /**
+         * @brief save csv options 
+         * 
+         */
         void save_csv(){
             std::string outname;
             std::cout << "Enter file name: ";
@@ -158,6 +196,11 @@ class Menu
             std::cout << "File saved! \n";
         }
 
+        /**
+         * @brief Polynomial or linear option 
+         * 
+         * @param str 
+         */
         void show_poly_lin(std::string str){
             std::cout << "[1] Linear "+str+" \n";
             std::cout << "[2] Polynomial "+str+" \n";
@@ -165,6 +208,10 @@ class Menu
             std::cin >> choice;
         }
 
+        /**
+         * @brief Show the regression option 
+         * 
+         */
         void show_regression_options(){
             menu_state = State::regression;
             std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
@@ -246,6 +293,10 @@ class Menu
             check_choice(4, choice);                  
         }
 
+        /**
+         * @brief Show interpolation options 
+         * 
+         */
         void show_interpolation_option(){
             menu_state = State::interpolation;
             std::cout << "――――――――――――――――――――――――――――――――――――――――――――――――――――――― \n";
@@ -334,6 +385,11 @@ class Menu
         }
 
     public:
+
+        /**
+         * @brief Construct a new Menu object
+         * 
+         */
         Menu(){
             menu_state = running;
             choice = 0;
@@ -341,6 +397,16 @@ class Menu
             linear_reg = true;
         }
 
+        /**
+         * @brief Destroy the Menu object
+         * 
+         */
+        ~Menu(){}
+
+        /**
+         * @brief Main run method 
+         * 
+         */
         void run(){
             while(menu_state != exit)
             {
@@ -397,5 +463,4 @@ class Menu
 
             }
         }
-
 };

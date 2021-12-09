@@ -17,24 +17,73 @@ namespace regr
             long double sumxy; // sum of x*y
             int n; // size of vetors 
             misc::Plot p;
-            // function 
+            
+            /**
+             * @brief The regression function 
+             * 
+             * @param xx 
+             * @return long double 
+             */
             virtual long double fun(long double xx){
                 return (long double)m*xx+c;
             }
         
         public:
+
+            /**
+             * @brief Construct a new Linear Regression object
+             * 
+             */
             LinearRegression(){}
 
+            /**
+             * @brief Destroy the Linear Regression object
+             * 
+             */
+            ~LinearRegression(){}
+
+            /**
+             * @brief Get the slope object
+             * 
+             * @return long double 
+             */
             long double get_slope(){return m;}
 
+            /**
+             * @brief Get the y intersept object
+             * 
+             * @return long double 
+             */
             long double get_y_intersept(){return c;}
 
+            /**
+             * @brief Get the fit data object
+             * 
+             * @return std::vector<long double> 
+             */
             std::vector<long double> get_fit_data(){return yfit;}
 
+            /**
+             * @brief Get the original corelation coefficient (using original data)
+             * 
+             * @return long double 
+             */
             long double get_original_r(){return misc::Table::get_r(x, y);}
 
+            /**
+             * @brief Get the fitted corelation coefficient using fitted data 
+             * 
+             * @return long double 
+             */
             long double get_fitted_r(){return misc::Table::get_r(x, yfit);}
 
+            /**
+             * @brief Loads the data
+             * 
+             * @param xx 
+             * @param yy 
+             * @return long double 
+             */
             long double load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
                     throw std::invalid_argument("regr::LinearRegression::load_data -> Size mismatch");
@@ -51,6 +100,10 @@ namespace regr
                 sumxy = misc::Table::get_sum(x*y);
             }
 
+            /**
+             * @brief Fits the data and trains the model 
+             * 
+             */
             virtual void fit_data(){
                 m = (n*sumxy-sumx*sumy)/(n*sumxx-sumx*sumx);
                 c = (sumy-m*sumx)/n;
@@ -60,6 +113,10 @@ namespace regr
                 }
             }
 
+            /**
+             * @brief Shows the regression equation 
+             * 
+             */
             virtual void show_equation(){
                 std::cout << std::fixed;
                 std::cout << std::setprecision(3);
@@ -68,6 +125,11 @@ namespace regr
                 << std::pow(get_original_r(), 2) << "\n";
             }
 
+            /**
+             * @brief Plots the regression function for given number of points 
+             * 
+             * @param nn 
+             */
             void plot_equation(int nn=500){
                 auto f = [&](long double xx)->long double{return fun(xx);};
                 p.set_domain(
@@ -88,6 +150,10 @@ namespace regr
                 p.plot_fun(f);
             }
 
+            /**
+             * @brief plots the original data and predicted data 
+             * 
+             */
             void plot_data(){
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
@@ -106,6 +172,11 @@ namespace regr
                 p.plot_vect(x, yfit);           
             }
 
+            /**
+             * @brief Get the data of regression 
+             * 
+             * @return misc::Table 
+             */
             misc::Table get_data(){
                 misc::Table t;
                 t.add_col("x-data", x);
@@ -114,16 +185,32 @@ namespace regr
                 return t;
             }
             
+            // used for inheritance 
             friend class PolyRegression; 
     };
 
     class PolyRegression: public LinearRegression
     {
         private:   
+            /**
+             * @brief So that we cant acess these methods when using this class
+             * 
+             */
             using LinearRegression::get_y_intersept;
             using LinearRegression::get_slope;
+
+            // stores coefficients of polynomials 
             std::vector<long double> coeff;
 
+            // degree of regression 
+            int degree;
+            
+            /**
+             * @brief overloads the regression function from LinearRegression 
+             * 
+             * @param xx 
+             * @return long double 
+             */
             long double fun(long double xx){
                 long double sm = 0;
                 for(int i = 0; i < coeff.size(); i++){
@@ -132,8 +219,12 @@ namespace regr
                 return sm;
             }
             
-            int degree; 
-
+            /**
+             * @brief Get the power as string 
+             * 
+             * @param i 
+             * @return std::string 
+             */
             std::string get_power(int i){
                 const std::vector<std::string> powers = 
                 {"", "", "²", "³", "⁴", "⁵", "⁶", "⁷", "⁸", "⁹"};
@@ -157,12 +248,31 @@ namespace regr
 
 
         public:
+            /**
+             * @brief Construct a new Poly Regression object
+             * 
+             */
             PolyRegression(){}
 
+            /**
+             * @brief Destroy the Poly Regression object
+             * 
+             */
+            ~PolyRegression(){}
+
+            /**
+             * @brief Set the degree 
+             * 
+             * @param deg 
+             */
             void set_degree(int deg = 2){
                 degree = deg;
             }
 
+            /**
+             * @brief Overloads show_equation from LinearRegression 
+             * 
+             */
             void show_equation(){ 
                 std::cout << std::fixed;
                 std::cout << std::setprecision(3);
@@ -182,6 +292,10 @@ namespace regr
                 }
             }
 
+            /**
+             * @brief Overloads the fit_data from LinearRegression 
+             * 
+             */
             void fit_data(){   
                 int i,j,k;
                 //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
