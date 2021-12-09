@@ -30,7 +30,6 @@ add_executable(test_int test/int_test.cpp)
 # menu 
 add_executable(test_menu test/menu_test.cpp)
 
-
 target_link_libraries(test_reg gtest pthread) 
 target_link_libraries(test_misc gtest pthread) 
 target_link_libraries(test_int gtest pthread) 

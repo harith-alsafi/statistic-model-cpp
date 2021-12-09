@@ -246,7 +246,6 @@ namespace regr
                 return "⋅x"+str;
             }
 
-
         public:
             /**
              * @brief Construct a new Poly Regression object
@@ -298,39 +297,57 @@ namespace regr
              */
             void fit_data(){   
                 int i,j,k;
-                //Array that will store the values of sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+
+                // Array that will store the values of sigma(xi),sigma(xi^2),
+                // sigma(xi^3)....sigma(xi^2n)
                 double X[2*degree+1];                        
                 for (i = 0; i < 2*degree+1; i++){
                     X[i]=0;
-                    //consecutive positions of the array will store N,sigma(xi),sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
+                    // consecutive positions of the array will store N,sigma(xi),
+                    // sigma(xi^2),sigma(xi^3)....sigma(xi^2n)
                     for (j=0;j<n;j++){
                         X[i]=X[i]+pow(x[j],i);
                     }
                 }
-                //B is the Normal matrix(augmented) that will store the equations, 'a' is for value of the final coefficients
+
+                // B is the Normal matrix(augmented) that 
+                // will store the equations, 'a' is for 
+                // value of the final coefficients
                 double B[degree+1][degree+2],a[degree+1];
-                 //Build the Normal matrix by storing the corresponding coefficients at the right positions except the last column of the matrix            
+                 // Build the Normal matrix by storing the
+                 // corresponding coefficients at the right 
+                 // positions except the last column of the matrix            
                 for (i = 0; i <= degree; i++){
                     for (j=0;j<=degree;j++){
                         B[i][j]=X[i+j];
                     }
                 }
-                //Array to store the values of sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
+
+                //Array to store the values of sigma(yi),
+                // sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)
                 double Y[degree+1];
-                //consecutive positions will store sigma(yi),sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)                    
+                //consecutive positions will store sigma(yi) 
+                // sigma(xi*yi),sigma(xi^2*yi)...sigma(xi^n*yi)                    
                 for (i = 0; i < degree+1; i++){    
                     Y[i]=0;
                     for (j = 0; j < n; j++){
                         Y[i]=Y[i]+pow(x[j],i)*y[j];
                     }       
                 }
-                 //load the values of Y as the last column of B(Normal Matrix but augmented)
+
+                // load the values of Y as the last column of
+                //  B(Normal Matrix but augmented)
                 for (i = 0; i <= degree; i++){
                     B[i][degree+1]=Y[i];               
                 }
-                //n is made n+1 because the Gaussian Elimination part below was for n equations, but here n is the degree of polynomial and for n degree we get n+1 equations 
+
+                //n is made n+1 because the Gaussian 
+                // Elimination part below was for n equations, 
+                // but here n is the degree of polynomial 
+                // and for n degree we get n+1 equations 
                 degree=degree+1; 
-                 //From now Gaussian Elimination starts(can be ignored) to solve the set of linear equations (Pivotisation)               
+                //From now Gaussian Elimination starts(can be ignored) 
+                // to solve the set of linear equations (Pivotisation)               
                 for (i = 0; i < degree; i++){
                     for (k = i+1; k < degree; k++){
                        if (B[i][i]<B[k][i]){
@@ -347,7 +364,8 @@ namespace regr
                 for (i = 0; i < degree-1; i++) {
                     for (k= i+1; k < degree; k++){
                         double t=B[k][i]/B[i][i];
-                        //make the elements below the pivot elements equal to zero or elimnate the variables
+                        // make the elements below the pivot 
+                        // elements equal to zero or elimnate the variables
                         for (j = 0; j <= degree; j++){
                             B[k][j]=B[k][j]-t*B[i][j];
                         }            
@@ -356,17 +374,22 @@ namespace regr
 
                 //back-substitution
                 for (i = degree-1; i >= 0; i--){                        
-                     //make the variable to be calculated equal to the rhs of the last equation
+                     // make the variable to be calculated equal
+                     // to the rhs of the last equation
                     a[i]=B[i][degree];               
                     for (j = 0; j < degree; j++){
                         if (j!=i){
-                            //then subtract all the lhs values except the coefficient of the variable whose value is being calculated
+                            //then subtract all the lhs values 
+                            // except the coefficient of the variable 
+                            // whose value is being calculated
                             a[i]=a[i]-B[i][j]*a[j];
                         }
                     }
-                    //now finally divide the rhs by the coefficient of the variable to be calculated
+                    //now finally divide the rhs by the 
+                    // coefficient of the variable to be calculated
                     a[i]=a[i]/B[i][i];            
                 }
+                // adding the coeff and getting the predicted values 
                 coeff.clear();
                 for(i = 0; i < degree; i++){
                     coeff.push_back(a[i]);

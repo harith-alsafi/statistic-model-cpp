@@ -287,6 +287,7 @@ namespace intp
              */
             long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
+                // stores the data in std::pair so its easier to sort 
                 std::vector<std::pair<long double, long double>> _points;
                 for(int i = 0; i < _x.size(); i++){
                     _points.push_back({_x[i], _y[i]});

@@ -361,11 +361,7 @@ unistd.h
 -
 
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/intp.hpp
-vector
--
 iterator
--
-iostream
 -
 utility
 -

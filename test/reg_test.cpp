@@ -31,15 +31,12 @@ TEST(reg, lr_values)
 
 TEST(reg, pr_showing)
 {
-
-
    PolyRegression pr;
    pr.load_data(
       {0.0, 1.0, 2.0, 3.0, 4.0},
       {1.0, 1.8, 1.3, 2.5, 6.3});
    pr.set_degree();
    pr.fit_data();
-
 
    pr.show_equation();
    pr.plot_data();
