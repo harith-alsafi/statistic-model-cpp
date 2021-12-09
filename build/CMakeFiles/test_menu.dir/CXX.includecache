@@ -33,11 +33,7 @@ unistd.h
 -
 
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/intp.hpp
-vector
--
 iterator
--
-iostream
 -
 utility
 -
@@ -69,10 +65,6 @@ graphs.hpp
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/graphs.hpp
 
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/regr.hpp
-vector
--
-iostream
--
 misc.hpp
 /media/harithalsafi/DATA/Media/Documents/Coding/Projects/c++/statistic-model-cpp/include/misc.hpp
 

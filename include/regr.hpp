@@ -1,7 +1,6 @@
 #pragma once
-#include <vector> 
-#include <iostream>
 #include "misc.hpp"
+
 namespace regr
 {
     class LinearRegression

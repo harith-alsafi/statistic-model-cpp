@@ -1,10 +1,8 @@
 #pragma once 
-#include <vector>
 #include <iterator>
-#include <iostream>
 #include <utility>
-
 #include "misc.hpp"
+
 namespace intp
 {
     class LinearInterp
@@ -22,8 +20,17 @@ namespace intp
             int n; // size of original 
             misc::Plot p;
 
+            /**
+             * @brief Gives an interpolated value for a given x-value 
+             * 
+             * @param xx 
+             * @param _x 
+             * @param _y 
+             * @return long 
+             */
             virtual long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
+                // converts x and y to std::pair so we can sort it without disrupting layout of points 
                 std::vector<std::pair<long double, long double>> _points;
                 for(int i = 0; i < _x.size(); i++){
                     _points.push_back({_x[i], _y[i]});
@@ -66,8 +73,24 @@ namespace intp
             }
             
         public:
+            /**
+             * @brief Construct a new Linear Interp object
+             * 
+             */
             LinearInterp(){}
 
+            /**
+             * @brief Destroy the Linear Interp object
+             * 
+             */
+            ~LinearInterp(){}
+
+            /**
+             * @brief Loads the data 
+             * 
+             * @param xx 
+             * @param yy 
+             */
             virtual void load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
                     throw std::invalid_argument("intp::LinearInterp::load_data -> Size mismatch");
@@ -95,6 +118,13 @@ namespace intp
                 y_in.clear();
             }
 
+            /**
+             * @brief Finds the interpolated value from given x
+             * 
+             * @param xx 
+             * @param use_combined // can use previously interpolated data
+             * @return long double 
+             */
             long double find_value(long double xx, bool use_combined = false){
                 if(use_combined == true){
                     return _find_value(xx, x_comb, y_comb);
@@ -102,6 +132,10 @@ namespace intp
                 return _find_value(xx, x, y);
             }
 
+            /**
+             * @brief Resets the interpolated data 
+             * 
+             */
             void reset_interpolated(){
                 x_in.clear();
                 y_in.clear();
@@ -109,6 +143,11 @@ namespace intp
                 y_comb = y;
             }
 
+            /**
+             * @brief Plots all posiible interpolations within given number of points 
+             * 
+             * @param nn 
+             */
             void plot_all_interpolation(int nn = 500){
                 auto dmn = misc::generate_vector(
                 misc::Table::get_min(x), misc::Table::get_max(x),
@@ -120,6 +159,10 @@ namespace intp
                 reset_interpolated();
             }
 
+            /**
+             * @brief Plots the original data 
+             * 
+             */
             void plot_data(){
                 p.set_domain(
                 std::min(misc::Table::get_min(x)-2.0, (long double) -1.0), 
@@ -134,6 +177,10 @@ namespace intp
                 p.plot_vect(x, y);         
             }
 
+            /**
+             * @brief Plots the interpolated data 
+             * 
+             */
             void plot_interpolated_data(){
                 if(!x_in.empty()){
                     p.set_domain(
@@ -150,9 +197,14 @@ namespace intp
                 }             
             }
 
+            /**
+             * @brief Plots x_comb and y_comb
+             * 
+             */
             void plot_combined_data(){
                 p.set_domain(
-                std::min(misc::Table::get_min(x_comb)-2.0, (long double) -1.0), 
+                std::min(misc::Table::get_min(x_comb)-2.0, 
+                (long double) -1.0), 
                 std::max(misc::Table::get_max(x_comb)+2.0, (long double) 1.0)
                 );
                 p.set_range(
@@ -164,6 +216,11 @@ namespace intp
                 p.plot_vect(x_comb, y_comb);                   
             }
 
+            /**
+             * @brief Get the original data object
+             * 
+             * @return misc::Table 
+             */
             misc::Table get_original_data(){
                 misc::Table t;
                 t.add_col("x-data", x);
@@ -171,6 +228,11 @@ namespace intp
                 return t;
             }
 
+            /**
+             * @brief Get the interpolated data object
+             * 
+             * @return misc::Table 
+             */
             misc::Table get_interpolated_data(){
                 misc::Table t;
                 t.add_col("x-data", x_in);
@@ -178,6 +240,11 @@ namespace intp
                 return t;
             }
 
+            /**
+             * @brief Get the combined data object
+             * 
+             * @return misc::Table 
+             */
             misc::Table get_combined_data(){
                 misc::Table t;
                 t.add_col("x-data", x_comb);
@@ -185,20 +252,39 @@ namespace intp
                 return t;
             }   
 
+            /**
+             * @brief Get the r original data object
+             * 
+             * @return long double 
+             */
             long double get_r_original_data(){
                 return misc::Table::get_r(x, y);
             }
 
+            /**
+             * @brief Get the r combined data object
+             * 
+             * @return long double 
+             */
             long double get_r_combined_data(){
                 return misc::Table::get_r(x_comb, y_comb);
             }    
 
+            // Friend so the class can access private attributes 
             friend class PolyInterp;
     };
 
     class PolyInterp : public LinearInterp
     {
-        private:            
+        private:      
+            /**
+             * @brief Overloads the find_val from LinearInterp 
+             * 
+             * @param xx 
+             * @param _x 
+             * @param _y 
+             * @return long 
+             */
             long double _find_value(long double xx, 
             std::vector<long double> _x, std::vector<long double> _y){
                 std::vector<std::pair<long double, long double>> _points;
@@ -248,7 +334,24 @@ namespace intp
                 return yy;            
             }
         public:
+            /**
+             * @brief Construct a new Poly Interp object
+             * 
+             */
             PolyInterp(){}
+
+            /**
+             * @brief Destroy the Poly Interp object
+             * 
+             */
+            ~PolyInterp(){}
+
+            /**
+             * @brief Overloads the load_data from LinearInterp
+             * 
+             * @param xx 
+             * @param yy 
+             */
             void load_data(std::vector<long double> xx, std::vector<long double> yy){
                 if(xx.size() != yy.size()){
                     throw std::invalid_argument("intp::LinearInterp::load_data -> Size mismatch");
