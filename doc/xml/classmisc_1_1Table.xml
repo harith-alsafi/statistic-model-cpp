@@ -12,12 +12,13 @@
         <argsstring></argsstring>
         <name>headers</name>
         <briefdescription>
+<para>Stores the headers. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="297" column="25" bodyfile="include/misc.hpp" bodystart="297" bodyend="-1"/>
+        <location file="include/misc.hpp" line="325" column="25" bodyfile="include/misc.hpp" bodystart="325" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Table_1a0074cb923e5106b76e392c3f224224ce" prot="private" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
@@ -25,12 +26,13 @@
         <argsstring></argsstring>
         <name>rows</name>
         <briefdescription>
+<para>Stores the row names. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="298" column="25" bodyfile="include/misc.hpp" bodystart="298" bodyend="-1"/>
+        <location file="include/misc.hpp" line="331" column="25" bodyfile="include/misc.hpp" bodystart="331" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Table_1a39d2c3781309bd9d679735c67645c9c0" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -38,12 +40,13 @@
         <argsstring></argsstring>
         <name>row</name>
         <briefdescription>
+<para>Row size. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="299" column="17" bodyfile="include/misc.hpp" bodystart="299" bodyend="-1"/>
+        <location file="include/misc.hpp" line="337" column="17" bodyfile="include/misc.hpp" bodystart="337" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Table_1a03025d4e255a14c2469ae5e6bbc9504b" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -51,12 +54,13 @@
         <argsstring></argsstring>
         <name>col</name>
         <briefdescription>
+<para>Colum size. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="300" column="17" bodyfile="include/misc.hpp" bodystart="300" bodyend="-1"/>
+        <location file="include/misc.hpp" line="343" column="17" bodyfile="include/misc.hpp" bodystart="343" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Table_1a5a24d8acca13e5f7c5124894277a2c45" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -65,12 +69,13 @@
         <name>sz</name>
         <initializer>= 10</initializer>
         <briefdescription>
+<para>Spacing size for print. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="301" column="17" bodyfile="include/misc.hpp" bodystart="301" bodyend="-1"/>
+        <location file="include/misc.hpp" line="349" column="17" bodyfile="include/misc.hpp" bodystart="349" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -102,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="106" column="17" bodyfile="include/misc.hpp" bodystart="106" bodyend="113"/>
+        <location file="include/misc.hpp" line="130" column="17" bodyfile="include/misc.hpp" bodystart="130" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a3f5cdfdd090295744091adef6d17db54" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -132,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="121" column="25" bodyfile="include/misc.hpp" bodystart="121" bodyend="130"/>
+        <location file="include/misc.hpp" line="145" column="25" bodyfile="include/misc.hpp" bodystart="145" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1afb08720056b64979ce0916c01bfa6d7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -150,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="139" column="25" bodyfile="include/misc.hpp" bodystart="139" bodyend="145"/>
+        <location file="include/misc.hpp" line="163" column="25" bodyfile="include/misc.hpp" bodystart="163" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a2e504c6423c1803b3dfcb76c9a4b0ffb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -168,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="154" column="25" bodyfile="include/misc.hpp" bodystart="154" bodyend="160"/>
+        <location file="include/misc.hpp" line="178" column="25" bodyfile="include/misc.hpp" bodystart="178" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1ad560a764340864bcfaa45cb223630946" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -186,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="169" column="25" bodyfile="include/misc.hpp" bodystart="169" bodyend="175"/>
+        <location file="include/misc.hpp" line="193" column="25" bodyfile="include/misc.hpp" bodystart="193" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a7541cb47eeb32a66371d1b62222ed804" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; <ref refid="structmisc_1_1Table_1_1QR" kindref="compound">QR</ref> &gt;</type>
@@ -204,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="184" column="25" bodyfile="include/misc.hpp" bodystart="184" bodyend="190"/>
+        <location file="include/misc.hpp" line="208" column="25" bodyfile="include/misc.hpp" bodystart="208" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1abd886f85bf61413954403bb2b0bf618c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -222,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="199" column="25" bodyfile="include/misc.hpp" bodystart="199" bodyend="205"/>
+        <location file="include/misc.hpp" line="223" column="25" bodyfile="include/misc.hpp" bodystart="223" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1ab06d0dec2ff90ca78a1fc572ed961b57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -236,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="262" column="18" bodyfile="include/misc.hpp" bodystart="262" bodyend="267"/>
+        <location file="include/misc.hpp" line="286" column="18" bodyfile="include/misc.hpp" bodystart="286" bodyend="291"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1aafff7966d5668296d0db42859ee1e084" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -250,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="273" column="18" bodyfile="include/misc.hpp" bodystart="273" bodyend="281"/>
+        <location file="include/misc.hpp" line="297" column="18" bodyfile="include/misc.hpp" bodystart="297" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a6fcbc154dd5f1009aea707f2a0656139" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -280,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="289" column="25" bodyfile="include/misc.hpp" bodystart="289" bodyend="295"/>
+        <location file="include/misc.hpp" line="313" column="25" bodyfile="include/misc.hpp" bodystart="313" bodyend="319"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-func">
@@ -324,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="214" column="32" bodyfile="include/misc.hpp" bodystart="214" bodyend="223"/>
+        <location file="include/misc.hpp" line="238" column="32" bodyfile="include/misc.hpp" bodystart="238" bodyend="247"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1aee2aa345050c5e4737302c02c41c38b2" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -366,7 +371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="232" column="32" bodyfile="include/misc.hpp" bodystart="232" bodyend="240"/>
+        <location file="include/misc.hpp" line="256" column="32" bodyfile="include/misc.hpp" bodystart="256" bodyend="264"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1aa49d6ed7fe338f0ba010abd480ebc159" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -408,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="249" column="32" bodyfile="include/misc.hpp" bodystart="249" bodyend="256"/>
+        <location file="include/misc.hpp" line="273" column="32" bodyfile="include/misc.hpp" bodystart="273" bodyend="280"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -424,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="308" column="13" bodyfile="include/misc.hpp" bodystart="308" bodyend="308"/>
+        <location file="include/misc.hpp" line="356" column="13" bodyfile="include/misc.hpp" bodystart="356" bodyend="356"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a1b46d730f03703016528c5e828939c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -438,7 +443,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="314" column="13" bodyfile="include/misc.hpp" bodystart="314" bodyend="314"/>
+        <location file="include/misc.hpp" line="362" column="13" bodyfile="include/misc.hpp" bodystart="362" bodyend="362"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -471,7 +476,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="323" column="18" bodyfile="include/misc.hpp" bodystart="323" bodyend="360"/>
+        <location file="include/misc.hpp" line="371" column="18" bodyfile="include/misc.hpp" bodystart="371" bodyend="408"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1ab761f2dcb25eb9e0a02ea055c44055c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -504,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="369" column="18" bodyfile="include/misc.hpp" bodystart="369" bodyend="397"/>
+        <location file="include/misc.hpp" line="417" column="18" bodyfile="include/misc.hpp" bodystart="417" bodyend="445"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a16f7da85853fc97975fe420e14a87ab4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -521,7 +526,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="404" column="17" bodyfile="include/misc.hpp" bodystart="404" bodyend="406"/>
+        <location file="include/misc.hpp" line="452" column="17" bodyfile="include/misc.hpp" bodystart="452" bodyend="454"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a2be7ed52482dc5bfeb38fa6485c76b91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -538,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="413" column="17" bodyfile="include/misc.hpp" bodystart="413" bodyend="415"/>
+        <location file="include/misc.hpp" line="461" column="17" bodyfile="include/misc.hpp" bodystart="461" bodyend="463"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a6cfc813d910d26b898fa6db3888e30c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::vector&lt; long double &gt;</type>
@@ -568,7 +573,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="423" column="25" bodyfile="include/misc.hpp" bodystart="423" bodyend="425"/>
+        <location file="include/misc.hpp" line="471" column="25" bodyfile="include/misc.hpp" bodystart="471" bodyend="473"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -596,7 +601,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="549" column="18" bodyfile="include/misc.hpp" bodystart="549" bodyend="605"/>
+        <location file="include/misc.hpp" line="597" column="18" bodyfile="include/misc.hpp" bodystart="597" bodyend="653"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1af39df8b64a7353ae48f237186fc516c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -610,7 +615,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="611" column="18" bodyfile="include/misc.hpp" bodystart="611" bodyend="614"/>
+        <location file="include/misc.hpp" line="659" column="18" bodyfile="include/misc.hpp" bodystart="659" bodyend="662"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a9fcaf25cf5b2adf8b4496339f8009017" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">Table</ref></type>
@@ -627,7 +632,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="621" column="19" bodyfile="include/misc.hpp" bodystart="621" bodyend="665"/>
+        <location file="include/misc.hpp" line="669" column="19" bodyfile="include/misc.hpp" bodystart="669" bodyend="713"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a643a1adbde19cd5f0ad9f310fcd5bae0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">Table</ref></type>
@@ -657,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="673" column="19" bodyfile="include/misc.hpp" bodystart="673" bodyend="682"/>
+        <location file="include/misc.hpp" line="721" column="19" bodyfile="include/misc.hpp" bodystart="721" bodyend="730"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1afea5e8f9a4f0fa30ca705423c880c01a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">Table</ref></type>
@@ -687,7 +692,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="690" column="19" bodyfile="include/misc.hpp" bodystart="690" bodyend="701"/>
+        <location file="include/misc.hpp" line="738" column="19" bodyfile="include/misc.hpp" bodystart="738" bodyend="749"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -731,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="711" column="18" bodyfile="include/misc.hpp" bodystart="711" bodyend="726"/>
+        <location file="include/misc.hpp" line="759" column="18" bodyfile="include/misc.hpp" bodystart="759" bodyend="774"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a04926443acfc292868328875a4c51e18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -745,7 +750,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="732" column="18" bodyfile="include/misc.hpp" bodystart="732" bodyend="734"/>
+        <location file="include/misc.hpp" line="780" column="18" bodyfile="include/misc.hpp" bodystart="780" bodyend="782"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -777,7 +782,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="433" column="32" bodyfile="include/misc.hpp" bodystart="433" bodyend="438"/>
+        <location file="include/misc.hpp" line="481" column="32" bodyfile="include/misc.hpp" bodystart="481" bodyend="486"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a00f26317647c271278462e5e8569e293" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -807,7 +812,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="446" column="32" bodyfile="include/misc.hpp" bodystart="446" bodyend="448"/>
+        <location file="include/misc.hpp" line="494" column="32" bodyfile="include/misc.hpp" bodystart="494" bodyend="496"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a64096cc9612a8351e8c030d06e3c114e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -837,7 +842,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="456" column="32" bodyfile="include/misc.hpp" bodystart="456" bodyend="458"/>
+        <location file="include/misc.hpp" line="504" column="32" bodyfile="include/misc.hpp" bodystart="504" bodyend="506"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1af50133b223f56da3837c4de8a93998e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -867,7 +872,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="466" column="32" bodyfile="include/misc.hpp" bodystart="466" bodyend="468"/>
+        <location file="include/misc.hpp" line="514" column="32" bodyfile="include/misc.hpp" bodystart="514" bodyend="516"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a932bcc149fe677607d3a82f27bd1d25c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -897,7 +902,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="476" column="32" bodyfile="include/misc.hpp" bodystart="476" bodyend="478"/>
+        <location file="include/misc.hpp" line="524" column="32" bodyfile="include/misc.hpp" bodystart="524" bodyend="526"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a423ecab88f682cd4ac3ae683842892af" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -927,7 +932,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="486" column="32" bodyfile="include/misc.hpp" bodystart="486" bodyend="494"/>
+        <location file="include/misc.hpp" line="534" column="32" bodyfile="include/misc.hpp" bodystart="534" bodyend="542"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a4616a2f714ab67617098c655d8321de4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -957,7 +962,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="502" column="32" bodyfile="include/misc.hpp" bodystart="502" bodyend="504"/>
+        <location file="include/misc.hpp" line="550" column="32" bodyfile="include/misc.hpp" bodystart="550" bodyend="552"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a0ead87e9c4a877d0141076b5ba4dcc0b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="structmisc_1_1Table_1_1QR" kindref="compound">QR</ref></type>
@@ -987,7 +992,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="512" column="23" bodyfile="include/misc.hpp" bodystart="512" bodyend="521"/>
+        <location file="include/misc.hpp" line="560" column="23" bodyfile="include/misc.hpp" bodystart="560" bodyend="569"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Table_1a1efe608906aefaec83b77dd3a76662d2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -1029,7 +1034,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="530" column="32" bodyfile="include/misc.hpp" bodystart="530" bodyend="542"/>
+        <location file="include/misc.hpp" line="578" column="32" bodyfile="include/misc.hpp" bodystart="578" bodyend="590"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1065,7 +1070,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/misc.hpp" line="82" column="5" bodyfile="include/misc.hpp" bodystart="83" bodyend="735"/>
+    <location file="include/misc.hpp" line="82" column="5" bodyfile="include/misc.hpp" bodystart="83" bodyend="783"/>
     <listofallmembers>
       <member refid="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" prot="public" virt="non-virtual"><scope>misc::Table</scope><name>add_col</name></member>
       <member refid="classmisc_1_1Table_1aad64d80cd3d176cf91d27dd05cb01317" prot="private" virt="non-virtual"><scope>misc::Table</scope><name>center</name></member>

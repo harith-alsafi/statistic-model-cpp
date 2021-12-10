@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="748" column="13" bodyfile="include/misc.hpp" bodystart="749" bodyend="756"/>
+        <location file="include/misc.hpp" line="796" column="13" bodyfile="include/misc.hpp" bodystart="797" bodyend="804"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -72,12 +72,13 @@
         <argsstring></argsstring>
         <name>height</name>
         <briefdescription>
+<para>Height of terminal plot. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="759" column="20" bodyfile="include/misc.hpp" bodystart="759" bodyend="-1"/>
+        <location file="include/misc.hpp" line="811" column="20" bodyfile="include/misc.hpp" bodystart="811" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1ae5cb9d73243cfe0675f5bbebc095853f" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -85,12 +86,13 @@
         <argsstring></argsstring>
         <name>width</name>
         <briefdescription>
+<para>Width of terminal plot. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="760" column="20" bodyfile="include/misc.hpp" bodystart="760" bodyend="-1"/>
+        <location file="include/misc.hpp" line="817" column="20" bodyfile="include/misc.hpp" bodystart="817" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1acd15f49e99e22504cd79b7a673590244" prot="private" static="no" mutable="no">
         <type>long double</type>
@@ -98,12 +100,13 @@
         <argsstring></argsstring>
         <name>xmin</name>
         <briefdescription>
+<para>Minimum x-value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="762" column="25" bodyfile="include/misc.hpp" bodystart="762" bodyend="-1"/>
+        <location file="include/misc.hpp" line="823" column="25" bodyfile="include/misc.hpp" bodystart="823" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1ae31d12ae7f4cd55acf4273141585959d" prot="private" static="no" mutable="no">
         <type>long double</type>
@@ -111,12 +114,13 @@
         <argsstring></argsstring>
         <name>xmax</name>
         <briefdescription>
+<para>Maxmimum x-value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="763" column="25" bodyfile="include/misc.hpp" bodystart="763" bodyend="-1"/>
+        <location file="include/misc.hpp" line="829" column="25" bodyfile="include/misc.hpp" bodystart="829" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1aede35cac1221e7be48e067d10a6b5480" prot="private" static="no" mutable="no">
         <type>long double</type>
@@ -124,12 +128,13 @@
         <argsstring></argsstring>
         <name>ymin</name>
         <briefdescription>
+<para>Minimum y-value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="764" column="25" bodyfile="include/misc.hpp" bodystart="764" bodyend="-1"/>
+        <location file="include/misc.hpp" line="835" column="25" bodyfile="include/misc.hpp" bodystart="835" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1a5ba170ac536e7d8399f8e4ecad64e1fe" prot="private" static="no" mutable="no">
         <type>long double</type>
@@ -137,12 +142,13 @@
         <argsstring></argsstring>
         <name>ymax</name>
         <briefdescription>
+<para>Maximum y-value. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="765" column="25" bodyfile="include/misc.hpp" bodystart="765" bodyend="-1"/>
+        <location file="include/misc.hpp" line="841" column="25" bodyfile="include/misc.hpp" bodystart="841" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1a0741ab8b63e13d8a4252acf6e93defbe" prot="private" static="no" mutable="no">
         <type>const size_t</type>
@@ -151,12 +157,13 @@
         <name>cols</name>
         <initializer>= 2</initializer>
         <briefdescription>
+<para>Size for cols which is 2. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="767" column="26" bodyfile="include/misc.hpp" bodystart="767" bodyend="-1"/>
+        <location file="include/misc.hpp" line="847" column="26" bodyfile="include/misc.hpp" bodystart="847" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1a2a9d2b16ea8c7f3138a5384a1ba923d8" prot="private" static="no" mutable="no">
         <type>std::vector&lt; long double &gt;</type>
@@ -164,12 +171,13 @@
         <argsstring></argsstring>
         <name>domain</name>
         <briefdescription>
+<para>Used to store domain vector. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="768" column="25" bodyfile="include/misc.hpp" bodystart="768" bodyend="-1"/>
+        <location file="include/misc.hpp" line="853" column="25" bodyfile="include/misc.hpp" bodystart="853" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1a51f146e8cb310a1d55af39f8ce52e9c3" prot="private" static="no" mutable="no">
         <type><ref refid="structgraphoptions" kindref="compound">graphoptions</ref></type>
@@ -177,12 +185,13 @@
         <argsstring></argsstring>
         <name>aoptions</name>
         <briefdescription>
+<para>Stores graphing options. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="769" column="26" bodyfile="include/misc.hpp" bodystart="769" bodyend="-1"/>
+        <location file="include/misc.hpp" line="859" column="26" bodyfile="include/misc.hpp" bodystart="859" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1a11fce306db045b8384b8eca900a56aca" prot="private" static="no" mutable="no">
         <type><ref refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434e" kindref="member">Color</ref></type>
@@ -190,12 +199,13 @@
         <argsstring></argsstring>
         <name>c</name>
         <briefdescription>
+<para>Stores color. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="770" column="19" bodyfile="include/misc.hpp" bodystart="770" bodyend="-1"/>
+        <location file="include/misc.hpp" line="865" column="19" bodyfile="include/misc.hpp" bodystart="865" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classmisc_1_1Plot_1adf0ac53c3f9d96298d814b66bb92112f" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -203,12 +213,13 @@
         <argsstring></argsstring>
         <name>title</name>
         <briefdescription>
+<para>Stores title. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="771" column="25" bodyfile="include/misc.hpp" bodystart="771" bodyend="-1"/>
+        <location file="include/misc.hpp" line="871" column="25" bodyfile="include/misc.hpp" bodystart="871" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -304,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="784" column="13" bodyfile="include/misc.hpp" bodystart="784" bodyend="789"/>
+        <location file="include/misc.hpp" line="884" column="13" bodyfile="include/misc.hpp" bodystart="884" bodyend="889"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a41c44efde77238011b7ef8d03fe70db9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -346,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="797" column="18" bodyfile="include/misc.hpp" bodystart="797" bodyend="800"/>
+        <location file="include/misc.hpp" line="897" column="18" bodyfile="include/misc.hpp" bodystart="897" bodyend="900"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a7d41a0e058bafb1a4243eb032c74556f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -388,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="808" column="18" bodyfile="include/misc.hpp" bodystart="808" bodyend="811"/>
+        <location file="include/misc.hpp" line="908" column="18" bodyfile="include/misc.hpp" bodystart="908" bodyend="911"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a14f50751b025e9c7d33e52d87179a757" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -430,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="819" column="18" bodyfile="include/misc.hpp" bodystart="819" bodyend="823"/>
+        <location file="include/misc.hpp" line="919" column="18" bodyfile="include/misc.hpp" bodystart="919" bodyend="923"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a7476d78c32c4c21d6330fba416ceae2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -459,7 +470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="830" column="18" bodyfile="include/misc.hpp" bodystart="830" bodyend="832"/>
+        <location file="include/misc.hpp" line="930" column="18" bodyfile="include/misc.hpp" bodystart="930" bodyend="932"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1ac2da558e0965208f9898d64cef0f6b74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -487,7 +498,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="839" column="18" bodyfile="include/misc.hpp" bodystart="839" bodyend="841"/>
+        <location file="include/misc.hpp" line="939" column="18" bodyfile="include/misc.hpp" bodystart="939" bodyend="941"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1ab041be78e2edf33fb68ee3642453bacc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -516,7 +527,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="848" column="18" bodyfile="include/misc.hpp" bodystart="848" bodyend="850"/>
+        <location file="include/misc.hpp" line="948" column="18" bodyfile="include/misc.hpp" bodystart="948" bodyend="950"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a239205a9cc0ab0fffa92b8109a653b2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -568,7 +579,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="859" column="18" bodyfile="include/misc.hpp" bodystart="859" bodyend="861"/>
+        <location file="include/misc.hpp" line="959" column="18" bodyfile="include/misc.hpp" bodystart="959" bodyend="961"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1a85567735781b6a1cfb277c2c8ae12355" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -608,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="869" column="18" bodyfile="include/misc.hpp" bodystart="869" bodyend="905"/>
+        <location file="include/misc.hpp" line="969" column="18" bodyfile="include/misc.hpp" bodystart="969" bodyend="1005"/>
       </memberdef>
       <memberdef kind="function" id="classmisc_1_1Plot_1aeea6cf0d2dbb82bad251918c8c202b87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -650,7 +661,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="914" column="18" bodyfile="include/misc.hpp" bodystart="914" bodyend="921"/>
+        <location file="include/misc.hpp" line="1014" column="18" bodyfile="include/misc.hpp" bodystart="1014" bodyend="1021"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -682,7 +693,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/misc.hpp" line="741" column="5" bodyfile="include/misc.hpp" bodystart="742" bodyend="922"/>
+    <location file="include/misc.hpp" line="789" column="5" bodyfile="include/misc.hpp" bodystart="790" bodyend="1022"/>
     <listofallmembers>
       <member refid="classmisc_1_1Plot_1a51f146e8cb310a1d55af39f8ce52e9c3" prot="private" virt="non-virtual"><scope>misc::Plot</scope><name>aoptions</name></member>
       <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb" prot="public" virt="non-virtual"><scope>misc::Plot</scope><name>blue</name></member>

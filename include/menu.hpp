@@ -36,20 +36,73 @@ class Menu
             interpolation
         };
 
+        /**
+         * @brief The menu state 
+         * 
+         */
         State menu_state;
         
+        /**
+         * @brief Table object 
+         * 
+         */
         misc::Table table;
+
+        /**
+         * @brief Plot object 
+         * 
+         */
         misc::Plot plt;
 
+        /**
+         * @brief Linear regression object 
+         * 
+         */
         regr::LinearRegression lr;
+
+        /**
+         * @brief Polynomial regression object 
+         * 
+         */
         regr::PolyRegression pr;
 
+        /**
+         * @brief Linear interpolation object 
+         * 
+         */
         intp::LinearInterp lip;
+
+        /**
+         * @brief Polynomial interpolation object 
+         * 
+         */
         intp::PolyInterp pip;
 
+        /**
+         * @brief Used to get the choice of the user 
+         * 
+         */
         int choice;
+
+        /**
+         * @brief Gets the loaded file name 
+         * 
+         */
         std::string filename;
+
+        std::vector<long double> x;
+        std::vector<long double> y;
+
+        /**
+         * @brief Specifies if the methods will be linear or polynomial, for interpolation 
+         * 
+         */
         bool linear_intp;
+
+        /**
+         * @brief Specifies if the methods will be linear or polynomial, for regression
+         * 
+         */
         bool linear_reg;
 
         /**
@@ -61,7 +114,14 @@ class Menu
         void check_choice(int max, int ch){
             if(ch > max || ch < 1){
                 std::cout << 
-                "Choice " + to_string(ch) + " doesn't exist, please try again \n"; 
+                "This choice doesn't exist, please try again \n"; 
+            }
+            if(cin.fail()){
+                cout << "\n";
+                cin.clear();
+                std::string ignoreLine; //read the invalid input into it
+                std::getline(cin, ignoreLine); //read the line till next space
+                return;
             }
         }
 
@@ -91,9 +151,9 @@ class Menu
          */
         void load_csv(){
             std::cout <<"Pre-existing csv files (Note: all options will work with any csv file): \n";
-            std::cout <<"statistics.csv [for all options] \n ";
-            std::cout <<"regression.csv [shows true demonstration of regression] \n ";
-            std::cout <<"interpolation.csv [shows true demonstration of interpolation] \n ";
+            std::cout <<"statistics.csv [for all options] \n";
+            std::cout <<"regression.csv [shows true demonstration of regression] \n";
+            std::cout <<"interpolation.csv [shows true demonstration of interpolation] \n";
             std::cout << "----------------------------------------------------------------------- \n";
             std::cout << "Enter CSV file name (with .csv extension): ";
             
@@ -114,6 +174,11 @@ class Menu
          * @return false 
          */
         bool check_csv_errors(){
+            if(filename.empty()){
+                menu_state = State::error_csv;
+                std::cout << "No CSV file was loaded please try again \n";
+                return false;
+            }
             if(menu_state != State::error_csv){
                 return true;
             }
@@ -128,6 +193,10 @@ class Menu
          * @return false 
          */
         bool check_unloaded_errors(){
+            if(x.empty() || y.empty()){
+                std::cout << "No data was loaded please try again \n";
+                return false;
+            }
             if(menu_state != State::error_unloaded_data){
                 return true;
             }
@@ -244,7 +313,7 @@ class Menu
                 std::string colname;
                 std::cout << "Chose column name for x-data: ";
                 std::cin >> colname;
-                std::vector<long double> x = table[colname];
+                x = table[colname];
                 if(x.empty()){
                     std::cout << "Wrong column name, please try again \n ";
                     menu_state = State::error_unloaded_data;
@@ -252,7 +321,7 @@ class Menu
                 }
                 std::cout << "Chose column name for y-data: ";
                 std::cin >> colname;
-                std::vector<long double> y = table[colname];
+                y = table[colname];
                 if(y.empty()){
                     std::cout << "Wrong column name, please try again \n ";
                     menu_state = State::error_unloaded_data;
@@ -330,7 +399,7 @@ class Menu
                 std::string colname;
                 std::cout << "Chose column name for x-data: ";
                 std::cin >> colname;
-                std::vector<long double> x = table[colname];
+                x = table[colname];
                 if(x.empty()){
                     std::cout << "Wrong column name, please try again \n";
                     menu_state = State::error_unloaded_data;
@@ -338,7 +407,7 @@ class Menu
                 }
                 std::cout << "Chose column name for y-data: ";
                 std::cin >> colname;
-                std::vector<long double> y = table[colname];
+                y = table[colname];
                 if(y.empty()){
                     std::cout << "Wrong column name, please try again \n";
                     menu_state = State::error_unloaded_data;

@@ -11,12 +11,13 @@
         <argsstring></argsstring>
         <name>coeff</name>
         <briefdescription>
+<para>Stores coefficients of polynomial. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="222" column="25" bodyfile="include/regr.hpp" bodystart="222" bodyend="-1"/>
+        <location file="include/regr.hpp" line="280" column="25" bodyfile="include/regr.hpp" bodystart="280" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classregr_1_1PolyRegression_1a1c63523cea2d40ca3505509ce557062c" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -24,12 +25,13 @@
         <argsstring></argsstring>
         <name>degree</name>
         <briefdescription>
+<para>Degree of polynomial. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="225" column="17" bodyfile="include/regr.hpp" bodystart="225" bodyend="-1"/>
+        <location file="include/regr.hpp" line="286" column="17" bodyfile="include/regr.hpp" bodystart="286" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -62,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="233" column="25" bodyfile="include/regr.hpp" bodystart="233" bodyend="239"/>
+        <location file="include/regr.hpp" line="294" column="25" bodyfile="include/regr.hpp" bodystart="294" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a94f0880a9a098f4a33392a4d2765eaa4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -92,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="247" column="25" bodyfile="include/regr.hpp" bodystart="247" bodyend="266"/>
+        <location file="include/regr.hpp" line="308" column="25" bodyfile="include/regr.hpp" bodystart="308" bodyend="327"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1af35f2ea523bbdcc9f820a4a78df175ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -106,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="218" column="13" bodyfile="include/regr.hpp" bodystart="72" bodyend="72"/>
+        <location file="include/regr.hpp" line="272" column="13" bodyfile="include/regr.hpp" bodystart="126" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a1088c5502e2cfc7997423c046bf01d8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -123,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="219" column="13" bodyfile="include/regr.hpp" bodystart="65" bodyend="65"/>
+        <location file="include/regr.hpp" line="273" column="13" bodyfile="include/regr.hpp" bodystart="119" bodyend="119"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -139,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="273" column="13" bodyfile="include/regr.hpp" bodystart="273" bodyend="273"/>
+        <location file="include/regr.hpp" line="334" column="13" bodyfile="include/regr.hpp" bodystart="334" bodyend="334"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a349fb1f73a2128ed128aab156c7d7ce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -153,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="279" column="13" bodyfile="include/regr.hpp" bodystart="279" bodyend="279"/>
+        <location file="include/regr.hpp" line="340" column="13" bodyfile="include/regr.hpp" bodystart="340" bodyend="340"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a6333d5db93fe8526d3907343d7e46e20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -182,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="286" column="18" bodyfile="include/regr.hpp" bodystart="286" bodyend="288"/>
+        <location file="include/regr.hpp" line="347" column="18" bodyfile="include/regr.hpp" bodystart="347" bodyend="349"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a03689acc8b399c9760b277bfa95b610f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -197,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="294" column="18" bodyfile="include/regr.hpp" bodystart="294" bodyend="311"/>
+        <location file="include/regr.hpp" line="355" column="18" bodyfile="include/regr.hpp" bodystart="355" bodyend="372"/>
       </memberdef>
       <memberdef kind="function" id="classregr_1_1PolyRegression_1a8c30c057967c27d0fb86c3c28d77dec9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -212,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/regr.hpp" line="317" column="18" bodyfile="include/regr.hpp" bodystart="317" bodyend="420"/>
+        <location file="include/regr.hpp" line="378" column="18" bodyfile="include/regr.hpp" bodystart="378" bodyend="481"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -269,7 +271,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/regr.hpp" line="211" column="5" bodyfile="include/regr.hpp" bodystart="212" bodyend="421"/>
+    <location file="include/regr.hpp" line="265" column="5" bodyfile="include/regr.hpp" bodystart="266" bodyend="482"/>
     <listofallmembers>
       <member refid="classregr_1_1LinearRegression_1aa685ec626a5a2fcd37ab42375ac2dbde" prot="private" virt="non-virtual"><scope>regr::PolyRegression</scope><name>c</name></member>
       <member refid="classregr_1_1PolyRegression_1a8bddad858a0f6b59bd459cb6fa7d84be" prot="private" virt="non-virtual"><scope>regr::PolyRegression</scope><name>coeff</name></member>

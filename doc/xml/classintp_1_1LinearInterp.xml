@@ -11,32 +11,7 @@
         <argsstring></argsstring>
         <name>x</name>
         <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/intp.hpp" line="27" column="25" bodyfile="include/intp.hpp" bodystart="27" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classintp_1_1LinearInterp_1a1b27f11407f80190fbfbc5d9abdc1403" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; long double &gt;</type>
-        <definition>std::vector&lt;long double&gt; intp::LinearInterp::y</definition>
-        <argsstring></argsstring>
-        <name>y</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/intp.hpp" line="28" column="25" bodyfile="include/intp.hpp" bodystart="28" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="classintp_1_1LinearInterp_1a7c88e4e60132c995b00e593fc27445f0" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; long double &gt;</type>
-        <definition>std::vector&lt;long double&gt; intp::LinearInterp::x_in</definition>
-        <argsstring></argsstring>
-        <name>x_in</name>
-        <briefdescription>
+<para>x-values </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -44,18 +19,47 @@
         </inbodydescription>
         <location file="include/intp.hpp" line="30" column="25" bodyfile="include/intp.hpp" bodystart="30" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="classintp_1_1LinearInterp_1a1b27f11407f80190fbfbc5d9abdc1403" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; intp::LinearInterp::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>y-values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="36" column="25" bodyfile="include/intp.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classintp_1_1LinearInterp_1a7c88e4e60132c995b00e593fc27445f0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; intp::LinearInterp::x_in</definition>
+        <argsstring></argsstring>
+        <name>x_in</name>
+        <briefdescription>
+<para>x-values used for interpolation only </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="42" column="25" bodyfile="include/intp.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="classintp_1_1LinearInterp_1ac9c017b3cd9b3a51b55af6b64b751619" prot="private" static="no" mutable="no">
         <type>std::vector&lt; long double &gt;</type>
         <definition>std::vector&lt;long double&gt; intp::LinearInterp::y_in</definition>
         <argsstring></argsstring>
         <name>y_in</name>
         <briefdescription>
+<para>Interpolated y-values only. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="31" column="25" bodyfile="include/intp.hpp" bodystart="31" bodyend="-1"/>
+        <location file="include/intp.hpp" line="48" column="25" bodyfile="include/intp.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classintp_1_1LinearInterp_1ae8546f0b25e02cdd8464cbd31c88e042" prot="private" static="no" mutable="no">
         <type>std::vector&lt; long double &gt;</type>
@@ -63,12 +67,13 @@
         <argsstring></argsstring>
         <name>x_comb</name>
         <briefdescription>
+<para>Original and interpolated x&apos;s. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="33" column="25" bodyfile="include/intp.hpp" bodystart="33" bodyend="-1"/>
+        <location file="include/intp.hpp" line="54" column="25" bodyfile="include/intp.hpp" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classintp_1_1LinearInterp_1a26963d5b0be30c57582579a36c472769" prot="private" static="no" mutable="no">
         <type>std::vector&lt; long double &gt;</type>
@@ -76,12 +81,13 @@
         <argsstring></argsstring>
         <name>y_comb</name>
         <briefdescription>
+<para>Original and interpolated y&apos;s. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="34" column="25" bodyfile="include/intp.hpp" bodystart="34" bodyend="-1"/>
+        <location file="include/intp.hpp" line="60" column="25" bodyfile="include/intp.hpp" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classintp_1_1LinearInterp_1a34d4500170e1150a3ef09ad97a919f39" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -89,12 +95,13 @@
         <argsstring></argsstring>
         <name>n</name>
         <briefdescription>
+<para>Size of x. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="35" column="17" bodyfile="include/intp.hpp" bodystart="35" bodyend="-1"/>
+        <location file="include/intp.hpp" line="66" column="17" bodyfile="include/intp.hpp" bodystart="66" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classintp_1_1LinearInterp_1ab5d909f2ba117c11352037451891c43d" prot="private" static="no" mutable="no">
         <type><ref refid="classmisc_1_1Plot" kindref="compound">misc::Plot</ref></type>
@@ -102,12 +109,13 @@
         <argsstring></argsstring>
         <name>p</name>
         <briefdescription>
+<para>Plot object. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="36" column="24" bodyfile="include/intp.hpp" bodystart="36" bodyend="-1"/>
+        <location file="include/intp.hpp" line="72" column="24" bodyfile="include/intp.hpp" bodystart="72" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -125,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="289" column="26" bodyfile="include/intp.hpp" bodystart="289" bodyend="-1"/>
+        <location file="include/intp.hpp" line="325" column="26" bodyfile="include/intp.hpp" bodystart="325" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -182,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="46" column="33" bodyfile="include/intp.hpp" bodystart="46" bodyend="88"/>
+        <location file="include/intp.hpp" line="82" column="33" bodyfile="include/intp.hpp" bodystart="82" bodyend="124"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -198,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="95" column="13" bodyfile="include/intp.hpp" bodystart="95" bodyend="95"/>
+        <location file="include/intp.hpp" line="131" column="13" bodyfile="include/intp.hpp" bodystart="131" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a16bc0a0f005f2b57af8c3cff45d80b8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -212,7 +220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="101" column="13" bodyfile="include/intp.hpp" bodystart="101" bodyend="101"/>
+        <location file="include/intp.hpp" line="137" column="13" bodyfile="include/intp.hpp" bodystart="137" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -253,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="109" column="26" bodyfile="include/intp.hpp" bodystart="109" bodyend="134"/>
+        <location file="include/intp.hpp" line="145" column="26" bodyfile="include/intp.hpp" bodystart="145" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -296,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="143" column="25" bodyfile="include/intp.hpp" bodystart="143" bodyend="148"/>
+        <location file="include/intp.hpp" line="179" column="25" bodyfile="include/intp.hpp" bodystart="179" bodyend="184"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a586931cc4470450bfcf1215f7e3daa2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -310,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="154" column="18" bodyfile="include/intp.hpp" bodystart="154" bodyend="159"/>
+        <location file="include/intp.hpp" line="190" column="18" bodyfile="include/intp.hpp" bodystart="190" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a905b1a16a9718f3c87f47d4f6c87eb93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -339,7 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="166" column="18" bodyfile="include/intp.hpp" bodystart="166" bodyend="175"/>
+        <location file="include/intp.hpp" line="202" column="18" bodyfile="include/intp.hpp" bodystart="202" bodyend="211"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a2ce5eafccbdfd1a92cec39694a5601ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -353,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="181" column="18" bodyfile="include/intp.hpp" bodystart="181" bodyend="193"/>
+        <location file="include/intp.hpp" line="217" column="18" bodyfile="include/intp.hpp" bodystart="217" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1af0af99e177d8c2c9bd345546ffe96a85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -367,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="199" column="18" bodyfile="include/intp.hpp" bodystart="199" bodyend="213"/>
+        <location file="include/intp.hpp" line="235" column="18" bodyfile="include/intp.hpp" bodystart="235" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a2e77ad32addfd39d1f81e198ed90b58c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -381,7 +389,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="219" column="18" bodyfile="include/intp.hpp" bodystart="219" bodyend="232"/>
+        <location file="include/intp.hpp" line="255" column="18" bodyfile="include/intp.hpp" bodystart="255" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a0c2c830a638153841382d819f4bc1e73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref></type>
@@ -398,7 +406,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="239" column="25" bodyfile="include/intp.hpp" bodystart="239" bodyend="244"/>
+        <location file="include/intp.hpp" line="275" column="25" bodyfile="include/intp.hpp" bodystart="275" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a34f189c555a7c5d8a2900a2f314ddd59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref></type>
@@ -415,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="251" column="25" bodyfile="include/intp.hpp" bodystart="251" bodyend="256"/>
+        <location file="include/intp.hpp" line="287" column="25" bodyfile="include/intp.hpp" bodystart="287" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a312024163ea8f6d9bdc20d37902b9fed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref></type>
@@ -432,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="263" column="25" bodyfile="include/intp.hpp" bodystart="263" bodyend="268"/>
+        <location file="include/intp.hpp" line="299" column="25" bodyfile="include/intp.hpp" bodystart="299" bodyend="304"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a33c4b83f8be6b8c68079dde8068fc86f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -449,7 +457,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="275" column="25" bodyfile="include/intp.hpp" bodystart="275" bodyend="277"/>
+        <location file="include/intp.hpp" line="311" column="25" bodyfile="include/intp.hpp" bodystart="311" bodyend="313"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1LinearInterp_1a5596a0d46568cb0256b4cea36e19d5dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>long double</type>
@@ -466,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="284" column="25" bodyfile="include/intp.hpp" bodystart="284" bodyend="286"/>
+        <location file="include/intp.hpp" line="320" column="25" bodyfile="include/intp.hpp" bodystart="320" bodyend="322"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -517,7 +525,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/intp.hpp" line="23" column="5" bodyfile="include/intp.hpp" bodystart="24" bodyend="290"/>
+    <location file="include/intp.hpp" line="23" column="5" bodyfile="include/intp.hpp" bodystart="24" bodyend="326"/>
     <listofallmembers>
       <member refid="classintp_1_1LinearInterp_1a1bfbc01f2d393ea8ece07c281888a00b" prot="private" virt="virtual"><scope>intp::LinearInterp</scope><name>_find_value</name></member>
       <member refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" prot="public" virt="non-virtual"><scope>intp::LinearInterp</scope><name>find_value</name></member>

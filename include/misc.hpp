@@ -89,11 +89,35 @@ namespace misc
              */
             struct QR
             {
-                long double LQ; // lower quartile 
+                /**
+                 * @brief Lower quartile 
+                 * 
+                 */
+                long double LQ; 
+
+                /**
+                 * @brief Q1 (25%)
+                 * 
+                 */
                 long double Q1; 
-                long double Q2; // median
+
+                /**
+                 * @brief Q2 (50%)
+                 * 
+                 */
+                long double Q2; 
+
+                /**
+                 * @brief Q3 (75%)
+                 * 
+                 */
                 long double Q3; 
-                long double UQ; // upper quartile 
+
+                /**
+                 * @brief Upper quartile 
+                 * 
+                 */
+                long double UQ; 
             };
         private:
 
@@ -294,11 +318,35 @@ namespace misc
                 return line;
             }
 
+            /**
+             * @brief Stores the headers 
+             * 
+             */
             std::vector<std::string> headers;
+
+            /**
+             * @brief Stores the row names
+             * 
+             */
             std::vector<std::string> rows;
+
+            /**
+             * @brief Row size 
+             * 
+             */
             int row;
+
+            /**
+             * @brief Colum size 
+             * 
+             */
             int col;
-            int sz = 10; // size for 
+
+            /**
+             * @brief Spacing size for print
+             * 
+             */
+            int sz = 10;  
 
         public:
             /**
@@ -756,18 +804,70 @@ namespace misc
             };
 
         private:
+            /**
+             * @brief Height of terminal plot
+             * 
+             */
             size_t height;
+
+            /**
+             * @brief Width of terminal plot 
+             * 
+             */
             size_t width; 
 
+            /**
+             * @brief Minimum x-value
+             * 
+             */
             long double xmin;
+
+            /**
+             * @brief Maxmimum x-value
+             * 
+             */
             long double xmax; 
+
+            /**
+             * @brief Minimum y-value
+             * 
+             */
             long double ymin; 
+
+            /**
+             * @brief Maximum y-value
+             * 
+             */
             long double ymax; 
 
+            /**
+             * @brief Size for cols which is 2
+             * 
+             */
             const size_t cols = 2;
+
+            /**
+             * @brief Used to store domain vector 
+             * 
+             */
             std::vector<long double> domain;
+
+            /**
+             * @brief Stores graphing options 
+             * 
+             */
             graphoptions aoptions;
+
+            /**
+             * @brief Stores color 
+             * 
+             */
             Color c;
+
+            /**
+             * @brief Stores title 
+             * 
+             */
             std::string title;
 
         public:

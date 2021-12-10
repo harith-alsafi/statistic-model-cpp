@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="307" column="25" bodyfile="include/intp.hpp" bodystart="307" bodyend="355"/>
+        <location file="include/intp.hpp" line="343" column="25" bodyfile="include/intp.hpp" bodystart="343" bodyend="391"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="361" column="13" bodyfile="include/intp.hpp" bodystart="361" bodyend="361"/>
+        <location file="include/intp.hpp" line="397" column="13" bodyfile="include/intp.hpp" bodystart="397" bodyend="397"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1PolyInterp_1a262c78f8d052291360cdc2cc7d57bf31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="367" column="13" bodyfile="include/intp.hpp" bodystart="367" bodyend="367"/>
+        <location file="include/intp.hpp" line="403" column="13" bodyfile="include/intp.hpp" bodystart="403" bodyend="403"/>
       </memberdef>
       <memberdef kind="function" id="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/intp.hpp" line="375" column="18" bodyfile="include/intp.hpp" bodystart="375" bodyend="386"/>
+        <location file="include/intp.hpp" line="411" column="18" bodyfile="include/intp.hpp" bodystart="411" bodyend="422"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -186,7 +186,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/intp.hpp" line="296" column="5" bodyfile="include/intp.hpp" bodystart="297" bodyend="387"/>
+    <location file="include/intp.hpp" line="332" column="5" bodyfile="include/intp.hpp" bodystart="333" bodyend="423"/>
     <listofallmembers>
       <member refid="classintp_1_1PolyInterp_1af2bbf7080242e2915109db16ec845b87" prot="private" virt="virtual"><scope>intp::PolyInterp</scope><name>_find_value</name></member>
       <member refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>find_value</name></member>

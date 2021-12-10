@@ -23,16 +23,52 @@ namespace intp
     class LinearInterp
     {
         private:
-            // original 
+            /**
+             * @brief x-values
+             * 
+             */
             std::vector<long double> x;
+
+            /**
+             * @brief y-values
+             * 
+             */
             std::vector<long double> y;
-            // interpolated only 
+
+            /**
+             * @brief x-values used for interpolation only
+             * 
+             */
             std::vector<long double> x_in;
+
+            /**
+             * @brief Interpolated y-values only
+             * 
+             */
             std::vector<long double> y_in;
-            // original + interpolated 
+            
+            /**
+             * @brief Original and interpolated x's
+             * 
+             */
             std::vector<long double> x_comb;
+
+            /**
+             * @brief Original and interpolated y's
+             * 
+             */
             std::vector<long double> y_comb;
-            int n; // size of original 
+
+            /**
+             * @brief Size of x 
+             * 
+             */
+            int n; 
+
+            /**
+             * @brief Plot object
+             * 
+             */
             misc::Plot p;
 
             /**

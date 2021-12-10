@@ -21,16 +21,70 @@ namespace regr
     class LinearRegression
     {
         private:
-            std::vector<long double> x;
+            /**
+             * @brief x-values
+             * 
+             */
+            std::vector<long double> x; 
+
+            /**
+             * @brief y-values
+             * 
+             */
             std::vector<long double> y;
-            std::vector<long double> yfit; // fitted values 
-            long double m; // slope
-            long double c; // y intersept 
-            long double sumx; // sum of x's
-            long double sumy; // sum of y's
-            long double sumxx; // sum of x^2
-            long double sumxy; // sum of x*y
-            int n; // size of vetors 
+
+            /**
+             * @brief fitted values 
+             * 
+             */
+            std::vector<long double> yfit; 
+
+            /**
+             * @brief Slope
+             * 
+             */
+            long double m; 
+
+            /**
+             * @brief y-intersept 
+             * 
+             */
+            long double c; 
+
+            /**
+             * @brief Sum of all x-values
+             * 
+             */
+            long double sumx; 
+
+            /**
+             * @brief Sum of all y-values
+             * 
+             */
+            long double sumy; 
+
+            /**
+             * @brief Sum of x*x
+             * 
+             */
+            long double sumxx; 
+            
+            /**
+             * @brief Sum of y*y
+             * 
+             */
+            long double sumxy; 
+
+            /**
+             * @brief Size of x
+             * 
+             */
+            int n; 
+
+            /**
+             * @brief Plot object
+             * 
+             */
             misc::Plot p;
             
             /**
@@ -218,10 +272,17 @@ namespace regr
             using LinearRegression::get_y_intersept;
             using LinearRegression::get_slope;
 
-            // stores coefficients of polynomials 
+
+            /**
+             * @brief Stores coefficients of polynomial 
+             * 
+             */
             std::vector<long double> coeff;
 
-            // degree of regression 
+            /**
+             * @brief Degree of polynomial 
+             * 
+             */
             int degree;
             
             /**

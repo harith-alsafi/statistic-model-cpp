@@ -10,12 +10,13 @@
         <argsstring></argsstring>
         <name>LQ</name>
         <briefdescription>
+<para>Lower quartile. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="92" column="29" bodyfile="include/misc.hpp" bodystart="92" bodyend="-1"/>
+        <location file="include/misc.hpp" line="96" column="29" bodyfile="include/misc.hpp" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -23,12 +24,13 @@
         <argsstring></argsstring>
         <name>Q1</name>
         <briefdescription>
+<para>Q1 (25%) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="93" column="29" bodyfile="include/misc.hpp" bodystart="93" bodyend="-1"/>
+        <location file="include/misc.hpp" line="102" column="29" bodyfile="include/misc.hpp" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1ac65f73e3532b6dfaa36e1ae65fafcb45" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -36,12 +38,13 @@
         <argsstring></argsstring>
         <name>Q2</name>
         <briefdescription>
+<para>Q2 (50%) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="94" column="29" bodyfile="include/misc.hpp" bodystart="94" bodyend="-1"/>
+        <location file="include/misc.hpp" line="108" column="29" bodyfile="include/misc.hpp" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1adcb33506be77f79517adf30cca5bc2ba" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -49,12 +52,13 @@
         <argsstring></argsstring>
         <name>Q3</name>
         <briefdescription>
+<para>Q3 (75%) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="95" column="29" bodyfile="include/misc.hpp" bodystart="95" bodyend="-1"/>
+        <location file="include/misc.hpp" line="114" column="29" bodyfile="include/misc.hpp" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1a971d49eb9b6cdeb684cf43d443d2f3c9" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -62,12 +66,13 @@
         <argsstring></argsstring>
         <name>UQ</name>
         <briefdescription>
+<para>Upper quartile. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="96" column="29" bodyfile="include/misc.hpp" bodystart="96" bodyend="-1"/>
+        <location file="include/misc.hpp" line="120" column="29" bodyfile="include/misc.hpp" bodystart="120" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -81,7 +86,7 @@
         <link refid="structmisc_1_1Table_1_1QR"/>
       </node>
     </collaborationgraph>
-    <location file="include/misc.hpp" line="90" column="13" bodyfile="include/misc.hpp" bodystart="91" bodyend="97"/>
+    <location file="include/misc.hpp" line="90" column="13" bodyfile="include/misc.hpp" bodystart="91" bodyend="121"/>
     <listofallmembers>
       <member refid="structmisc_1_1Table_1_1QR_1a048249726c2a8f0ad9e3eca6f867c3fa" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>LQ</name></member>
       <member refid="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>Q1</name></member>

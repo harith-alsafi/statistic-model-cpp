@@ -3,11 +3,7 @@
   <compounddef id="menu__test_8cpp" kind="file" language="C++">
     <compoundname>menu_test.cpp</compoundname>
     <includes refid="menu_8hpp" local="yes">../include/menu.hpp</includes>
-    <includes local="yes">../lib/googletest/googletest/include/gtest/gtest.h</includes>
     <incdepgraph>
-      <node id="26">
-        <label>../lib/googletest/googletest/include/gtest/gtest.h</label>
-      </node>
       <node id="13">
         <label>graphs.hpp</label>
         <link refid="graphs_8hpp"/>
@@ -84,8 +80,6 @@
         <label>test/menu_test.cpp</label>
         <link refid="menu__test_8cpp"/>
         <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="26" relation="include">
         </childnode>
       </node>
       <node id="11">
@@ -167,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="test/menu_test.cpp" line="4" column="5" bodyfile="test/menu_test.cpp" bodystart="4" bodyend="9"/>
+        <location file="test/menu_test.cpp" line="3" column="5" bodyfile="test/menu_test.cpp" bodystart="3" bodyend="8"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -176,14 +170,13 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/menu.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lib/googletest/googletest/include/gtest/gtest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4" refid="menu__test_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="menu__test_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>m;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>m.<ref refid="classMenu_1a35656cd130e24d69383a5c9d0a73a38c" kindref="member">run</ref>();</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="menu__test_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="menu__test_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>m;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>m.<ref refid="classMenu_1a35656cd130e24d69383a5c9d0a73a38c" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="test/menu_test.cpp"/>
   </compounddef>
