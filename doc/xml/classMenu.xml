@@ -1,0 +1,581 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="classMenu" kind="class" language="C++" prot="public">
+    <compoundname>Menu</compoundname>
+    <includes refid="menu_8hpp" local="yes">menu.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classMenu_1a8269685e78203b028d5bd77c339898b2" prot="private" static="no" strong="no">
+        <type></type>
+        <name>State</name>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9" prot="private">
+          <name>running</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b" prot="private">
+          <name>exit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55" prot="private">
+          <name>error_csv</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb" prot="private">
+          <name>error_unloaded_data</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4" prot="private">
+          <name>show_data</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48" prot="private">
+          <name>regression</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classMenu_1a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc" prot="private">
+          <name>interpolation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>State of the program. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="28" column="9" bodyfile="include/menu.hpp" bodystart="29" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMenu_1a1454c539a24cfb1cd1fd8b123808f915" prot="private" static="no" mutable="no">
+        <type><ref refid="classMenu_1a8269685e78203b028d5bd77c339898b2" kindref="member">State</ref></type>
+        <definition>State Menu::menu_state</definition>
+        <argsstring></argsstring>
+        <name>menu_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="39" column="15" bodyfile="include/menu.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a5c32e53d60f984a0fa95c4c945a27b2a" prot="private" static="no" mutable="no">
+        <type><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref></type>
+        <definition>misc::Table Menu::table</definition>
+        <argsstring></argsstring>
+        <name>table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="41" column="21" bodyfile="include/menu.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a64fa7fe586f049762b839f59ac605b89" prot="private" static="no" mutable="no">
+        <type><ref refid="classmisc_1_1Plot" kindref="compound">misc::Plot</ref></type>
+        <definition>misc::Plot Menu::plt</definition>
+        <argsstring></argsstring>
+        <name>plt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="42" column="20" bodyfile="include/menu.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a44980a00fc87a13a68d8b375e324247c" prot="private" static="no" mutable="no">
+        <type><ref refid="classregr_1_1LinearRegression" kindref="compound">regr::LinearRegression</ref></type>
+        <definition>regr::LinearRegression Menu::lr</definition>
+        <argsstring></argsstring>
+        <name>lr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="44" column="32" bodyfile="include/menu.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1aa0e85d4ee6dbc5859fc13f4dabfa64dc" prot="private" static="no" mutable="no">
+        <type><ref refid="classregr_1_1PolyRegression" kindref="compound">regr::PolyRegression</ref></type>
+        <definition>regr::PolyRegression Menu::pr</definition>
+        <argsstring></argsstring>
+        <name>pr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="45" column="30" bodyfile="include/menu.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a7a58bdb496c3d5d9e9b77022a0586cee" prot="private" static="no" mutable="no">
+        <type><ref refid="classintp_1_1LinearInterp" kindref="compound">intp::LinearInterp</ref></type>
+        <definition>intp::LinearInterp Menu::lip</definition>
+        <argsstring></argsstring>
+        <name>lip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="47" column="28" bodyfile="include/menu.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a44f5bfea44ad13c7f92ca314e5182551" prot="private" static="no" mutable="no">
+        <type><ref refid="classintp_1_1PolyInterp" kindref="compound">intp::PolyInterp</ref></type>
+        <definition>intp::PolyInterp Menu::pip</definition>
+        <argsstring></argsstring>
+        <name>pip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="48" column="26" bodyfile="include/menu.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1ad5152b40c2819510f9e74600f4b510ad" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Menu::choice</definition>
+        <argsstring></argsstring>
+        <name>choice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="50" column="13" bodyfile="include/menu.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a10059b5c997cc3a0db9e8e2a64887b43" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Menu::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="51" column="21" bodyfile="include/menu.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1a485adcf0d2d5801661dbb29368f9b62c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Menu::linear_intp</definition>
+        <argsstring></argsstring>
+        <name>linear_intp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="52" column="14" bodyfile="include/menu.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMenu_1ae9b50937e0f5b42edc0f62c7f882da45" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Menu::linear_reg</definition>
+        <argsstring></argsstring>
+        <name>linear_reg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="53" column="14" bodyfile="include/menu.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMenu_1ada2f777bf28916af738443aa3ebcb927" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::check_choice</definition>
+        <argsstring>(int max, int ch)</argsstring>
+        <name>check_choice</name>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Checks the choices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="61" column="14" bodyfile="include/menu.hpp" bodystart="61" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1ab19a5a2c276c6e316a573371cd9f493c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::main_options</definition>
+        <argsstring>()</argsstring>
+        <name>main_options</name>
+        <briefdescription>
+<para>Showcase main options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="72" column="14" bodyfile="include/menu.hpp" bodystart="72" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aee8fe3152b6510f00eee2cc8569c7ce7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::load_csv</definition>
+        <argsstring>()</argsstring>
+        <name>load_csv</name>
+        <briefdescription>
+<para>load csv options </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="92" column="14" bodyfile="include/menu.hpp" bodystart="92" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1aa50e9b58689b9187ea8f92f41eec963d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Menu::check_csv_errors</definition>
+        <argsstring>()</argsstring>
+        <name>check_csv_errors</name>
+        <briefdescription>
+<para>Checks if csv was loaded correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="116" column="14" bodyfile="include/menu.hpp" bodystart="116" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a4e10e43feb29875c0e86b91b15f0c1b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Menu::check_unloaded_errors</definition>
+        <argsstring>()</argsstring>
+        <name>check_unloaded_errors</name>
+        <briefdescription>
+<para>Checks if data was loaded correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="130" column="14" bodyfile="include/menu.hpp" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a6676a4fd2611efa0185852b24e135a26" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::show_data_options</definition>
+        <argsstring>()</argsstring>
+        <name>show_data_options</name>
+        <briefdescription>
+<para>show data options </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="142" column="14" bodyfile="include/menu.hpp" bodystart="142" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1ae32c8e7216be9755780b48deaf73ca08" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::save_csv</definition>
+        <argsstring>()</argsstring>
+        <name>save_csv</name>
+        <briefdescription>
+<para>save csv options </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="203" column="14" bodyfile="include/menu.hpp" bodystart="203" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a586307437e1e10c56853bd83b8c3e361" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::show_poly_lin</definition>
+        <argsstring>(std::string str)</argsstring>
+        <name>show_poly_lin</name>
+        <param>
+          <type>std::string</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Polynomial or linear option. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="220" column="14" bodyfile="include/menu.hpp" bodystart="220" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1ad33276d92ca6fad9ce0c36ab4154c474" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::show_regression_options</definition>
+        <argsstring>()</argsstring>
+        <name>show_regression_options</name>
+        <briefdescription>
+<para>Show the regression option. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="231" column="14" bodyfile="include/menu.hpp" bodystart="231" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a8f5f67b770d28fea9ea7c25c5c2be696" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::show_interpolation_option</definition>
+        <argsstring>()</argsstring>
+        <name>show_interpolation_option</name>
+        <briefdescription>
+<para>Show interpolation options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="316" column="14" bodyfile="include/menu.hpp" bodystart="316" bodyend="401"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Menu::Menu</definition>
+        <argsstring>()</argsstring>
+        <name>Menu</name>
+        <briefdescription>
+<para>Construct a new Menu object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="409" column="9" bodyfile="include/menu.hpp" bodystart="409" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Menu::~Menu</definition>
+        <argsstring>()</argsstring>
+        <name>~Menu</name>
+        <briefdescription>
+<para>Destroy the Menu object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="420" column="9" bodyfile="include/menu.hpp" bodystart="420" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classMenu_1a35656cd130e24d69383a5c9d0a73a38c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+<para>Main run method. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/menu.hpp" line="426" column="14" bodyfile="include/menu.hpp" bodystart="426" bodyend="481"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for the main menu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-table</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-plt</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-lr</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-pr</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-lip</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-pip</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-filename</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="6">
+        <label>graphoptions</label>
+        <link refid="structgraphoptions"/>
+      </node>
+      <node id="11">
+        <label>intp::LinearInterp</label>
+        <link refid="classintp_1_1LinearInterp"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-p</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>intp::PolyInterp</label>
+        <link refid="classintp_1_1PolyInterp"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>misc::Plot</label>
+        <link refid="classmisc_1_1Plot"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-aoptions</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-title</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>misc::Table</label>
+        <link refid="classmisc_1_1Table"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>regr::LinearRegression</label>
+        <link refid="classregr_1_1LinearRegression"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-p</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>regr::PolyRegression</label>
+        <link refid="classregr_1_1PolyRegression"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="7">
+        <label>std::string</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/menu.hpp" line="21" column="1" bodyfile="include/menu.hpp" bodystart="22" bodyend="482"/>
+    <listofallmembers>
+      <member refid="classMenu_1ada2f777bf28916af738443aa3ebcb927" prot="private" virt="non-virtual"><scope>Menu</scope><name>check_choice</name></member>
+      <member refid="classMenu_1aa50e9b58689b9187ea8f92f41eec963d" prot="private" virt="non-virtual"><scope>Menu</scope><name>check_csv_errors</name></member>
+      <member refid="classMenu_1a4e10e43feb29875c0e86b91b15f0c1b6" prot="private" virt="non-virtual"><scope>Menu</scope><name>check_unloaded_errors</name></member>
+      <member refid="classMenu_1ad5152b40c2819510f9e74600f4b510ad" prot="private" virt="non-virtual"><scope>Menu</scope><name>choice</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55" prot="private" virt="non-virtual"><scope>Menu</scope><name>error_csv</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb" prot="private" virt="non-virtual"><scope>Menu</scope><name>error_unloaded_data</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b" prot="private" virt="non-virtual"><scope>Menu</scope><name>exit</name></member>
+      <member refid="classMenu_1a10059b5c997cc3a0db9e8e2a64887b43" prot="private" virt="non-virtual"><scope>Menu</scope><name>filename</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc" prot="private" virt="non-virtual"><scope>Menu</scope><name>interpolation</name></member>
+      <member refid="classMenu_1a485adcf0d2d5801661dbb29368f9b62c" prot="private" virt="non-virtual"><scope>Menu</scope><name>linear_intp</name></member>
+      <member refid="classMenu_1ae9b50937e0f5b42edc0f62c7f882da45" prot="private" virt="non-virtual"><scope>Menu</scope><name>linear_reg</name></member>
+      <member refid="classMenu_1a7a58bdb496c3d5d9e9b77022a0586cee" prot="private" virt="non-virtual"><scope>Menu</scope><name>lip</name></member>
+      <member refid="classMenu_1aee8fe3152b6510f00eee2cc8569c7ce7" prot="private" virt="non-virtual"><scope>Menu</scope><name>load_csv</name></member>
+      <member refid="classMenu_1a44980a00fc87a13a68d8b375e324247c" prot="private" virt="non-virtual"><scope>Menu</scope><name>lr</name></member>
+      <member refid="classMenu_1ab19a5a2c276c6e316a573371cd9f493c" prot="private" virt="non-virtual"><scope>Menu</scope><name>main_options</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+      <member refid="classMenu_1a1454c539a24cfb1cd1fd8b123808f915" prot="private" virt="non-virtual"><scope>Menu</scope><name>menu_state</name></member>
+      <member refid="classMenu_1a44f5bfea44ad13c7f92ca314e5182551" prot="private" virt="non-virtual"><scope>Menu</scope><name>pip</name></member>
+      <member refid="classMenu_1a64fa7fe586f049762b839f59ac605b89" prot="private" virt="non-virtual"><scope>Menu</scope><name>plt</name></member>
+      <member refid="classMenu_1aa0e85d4ee6dbc5859fc13f4dabfa64dc" prot="private" virt="non-virtual"><scope>Menu</scope><name>pr</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48" prot="private" virt="non-virtual"><scope>Menu</scope><name>regression</name></member>
+      <member refid="classMenu_1a35656cd130e24d69383a5c9d0a73a38c" prot="public" virt="non-virtual"><scope>Menu</scope><name>run</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9" prot="private" virt="non-virtual"><scope>Menu</scope><name>running</name></member>
+      <member refid="classMenu_1ae32c8e7216be9755780b48deaf73ca08" prot="private" virt="non-virtual"><scope>Menu</scope><name>save_csv</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4" prot="private" virt="non-virtual"><scope>Menu</scope><name>show_data</name></member>
+      <member refid="classMenu_1a6676a4fd2611efa0185852b24e135a26" prot="private" virt="non-virtual"><scope>Menu</scope><name>show_data_options</name></member>
+      <member refid="classMenu_1a8f5f67b770d28fea9ea7c25c5c2be696" prot="private" virt="non-virtual"><scope>Menu</scope><name>show_interpolation_option</name></member>
+      <member refid="classMenu_1a586307437e1e10c56853bd83b8c3e361" prot="private" virt="non-virtual"><scope>Menu</scope><name>show_poly_lin</name></member>
+      <member refid="classMenu_1ad33276d92ca6fad9ce0c36ab4154c474" prot="private" virt="non-virtual"><scope>Menu</scope><name>show_regression_options</name></member>
+      <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2" prot="private" virt="non-virtual"><scope>Menu</scope><name>State</name></member>
+      <member refid="classMenu_1a5c32e53d60f984a0fa95c4c945a27b2a" prot="private" virt="non-virtual"><scope>Menu</scope><name>table</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>Menu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

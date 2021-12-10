@@ -8,6 +8,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/reg.hpp" line="2" column="1"/>
+    <location file="include/regr.hpp" line="15" column="1"/>
   </compounddef>
 </doxygen>

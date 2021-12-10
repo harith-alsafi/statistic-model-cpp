@@ -1,0 +1,231 @@
+\hypertarget{graphs_8hpp}{}\doxysection{include/graphs.hpp File Reference}
+\label{graphs_8hpp}\index{include/graphs.hpp@{include/graphs.hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cfloat$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cwchar$>$}\newline
+{\ttfamily \#include $<$clocale$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for graphs.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphs_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{graphs_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structgraphoptions}{graphoptions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{graphs_8hpp_a2c4e6a8e51fcb85e7bf2e4aaca3abdf8}{strcol}} (const char $\ast$const str)
+\item 
+string \mbox{\hyperlink{graphs_8hpp_a7c93086728906d56f07a7320e866e9e0}{wrap}} (const char $\ast$const str, const size\+\_\+t line\+\_\+length)
+\item 
+size\+\_\+t \mbox{\hyperlink{graphs_8hpp_a78d4673ef4f8b08c0d58e9128abc0fd3}{outputlabel}} (const long double label, ostringstream \&strm)
+\item 
+int \mbox{\hyperlink{graphs_8hpp_ad96f6525c5be962000176e0437a294f8}{graph}} (const size\+\_\+t height, const size\+\_\+t width, const long double xmin, const long double xmax, const long double ymin, const long double ymax, unsigned short $\ast$$\ast$array, const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&aoptions)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{graphs_8hpp_a6cfeb94c998df81de0952aaf62003256}{graph}} (size\+\_\+t height, size\+\_\+t width, long double xmin, long double xmax, long double ymin, long double ymax, const size\+\_\+t rows, T $\ast$$\ast$array, const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&aoptions)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{graphs_8hpp_a01dbe23781c1a611f8d763a4b86e60fb}{graph}} (size\+\_\+t height, size\+\_\+t width, const long double xmin, const long double xmax, const long double ymin, const long double ymax, const size\+\_\+t numfunctions, T($\ast$functions\mbox{[}$\,$\mbox{]})(T), const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&aoptions)
+\item 
+{\footnotesize template$<$typename T $>$ }\\int \mbox{\hyperlink{graphs_8hpp_aba2da8a69f16ce7852287271183e134c}{graph}} (size\+\_\+t height, size\+\_\+t width, const long double xmin, const long double xmax, const long double ymin, const long double ymax, T afunction(T), const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&aoptions)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \mbox{\hyperlink{graphs_8hpp_a3cbcc834bba715d7897e5dcb0a500d76}{styles}} \mbox{[}$\,$\mbox{]}\mbox{[}11\mbox{]}
+\item 
+const char $\ast$const \mbox{\hyperlink{graphs_8hpp_ac7e7a5b513e5e27b84df7ae424a1e2fc}{colors}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}\textbackslash{}e\mbox{[}39m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}30m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}31m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}32m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}33m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}34m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}35m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}36m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}37m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}90m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}91m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}92m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}93m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}94m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}95m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}96m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}97m\char`\"{}\}
+\item 
+const char $\ast$const \mbox{\hyperlink{graphs_8hpp_a6a1a2273d67802663aa06d5c6213bbc3}{dots}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}⠀\char`\"{}, \char`\"{}⠁\char`\"{}, \char`\"{}⠂\char`\"{}, \char`\"{}⠃\char`\"{}, \char`\"{}⠄\char`\"{}, \char`\"{}⠅\char`\"{}, \char`\"{}⠆\char`\"{}, \char`\"{}⠇\char`\"{}, \char`\"{}⠈\char`\"{}, \char`\"{}⠉\char`\"{}, \char`\"{}⠊\char`\"{}, \char`\"{}⠋\char`\"{}, \char`\"{}⠌\char`\"{}, \char`\"{}⠍\char`\"{}, \char`\"{}⠎\char`\"{}, \char`\"{}⠏\char`\"{}, \char`\"{}⠐\char`\"{}, \char`\"{}⠑\char`\"{}, \char`\"{}⠒\char`\"{}, \char`\"{}⠓\char`\"{}, \char`\"{}⠔\char`\"{}, \char`\"{}⠕\char`\"{}, \char`\"{}⠖\char`\"{}, \char`\"{}⠗\char`\"{}, \char`\"{}⠘\char`\"{}, \char`\"{}⠙\char`\"{}, \char`\"{}⠚\char`\"{}, \char`\"{}⠛\char`\"{}, \char`\"{}⠜\char`\"{}, \char`\"{}⠝\char`\"{}, \char`\"{}⠞\char`\"{}, \char`\"{}⠟\char`\"{}, \char`\"{}⠠\char`\"{}, \char`\"{}⠡\char`\"{}, \char`\"{}⠢\char`\"{}, \char`\"{}⠣\char`\"{}, \char`\"{}⠤\char`\"{}, \char`\"{}⠥\char`\"{}, \char`\"{}⠦\char`\"{}, \char`\"{}⠧\char`\"{}, \char`\"{}⠨\char`\"{}, \char`\"{}⠩\char`\"{}, \char`\"{}⠪\char`\"{}, \char`\"{}⠫\char`\"{}, \char`\"{}⠬\char`\"{}, \char`\"{}⠭\char`\"{}, \char`\"{}⠮\char`\"{}, \char`\"{}⠯\char`\"{}, \char`\"{}⠰\char`\"{}, \char`\"{}⠱\char`\"{}, \char`\"{}⠲\char`\"{}, \char`\"{}⠳\char`\"{}, \char`\"{}⠴\char`\"{}, \char`\"{}⠵\char`\"{}, \char`\"{}⠶\char`\"{}, \char`\"{}⠷\char`\"{}, \char`\"{}⠸\char`\"{}, \char`\"{}⠹\char`\"{}, \char`\"{}⠺\char`\"{}, \char`\"{}⠻\char`\"{}, \char`\"{}⠼\char`\"{}, \char`\"{}⠽\char`\"{}, \char`\"{}⠾\char`\"{}, \char`\"{}⠿\char`\"{}, \char`\"{}⡀\char`\"{}, \char`\"{}⡁\char`\"{}, \char`\"{}⡂\char`\"{}, \char`\"{}⡃\char`\"{}, \char`\"{}⡄\char`\"{}, \char`\"{}⡅\char`\"{}, \char`\"{}⡆\char`\"{}, \char`\"{}⡇\char`\"{}, \char`\"{}⡈\char`\"{}, \char`\"{}⡉\char`\"{}, \char`\"{}⡊\char`\"{}, \char`\"{}⡋\char`\"{}, \char`\"{}⡌\char`\"{}, \char`\"{}⡍\char`\"{}, \char`\"{}⡎\char`\"{}, \char`\"{}⡏\char`\"{}, \char`\"{}⡐\char`\"{}, \char`\"{}⡑\char`\"{}, \char`\"{}⡒\char`\"{}, \char`\"{}⡓\char`\"{}, \char`\"{}⡔\char`\"{}, \char`\"{}⡕\char`\"{}, \char`\"{}⡖\char`\"{}, \char`\"{}⡗\char`\"{}, \char`\"{}⡘\char`\"{}, \char`\"{}⡙\char`\"{}, \char`\"{}⡚\char`\"{}, \char`\"{}⡛\char`\"{}, \char`\"{}⡜\char`\"{}, \char`\"{}⡝\char`\"{}, \char`\"{}⡞\char`\"{}, \char`\"{}⡟\char`\"{}, \char`\"{}⡠\char`\"{}, \char`\"{}⡡\char`\"{}, \char`\"{}⡢\char`\"{}, \char`\"{}⡣\char`\"{}, \char`\"{}⡤\char`\"{}, \char`\"{}⡥\char`\"{}, \char`\"{}⡦\char`\"{}, \char`\"{}⡧\char`\"{}, \char`\"{}⡨\char`\"{}, \char`\"{}⡩\char`\"{}, \char`\"{}⡪\char`\"{}, \char`\"{}⡫\char`\"{}, \char`\"{}⡬\char`\"{}, \char`\"{}⡭\char`\"{}, \char`\"{}⡮\char`\"{}, \char`\"{}⡯\char`\"{}, \char`\"{}⡰\char`\"{}, \char`\"{}⡱\char`\"{}, \char`\"{}⡲\char`\"{}, \char`\"{}⡳\char`\"{}, \char`\"{}⡴\char`\"{}, \char`\"{}⡵\char`\"{}, \char`\"{}⡶\char`\"{}, \char`\"{}⡷\char`\"{}, \char`\"{}⡸\char`\"{}, \char`\"{}⡹\char`\"{}, \char`\"{}⡺\char`\"{}, \char`\"{}⡻\char`\"{}, \char`\"{}⡼\char`\"{}, \char`\"{}⡽\char`\"{}, \char`\"{}⡾\char`\"{}, \char`\"{}⡿\char`\"{}, \char`\"{}⢀\char`\"{}, \char`\"{}⢁\char`\"{}, \char`\"{}⢂\char`\"{}, \char`\"{}⢃\char`\"{}, \char`\"{}⢄\char`\"{}, \char`\"{}⢅\char`\"{}, \char`\"{}⢆\char`\"{}, \char`\"{}⢇\char`\"{}, \char`\"{}⢈\char`\"{}, \char`\"{}⢉\char`\"{}, \char`\"{}⢊\char`\"{}, \char`\"{}⢋\char`\"{}, \char`\"{}⢌\char`\"{}, \char`\"{}⢍\char`\"{}, \char`\"{}⢎\char`\"{}, \char`\"{}⢏\char`\"{}, \char`\"{}⢐\char`\"{}, \char`\"{}⢑\char`\"{}, \char`\"{}⢒\char`\"{}, \char`\"{}⢓\char`\"{}, \char`\"{}⢔\char`\"{}, \char`\"{}⢕\char`\"{}, \char`\"{}⢖\char`\"{}, \char`\"{}⢗\char`\"{}, \char`\"{}⢘\char`\"{}, \char`\"{}⢙\char`\"{}, \char`\"{}⢚\char`\"{}, \char`\"{}⢛\char`\"{}, \char`\"{}⢜\char`\"{}, \char`\"{}⢝\char`\"{}, \char`\"{}⢞\char`\"{}, \char`\"{}⢟\char`\"{}, \char`\"{}⢠\char`\"{}, \char`\"{}⢡\char`\"{}, \char`\"{}⢢\char`\"{}, \char`\"{}⢣\char`\"{}, \char`\"{}⢤\char`\"{}, \char`\"{}⢥\char`\"{}, \char`\"{}⢦\char`\"{}, \char`\"{}⢧\char`\"{}, \char`\"{}⢨\char`\"{}, \char`\"{}⢩\char`\"{}, \char`\"{}⢪\char`\"{}, \char`\"{}⢫\char`\"{}, \char`\"{}⢬\char`\"{}, \char`\"{}⢭\char`\"{}, \char`\"{}⢮\char`\"{}, \char`\"{}⢯\char`\"{}, \char`\"{}⢰\char`\"{}, \char`\"{}⢱\char`\"{}, \char`\"{}⢲\char`\"{}, \char`\"{}⢳\char`\"{}, \char`\"{}⢴\char`\"{}, \char`\"{}⢵\char`\"{}, \char`\"{}⢶\char`\"{}, \char`\"{}⢷\char`\"{}, \char`\"{}⢸\char`\"{}, \char`\"{}⢹\char`\"{}, \char`\"{}⢺\char`\"{}, \char`\"{}⢻\char`\"{}, \char`\"{}⢼\char`\"{}, \char`\"{}⢽\char`\"{}, \char`\"{}⢾\char`\"{}, \char`\"{}⢿\char`\"{}, \char`\"{}⣀\char`\"{}, \char`\"{}⣁\char`\"{}, \char`\"{}⣂\char`\"{}, \char`\"{}⣃\char`\"{}, \char`\"{}⣄\char`\"{}, \char`\"{}⣅\char`\"{}, \char`\"{}⣆\char`\"{}, \char`\"{}⣇\char`\"{}, \char`\"{}⣈\char`\"{}, \char`\"{}⣉\char`\"{}, \char`\"{}⣊\char`\"{}, \char`\"{}⣋\char`\"{}, \char`\"{}⣌\char`\"{}, \char`\"{}⣍\char`\"{}, \char`\"{}⣎\char`\"{}, \char`\"{}⣏\char`\"{}, \char`\"{}⣐\char`\"{}, \char`\"{}⣑\char`\"{}, \char`\"{}⣒\char`\"{}, \char`\"{}⣓\char`\"{}, \char`\"{}⣔\char`\"{}, \char`\"{}⣕\char`\"{}, \char`\"{}⣖\char`\"{}, \char`\"{}⣗\char`\"{}, \char`\"{}⣘\char`\"{}, \char`\"{}⣙\char`\"{}, \char`\"{}⣚\char`\"{}, \char`\"{}⣛\char`\"{}, \char`\"{}⣜\char`\"{}, \char`\"{}⣝\char`\"{}, \char`\"{}⣞\char`\"{}, \char`\"{}⣟\char`\"{}, \char`\"{}⣠\char`\"{}, \char`\"{}⣡\char`\"{}, \char`\"{}⣢\char`\"{}, \char`\"{}⣣\char`\"{}, \char`\"{}⣤\char`\"{}, \char`\"{}⣥\char`\"{}, \char`\"{}⣦\char`\"{}, \char`\"{}⣧\char`\"{}, \char`\"{}⣨\char`\"{}, \char`\"{}⣩\char`\"{}, \char`\"{}⣪\char`\"{}, \char`\"{}⣫\char`\"{}, \char`\"{}⣬\char`\"{}, \char`\"{}⣭\char`\"{}, \char`\"{}⣮\char`\"{}, \char`\"{}⣯\char`\"{}, \char`\"{}⣰\char`\"{}, \char`\"{}⣱\char`\"{}, \char`\"{}⣲\char`\"{}, \char`\"{}⣳\char`\"{}, \char`\"{}⣴\char`\"{}, \char`\"{}⣵\char`\"{}, \char`\"{}⣶\char`\"{}, \char`\"{}⣷\char`\"{}, \char`\"{}⣸\char`\"{}, \char`\"{}⣹\char`\"{}, \char`\"{}⣺\char`\"{}, \char`\"{}⣻\char`\"{}, \char`\"{}⣼\char`\"{}, \char`\"{}⣽\char`\"{}, \char`\"{}⣾\char`\"{}, \char`\"{}⣿\char`\"{}\}
+\item 
+const int \mbox{\hyperlink{graphs_8hpp_a524d16027eb5d4d9052f1634a15a863d}{values}} \mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]} = \{\{0x1, 0x2, 0x4, 0x40\}, \{0x8, 0x10, 0x20, 0x80\}\}
+\item 
+const char $\ast$const \mbox{\hyperlink{graphs_8hpp_a84a54be46d61d60c0e6a76ac79bae486}{fractions}} \mbox{[}$\,$\mbox{]} = \{\char`\"{}¼\char`\"{}, \char`\"{}½\char`\"{}, \char`\"{}¾\char`\"{}, \char`\"{}⅐\char`\"{}, \char`\"{}⅑\char`\"{}, \char`\"{}⅒\char`\"{}, \char`\"{}⅓\char`\"{}, \char`\"{}⅔\char`\"{}, \char`\"{}⅕\char`\"{}, \char`\"{}⅖\char`\"{}, \char`\"{}⅗\char`\"{}, \char`\"{}⅘\char`\"{}, \char`\"{}⅙\char`\"{}, \char`\"{}⅚\char`\"{}, \char`\"{}⅛\char`\"{}, \char`\"{}⅜\char`\"{}, \char`\"{}⅝\char`\"{}, \char`\"{}⅞\char`\"{}\}
+\item 
+const long double \mbox{\hyperlink{graphs_8hpp_a9bd47038e7a99a6f487cd7067247bd07}{fractionvalues}} \mbox{[}$\,$\mbox{]} = \{1.\+0L / 4.\+0L, 1.\+0L / 2.\+0L, 3.\+0L / 4.\+0L, 1.\+0L / 7.\+0L, 1.\+0L / 9.\+0L, 1.\+0L / 10.\+0L, 1.\+0L / 3.\+0L, 2.\+0L / 3.\+0L, 1.\+0L / 5.\+0L, 2.\+0L / 5.\+0L, 3.\+0L / 5.\+0L, 4.\+0L / 5.\+0L, 1.\+0L / 6.\+0L, 5.\+0L / 6.\+0L, 1.\+0L / 8.\+0L, 3.\+0L / 8.\+0L, 5.\+0L / 8.\+0L, 7.\+0L / 8.\+0L\}
+\item 
+const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \mbox{\hyperlink{graphs_8hpp_a5c1a8e3cedb72ff9591ac596bd334f28}{graphdefaultoptions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphs_8hpp_ad96f6525c5be962000176e0437a294f8}\label{graphs_8hpp_ad96f6525c5be962000176e0437a294f8}} 
+\index{graphs.hpp@{graphs.hpp}!graph@{graph}}
+\index{graph@{graph}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int graph (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{height,  }\item[{const size\+\_\+t}]{width,  }\item[{const long double}]{xmin,  }\item[{const long double}]{xmax,  }\item[{const long double}]{ymin,  }\item[{const long double}]{ymax,  }\item[{unsigned short $\ast$$\ast$}]{array,  }\item[{const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&}]{aoptions }\end{DoxyParamCaption})}
+
+
+
+Definition at line 230 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a01dbe23781c1a611f8d763a4b86e60fb}\label{graphs_8hpp_a01dbe23781c1a611f8d763a4b86e60fb}} 
+\index{graphs.hpp@{graphs.hpp}!graph@{graph}}
+\index{graph@{graph}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int graph (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{width,  }\item[{const long double}]{xmin,  }\item[{const long double}]{xmax,  }\item[{const long double}]{ymin,  }\item[{const long double}]{ymax,  }\item[{const size\+\_\+t}]{numfunctions,  }\item[{T($\ast$\mbox{[}$\,$\mbox{]})(T)}]{functions,  }\item[{const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&}]{aoptions }\end{DoxyParamCaption})}
+
+
+
+Definition at line 626 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_aba2da8a69f16ce7852287271183e134c}\label{graphs_8hpp_aba2da8a69f16ce7852287271183e134c}} 
+\index{graphs.hpp@{graphs.hpp}!graph@{graph}}
+\index{graph@{graph}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int graph (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{width,  }\item[{const long double}]{xmin,  }\item[{const long double}]{xmax,  }\item[{const long double}]{ymin,  }\item[{const long double}]{ymax,  }\item[{T }]{afunctionT,  }\item[{const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&}]{aoptions }\end{DoxyParamCaption})}
+
+
+
+Definition at line 728 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a6cfeb94c998df81de0952aaf62003256}\label{graphs_8hpp_a6cfeb94c998df81de0952aaf62003256}} 
+\index{graphs.hpp@{graphs.hpp}!graph@{graph}}
+\index{graph@{graph}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{graph()}{graph()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int graph (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{height,  }\item[{size\+\_\+t}]{width,  }\item[{long double}]{xmin,  }\item[{long double}]{xmax,  }\item[{long double}]{ymin,  }\item[{long double}]{ymax,  }\item[{const size\+\_\+t}]{rows,  }\item[{T $\ast$$\ast$}]{array,  }\item[{const \mbox{\hyperlink{structgraphoptions}{graphoptions}} \&}]{aoptions }\end{DoxyParamCaption})}
+
+
+
+Definition at line 507 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a78d4673ef4f8b08c0d58e9128abc0fd3}\label{graphs_8hpp_a78d4673ef4f8b08c0d58e9128abc0fd3}} 
+\index{graphs.hpp@{graphs.hpp}!outputlabel@{outputlabel}}
+\index{outputlabel@{outputlabel}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{outputlabel()}{outputlabel()}}
+{\footnotesize\ttfamily size\+\_\+t outputlabel (\begin{DoxyParamCaption}\item[{const long double}]{label,  }\item[{ostringstream \&}]{strm }\end{DoxyParamCaption})}
+
+
+
+Definition at line 166 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a2c4e6a8e51fcb85e7bf2e4aaca3abdf8}\label{graphs_8hpp_a2c4e6a8e51fcb85e7bf2e4aaca3abdf8}} 
+\index{graphs.hpp@{graphs.hpp}!strcol@{strcol}}
+\index{strcol@{strcol}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{strcol()}{strcol()}}
+{\footnotesize\ttfamily int strcol (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a7c93086728906d56f07a7320e866e9e0}\label{graphs_8hpp_a7c93086728906d56f07a7320e866e9e0}} 
+\index{graphs.hpp@{graphs.hpp}!wrap@{wrap}}
+\index{wrap@{wrap}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{wrap()}{wrap()}}
+{\footnotesize\ttfamily string wrap (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{str,  }\item[{const size\+\_\+t}]{line\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Definition at line 115 of file graphs.\+hpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{graphs_8hpp_ac7e7a5b513e5e27b84df7ae424a1e2fc}\label{graphs_8hpp_ac7e7a5b513e5e27b84df7ae424a1e2fc}} 
+\index{graphs.hpp@{graphs.hpp}!colors@{colors}}
+\index{colors@{colors}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{colors}{colors}}
+{\footnotesize\ttfamily const char$\ast$ const colors\mbox{[}$\,$\mbox{]} = \{\char`\"{}\textbackslash{}e\mbox{[}39m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}30m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}31m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}32m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}33m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}34m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}35m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}36m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}37m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}90m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}91m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}92m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}93m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}94m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}95m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}96m\char`\"{}, \char`\"{}\textbackslash{}e\mbox{[}97m\char`\"{}\}}
+
+
+
+Definition at line 30 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a6a1a2273d67802663aa06d5c6213bbc3}\label{graphs_8hpp_a6a1a2273d67802663aa06d5c6213bbc3}} 
+\index{graphs.hpp@{graphs.hpp}!dots@{dots}}
+\index{dots@{dots}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{dots}{dots}}
+{\footnotesize\ttfamily const char$\ast$ const dots\mbox{[}$\,$\mbox{]} = \{\char`\"{}⠀\char`\"{}, \char`\"{}⠁\char`\"{}, \char`\"{}⠂\char`\"{}, \char`\"{}⠃\char`\"{}, \char`\"{}⠄\char`\"{}, \char`\"{}⠅\char`\"{}, \char`\"{}⠆\char`\"{}, \char`\"{}⠇\char`\"{}, \char`\"{}⠈\char`\"{}, \char`\"{}⠉\char`\"{}, \char`\"{}⠊\char`\"{}, \char`\"{}⠋\char`\"{}, \char`\"{}⠌\char`\"{}, \char`\"{}⠍\char`\"{}, \char`\"{}⠎\char`\"{}, \char`\"{}⠏\char`\"{}, \char`\"{}⠐\char`\"{}, \char`\"{}⠑\char`\"{}, \char`\"{}⠒\char`\"{}, \char`\"{}⠓\char`\"{}, \char`\"{}⠔\char`\"{}, \char`\"{}⠕\char`\"{}, \char`\"{}⠖\char`\"{}, \char`\"{}⠗\char`\"{}, \char`\"{}⠘\char`\"{}, \char`\"{}⠙\char`\"{}, \char`\"{}⠚\char`\"{}, \char`\"{}⠛\char`\"{}, \char`\"{}⠜\char`\"{}, \char`\"{}⠝\char`\"{}, \char`\"{}⠞\char`\"{}, \char`\"{}⠟\char`\"{}, \char`\"{}⠠\char`\"{}, \char`\"{}⠡\char`\"{}, \char`\"{}⠢\char`\"{}, \char`\"{}⠣\char`\"{}, \char`\"{}⠤\char`\"{}, \char`\"{}⠥\char`\"{}, \char`\"{}⠦\char`\"{}, \char`\"{}⠧\char`\"{}, \char`\"{}⠨\char`\"{}, \char`\"{}⠩\char`\"{}, \char`\"{}⠪\char`\"{}, \char`\"{}⠫\char`\"{}, \char`\"{}⠬\char`\"{}, \char`\"{}⠭\char`\"{}, \char`\"{}⠮\char`\"{}, \char`\"{}⠯\char`\"{}, \char`\"{}⠰\char`\"{}, \char`\"{}⠱\char`\"{}, \char`\"{}⠲\char`\"{}, \char`\"{}⠳\char`\"{}, \char`\"{}⠴\char`\"{}, \char`\"{}⠵\char`\"{}, \char`\"{}⠶\char`\"{}, \char`\"{}⠷\char`\"{}, \char`\"{}⠸\char`\"{}, \char`\"{}⠹\char`\"{}, \char`\"{}⠺\char`\"{}, \char`\"{}⠻\char`\"{}, \char`\"{}⠼\char`\"{}, \char`\"{}⠽\char`\"{}, \char`\"{}⠾\char`\"{}, \char`\"{}⠿\char`\"{}, \char`\"{}⡀\char`\"{}, \char`\"{}⡁\char`\"{}, \char`\"{}⡂\char`\"{}, \char`\"{}⡃\char`\"{}, \char`\"{}⡄\char`\"{}, \char`\"{}⡅\char`\"{}, \char`\"{}⡆\char`\"{}, \char`\"{}⡇\char`\"{}, \char`\"{}⡈\char`\"{}, \char`\"{}⡉\char`\"{}, \char`\"{}⡊\char`\"{}, \char`\"{}⡋\char`\"{}, \char`\"{}⡌\char`\"{}, \char`\"{}⡍\char`\"{}, \char`\"{}⡎\char`\"{}, \char`\"{}⡏\char`\"{}, \char`\"{}⡐\char`\"{}, \char`\"{}⡑\char`\"{}, \char`\"{}⡒\char`\"{}, \char`\"{}⡓\char`\"{}, \char`\"{}⡔\char`\"{}, \char`\"{}⡕\char`\"{}, \char`\"{}⡖\char`\"{}, \char`\"{}⡗\char`\"{}, \char`\"{}⡘\char`\"{}, \char`\"{}⡙\char`\"{}, \char`\"{}⡚\char`\"{}, \char`\"{}⡛\char`\"{}, \char`\"{}⡜\char`\"{}, \char`\"{}⡝\char`\"{}, \char`\"{}⡞\char`\"{}, \char`\"{}⡟\char`\"{}, \char`\"{}⡠\char`\"{}, \char`\"{}⡡\char`\"{}, \char`\"{}⡢\char`\"{}, \char`\"{}⡣\char`\"{}, \char`\"{}⡤\char`\"{}, \char`\"{}⡥\char`\"{}, \char`\"{}⡦\char`\"{}, \char`\"{}⡧\char`\"{}, \char`\"{}⡨\char`\"{}, \char`\"{}⡩\char`\"{}, \char`\"{}⡪\char`\"{}, \char`\"{}⡫\char`\"{}, \char`\"{}⡬\char`\"{}, \char`\"{}⡭\char`\"{}, \char`\"{}⡮\char`\"{}, \char`\"{}⡯\char`\"{}, \char`\"{}⡰\char`\"{}, \char`\"{}⡱\char`\"{}, \char`\"{}⡲\char`\"{}, \char`\"{}⡳\char`\"{}, \char`\"{}⡴\char`\"{}, \char`\"{}⡵\char`\"{}, \char`\"{}⡶\char`\"{}, \char`\"{}⡷\char`\"{}, \char`\"{}⡸\char`\"{}, \char`\"{}⡹\char`\"{}, \char`\"{}⡺\char`\"{}, \char`\"{}⡻\char`\"{}, \char`\"{}⡼\char`\"{}, \char`\"{}⡽\char`\"{}, \char`\"{}⡾\char`\"{}, \char`\"{}⡿\char`\"{}, \char`\"{}⢀\char`\"{}, \char`\"{}⢁\char`\"{}, \char`\"{}⢂\char`\"{}, \char`\"{}⢃\char`\"{}, \char`\"{}⢄\char`\"{}, \char`\"{}⢅\char`\"{}, \char`\"{}⢆\char`\"{}, \char`\"{}⢇\char`\"{}, \char`\"{}⢈\char`\"{}, \char`\"{}⢉\char`\"{}, \char`\"{}⢊\char`\"{}, \char`\"{}⢋\char`\"{}, \char`\"{}⢌\char`\"{}, \char`\"{}⢍\char`\"{}, \char`\"{}⢎\char`\"{}, \char`\"{}⢏\char`\"{}, \char`\"{}⢐\char`\"{}, \char`\"{}⢑\char`\"{}, \char`\"{}⢒\char`\"{}, \char`\"{}⢓\char`\"{}, \char`\"{}⢔\char`\"{}, \char`\"{}⢕\char`\"{}, \char`\"{}⢖\char`\"{}, \char`\"{}⢗\char`\"{}, \char`\"{}⢘\char`\"{}, \char`\"{}⢙\char`\"{}, \char`\"{}⢚\char`\"{}, \char`\"{}⢛\char`\"{}, \char`\"{}⢜\char`\"{}, \char`\"{}⢝\char`\"{}, \char`\"{}⢞\char`\"{}, \char`\"{}⢟\char`\"{}, \char`\"{}⢠\char`\"{}, \char`\"{}⢡\char`\"{}, \char`\"{}⢢\char`\"{}, \char`\"{}⢣\char`\"{}, \char`\"{}⢤\char`\"{}, \char`\"{}⢥\char`\"{}, \char`\"{}⢦\char`\"{}, \char`\"{}⢧\char`\"{}, \char`\"{}⢨\char`\"{}, \char`\"{}⢩\char`\"{}, \char`\"{}⢪\char`\"{}, \char`\"{}⢫\char`\"{}, \char`\"{}⢬\char`\"{}, \char`\"{}⢭\char`\"{}, \char`\"{}⢮\char`\"{}, \char`\"{}⢯\char`\"{}, \char`\"{}⢰\char`\"{}, \char`\"{}⢱\char`\"{}, \char`\"{}⢲\char`\"{}, \char`\"{}⢳\char`\"{}, \char`\"{}⢴\char`\"{}, \char`\"{}⢵\char`\"{}, \char`\"{}⢶\char`\"{}, \char`\"{}⢷\char`\"{}, \char`\"{}⢸\char`\"{}, \char`\"{}⢹\char`\"{}, \char`\"{}⢺\char`\"{}, \char`\"{}⢻\char`\"{}, \char`\"{}⢼\char`\"{}, \char`\"{}⢽\char`\"{}, \char`\"{}⢾\char`\"{}, \char`\"{}⢿\char`\"{}, \char`\"{}⣀\char`\"{}, \char`\"{}⣁\char`\"{}, \char`\"{}⣂\char`\"{}, \char`\"{}⣃\char`\"{}, \char`\"{}⣄\char`\"{}, \char`\"{}⣅\char`\"{}, \char`\"{}⣆\char`\"{}, \char`\"{}⣇\char`\"{}, \char`\"{}⣈\char`\"{}, \char`\"{}⣉\char`\"{}, \char`\"{}⣊\char`\"{}, \char`\"{}⣋\char`\"{}, \char`\"{}⣌\char`\"{}, \char`\"{}⣍\char`\"{}, \char`\"{}⣎\char`\"{}, \char`\"{}⣏\char`\"{}, \char`\"{}⣐\char`\"{}, \char`\"{}⣑\char`\"{}, \char`\"{}⣒\char`\"{}, \char`\"{}⣓\char`\"{}, \char`\"{}⣔\char`\"{}, \char`\"{}⣕\char`\"{}, \char`\"{}⣖\char`\"{}, \char`\"{}⣗\char`\"{}, \char`\"{}⣘\char`\"{}, \char`\"{}⣙\char`\"{}, \char`\"{}⣚\char`\"{}, \char`\"{}⣛\char`\"{}, \char`\"{}⣜\char`\"{}, \char`\"{}⣝\char`\"{}, \char`\"{}⣞\char`\"{}, \char`\"{}⣟\char`\"{}, \char`\"{}⣠\char`\"{}, \char`\"{}⣡\char`\"{}, \char`\"{}⣢\char`\"{}, \char`\"{}⣣\char`\"{}, \char`\"{}⣤\char`\"{}, \char`\"{}⣥\char`\"{}, \char`\"{}⣦\char`\"{}, \char`\"{}⣧\char`\"{}, \char`\"{}⣨\char`\"{}, \char`\"{}⣩\char`\"{}, \char`\"{}⣪\char`\"{}, \char`\"{}⣫\char`\"{}, \char`\"{}⣬\char`\"{}, \char`\"{}⣭\char`\"{}, \char`\"{}⣮\char`\"{}, \char`\"{}⣯\char`\"{}, \char`\"{}⣰\char`\"{}, \char`\"{}⣱\char`\"{}, \char`\"{}⣲\char`\"{}, \char`\"{}⣳\char`\"{}, \char`\"{}⣴\char`\"{}, \char`\"{}⣵\char`\"{}, \char`\"{}⣶\char`\"{}, \char`\"{}⣷\char`\"{}, \char`\"{}⣸\char`\"{}, \char`\"{}⣹\char`\"{}, \char`\"{}⣺\char`\"{}, \char`\"{}⣻\char`\"{}, \char`\"{}⣼\char`\"{}, \char`\"{}⣽\char`\"{}, \char`\"{}⣾\char`\"{}, \char`\"{}⣿\char`\"{}\}}
+
+
+
+Definition at line 32 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a84a54be46d61d60c0e6a76ac79bae486}\label{graphs_8hpp_a84a54be46d61d60c0e6a76ac79bae486}} 
+\index{graphs.hpp@{graphs.hpp}!fractions@{fractions}}
+\index{fractions@{fractions}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{fractions}{fractions}}
+{\footnotesize\ttfamily const char$\ast$ const fractions\mbox{[}$\,$\mbox{]} = \{\char`\"{}¼\char`\"{}, \char`\"{}½\char`\"{}, \char`\"{}¾\char`\"{}, \char`\"{}⅐\char`\"{}, \char`\"{}⅑\char`\"{}, \char`\"{}⅒\char`\"{}, \char`\"{}⅓\char`\"{}, \char`\"{}⅔\char`\"{}, \char`\"{}⅕\char`\"{}, \char`\"{}⅖\char`\"{}, \char`\"{}⅗\char`\"{}, \char`\"{}⅘\char`\"{}, \char`\"{}⅙\char`\"{}, \char`\"{}⅚\char`\"{}, \char`\"{}⅛\char`\"{}, \char`\"{}⅜\char`\"{}, \char`\"{}⅝\char`\"{}, \char`\"{}⅞\char`\"{}\}}
+
+
+
+Definition at line 36 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a9bd47038e7a99a6f487cd7067247bd07}\label{graphs_8hpp_a9bd47038e7a99a6f487cd7067247bd07}} 
+\index{graphs.hpp@{graphs.hpp}!fractionvalues@{fractionvalues}}
+\index{fractionvalues@{fractionvalues}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{fractionvalues}{fractionvalues}}
+{\footnotesize\ttfamily const long double fractionvalues\mbox{[}$\,$\mbox{]} = \{1.\+0L / 4.\+0L, 1.\+0L / 2.\+0L, 3.\+0L / 4.\+0L, 1.\+0L / 7.\+0L, 1.\+0L / 9.\+0L, 1.\+0L / 10.\+0L, 1.\+0L / 3.\+0L, 2.\+0L / 3.\+0L, 1.\+0L / 5.\+0L, 2.\+0L / 5.\+0L, 3.\+0L / 5.\+0L, 4.\+0L / 5.\+0L, 1.\+0L / 6.\+0L, 5.\+0L / 6.\+0L, 1.\+0L / 8.\+0L, 3.\+0L / 8.\+0L, 5.\+0L / 8.\+0L, 7.\+0L / 8.\+0L\}}
+
+
+
+Definition at line 38 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a5c1a8e3cedb72ff9591ac596bd334f28}\label{graphs_8hpp_a5c1a8e3cedb72ff9591ac596bd334f28}} 
+\index{graphs.hpp@{graphs.hpp}!graphdefaultoptions@{graphdefaultoptions}}
+\index{graphdefaultoptions@{graphdefaultoptions}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{graphdefaultoptions}{graphdefaultoptions}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structgraphoptions}{graphoptions}} graphdefaultoptions}
+
+
+
+Definition at line 66 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a3cbcc834bba715d7897e5dcb0a500d76}\label{graphs_8hpp_a3cbcc834bba715d7897e5dcb0a500d76}} 
+\index{graphs.hpp@{graphs.hpp}!styles@{styles}}
+\index{styles@{styles}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{styles}{styles}}
+{\footnotesize\ttfamily const char$\ast$ const styles\mbox{[}$\,$\mbox{]}\mbox{[}11\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}-\/"{}}, \textcolor{stringliteral}{"{}|"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}—"{}}, \textcolor{stringliteral}{"{}|"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}, \textcolor{stringliteral}{"{}+"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}─"{}}, \textcolor{stringliteral}{"{}│"{}}, \textcolor{stringliteral}{"{}┌"{}}, \textcolor{stringliteral}{"{}┬"{}}, \textcolor{stringliteral}{"{}┐"{}}, \textcolor{stringliteral}{"{}├"{}}, \textcolor{stringliteral}{"{}┼"{}}, \textcolor{stringliteral}{"{}┤"{}}, \textcolor{stringliteral}{"{}└"{}}, \textcolor{stringliteral}{"{}┴"{}}, \textcolor{stringliteral}{"{}┘"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}━"{}}, \textcolor{stringliteral}{"{}┃"{}}, \textcolor{stringliteral}{"{}┏"{}}, \textcolor{stringliteral}{"{}┳"{}}, \textcolor{stringliteral}{"{}┓"{}}, \textcolor{stringliteral}{"{}┣"{}}, \textcolor{stringliteral}{"{}╋"{}}, \textcolor{stringliteral}{"{}┫"{}}, \textcolor{stringliteral}{"{}┗"{}}, \textcolor{stringliteral}{"{}┻"{}}, \textcolor{stringliteral}{"{}┛"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}═"{}}, \textcolor{stringliteral}{"{}║"{}}, \textcolor{stringliteral}{"{}╔"{}}, \textcolor{stringliteral}{"{}╦"{}}, \textcolor{stringliteral}{"{}╗"{}}, \textcolor{stringliteral}{"{}╠"{}}, \textcolor{stringliteral}{"{}╬"{}}, \textcolor{stringliteral}{"{}╣"{}}, \textcolor{stringliteral}{"{}╚"{}}, \textcolor{stringliteral}{"{}╩"{}}, \textcolor{stringliteral}{"{}╝"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}╌"{}}, \textcolor{stringliteral}{"{}╎"{}}, \textcolor{stringliteral}{"{}┌"{}}, \textcolor{stringliteral}{"{}┬"{}}, \textcolor{stringliteral}{"{}┐"{}}, \textcolor{stringliteral}{"{}├"{}}, \textcolor{stringliteral}{"{}┼"{}}, \textcolor{stringliteral}{"{}┤"{}}, \textcolor{stringliteral}{"{}└"{}}, \textcolor{stringliteral}{"{}┴"{}}, \textcolor{stringliteral}{"{}┘"{}}\}, }
+\DoxyCodeLine{    \{\textcolor{stringliteral}{"{}╍"{}}, \textcolor{stringliteral}{"{}╏"{}}, \textcolor{stringliteral}{"{}┏"{}}, \textcolor{stringliteral}{"{}┳"{}}, \textcolor{stringliteral}{"{}┓"{}}, \textcolor{stringliteral}{"{}┣"{}}, \textcolor{stringliteral}{"{}╋"{}}, \textcolor{stringliteral}{"{}┫"{}}, \textcolor{stringliteral}{"{}┗"{}}, \textcolor{stringliteral}{"{}┻"{}}, \textcolor{stringliteral}{"{}┛"{}}\}  }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 19 of file graphs.\+hpp.
+
+\mbox{\Hypertarget{graphs_8hpp_a524d16027eb5d4d9052f1634a15a863d}\label{graphs_8hpp_a524d16027eb5d4d9052f1634a15a863d}} 
+\index{graphs.hpp@{graphs.hpp}!values@{values}}
+\index{values@{values}!graphs.hpp@{graphs.hpp}}
+\doxysubsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily const int values\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]} = \{\{0x1, 0x2, 0x4, 0x40\}, \{0x8, 0x10, 0x20, 0x80\}\}}
+
+
+
+Definition at line 34 of file graphs.\+hpp.
+

@@ -1,3 +1,8 @@
 <map id="intp::PolyInterp" name="intp::PolyInterp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,116,83"/>
+<area shape="rect" id="node1" title="Class for polynomial interpolation." alt="" coords="56,1184,167,1305"/>
+<area shape="rect" id="node2" href="$classintp_1_1LinearInterp.html" title="Class for Linear interpolation." alt="" coords="27,764,196,1135"/>
+<area shape="rect" id="node3" href="$classmisc_1_1Plot.html" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" id="node4" href="$structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" id="node5" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" id="node6" title=" " alt="" coords="131,5,257,97"/>
 </map>

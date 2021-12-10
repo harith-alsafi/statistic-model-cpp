@@ -1,15 +1,7 @@
 var searchData=
 [
-  ['generatedomain_10',['generateDomain',['../classmisc_1_1Plot.html#afe5d9755ead78c69a1ad1415a2ea532f',1,'misc::Plot']]],
-  ['getavg_11',['getAvg',['../classmisc_1_1Table.html#a1978b6ea40bacf28cab9a4dbee6fba74',1,'misc::Table']]],
-  ['getavgs_12',['getAvgs',['../classmisc_1_1Table.html#a6e5c955b60123e296e33d6438521b1e9',1,'misc::Table']]],
-  ['getmax_13',['getMax',['../classmisc_1_1Table.html#a24471fff20c0a96eadf41531b2bcd923',1,'misc::Table']]],
-  ['getmin_14',['getMin',['../classmisc_1_1Table.html#a4553ac717bcf5482688d2e29c05c8b19',1,'misc::Table']]],
-  ['getqr_15',['getQR',['../classmisc_1_1Table.html#a6c43ec9c6d7e7d4ca414b92617f83881',1,'misc::Table']]],
-  ['getqrs_16',['getQRs',['../classmisc_1_1Table.html#a1b42a09b9bc50afb69ce94bc40fe1d52',1,'misc::Table']]],
-  ['getstd_17',['getStd',['../classmisc_1_1Table.html#a949aa45612aacbdc6709b0ba4c864207',1,'misc::Table']]],
-  ['getstds_18',['getStds',['../classmisc_1_1Table.html#a1e6b098ea88b59d0c26b24c5050d5843',1,'misc::Table']]],
-  ['getvar_19',['getVar',['../classmisc_1_1Table.html#ab194bb65153718986cb8bfff18526294',1,'misc::Table']]],
-  ['getvars_20',['getVars',['../classmisc_1_1Table.html#ada09ad1dff1ef0d5d50cff347e9bbf70',1,'misc::Table']]],
-  ['graphoptions_21',['graphoptions',['../structgraphoptions.html',1,'graphoptions'],['../structgraphoptions.html#a142ea0e411fcfd6cfeeeb1c6a8869133',1,'graphoptions::graphoptions()']]]
+  ['degree_21',['degree',['../classregr_1_1PolyRegression.html#a1c63523cea2d40ca3505509ce557062c',1,'regr::PolyRegression']]],
+  ['describe_5fall_22',['describe_all',['../classmisc_1_1Table.html#a9fcaf25cf5b2adf8b4496339f8009017',1,'misc::Table']]],
+  ['domain_23',['domain',['../classmisc_1_1Plot.html#a2a9d2b16ea8c7f3138a5384a1ba923d8',1,'misc::Plot']]],
+  ['dots_24',['dots',['../graphs_8hpp.html#a6a1a2273d67802663aa06d5c6213bbc3',1,'graphs.hpp']]]
 ];

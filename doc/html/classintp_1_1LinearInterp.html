@@ -65,22 +65,858 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classintp_1_1LinearInterp-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">intp::LinearInterp Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &quot;int.hpp&quot;</code></p>
+<p>Class for Linear interpolation.  
+ <a href="classintp_1_1LinearInterp.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="intp_8hpp_source.html">intp.hpp</a>&quot;</code></p>
+<div class="dynheader">
+Inheritance diagram for intp::LinearInterp:</div>
+<div class="dyncontent">
+<div class="center"><img src="classintp_1_1LinearInterp__inherit__graph.png" border="0" usemap="#aintp_1_1LinearInterp_inherit__map" alt="Inheritance graph"/></div>
+<map name="aintp_1_1LinearInterp_inherit__map" id="aintp_1_1LinearInterp_inherit__map">
+<area shape="rect" title="Class for Linear interpolation." alt="" coords="5,5,175,391"/>
+<area shape="rect" href="classintp_1_1PolyInterp.html" title="Class for polynomial interpolation." alt="" coords="35,439,145,560"/>
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for intp::LinearInterp:</div>
 <div class="dyncontent">
 <div class="center"><img src="classintp_1_1LinearInterp__coll__graph.png" border="0" usemap="#aintp_1_1LinearInterp_coll__map" alt="Collaboration graph"/></div>
 <map name="aintp_1_1LinearInterp_coll__map" id="aintp_1_1LinearInterp_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,124,83"/>
+<area shape="rect" title="Class for Linear interpolation." alt="" coords="27,764,196,1135"/>
+<area shape="rect" href="classmisc_1_1Plot.html" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" href="structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" title=" " alt="" coords="131,5,257,97"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab47c88b454ae9e5680d7e25895c0db57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#ab47c88b454ae9e5680d7e25895c0db57">LinearInterp</a> ()</td></tr>
+<tr class="memdesc:ab47c88b454ae9e5680d7e25895c0db57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Linear Interp object.  <a href="classintp_1_1LinearInterp.html#ab47c88b454ae9e5680d7e25895c0db57">More...</a><br /></td></tr>
+<tr class="separator:ab47c88b454ae9e5680d7e25895c0db57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16bc0a0f005f2b57af8c3cff45d80b8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a16bc0a0f005f2b57af8c3cff45d80b8f">~LinearInterp</a> ()</td></tr>
+<tr class="memdesc:a16bc0a0f005f2b57af8c3cff45d80b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Linear Interp object.  <a href="classintp_1_1LinearInterp.html#a16bc0a0f005f2b57af8c3cff45d80b8f">More...</a><br /></td></tr>
+<tr class="separator:a16bc0a0f005f2b57af8c3cff45d80b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee7f275fca970ba5ed822689f772ed6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a1ee7f275fca970ba5ed822689f772ed6">load_data</a> (std::vector&lt; long double &gt; xx, std::vector&lt; long double &gt; yy)</td></tr>
+<tr class="memdesc:a1ee7f275fca970ba5ed822689f772ed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the data.  <a href="classintp_1_1LinearInterp.html#a1ee7f275fca970ba5ed822689f772ed6">More...</a><br /></td></tr>
+<tr class="separator:a1ee7f275fca970ba5ed822689f772ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a36bb67d8a42be7d15d04648229208"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a19a36bb67d8a42be7d15d04648229208">find_value</a> (long double xx, bool use_combined=false)</td></tr>
+<tr class="memdesc:a19a36bb67d8a42be7d15d04648229208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the interpolated value from given x.  <a href="classintp_1_1LinearInterp.html#a19a36bb67d8a42be7d15d04648229208">More...</a><br /></td></tr>
+<tr class="separator:a19a36bb67d8a42be7d15d04648229208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a586931cc4470450bfcf1215f7e3daa2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a586931cc4470450bfcf1215f7e3daa2c">reset_interpolated</a> ()</td></tr>
+<tr class="memdesc:a586931cc4470450bfcf1215f7e3daa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the interpolated data.  <a href="classintp_1_1LinearInterp.html#a586931cc4470450bfcf1215f7e3daa2c">More...</a><br /></td></tr>
+<tr class="separator:a586931cc4470450bfcf1215f7e3daa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905b1a16a9718f3c87f47d4f6c87eb93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a905b1a16a9718f3c87f47d4f6c87eb93">plot_all_interpolation</a> (int nn=500)</td></tr>
+<tr class="memdesc:a905b1a16a9718f3c87f47d4f6c87eb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots all posiible interpolations within given number of points.  <a href="classintp_1_1LinearInterp.html#a905b1a16a9718f3c87f47d4f6c87eb93">More...</a><br /></td></tr>
+<tr class="separator:a905b1a16a9718f3c87f47d4f6c87eb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ce5eafccbdfd1a92cec39694a5601ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a2ce5eafccbdfd1a92cec39694a5601ee">plot_data</a> ()</td></tr>
+<tr class="memdesc:a2ce5eafccbdfd1a92cec39694a5601ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots the original data.  <a href="classintp_1_1LinearInterp.html#a2ce5eafccbdfd1a92cec39694a5601ee">More...</a><br /></td></tr>
+<tr class="separator:a2ce5eafccbdfd1a92cec39694a5601ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0af99e177d8c2c9bd345546ffe96a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#af0af99e177d8c2c9bd345546ffe96a85">plot_interpolated_data</a> ()</td></tr>
+<tr class="memdesc:af0af99e177d8c2c9bd345546ffe96a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots the interpolated data.  <a href="classintp_1_1LinearInterp.html#af0af99e177d8c2c9bd345546ffe96a85">More...</a><br /></td></tr>
+<tr class="separator:af0af99e177d8c2c9bd345546ffe96a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e77ad32addfd39d1f81e198ed90b58c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a2e77ad32addfd39d1f81e198ed90b58c">plot_combined_data</a> ()</td></tr>
+<tr class="memdesc:a2e77ad32addfd39d1f81e198ed90b58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots x_comb and y_comb.  <a href="classintp_1_1LinearInterp.html#a2e77ad32addfd39d1f81e198ed90b58c">More...</a><br /></td></tr>
+<tr class="separator:a2e77ad32addfd39d1f81e198ed90b58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2c830a638153841382d819f4bc1e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Table.html">misc::Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a0c2c830a638153841382d819f4bc1e73">get_original_data</a> ()</td></tr>
+<tr class="memdesc:a0c2c830a638153841382d819f4bc1e73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the original data object.  <a href="classintp_1_1LinearInterp.html#a0c2c830a638153841382d819f4bc1e73">More...</a><br /></td></tr>
+<tr class="separator:a0c2c830a638153841382d819f4bc1e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f189c555a7c5d8a2900a2f314ddd59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Table.html">misc::Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a34f189c555a7c5d8a2900a2f314ddd59">get_interpolated_data</a> ()</td></tr>
+<tr class="memdesc:a34f189c555a7c5d8a2900a2f314ddd59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the interpolated data object.  <a href="classintp_1_1LinearInterp.html#a34f189c555a7c5d8a2900a2f314ddd59">More...</a><br /></td></tr>
+<tr class="separator:a34f189c555a7c5d8a2900a2f314ddd59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312024163ea8f6d9bdc20d37902b9fed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Table.html">misc::Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a312024163ea8f6d9bdc20d37902b9fed">get_combined_data</a> ()</td></tr>
+<tr class="memdesc:a312024163ea8f6d9bdc20d37902b9fed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the combined data object.  <a href="classintp_1_1LinearInterp.html#a312024163ea8f6d9bdc20d37902b9fed">More...</a><br /></td></tr>
+<tr class="separator:a312024163ea8f6d9bdc20d37902b9fed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c4b83f8be6b8c68079dde8068fc86f"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a33c4b83f8be6b8c68079dde8068fc86f">get_r_original_data</a> ()</td></tr>
+<tr class="memdesc:a33c4b83f8be6b8c68079dde8068fc86f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the r original data object.  <a href="classintp_1_1LinearInterp.html#a33c4b83f8be6b8c68079dde8068fc86f">More...</a><br /></td></tr>
+<tr class="separator:a33c4b83f8be6b8c68079dde8068fc86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5596a0d46568cb0256b4cea36e19d5dd"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a5596a0d46568cb0256b4cea36e19d5dd">get_r_combined_data</a> ()</td></tr>
+<tr class="memdesc:a5596a0d46568cb0256b4cea36e19d5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the r combined data object.  <a href="classintp_1_1LinearInterp.html#a5596a0d46568cb0256b4cea36e19d5dd">More...</a><br /></td></tr>
+<tr class="separator:a5596a0d46568cb0256b4cea36e19d5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1bfbc01f2d393ea8ece07c281888a00b"><td class="memItemLeft" align="right" valign="top">virtual long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a1bfbc01f2d393ea8ece07c281888a00b">_find_value</a> (long double xx, std::vector&lt; long double &gt; _x, std::vector&lt; long double &gt; _y)</td></tr>
+<tr class="memdesc:a1bfbc01f2d393ea8ece07c281888a00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives an interpolated value for a given x-value.  <a href="classintp_1_1LinearInterp.html#a1bfbc01f2d393ea8ece07c281888a00b">More...</a><br /></td></tr>
+<tr class="separator:a1bfbc01f2d393ea8ece07c281888a00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a61ee1cce36d503c6489e87aa000e45c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a61ee1cce36d503c6489e87aa000e45c5">x</a></td></tr>
+<tr class="separator:a61ee1cce36d503c6489e87aa000e45c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b27f11407f80190fbfbc5d9abdc1403"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a1b27f11407f80190fbfbc5d9abdc1403">y</a></td></tr>
+<tr class="separator:a1b27f11407f80190fbfbc5d9abdc1403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c88e4e60132c995b00e593fc27445f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a7c88e4e60132c995b00e593fc27445f0">x_in</a></td></tr>
+<tr class="separator:a7c88e4e60132c995b00e593fc27445f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c017b3cd9b3a51b55af6b64b751619"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#ac9c017b3cd9b3a51b55af6b64b751619">y_in</a></td></tr>
+<tr class="separator:ac9c017b3cd9b3a51b55af6b64b751619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8546f0b25e02cdd8464cbd31c88e042"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#ae8546f0b25e02cdd8464cbd31c88e042">x_comb</a></td></tr>
+<tr class="separator:ae8546f0b25e02cdd8464cbd31c88e042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26963d5b0be30c57582579a36c472769"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a26963d5b0be30c57582579a36c472769">y_comb</a></td></tr>
+<tr class="separator:a26963d5b0be30c57582579a36c472769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d4500170e1150a3ef09ad97a919f39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a34d4500170e1150a3ef09ad97a919f39">n</a></td></tr>
+<tr class="separator:a34d4500170e1150a3ef09ad97a919f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d909f2ba117c11352037451891c43d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Plot.html">misc::Plot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#ab5d909f2ba117c11352037451891c43d">p</a></td></tr>
+<tr class="separator:ab5d909f2ba117c11352037451891c43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a95a52a22e82f0de918e04105356d6317"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classintp_1_1LinearInterp.html#a95a52a22e82f0de918e04105356d6317">PolyInterp</a></td></tr>
+<tr class="separator:a95a52a22e82f0de918e04105356d6317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p class="">Class for Linear interpolation. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00023">23</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab47c88b454ae9e5680d7e25895c0db57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab47c88b454ae9e5680d7e25895c0db57">&#9670;&nbsp;</a></span>LinearInterp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">intp::LinearInterp::LinearInterp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Linear Interp object. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00095">95</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a16bc0a0f005f2b57af8c3cff45d80b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16bc0a0f005f2b57af8c3cff45d80b8f">&#9670;&nbsp;</a></span>~LinearInterp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">intp::LinearInterp::~LinearInterp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy the Linear Interp object. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00101">101</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1bfbc01f2d393ea8ece07c281888a00b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfbc01f2d393ea8ece07c281888a00b">&#9670;&nbsp;</a></span>_find_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long double intp::LinearInterp::_find_value </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>xx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>_y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gives an interpolated value for a given x-value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xx</td><td></td></tr>
+    <tr><td class="paramname">_x</td><td></td></tr>
+    <tr><td class="paramname">_y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classintp_1_1PolyInterp.html#af2bbf7080242e2915109db16ec845b87">intp::PolyInterp</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00046">46</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a19a36bb67d8a42be7d15d04648229208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a36bb67d8a42be7d15d04648229208">&#9670;&nbsp;</a></span>find_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double intp::LinearInterp::find_value </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>xx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_combined</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the interpolated value from given x. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xx</td><td></td></tr>
+    <tr><td class="paramname">use_combined</td><td>// can use previously interpolated data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00143">143</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a312024163ea8f6d9bdc20d37902b9fed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312024163ea8f6d9bdc20d37902b9fed">&#9670;&nbsp;</a></span>get_combined_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Table.html">misc::Table</a> intp::LinearInterp::get_combined_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the combined data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>misc::Table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00263">263</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a34f189c555a7c5d8a2900a2f314ddd59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f189c555a7c5d8a2900a2f314ddd59">&#9670;&nbsp;</a></span>get_interpolated_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Table.html">misc::Table</a> intp::LinearInterp::get_interpolated_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the interpolated data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>misc::Table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00251">251</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0c2c830a638153841382d819f4bc1e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2c830a638153841382d819f4bc1e73">&#9670;&nbsp;</a></span>get_original_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Table.html">misc::Table</a> intp::LinearInterp::get_original_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the original data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>misc::Table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00239">239</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a5596a0d46568cb0256b4cea36e19d5dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5596a0d46568cb0256b4cea36e19d5dd">&#9670;&nbsp;</a></span>get_r_combined_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double intp::LinearInterp::get_r_combined_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the r combined data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00284">284</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a33c4b83f8be6b8c68079dde8068fc86f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c4b83f8be6b8c68079dde8068fc86f">&#9670;&nbsp;</a></span>get_r_original_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double intp::LinearInterp::get_r_original_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the r original data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00275">275</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1ee7f275fca970ba5ed822689f772ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ee7f275fca970ba5ed822689f772ed6">&#9670;&nbsp;</a></span>load_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void intp::LinearInterp::load_data </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>xx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>yy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xx</td><td></td></tr>
+    <tr><td class="paramname">yy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classintp_1_1PolyInterp.html#af7f4fb4af5ff903947fbcc932490646e">intp::PolyInterp</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00109">109</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a905b1a16a9718f3c87f47d4f6c87eb93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905b1a16a9718f3c87f47d4f6c87eb93">&#9670;&nbsp;</a></span>plot_all_interpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intp::LinearInterp::plot_all_interpolation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nn</em> = <code>500</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plots all posiible interpolations within given number of points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00166">166</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2e77ad32addfd39d1f81e198ed90b58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e77ad32addfd39d1f81e198ed90b58c">&#9670;&nbsp;</a></span>plot_combined_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intp::LinearInterp::plot_combined_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plots x_comb and y_comb. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00219">219</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ce5eafccbdfd1a92cec39694a5601ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce5eafccbdfd1a92cec39694a5601ee">&#9670;&nbsp;</a></span>plot_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intp::LinearInterp::plot_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plots the original data. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00181">181</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af0af99e177d8c2c9bd345546ffe96a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0af99e177d8c2c9bd345546ffe96a85">&#9670;&nbsp;</a></span>plot_interpolated_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intp::LinearInterp::plot_interpolated_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plots the interpolated data. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00199">199</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a586931cc4470450bfcf1215f7e3daa2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a586931cc4470450bfcf1215f7e3daa2c">&#9670;&nbsp;</a></span>reset_interpolated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void intp::LinearInterp::reset_interpolated </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the interpolated data. </p>
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00154">154</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a95a52a22e82f0de918e04105356d6317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a52a22e82f0de918e04105356d6317">&#9670;&nbsp;</a></span>PolyInterp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classintp_1_1PolyInterp.html">PolyInterp</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00289">289</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a34d4500170e1150a3ef09ad97a919f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d4500170e1150a3ef09ad97a919f39">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int intp::LinearInterp::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00035">35</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab5d909f2ba117c11352037451891c43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d909f2ba117c11352037451891c43d">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Plot.html">misc::Plot</a> intp::LinearInterp::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00036">36</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a61ee1cce36d503c6489e87aa000e45c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ee1cce36d503c6489e87aa000e45c5">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00027">27</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae8546f0b25e02cdd8464cbd31c88e042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8546f0b25e02cdd8464cbd31c88e042">&#9670;&nbsp;</a></span>x_comb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::x_comb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00033">33</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7c88e4e60132c995b00e593fc27445f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c88e4e60132c995b00e593fc27445f0">&#9670;&nbsp;</a></span>x_in</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::x_in</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00030">30</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1b27f11407f80190fbfbc5d9abdc1403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b27f11407f80190fbfbc5d9abdc1403">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00028">28</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a26963d5b0be30c57582579a36c472769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26963d5b0be30c57582579a36c472769">&#9670;&nbsp;</a></span>y_comb</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::y_comb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00034">34</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac9c017b3cd9b3a51b55af6b64b751619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9c017b3cd9b3a51b55af6b64b751619">&#9670;&nbsp;</a></span>y_in</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; intp::LinearInterp::y_in</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="intp_8hpp_source.html#l00031">31</a> of file <a class="el" href="intp_8hpp_source.html">intp.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/int.hpp</li>
+<li>include/<a class="el" href="intp_8hpp_source.html">intp.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

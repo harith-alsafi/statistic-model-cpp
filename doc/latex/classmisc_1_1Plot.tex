@@ -2,7 +2,7 @@
 \label{classmisc_1_1Plot}\index{misc::Plot@{misc::Plot}}
 
 
-Simple terminal plot.  
+Encapsulates graph.\+hpp (\href{https://github.com/tdulcet/Tables-and-Graphs}{\texttt{ https\+://github.\+com/tdulcet/\+Tables-\/and-\/\+Graphs}})  
 
 
 
@@ -15,25 +15,44 @@ Collaboration diagram for misc\+::Plot\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=183pt]{classmisc_1_1Plot__coll__graph}
+\includegraphics[height=550pt]{classmisc_1_1Plot__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{Color}} \{ \newline
+\mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf}{red}} = 10
+, \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad}{green}} = 11
+, \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437}{yellow}} = 12
+, \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4}{purple}} = 14
+, \newline
+\mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb}{blue}} = 15
+, \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34}{white}} = 16
+ \}
+\begin{DoxyCompactList}\small\item\em Colors for plots. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}{Plot}} (int h=145, int w=145, long double xmn=-\/10, long double xmx=10, long double ymn=-\/10, long double ymx=10)
 \begin{DoxyCompactList}\small\item\em Construct a new Plot object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}{set\+Domain}} (long double xmn=-\/10, long double xmx=10)
+void \mbox{\hyperlink{classmisc_1_1Plot_a41c44efde77238011b7ef8d03fe70db9}{set\+\_\+domain}} (long double xmn=-\/10, long double xmx=10)
 \begin{DoxyCompactList}\small\item\em Set the Domain. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}{set\+Range}} (long double ymn=-\/10, long double ymx=10)
+void \mbox{\hyperlink{classmisc_1_1Plot_a7d41a0e058bafb1a4243eb032c74556f}{set\+\_\+range}} (long double ymn=-\/10, long double ymx=10)
 \begin{DoxyCompactList}\small\item\em Set the Range. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}{set\+Size}} (int h=140, int w=140)
+void \mbox{\hyperlink{classmisc_1_1Plot_a14f50751b025e9c7d33e52d87179a757}{set\+\_\+size}} (int h=140, int w=140)
 \begin{DoxyCompactList}\small\item\em Set the Size of figure. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}{generate\+Domain}} (long double xmn=-\/10, long double xmx=10, int n=50)
+void \mbox{\hyperlink{classmisc_1_1Plot_a7476d78c32c4c21d6330fba416ceae2c}{set\+\_\+color}} (\mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{Color}} cc=Color\+::blue)
+\begin{DoxyCompactList}\small\item\em Set the color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_ac2da558e0965208f9898d64cef0f6b74}{set\+\_\+title}} (std\+::string tt)
+\begin{DoxyCompactList}\small\item\em Set the title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_ab041be78e2edf33fb68ee3642453bacc}{generate\+\_\+domain}} (int n=50)
+\begin{DoxyCompactList}\small\item\em Generates domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmisc_1_1Plot_a239205a9cc0ab0fffa92b8109a653b2f}{generate\+\_\+domain}} (long double xmn, long double xmx, int n)
 \begin{DoxyCompactList}\small\item\em Generates domain to plot function. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}{plot\+Vect}} (std\+::vector$<$ long double $>$ \&x, std\+::vector$<$ long double $>$ \&y)
+void \mbox{\hyperlink{classmisc_1_1Plot_a85567735781b6a1cfb277c2c8ae12355}{plot\+\_\+vect}} (std\+::vector$<$ long double $>$ \&x, std\+::vector$<$ long double $>$ \&y)
 \begin{DoxyCompactList}\small\item\em Plots vectors. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename D $>$ }\\void \mbox{\hyperlink{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}{plot\+Fun}} (D fun)
+{\footnotesize template$<$typename LAMBDA $>$ }\\void \mbox{\hyperlink{classmisc_1_1Plot_aeea6cf0d2dbb82bad251918c8c202b87}{plot\+\_\+fun}} (LAMBDA fun)
 \begin{DoxyCompactList}\small\item\em Plots function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -53,11 +72,64 @@ long double \mbox{\hyperlink{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe
 const size\+\_\+t \mbox{\hyperlink{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}{cols}} = 2
 \item 
 std\+::vector$<$ long double $>$ \mbox{\hyperlink{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}{domain}}
+\item 
+\mbox{\hyperlink{structgraphoptions}{graphoptions}} \mbox{\hyperlink{classmisc_1_1Plot_a51f146e8cb310a1d55af39f8ce52e9c3}{aoptions}}
+\item 
+\mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{Color}} \mbox{\hyperlink{classmisc_1_1Plot_a11fce306db045b8384b8eca900a56aca}{c}}
+\item 
+std\+::string \mbox{\hyperlink{classmisc_1_1Plot_adf0ac53c3f9d96298d814b66bb92112f}{title}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Simple terminal plot. 
+Encapsulates graph.\+hpp (\href{https://github.com/tdulcet/Tables-and-Graphs}{\texttt{ https\+://github.\+com/tdulcet/\+Tables-\/and-\/\+Graphs}}) 
+
+Definition at line 741 of file misc.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}} 
+\index{misc::Plot@{misc::Plot}!Color@{Color}}
+\index{Color@{Color}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{misc\+::\+Plot\+::\+Color}}}
+
+
+
+Colors for plots. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{red@{red}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!red@{red}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf}} 
+red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{green@{green}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!green@{green}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad}} 
+green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{yellow@{yellow}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!yellow@{yellow}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437}} 
+yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{purple@{purple}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!purple@{purple}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4}} 
+purple&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{blue@{blue}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!blue@{blue}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb}} 
+blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{white@{white}!misc::Plot@{misc::Plot}}\index{misc::Plot@{misc::Plot}!white@{white}}}\mbox{\Hypertarget{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34}\label{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34}} 
+white&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 748 of file misc.\+hpp.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}\label{classmisc_1_1Plot_ad121e04781c92735596200df60b4ec7a}} 
@@ -87,12 +159,35 @@ Construct a new Plot object.
 \end{DoxyParams}
 
 
+Definition at line 784 of file misc.\+hpp.
+
+
+
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}\label{classmisc_1_1Plot_afe5d9755ead78c69a1ad1415a2ea532f}} 
-\index{misc::Plot@{misc::Plot}!generateDomain@{generateDomain}}
-\index{generateDomain@{generateDomain}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{generateDomain()}{generateDomain()}}
-{\footnotesize\ttfamily void misc\+::\+Plot\+::generate\+Domain (\begin{DoxyParamCaption}\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10},  }\item[{int}]{n = {\ttfamily 50} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classmisc_1_1Plot_ab041be78e2edf33fb68ee3642453bacc}\label{classmisc_1_1Plot_ab041be78e2edf33fb68ee3642453bacc}} 
+\index{misc::Plot@{misc::Plot}!generate\_domain@{generate\_domain}}
+\index{generate\_domain@{generate\_domain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{generate\_domain()}{generate\_domain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::generate\+\_\+domain (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 50} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates domain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 848 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a239205a9cc0ab0fffa92b8109a653b2f}\label{classmisc_1_1Plot_a239205a9cc0ab0fffa92b8109a653b2f}} 
+\index{misc::Plot@{misc::Plot}!generate\_domain@{generate\_domain}}
+\index{generate\_domain@{generate\_domain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{generate\_domain()}{generate\_domain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::generate\+\_\+domain (\begin{DoxyParamCaption}\item[{long double}]{xmn,  }\item[{long double}]{xmx,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -107,12 +202,16 @@ Generates domain to plot function.
 {\em n} & number of points \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}\label{classmisc_1_1Plot_a8bfdf81ac1f5abeb96fa359fc73d9d31}} 
-\index{misc::Plot@{misc::Plot}!plotFun@{plotFun}}
-\index{plotFun@{plotFun}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{plotFun()}{plotFun()}}
-{\footnotesize\ttfamily template$<$typename D $>$ \\
-void misc\+::\+Plot\+::plot\+Fun (\begin{DoxyParamCaption}\item[{D}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definition at line 859 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_aeea6cf0d2dbb82bad251918c8c202b87}\label{classmisc_1_1Plot_aeea6cf0d2dbb82bad251918c8c202b87}} 
+\index{misc::Plot@{misc::Plot}!plot\_fun@{plot\_fun}}
+\index{plot\_fun@{plot\_fun}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{plot\_fun()}{plot\_fun()}}
+{\footnotesize\ttfamily template$<$typename LAMBDA $>$ \\
+void misc\+::\+Plot\+::plot\+\_\+fun (\begin{DoxyParamCaption}\item[{LAMBDA}]{fun }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -120,7 +219,7 @@ Plots function.
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em D} & \\
+{\em LAMBDA} & \\
 \hline
 \end{DoxyTemplParams}
 
@@ -128,11 +227,15 @@ Plots function.
 {\em fun} & lambda function \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}\label{classmisc_1_1Plot_a6f75f1a37636d3b36b0dc3a117278a38}} 
-\index{misc::Plot@{misc::Plot}!plotVect@{plotVect}}
-\index{plotVect@{plotVect}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{plotVect()}{plotVect()}}
-{\footnotesize\ttfamily void misc\+::\+Plot\+::plot\+Vect (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{x,  }\item[{std\+::vector$<$ long double $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definition at line 914 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a85567735781b6a1cfb277c2c8ae12355}\label{classmisc_1_1Plot_a85567735781b6a1cfb277c2c8ae12355}} 
+\index{misc::Plot@{misc::Plot}!plot\_vect@{plot\_vect}}
+\index{plot\_vect@{plot\_vect}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{plot\_vect()}{plot\_vect()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::plot\+\_\+vect (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$ \&}]{x,  }\item[{std\+::vector$<$ long double $>$ \&}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -145,11 +248,34 @@ Plots vectors.
 {\em y} & vector for y \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}\label{classmisc_1_1Plot_a3f92965f3826de471737a081164d4c00}} 
-\index{misc::Plot@{misc::Plot}!setDomain@{setDomain}}
-\index{setDomain@{setDomain}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{setDomain()}{setDomain()}}
-{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Domain (\begin{DoxyParamCaption}\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definition at line 869 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a7476d78c32c4c21d6330fba416ceae2c}\label{classmisc_1_1Plot_a7476d78c32c4c21d6330fba416ceae2c}} 
+\index{misc::Plot@{misc::Plot}!set\_color@{set\_color}}
+\index{set\_color@{set\_color}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{set\_color()}{set\_color()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+\_\+color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{Color}}}]{cc = {\ttfamily Color\+:\+:blue} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 830 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a41c44efde77238011b7ef8d03fe70db9}\label{classmisc_1_1Plot_a41c44efde77238011b7ef8d03fe70db9}} 
+\index{misc::Plot@{misc::Plot}!set\_domain@{set\_domain}}
+\index{set\_domain@{set\_domain}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{set\_domain()}{set\_domain()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+\_\+domain (\begin{DoxyParamCaption}\item[{long double}]{xmn = {\ttfamily -\/10},  }\item[{long double}]{xmx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -162,11 +288,15 @@ Set the Domain.
 {\em xmx} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}\label{classmisc_1_1Plot_a18ff734377adc641213aa132bc34063b}} 
-\index{misc::Plot@{misc::Plot}!setRange@{setRange}}
-\index{setRange@{setRange}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}}
-{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Range (\begin{DoxyParamCaption}\item[{long double}]{ymn = {\ttfamily -\/10},  }\item[{long double}]{ymx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definition at line 797 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a7d41a0e058bafb1a4243eb032c74556f}\label{classmisc_1_1Plot_a7d41a0e058bafb1a4243eb032c74556f}} 
+\index{misc::Plot@{misc::Plot}!set\_range@{set\_range}}
+\index{set\_range@{set\_range}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{set\_range()}{set\_range()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+\_\+range (\begin{DoxyParamCaption}\item[{long double}]{ymn = {\ttfamily -\/10},  }\item[{long double}]{ymx = {\ttfamily 10} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -179,11 +309,15 @@ Set the Range.
 {\em ymx} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}\label{classmisc_1_1Plot_a03321a3f086b7b92f9b722176a8599dc}} 
-\index{misc::Plot@{misc::Plot}!setSize@{setSize}}
-\index{setSize@{setSize}!misc::Plot@{misc::Plot}}
-\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
-{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{h = {\ttfamily 140},  }\item[{int}]{w = {\ttfamily 140} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+Definition at line 808 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a14f50751b025e9c7d33e52d87179a757}\label{classmisc_1_1Plot_a14f50751b025e9c7d33e52d87179a757}} 
+\index{misc::Plot@{misc::Plot}!set\_size@{set\_size}}
+\index{set\_size@{set\_size}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{set\_size()}{set\_size()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{h = {\ttfamily 140},  }\item[{int}]{w = {\ttfamily 140} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -198,12 +332,59 @@ Set the Size of figure.
 \end{DoxyParams}
 
 
+Definition at line 819 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_ac2da558e0965208f9898d64cef0f6b74}\label{classmisc_1_1Plot_ac2da558e0965208f9898d64cef0f6b74}} 
+\index{misc::Plot@{misc::Plot}!set\_title@{set\_title}}
+\index{set\_title@{set\_title}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{set\_title()}{set\_title()}}
+{\footnotesize\ttfamily void misc\+::\+Plot\+::set\+\_\+title (\begin{DoxyParamCaption}\item[{std\+::string}]{tt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tt} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 839 of file misc.\+hpp.
+
+
+
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmisc_1_1Plot_a51f146e8cb310a1d55af39f8ce52e9c3}\label{classmisc_1_1Plot_a51f146e8cb310a1d55af39f8ce52e9c3}} 
+\index{misc::Plot@{misc::Plot}!aoptions@{aoptions}}
+\index{aoptions@{aoptions}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{aoptions}{aoptions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgraphoptions}{graphoptions}} misc\+::\+Plot\+::aoptions\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 769 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_a11fce306db045b8384b8eca900a56aca}\label{classmisc_1_1Plot_a11fce306db045b8384b8eca900a56aca}} 
+\index{misc::Plot@{misc::Plot}!c@{c}}
+\index{c@{c}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Plot_a6f9abfb902e62f8e77f705f1d103434e}{Color}} misc\+::\+Plot\+::c\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 770 of file misc.\+hpp.
+
 \mbox{\Hypertarget{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}\label{classmisc_1_1Plot_a0741ab8b63e13d8a4252acf6e93defbe}} 
 \index{misc::Plot@{misc::Plot}!cols@{cols}}
 \index{cols@{cols}!misc::Plot@{misc::Plot}}
 \doxysubsubsection{\texorpdfstring{cols}{cols}}
 {\footnotesize\ttfamily const size\+\_\+t misc\+::\+Plot\+::cols = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 767 of file misc.\+hpp.
 
 \mbox{\Hypertarget{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}\label{classmisc_1_1Plot_a2a9d2b16ea8c7f3138a5384a1ba923d8}} 
 \index{misc::Plot@{misc::Plot}!domain@{domain}}
@@ -211,11 +392,29 @@ Set the Size of figure.
 \doxysubsubsection{\texorpdfstring{domain}{domain}}
 {\footnotesize\ttfamily std\+::vector$<$long double$>$ misc\+::\+Plot\+::domain\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 768 of file misc.\+hpp.
+
 \mbox{\Hypertarget{classmisc_1_1Plot_ae418d8c18c7e0a4682ac9258513ede5e}\label{classmisc_1_1Plot_ae418d8c18c7e0a4682ac9258513ede5e}} 
 \index{misc::Plot@{misc::Plot}!height@{height}}
 \index{height@{height}!misc::Plot@{misc::Plot}}
 \doxysubsubsection{\texorpdfstring{height}{height}}
 {\footnotesize\ttfamily size\+\_\+t misc\+::\+Plot\+::height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 759 of file misc.\+hpp.
+
+\mbox{\Hypertarget{classmisc_1_1Plot_adf0ac53c3f9d96298d814b66bb92112f}\label{classmisc_1_1Plot_adf0ac53c3f9d96298d814b66bb92112f}} 
+\index{misc::Plot@{misc::Plot}!title@{title}}
+\index{title@{title}!misc::Plot@{misc::Plot}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily std\+::string misc\+::\+Plot\+::title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 771 of file misc.\+hpp.
 
 \mbox{\Hypertarget{classmisc_1_1Plot_ae5cb9d73243cfe0675f5bbebc095853f}\label{classmisc_1_1Plot_ae5cb9d73243cfe0675f5bbebc095853f}} 
 \index{misc::Plot@{misc::Plot}!width@{width}}
@@ -223,11 +422,19 @@ Set the Size of figure.
 \doxysubsubsection{\texorpdfstring{width}{width}}
 {\footnotesize\ttfamily size\+\_\+t misc\+::\+Plot\+::width\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 760 of file misc.\+hpp.
+
 \mbox{\Hypertarget{classmisc_1_1Plot_ae31d12ae7f4cd55acf4273141585959d}\label{classmisc_1_1Plot_ae31d12ae7f4cd55acf4273141585959d}} 
 \index{misc::Plot@{misc::Plot}!xmax@{xmax}}
 \index{xmax@{xmax}!misc::Plot@{misc::Plot}}
 \doxysubsubsection{\texorpdfstring{xmax}{xmax}}
 {\footnotesize\ttfamily long double misc\+::\+Plot\+::xmax\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 763 of file misc.\+hpp.
 
 \mbox{\Hypertarget{classmisc_1_1Plot_acd15f49e99e22504cd79b7a673590244}\label{classmisc_1_1Plot_acd15f49e99e22504cd79b7a673590244}} 
 \index{misc::Plot@{misc::Plot}!xmin@{xmin}}
@@ -235,11 +442,19 @@ Set the Size of figure.
 \doxysubsubsection{\texorpdfstring{xmin}{xmin}}
 {\footnotesize\ttfamily long double misc\+::\+Plot\+::xmin\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 762 of file misc.\+hpp.
+
 \mbox{\Hypertarget{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe}\label{classmisc_1_1Plot_a5ba170ac536e7d8399f8e4ecad64e1fe}} 
 \index{misc::Plot@{misc::Plot}!ymax@{ymax}}
 \index{ymax@{ymax}!misc::Plot@{misc::Plot}}
 \doxysubsubsection{\texorpdfstring{ymax}{ymax}}
 {\footnotesize\ttfamily long double misc\+::\+Plot\+::ymax\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 765 of file misc.\+hpp.
 
 \mbox{\Hypertarget{classmisc_1_1Plot_aede35cac1221e7be48e067d10a6b5480}\label{classmisc_1_1Plot_aede35cac1221e7be48e067d10a6b5480}} 
 \index{misc::Plot@{misc::Plot}!ymin@{ymin}}
@@ -249,6 +464,10 @@ Set the Size of figure.
 
 
 
+Definition at line 764 of file misc.\+hpp.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/misc.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{misc_8hpp}{misc.\+hpp}}\end{DoxyCompactItemize}

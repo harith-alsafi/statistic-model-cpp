@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['headers_103',['headers',['../classmisc_1_1Table.html#aa920782e0a9185ee944d7b8e54b880aa',1,'misc::Table']]],
-  ['height_104',['height',['../classmisc_1_1Plot.html#ae418d8c18c7e0a4682ac9258513ede5e',1,'misc::Plot']]]
+  ['filename_310',['filename',['../classMenu.html#a10059b5c997cc3a0db9e8e2a64887b43',1,'Menu']]],
+  ['fractions_311',['fractions',['../graphs_8hpp.html#a84a54be46d61d60c0e6a76ac79bae486',1,'graphs.hpp']]],
+  ['fractionvalues_312',['fractionvalues',['../graphs_8hpp.html#a9bd47038e7a99a6f487cd7067247bd07',1,'graphs.hpp']]]
 ];

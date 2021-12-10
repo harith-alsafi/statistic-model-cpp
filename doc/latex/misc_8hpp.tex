@@ -1,0 +1,126 @@
+\hypertarget{misc_8hpp}{}\doxysection{include/misc.hpp File Reference}
+\label{misc_8hpp}\index{include/misc.hpp@{include/misc.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include \char`\"{}graphs.\+hpp\char`\"{}}\newline
+Include dependency graph for misc.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{misc_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{misc_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}}
+\begin{DoxyCompactList}\small\item\em Table class to contain the dataframe. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmisc_1_1Table_1_1QR}{misc\+::\+Table\+::\+QR}}
+\begin{DoxyCompactList}\small\item\em Struct to contain the quartile range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}}
+\begin{DoxyCompactList}\small\item\em Encapsulates graph.\+hpp (\href{https://github.com/tdulcet/Tables-and-Graphs}{\texttt{ https\+://github.\+com/tdulcet/\+Tables-\/and-\/\+Graphs}}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemisc}{misc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TYPE $>$ }\\std\+::vector$<$ TYPE $>$ \mbox{\hyperlink{misc_8hpp_ad117ac09cf8ab47747371b2cbd921225}{operator$\ast$}} (std\+::vector$<$ TYPE $>$ first, std\+::vector$<$ TYPE $>$ second)
+\begin{DoxyCompactList}\small\item\em Operator to multiply two vectors. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\TYPE \mbox{\hyperlink{misc_8hpp_a4ea6f15122d3506b7322511c59d732a0}{round}} (TYPE a, int dp=0)
+\begin{DoxyCompactList}\small\item\em Overloads the round function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename TYPE $>$ }\\std\+::vector$<$ TYPE $>$ \mbox{\hyperlink{namespacemisc_af54e23a4e431270b3e2e589b9d732b7e}{misc\+::generate\+\_\+vector}} (TYPE mn, TYPE mx, int n)
+\begin{DoxyCompactList}\small\item\em Genarate vector from min, max andn number of points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Harith Al-\/\+Safi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2021-\/12-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{misc_8hpp_ad117ac09cf8ab47747371b2cbd921225}\label{misc_8hpp_ad117ac09cf8ab47747371b2cbd921225}} 
+\index{misc.hpp@{misc.hpp}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename TYPE $>$ \\
+std\+::vector$<$TYPE$>$ operator$\ast$ (\begin{DoxyParamCaption}\item[{std\+::vector$<$ TYPE $>$}]{first,  }\item[{std\+::vector$<$ TYPE $>$}]{second }\end{DoxyParamCaption})}
+
+
+
+Operator to multiply two vectors. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TYPE} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & \\
+\hline
+{\em second} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+TYPE$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file misc.\+hpp.
+
+\mbox{\Hypertarget{misc_8hpp_a4ea6f15122d3506b7322511c59d732a0}\label{misc_8hpp_a4ea6f15122d3506b7322511c59d732a0}} 
+\index{misc.hpp@{misc.hpp}!round@{round}}
+\index{round@{round}!misc.hpp@{misc.hpp}}
+\doxysubsubsection{\texorpdfstring{round()}{round()}}
+{\footnotesize\ttfamily template$<$typename TYPE $>$ \\
+TYPE round (\begin{DoxyParamCaption}\item[{TYPE}]{a,  }\item[{int}]{dp = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Overloads the round function. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TYPE} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the value itself \\
+\hline
+{\em dp} & number of decimal places \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TYPE 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file misc.\+hpp.
+

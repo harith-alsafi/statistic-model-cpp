@@ -8,6 +8,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="include/int.hpp" line="2" column="1"/>
+    <location file="include/intp.hpp" line="17" column="1"/>
   </compounddef>
 </doxygen>

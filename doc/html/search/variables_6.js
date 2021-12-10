@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lq_106',['LQ',['../structmisc_1_1Table_1_1QR.html#a048249726c2a8f0ad9e3eca6f867c3fa',1,'misc::Table::QR']]]
+  ['headers_314',['headers',['../classmisc_1_1Table.html#aa920782e0a9185ee944d7b8e54b880aa',1,'misc::Table']]],
+  ['height_315',['height',['../classmisc_1_1Plot.html#ae418d8c18c7e0a4682ac9258513ede5e',1,'misc::Plot']]]
 ];

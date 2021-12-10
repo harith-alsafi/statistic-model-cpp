@@ -1,0 +1,14 @@
+<map id="Menu" name="Menu">
+<area shape="rect" id="node1" title="Class for the main menu." alt="" coords="246,1939,431,2251"/>
+<area shape="rect" id="node2" href="$classmisc_1_1Table.html" title="Table class to contain the dataframe." alt="" coords="5,1227,128,1876"/>
+<area shape="rect" id="node3" title=" " alt="" coords="9,925,125,1003"/>
+<area shape="rect" id="node4" title=" " alt="" coords="47,499,86,577"/>
+<area shape="rect" id="node5" href="$classmisc_1_1Plot.html" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="309,375,451,701"/>
+<area shape="rect" id="node9" href="$classregr_1_1LinearRegression.html" title="Class for Linear regression." alt="" coords="231,764,385,1164"/>
+<area shape="rect" id="node11" href="$classintp_1_1LinearInterp.html" title="Class for Linear interpolation." alt="" coords="409,779,578,1149"/>
+<area shape="rect" id="node6" href="$structgraphoptions.html" title=" " alt="" coords="318,147,442,312"/>
+<area shape="rect" id="node7" title=" " alt="" coords="492,191,572,268"/>
+<area shape="rect" id="node8" title=" " alt="" coords="469,5,595,97"/>
+<area shape="rect" id="node10" href="$classregr_1_1PolyRegression.html" title="Class for polynomial regression." alt="" coords="267,1447,411,1656"/>
+<area shape="rect" id="node12" href="$classintp_1_1PolyInterp.html" title="Class for polynomial interpolation." alt="" coords="505,1491,615,1612"/>
+</map>

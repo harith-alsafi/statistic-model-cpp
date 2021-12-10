@@ -2,19 +2,485 @@
 \label{classregr_1_1LinearRegression}\index{regr::LinearRegression@{regr::LinearRegression}}
 
 
-{\ttfamily \#include \char`\"{}reg.\+hpp\char`\"{}}
+Class for Linear regression.  
 
+
+
+
+{\ttfamily \#include \char`\"{}regr.\+hpp\char`\"{}}
+
+
+
+Inheritance diagram for regr\+::Linear\+Regression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classregr_1_1LinearRegression__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for regr\+::Linear\+Regression\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=195pt]{classregr_1_1LinearRegression__coll__graph}
+\includegraphics[height=550pt]{classregr_1_1LinearRegression__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classregr_1_1LinearRegression_aa80d196a8a446d9444ab7217bb1eb102}{Linear\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Linear Regression object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classregr_1_1LinearRegression_a4a2a708a797e3066411b9ff9601394e2}{$\sim$\+Linear\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Linear Regression object. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a1088c5502e2cfc7997423c046bf01d8f}{get\+\_\+slope}} ()
+\begin{DoxyCompactList}\small\item\em Get the slope object. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_af35f2ea523bbdcc9f820a4a78df175ec}{get\+\_\+y\+\_\+intersept}} ()
+\begin{DoxyCompactList}\small\item\em Get the y intersept object. \end{DoxyCompactList}\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classregr_1_1LinearRegression_a06c777ad76e48b829906937b962f56bf}{get\+\_\+fit\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the fit data object. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a172f6f7583a1703f71fb831bd74af95c}{get\+\_\+original\+\_\+r}} ()
+\begin{DoxyCompactList}\small\item\em Get the original corelation coefficient (using original data) \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a99e5f6f8cbde93b005728cc05d55a3ef}{get\+\_\+fitted\+\_\+r}} ()
+\begin{DoxyCompactList}\small\item\em Get the fitted corelation coefficient using fitted data. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a3dcb948847da6de38e83105577b77e25}{load\+\_\+data}} (std\+::vector$<$ long double $>$ xx, std\+::vector$<$ long double $>$ yy)
+\begin{DoxyCompactList}\small\item\em Loads the data. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classregr_1_1LinearRegression_adcc20a41b2f80db68e21f169262a3d8a}{fit\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Fits the data and trains the model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classregr_1_1LinearRegression_a7550e154140c7d8d16afc1458a4171b5}{show\+\_\+equation}} ()
+\begin{DoxyCompactList}\small\item\em Shows the regression equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregr_1_1LinearRegression_abc4fcce72b8749b7a616c6096a78bbc7}{plot\+\_\+equation}} (int nn=500)
+\begin{DoxyCompactList}\small\item\em Plots the regression function for given number of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregr_1_1LinearRegression_a42d8b4eba987c0cf243aa36f0a3c1c4b}{plot\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em plots the original data and predicted data \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} \mbox{\hyperlink{classregr_1_1LinearRegression_a2c2066e9dbd92a01a1426ee72d357f88}{get\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the data of regression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual long double \mbox{\hyperlink{classregr_1_1LinearRegression_a54deda798bb827b04338f02734e17b7f}{fun}} (long double xx)
+\begin{DoxyCompactList}\small\item\em The regression function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classregr_1_1LinearRegression_a2ab986584cf1e65f73067befbbf31f20}{x}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classregr_1_1LinearRegression_a15da637fcac71de15546d67adeadb174}{y}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classregr_1_1LinearRegression_a1a1127b7fa4cdefefccb7ebad58fcf1a}{yfit}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a691f55a1966c8ee3fccfe5b0d0830164}{m}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_aa685ec626a5a2fcd37ab42375ac2dbde}{c}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_abd7eab80727c7419b6be007f0fe15546}{sumx}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a58835f34ed83ca222fe7e77ab1c354c9}{sumy}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a2a3df8724439e5029f8e9679fda55c58}{sumxx}}
+\item 
+long double \mbox{\hyperlink{classregr_1_1LinearRegression_a6e3b21917833e9d88d8c9a28dad34524}{sumxy}}
+\item 
+int \mbox{\hyperlink{classregr_1_1LinearRegression_a53294f76033f6bd16ae3f80061cc960b}{n}}
+\item 
+\mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} \mbox{\hyperlink{classregr_1_1LinearRegression_afce244541db45ad270d2e623bfd762bc}{p}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classregr_1_1LinearRegression_ac86b2d6ec0b013eae630dd02c884b53e}{Poly\+Regression}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for Linear regression. 
+
+Definition at line 21 of file regr.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classregr_1_1LinearRegression_aa80d196a8a446d9444ab7217bb1eb102}\label{classregr_1_1LinearRegression_aa80d196a8a446d9444ab7217bb1eb102}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!LinearRegression@{LinearRegression}}
+\index{LinearRegression@{LinearRegression}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{LinearRegression()}{LinearRegression()}}
+{\footnotesize\ttfamily regr\+::\+Linear\+Regression\+::\+Linear\+Regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Linear Regression object. 
+
+
+
+Definition at line 52 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a4a2a708a797e3066411b9ff9601394e2}\label{classregr_1_1LinearRegression_a4a2a708a797e3066411b9ff9601394e2}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!````~LinearRegression@{$\sim$LinearRegression}}
+\index{````~LinearRegression@{$\sim$LinearRegression}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{$\sim$LinearRegression()}{~LinearRegression()}}
+{\footnotesize\ttfamily regr\+::\+Linear\+Regression\+::$\sim$\+Linear\+Regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Linear Regression object. 
+
+
+
+Definition at line 58 of file regr.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classregr_1_1LinearRegression_adcc20a41b2f80db68e21f169262a3d8a}\label{classregr_1_1LinearRegression_adcc20a41b2f80db68e21f169262a3d8a}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!fit\_data@{fit\_data}}
+\index{fit\_data@{fit\_data}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{fit\_data()}{fit\_data()}}
+{\footnotesize\ttfamily virtual void regr\+::\+Linear\+Regression\+::fit\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Fits the data and trains the model. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classregr_1_1PolyRegression_a8c30c057967c27d0fb86c3c28d77dec9}{regr\+::\+Poly\+Regression}}.
+
+
+
+Definition at line 122 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a54deda798bb827b04338f02734e17b7f}\label{classregr_1_1LinearRegression_a54deda798bb827b04338f02734e17b7f}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!fun@{fun}}
+\index{fun@{fun}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{fun()}{fun()}}
+{\footnotesize\ttfamily virtual long double regr\+::\+Linear\+Regression\+::fun (\begin{DoxyParamCaption}\item[{long double}]{xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+The regression function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classregr_1_1PolyRegression_a08293f8251aba51d2c6f3425e5157e63}{regr\+::\+Poly\+Regression}}.
+
+
+
+Definition at line 42 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a2c2066e9dbd92a01a1426ee72d357f88}\label{classregr_1_1LinearRegression_a2c2066e9dbd92a01a1426ee72d357f88}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} regr\+::\+Linear\+Regression\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data of regression. 
+
+\begin{DoxyReturn}{Returns}
+misc\+::\+Table 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a06c777ad76e48b829906937b962f56bf}\label{classregr_1_1LinearRegression_a06c777ad76e48b829906937b962f56bf}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_fit\_data@{get\_fit\_data}}
+\index{get\_fit\_data@{get\_fit\_data}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_fit\_data()}{get\_fit\_data()}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ regr\+::\+Linear\+Regression\+::get\+\_\+fit\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the fit data object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$long double$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a99e5f6f8cbde93b005728cc05d55a3ef}\label{classregr_1_1LinearRegression_a99e5f6f8cbde93b005728cc05d55a3ef}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_fitted\_r@{get\_fitted\_r}}
+\index{get\_fitted\_r@{get\_fitted\_r}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_fitted\_r()}{get\_fitted\_r()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+fitted\+\_\+r (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the fitted corelation coefficient using fitted data. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a172f6f7583a1703f71fb831bd74af95c}\label{classregr_1_1LinearRegression_a172f6f7583a1703f71fb831bd74af95c}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_original\_r@{get\_original\_r}}
+\index{get\_original\_r@{get\_original\_r}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_original\_r()}{get\_original\_r()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+original\+\_\+r (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the original corelation coefficient (using original data) 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a1088c5502e2cfc7997423c046bf01d8f}\label{classregr_1_1LinearRegression_a1088c5502e2cfc7997423c046bf01d8f}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_slope@{get\_slope}}
+\index{get\_slope@{get\_slope}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_slope()}{get\_slope()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+slope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the slope object. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_af35f2ea523bbdcc9f820a4a78df175ec}\label{classregr_1_1LinearRegression_af35f2ea523bbdcc9f820a4a78df175ec}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!get\_y\_intersept@{get\_y\_intersept}}
+\index{get\_y\_intersept@{get\_y\_intersept}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{get\_y\_intersept()}{get\_y\_intersept()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+y\+\_\+intersept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the y intersept object. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a3dcb948847da6de38e83105577b77e25}\label{classregr_1_1LinearRegression_a3dcb948847da6de38e83105577b77e25}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::load\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$}]{xx,  }\item[{std\+::vector$<$ long double $>$}]{yy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em yy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 102 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a42d8b4eba987c0cf243aa36f0a3c1c4b}\label{classregr_1_1LinearRegression_a42d8b4eba987c0cf243aa36f0a3c1c4b}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!plot\_data@{plot\_data}}
+\index{plot\_data@{plot\_data}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{plot\_data()}{plot\_data()}}
+{\footnotesize\ttfamily void regr\+::\+Linear\+Regression\+::plot\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+plots the original data and predicted data 
+
+
+
+Definition at line 172 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_abc4fcce72b8749b7a616c6096a78bbc7}\label{classregr_1_1LinearRegression_abc4fcce72b8749b7a616c6096a78bbc7}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!plot\_equation@{plot\_equation}}
+\index{plot\_equation@{plot\_equation}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{plot\_equation()}{plot\_equation()}}
+{\footnotesize\ttfamily void regr\+::\+Linear\+Regression\+::plot\+\_\+equation (\begin{DoxyParamCaption}\item[{int}]{nn = {\ttfamily 500} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots the regression function for given number of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a7550e154140c7d8d16afc1458a4171b5}\label{classregr_1_1LinearRegression_a7550e154140c7d8d16afc1458a4171b5}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!show\_equation@{show\_equation}}
+\index{show\_equation@{show\_equation}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{show\_equation()}{show\_equation()}}
+{\footnotesize\ttfamily virtual void regr\+::\+Linear\+Regression\+::show\+\_\+equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Shows the regression equation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classregr_1_1PolyRegression_a03689acc8b399c9760b277bfa95b610f}{regr\+::\+Poly\+Regression}}.
+
+
+
+Definition at line 135 of file regr.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classregr_1_1LinearRegression_ac86b2d6ec0b013eae630dd02c884b53e}\label{classregr_1_1LinearRegression_ac86b2d6ec0b013eae630dd02c884b53e}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!PolyRegression@{PolyRegression}}
+\index{PolyRegression@{PolyRegression}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{PolyRegression}{PolyRegression}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classregr_1_1PolyRegression}{Poly\+Regression}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 204 of file regr.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classregr_1_1LinearRegression_aa685ec626a5a2fcd37ab42375ac2dbde}\label{classregr_1_1LinearRegression_aa685ec626a5a2fcd37ab42375ac2dbde}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!c@{c}}
+\index{c@{c}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::c\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a691f55a1966c8ee3fccfe5b0d0830164}\label{classregr_1_1LinearRegression_a691f55a1966c8ee3fccfe5b0d0830164}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!m@{m}}
+\index{m@{m}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::m\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a53294f76033f6bd16ae3f80061cc960b}\label{classregr_1_1LinearRegression_a53294f76033f6bd16ae3f80061cc960b}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!n@{n}}
+\index{n@{n}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int regr\+::\+Linear\+Regression\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_afce244541db45ad270d2e623bfd762bc}\label{classregr_1_1LinearRegression_afce244541db45ad270d2e623bfd762bc}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!p@{p}}
+\index{p@{p}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} regr\+::\+Linear\+Regression\+::p\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_abd7eab80727c7419b6be007f0fe15546}\label{classregr_1_1LinearRegression_abd7eab80727c7419b6be007f0fe15546}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!sumx@{sumx}}
+\index{sumx@{sumx}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{sumx}{sumx}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::sumx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 29 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a2a3df8724439e5029f8e9679fda55c58}\label{classregr_1_1LinearRegression_a2a3df8724439e5029f8e9679fda55c58}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!sumxx@{sumxx}}
+\index{sumxx@{sumxx}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{sumxx}{sumxx}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::sumxx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a6e3b21917833e9d88d8c9a28dad34524}\label{classregr_1_1LinearRegression_a6e3b21917833e9d88d8c9a28dad34524}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!sumxy@{sumxy}}
+\index{sumxy@{sumxy}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{sumxy}{sumxy}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::sumxy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a58835f34ed83ca222fe7e77ab1c354c9}\label{classregr_1_1LinearRegression_a58835f34ed83ca222fe7e77ab1c354c9}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!sumy@{sumy}}
+\index{sumy@{sumy}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{sumy}{sumy}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::sumy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a2ab986584cf1e65f73067befbbf31f20}\label{classregr_1_1LinearRegression_a2ab986584cf1e65f73067befbbf31f20}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!x@{x}}
+\index{x@{x}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ regr\+::\+Linear\+Regression\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 24 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a15da637fcac71de15546d67adeadb174}\label{classregr_1_1LinearRegression_a15da637fcac71de15546d67adeadb174}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!y@{y}}
+\index{y@{y}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ regr\+::\+Linear\+Regression\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 25 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1LinearRegression_a1a1127b7fa4cdefefccb7ebad58fcf1a}\label{classregr_1_1LinearRegression_a1a1127b7fa4cdefefccb7ebad58fcf1a}} 
+\index{regr::LinearRegression@{regr::LinearRegression}!yfit@{yfit}}
+\index{yfit@{yfit}!regr::LinearRegression@{regr::LinearRegression}}
+\doxysubsubsection{\texorpdfstring{yfit}{yfit}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ regr\+::\+Linear\+Regression\+::yfit\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file regr.\+hpp.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/reg.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{regr_8hpp}{regr.\+hpp}}\end{DoxyCompactItemize}

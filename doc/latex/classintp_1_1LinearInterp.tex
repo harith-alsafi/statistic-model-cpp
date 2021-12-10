@@ -2,19 +2,469 @@
 \label{classintp_1_1LinearInterp}\index{intp::LinearInterp@{intp::LinearInterp}}
 
 
-{\ttfamily \#include \char`\"{}int.\+hpp\char`\"{}}
+Class for Linear interpolation.  
 
+
+
+
+{\ttfamily \#include \char`\"{}intp.\+hpp\char`\"{}}
+
+
+
+Inheritance diagram for intp\+::Linear\+Interp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classintp_1_1LinearInterp__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for intp\+::Linear\+Interp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=169pt]{classintp_1_1LinearInterp__coll__graph}
+\includegraphics[height=550pt]{classintp_1_1LinearInterp__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classintp_1_1LinearInterp_ab47c88b454ae9e5680d7e25895c0db57}{Linear\+Interp}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Linear Interp object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classintp_1_1LinearInterp_a16bc0a0f005f2b57af8c3cff45d80b8f}{$\sim$\+Linear\+Interp}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Linear Interp object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classintp_1_1LinearInterp_a1ee7f275fca970ba5ed822689f772ed6}{load\+\_\+data}} (std\+::vector$<$ long double $>$ xx, std\+::vector$<$ long double $>$ yy)
+\begin{DoxyCompactList}\small\item\em Loads the data. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classintp_1_1LinearInterp_a19a36bb67d8a42be7d15d04648229208}{find\+\_\+value}} (long double xx, bool use\+\_\+combined=false)
+\begin{DoxyCompactList}\small\item\em Finds the interpolated value from given x. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1LinearInterp_a586931cc4470450bfcf1215f7e3daa2c}{reset\+\_\+interpolated}} ()
+\begin{DoxyCompactList}\small\item\em Resets the interpolated data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1LinearInterp_a905b1a16a9718f3c87f47d4f6c87eb93}{plot\+\_\+all\+\_\+interpolation}} (int nn=500)
+\begin{DoxyCompactList}\small\item\em Plots all posiible interpolations within given number of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1LinearInterp_a2ce5eafccbdfd1a92cec39694a5601ee}{plot\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Plots the original data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1LinearInterp_af0af99e177d8c2c9bd345546ffe96a85}{plot\+\_\+interpolated\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Plots the interpolated data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1LinearInterp_a2e77ad32addfd39d1f81e198ed90b58c}{plot\+\_\+combined\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Plots x\+\_\+comb and y\+\_\+comb. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} \mbox{\hyperlink{classintp_1_1LinearInterp_a0c2c830a638153841382d819f4bc1e73}{get\+\_\+original\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the original data object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} \mbox{\hyperlink{classintp_1_1LinearInterp_a34f189c555a7c5d8a2900a2f314ddd59}{get\+\_\+interpolated\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the interpolated data object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} \mbox{\hyperlink{classintp_1_1LinearInterp_a312024163ea8f6d9bdc20d37902b9fed}{get\+\_\+combined\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the combined data object. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classintp_1_1LinearInterp_a33c4b83f8be6b8c68079dde8068fc86f}{get\+\_\+r\+\_\+original\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the r original data object. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classintp_1_1LinearInterp_a5596a0d46568cb0256b4cea36e19d5dd}{get\+\_\+r\+\_\+combined\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Get the r combined data object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual long double \mbox{\hyperlink{classintp_1_1LinearInterp_a1bfbc01f2d393ea8ece07c281888a00b}{\+\_\+find\+\_\+value}} (long double xx, std\+::vector$<$ long double $>$ \+\_\+x, std\+::vector$<$ long double $>$ \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Gives an interpolated value for a given x-\/value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_a61ee1cce36d503c6489e87aa000e45c5}{x}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_a1b27f11407f80190fbfbc5d9abdc1403}{y}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_a7c88e4e60132c995b00e593fc27445f0}{x\+\_\+in}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_ac9c017b3cd9b3a51b55af6b64b751619}{y\+\_\+in}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_ae8546f0b25e02cdd8464cbd31c88e042}{x\+\_\+comb}}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classintp_1_1LinearInterp_a26963d5b0be30c57582579a36c472769}{y\+\_\+comb}}
+\item 
+int \mbox{\hyperlink{classintp_1_1LinearInterp_a34d4500170e1150a3ef09ad97a919f39}{n}}
+\item 
+\mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} \mbox{\hyperlink{classintp_1_1LinearInterp_ab5d909f2ba117c11352037451891c43d}{p}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classintp_1_1LinearInterp_a95a52a22e82f0de918e04105356d6317}{Poly\+Interp}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for Linear interpolation. 
+
+Definition at line 23 of file intp.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classintp_1_1LinearInterp_ab47c88b454ae9e5680d7e25895c0db57}\label{classintp_1_1LinearInterp_ab47c88b454ae9e5680d7e25895c0db57}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!LinearInterp@{LinearInterp}}
+\index{LinearInterp@{LinearInterp}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{LinearInterp()}{LinearInterp()}}
+{\footnotesize\ttfamily intp\+::\+Linear\+Interp\+::\+Linear\+Interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Linear Interp object. 
+
+
+
+Definition at line 95 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a16bc0a0f005f2b57af8c3cff45d80b8f}\label{classintp_1_1LinearInterp_a16bc0a0f005f2b57af8c3cff45d80b8f}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!````~LinearInterp@{$\sim$LinearInterp}}
+\index{````~LinearInterp@{$\sim$LinearInterp}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{$\sim$LinearInterp()}{~LinearInterp()}}
+{\footnotesize\ttfamily intp\+::\+Linear\+Interp\+::$\sim$\+Linear\+Interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Linear Interp object. 
+
+
+
+Definition at line 101 of file intp.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a1bfbc01f2d393ea8ece07c281888a00b}\label{classintp_1_1LinearInterp_a1bfbc01f2d393ea8ece07c281888a00b}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!\_find\_value@{\_find\_value}}
+\index{\_find\_value@{\_find\_value}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{\_find\_value()}{\_find\_value()}}
+{\footnotesize\ttfamily virtual long double intp\+::\+Linear\+Interp\+::\+\_\+find\+\_\+value (\begin{DoxyParamCaption}\item[{long double}]{xx,  }\item[{std\+::vector$<$ long double $>$}]{\+\_\+x,  }\item[{std\+::vector$<$ long double $>$}]{\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Gives an interpolated value for a given x-\/value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em \+\_\+x} & \\
+\hline
+{\em \+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classintp_1_1PolyInterp_af2bbf7080242e2915109db16ec845b87}{intp\+::\+Poly\+Interp}}.
+
+
+
+Definition at line 46 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a19a36bb67d8a42be7d15d04648229208}\label{classintp_1_1LinearInterp_a19a36bb67d8a42be7d15d04648229208}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!find\_value@{find\_value}}
+\index{find\_value@{find\_value}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{find\_value()}{find\_value()}}
+{\footnotesize\ttfamily long double intp\+::\+Linear\+Interp\+::find\+\_\+value (\begin{DoxyParamCaption}\item[{long double}]{xx,  }\item[{bool}]{use\+\_\+combined = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the interpolated value from given x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em use\+\_\+combined} & // can use previously interpolated data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a312024163ea8f6d9bdc20d37902b9fed}\label{classintp_1_1LinearInterp_a312024163ea8f6d9bdc20d37902b9fed}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!get\_combined\_data@{get\_combined\_data}}
+\index{get\_combined\_data@{get\_combined\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{get\_combined\_data()}{get\_combined\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} intp\+::\+Linear\+Interp\+::get\+\_\+combined\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the combined data object. 
+
+\begin{DoxyReturn}{Returns}
+misc\+::\+Table 
+\end{DoxyReturn}
+
+
+Definition at line 263 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a34f189c555a7c5d8a2900a2f314ddd59}\label{classintp_1_1LinearInterp_a34f189c555a7c5d8a2900a2f314ddd59}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!get\_interpolated\_data@{get\_interpolated\_data}}
+\index{get\_interpolated\_data@{get\_interpolated\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{get\_interpolated\_data()}{get\_interpolated\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} intp\+::\+Linear\+Interp\+::get\+\_\+interpolated\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the interpolated data object. 
+
+\begin{DoxyReturn}{Returns}
+misc\+::\+Table 
+\end{DoxyReturn}
+
+
+Definition at line 251 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a0c2c830a638153841382d819f4bc1e73}\label{classintp_1_1LinearInterp_a0c2c830a638153841382d819f4bc1e73}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!get\_original\_data@{get\_original\_data}}
+\index{get\_original\_data@{get\_original\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{get\_original\_data()}{get\_original\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} intp\+::\+Linear\+Interp\+::get\+\_\+original\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the original data object. 
+
+\begin{DoxyReturn}{Returns}
+misc\+::\+Table 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a5596a0d46568cb0256b4cea36e19d5dd}\label{classintp_1_1LinearInterp_a5596a0d46568cb0256b4cea36e19d5dd}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!get\_r\_combined\_data@{get\_r\_combined\_data}}
+\index{get\_r\_combined\_data@{get\_r\_combined\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{get\_r\_combined\_data()}{get\_r\_combined\_data()}}
+{\footnotesize\ttfamily long double intp\+::\+Linear\+Interp\+::get\+\_\+r\+\_\+combined\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the r combined data object. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 284 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a33c4b83f8be6b8c68079dde8068fc86f}\label{classintp_1_1LinearInterp_a33c4b83f8be6b8c68079dde8068fc86f}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!get\_r\_original\_data@{get\_r\_original\_data}}
+\index{get\_r\_original\_data@{get\_r\_original\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{get\_r\_original\_data()}{get\_r\_original\_data()}}
+{\footnotesize\ttfamily long double intp\+::\+Linear\+Interp\+::get\+\_\+r\+\_\+original\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the r original data object. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 275 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a1ee7f275fca970ba5ed822689f772ed6}\label{classintp_1_1LinearInterp_a1ee7f275fca970ba5ed822689f772ed6}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily virtual void intp\+::\+Linear\+Interp\+::load\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$}]{xx,  }\item[{std\+::vector$<$ long double $>$}]{yy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Loads the data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em yy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classintp_1_1PolyInterp_af7f4fb4af5ff903947fbcc932490646e}{intp\+::\+Poly\+Interp}}.
+
+
+
+Definition at line 109 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a905b1a16a9718f3c87f47d4f6c87eb93}\label{classintp_1_1LinearInterp_a905b1a16a9718f3c87f47d4f6c87eb93}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!plot\_all\_interpolation@{plot\_all\_interpolation}}
+\index{plot\_all\_interpolation@{plot\_all\_interpolation}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{plot\_all\_interpolation()}{plot\_all\_interpolation()}}
+{\footnotesize\ttfamily void intp\+::\+Linear\+Interp\+::plot\+\_\+all\+\_\+interpolation (\begin{DoxyParamCaption}\item[{int}]{nn = {\ttfamily 500} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots all posiible interpolations within given number of points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nn} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 166 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a2e77ad32addfd39d1f81e198ed90b58c}\label{classintp_1_1LinearInterp_a2e77ad32addfd39d1f81e198ed90b58c}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!plot\_combined\_data@{plot\_combined\_data}}
+\index{plot\_combined\_data@{plot\_combined\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{plot\_combined\_data()}{plot\_combined\_data()}}
+{\footnotesize\ttfamily void intp\+::\+Linear\+Interp\+::plot\+\_\+combined\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots x\+\_\+comb and y\+\_\+comb. 
+
+
+
+Definition at line 219 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a2ce5eafccbdfd1a92cec39694a5601ee}\label{classintp_1_1LinearInterp_a2ce5eafccbdfd1a92cec39694a5601ee}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!plot\_data@{plot\_data}}
+\index{plot\_data@{plot\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{plot\_data()}{plot\_data()}}
+{\footnotesize\ttfamily void intp\+::\+Linear\+Interp\+::plot\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots the original data. 
+
+
+
+Definition at line 181 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_af0af99e177d8c2c9bd345546ffe96a85}\label{classintp_1_1LinearInterp_af0af99e177d8c2c9bd345546ffe96a85}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!plot\_interpolated\_data@{plot\_interpolated\_data}}
+\index{plot\_interpolated\_data@{plot\_interpolated\_data}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{plot\_interpolated\_data()}{plot\_interpolated\_data()}}
+{\footnotesize\ttfamily void intp\+::\+Linear\+Interp\+::plot\+\_\+interpolated\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plots the interpolated data. 
+
+
+
+Definition at line 199 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a586931cc4470450bfcf1215f7e3daa2c}\label{classintp_1_1LinearInterp_a586931cc4470450bfcf1215f7e3daa2c}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!reset\_interpolated@{reset\_interpolated}}
+\index{reset\_interpolated@{reset\_interpolated}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{reset\_interpolated()}{reset\_interpolated()}}
+{\footnotesize\ttfamily void intp\+::\+Linear\+Interp\+::reset\+\_\+interpolated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the interpolated data. 
+
+
+
+Definition at line 154 of file intp.\+hpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a95a52a22e82f0de918e04105356d6317}\label{classintp_1_1LinearInterp_a95a52a22e82f0de918e04105356d6317}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!PolyInterp@{PolyInterp}}
+\index{PolyInterp@{PolyInterp}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{PolyInterp}{PolyInterp}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classintp_1_1PolyInterp}{Poly\+Interp}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 289 of file intp.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a34d4500170e1150a3ef09ad97a919f39}\label{classintp_1_1LinearInterp_a34d4500170e1150a3ef09ad97a919f39}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!n@{n}}
+\index{n@{n}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int intp\+::\+Linear\+Interp\+::n\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_ab5d909f2ba117c11352037451891c43d}\label{classintp_1_1LinearInterp_ab5d909f2ba117c11352037451891c43d}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!p@{p}}
+\index{p@{p}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} intp\+::\+Linear\+Interp\+::p\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a61ee1cce36d503c6489e87aa000e45c5}\label{classintp_1_1LinearInterp_a61ee1cce36d503c6489e87aa000e45c5}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!x@{x}}
+\index{x@{x}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_ae8546f0b25e02cdd8464cbd31c88e042}\label{classintp_1_1LinearInterp_ae8546f0b25e02cdd8464cbd31c88e042}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!x\_comb@{x\_comb}}
+\index{x\_comb@{x\_comb}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{x\_comb}{x\_comb}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::x\+\_\+comb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a7c88e4e60132c995b00e593fc27445f0}\label{classintp_1_1LinearInterp_a7c88e4e60132c995b00e593fc27445f0}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!x\_in@{x\_in}}
+\index{x\_in@{x\_in}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{x\_in}{x\_in}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::x\+\_\+in\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 30 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a1b27f11407f80190fbfbc5d9abdc1403}\label{classintp_1_1LinearInterp_a1b27f11407f80190fbfbc5d9abdc1403}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!y@{y}}
+\index{y@{y}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_a26963d5b0be30c57582579a36c472769}\label{classintp_1_1LinearInterp_a26963d5b0be30c57582579a36c472769}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!y\_comb@{y\_comb}}
+\index{y\_comb@{y\_comb}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{y\_comb}{y\_comb}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::y\+\_\+comb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1LinearInterp_ac9c017b3cd9b3a51b55af6b64b751619}\label{classintp_1_1LinearInterp_ac9c017b3cd9b3a51b55af6b64b751619}} 
+\index{intp::LinearInterp@{intp::LinearInterp}!y\_in@{y\_in}}
+\index{y\_in@{y\_in}!intp::LinearInterp@{intp::LinearInterp}}
+\doxysubsubsection{\texorpdfstring{y\_in}{y\_in}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ intp\+::\+Linear\+Interp\+::y\+\_\+in\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file intp.\+hpp.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/int.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{intp_8hpp}{intp.\+hpp}}\end{DoxyCompactItemize}

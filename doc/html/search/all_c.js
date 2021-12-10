@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['readcsv_40',['readCSV',['../classmisc_1_1Table.html#a4de8db30fe3f14355bf444c2c24a093a',1,'misc::Table']]],
-  ['regr_41',['regr',['../namespaceregr.html',1,'']]],
-  ['row_42',['row',['../classmisc_1_1Table.html#a39d2c3781309bd9d679735c67645c9c0',1,'misc::Table']]]
+  ['n_94',['n',['../classintp_1_1LinearInterp.html#a34d4500170e1150a3ef09ad97a919f39',1,'intp::LinearInterp::n()'],['../classregr_1_1LinearRegression.html#a53294f76033f6bd16ae3f80061cc960b',1,'regr::LinearRegression::n()']]]
 ];

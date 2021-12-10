@@ -11,10 +11,101 @@
     <member refid="structgraphoptions_1af61ad80e401468feeb49505babf1cb3e" kind="function"><name>~graphoptions</name></member>
   </compound>
   <compound refid="classintp_1_1LinearInterp" kind="class"><name>intp::LinearInterp</name>
+    <member refid="classintp_1_1LinearInterp_1a61ee1cce36d503c6489e87aa000e45c5" kind="variable"><name>x</name></member>
+    <member refid="classintp_1_1LinearInterp_1a1b27f11407f80190fbfbc5d9abdc1403" kind="variable"><name>y</name></member>
+    <member refid="classintp_1_1LinearInterp_1a7c88e4e60132c995b00e593fc27445f0" kind="variable"><name>x_in</name></member>
+    <member refid="classintp_1_1LinearInterp_1ac9c017b3cd9b3a51b55af6b64b751619" kind="variable"><name>y_in</name></member>
+    <member refid="classintp_1_1LinearInterp_1ae8546f0b25e02cdd8464cbd31c88e042" kind="variable"><name>x_comb</name></member>
+    <member refid="classintp_1_1LinearInterp_1a26963d5b0be30c57582579a36c472769" kind="variable"><name>y_comb</name></member>
+    <member refid="classintp_1_1LinearInterp_1a34d4500170e1150a3ef09ad97a919f39" kind="variable"><name>n</name></member>
+    <member refid="classintp_1_1LinearInterp_1ab5d909f2ba117c11352037451891c43d" kind="variable"><name>p</name></member>
+    <member refid="classintp_1_1LinearInterp_1a95a52a22e82f0de918e04105356d6317" kind="friend"><name>PolyInterp</name></member>
+    <member refid="classintp_1_1LinearInterp_1a1bfbc01f2d393ea8ece07c281888a00b" kind="function"><name>_find_value</name></member>
+    <member refid="classintp_1_1LinearInterp_1ab47c88b454ae9e5680d7e25895c0db57" kind="function"><name>LinearInterp</name></member>
+    <member refid="classintp_1_1LinearInterp_1a16bc0a0f005f2b57af8c3cff45d80b8f" kind="function"><name>~LinearInterp</name></member>
+    <member refid="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6" kind="function"><name>load_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kind="function"><name>find_value</name></member>
+    <member refid="classintp_1_1LinearInterp_1a586931cc4470450bfcf1215f7e3daa2c" kind="function"><name>reset_interpolated</name></member>
+    <member refid="classintp_1_1LinearInterp_1a905b1a16a9718f3c87f47d4f6c87eb93" kind="function"><name>plot_all_interpolation</name></member>
+    <member refid="classintp_1_1LinearInterp_1a2ce5eafccbdfd1a92cec39694a5601ee" kind="function"><name>plot_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1af0af99e177d8c2c9bd345546ffe96a85" kind="function"><name>plot_interpolated_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a2e77ad32addfd39d1f81e198ed90b58c" kind="function"><name>plot_combined_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a0c2c830a638153841382d819f4bc1e73" kind="function"><name>get_original_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a34f189c555a7c5d8a2900a2f314ddd59" kind="function"><name>get_interpolated_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a312024163ea8f6d9bdc20d37902b9fed" kind="function"><name>get_combined_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a33c4b83f8be6b8c68079dde8068fc86f" kind="function"><name>get_r_original_data</name></member>
+    <member refid="classintp_1_1LinearInterp_1a5596a0d46568cb0256b4cea36e19d5dd" kind="function"><name>get_r_combined_data</name></member>
   </compound>
   <compound refid="classregr_1_1LinearRegression" kind="class"><name>regr::LinearRegression</name>
+    <member refid="classregr_1_1LinearRegression_1a2ab986584cf1e65f73067befbbf31f20" kind="variable"><name>x</name></member>
+    <member refid="classregr_1_1LinearRegression_1a15da637fcac71de15546d67adeadb174" kind="variable"><name>y</name></member>
+    <member refid="classregr_1_1LinearRegression_1a1a1127b7fa4cdefefccb7ebad58fcf1a" kind="variable"><name>yfit</name></member>
+    <member refid="classregr_1_1LinearRegression_1a691f55a1966c8ee3fccfe5b0d0830164" kind="variable"><name>m</name></member>
+    <member refid="classregr_1_1LinearRegression_1aa685ec626a5a2fcd37ab42375ac2dbde" kind="variable"><name>c</name></member>
+    <member refid="classregr_1_1LinearRegression_1abd7eab80727c7419b6be007f0fe15546" kind="variable"><name>sumx</name></member>
+    <member refid="classregr_1_1LinearRegression_1a58835f34ed83ca222fe7e77ab1c354c9" kind="variable"><name>sumy</name></member>
+    <member refid="classregr_1_1LinearRegression_1a2a3df8724439e5029f8e9679fda55c58" kind="variable"><name>sumxx</name></member>
+    <member refid="classregr_1_1LinearRegression_1a6e3b21917833e9d88d8c9a28dad34524" kind="variable"><name>sumxy</name></member>
+    <member refid="classregr_1_1LinearRegression_1a53294f76033f6bd16ae3f80061cc960b" kind="variable"><name>n</name></member>
+    <member refid="classregr_1_1LinearRegression_1afce244541db45ad270d2e623bfd762bc" kind="variable"><name>p</name></member>
+    <member refid="classregr_1_1LinearRegression_1ac86b2d6ec0b013eae630dd02c884b53e" kind="friend"><name>PolyRegression</name></member>
+    <member refid="classregr_1_1LinearRegression_1a54deda798bb827b04338f02734e17b7f" kind="function"><name>fun</name></member>
+    <member refid="classregr_1_1LinearRegression_1aa80d196a8a446d9444ab7217bb1eb102" kind="function"><name>LinearRegression</name></member>
+    <member refid="classregr_1_1LinearRegression_1a4a2a708a797e3066411b9ff9601394e2" kind="function"><name>~LinearRegression</name></member>
+    <member refid="classregr_1_1LinearRegression_1a1088c5502e2cfc7997423c046bf01d8f" kind="function"><name>get_slope</name></member>
+    <member refid="classregr_1_1LinearRegression_1af35f2ea523bbdcc9f820a4a78df175ec" kind="function"><name>get_y_intersept</name></member>
+    <member refid="classregr_1_1LinearRegression_1a06c777ad76e48b829906937b962f56bf" kind="function"><name>get_fit_data</name></member>
+    <member refid="classregr_1_1LinearRegression_1a172f6f7583a1703f71fb831bd74af95c" kind="function"><name>get_original_r</name></member>
+    <member refid="classregr_1_1LinearRegression_1a99e5f6f8cbde93b005728cc05d55a3ef" kind="function"><name>get_fitted_r</name></member>
+    <member refid="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" kind="function"><name>load_data</name></member>
+    <member refid="classregr_1_1LinearRegression_1adcc20a41b2f80db68e21f169262a3d8a" kind="function"><name>fit_data</name></member>
+    <member refid="classregr_1_1LinearRegression_1a7550e154140c7d8d16afc1458a4171b5" kind="function"><name>show_equation</name></member>
+    <member refid="classregr_1_1LinearRegression_1abc4fcce72b8749b7a616c6096a78bbc7" kind="function"><name>plot_equation</name></member>
+    <member refid="classregr_1_1LinearRegression_1a42d8b4eba987c0cf243aa36f0a3c1c4b" kind="function"><name>plot_data</name></member>
+    <member refid="classregr_1_1LinearRegression_1a2c2066e9dbd92a01a1426ee72d357f88" kind="function"><name>get_data</name></member>
+  </compound>
+  <compound refid="classMenu" kind="class"><name>Menu</name>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2" kind="enum"><name>State</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9" kind="enumvalue"><name>running</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b" kind="enumvalue"><name>exit</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55" kind="enumvalue"><name>error_csv</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb" kind="enumvalue"><name>error_unloaded_data</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4" kind="enumvalue"><name>show_data</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48" kind="enumvalue"><name>regression</name></member>
+    <member refid="classMenu_1a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc" kind="enumvalue"><name>interpolation</name></member>
+    <member refid="classMenu_1a1454c539a24cfb1cd1fd8b123808f915" kind="variable"><name>menu_state</name></member>
+    <member refid="classMenu_1a5c32e53d60f984a0fa95c4c945a27b2a" kind="variable"><name>table</name></member>
+    <member refid="classMenu_1a64fa7fe586f049762b839f59ac605b89" kind="variable"><name>plt</name></member>
+    <member refid="classMenu_1a44980a00fc87a13a68d8b375e324247c" kind="variable"><name>lr</name></member>
+    <member refid="classMenu_1aa0e85d4ee6dbc5859fc13f4dabfa64dc" kind="variable"><name>pr</name></member>
+    <member refid="classMenu_1a7a58bdb496c3d5d9e9b77022a0586cee" kind="variable"><name>lip</name></member>
+    <member refid="classMenu_1a44f5bfea44ad13c7f92ca314e5182551" kind="variable"><name>pip</name></member>
+    <member refid="classMenu_1ad5152b40c2819510f9e74600f4b510ad" kind="variable"><name>choice</name></member>
+    <member refid="classMenu_1a10059b5c997cc3a0db9e8e2a64887b43" kind="variable"><name>filename</name></member>
+    <member refid="classMenu_1a485adcf0d2d5801661dbb29368f9b62c" kind="variable"><name>linear_intp</name></member>
+    <member refid="classMenu_1ae9b50937e0f5b42edc0f62c7f882da45" kind="variable"><name>linear_reg</name></member>
+    <member refid="classMenu_1ada2f777bf28916af738443aa3ebcb927" kind="function"><name>check_choice</name></member>
+    <member refid="classMenu_1ab19a5a2c276c6e316a573371cd9f493c" kind="function"><name>main_options</name></member>
+    <member refid="classMenu_1aee8fe3152b6510f00eee2cc8569c7ce7" kind="function"><name>load_csv</name></member>
+    <member refid="classMenu_1aa50e9b58689b9187ea8f92f41eec963d" kind="function"><name>check_csv_errors</name></member>
+    <member refid="classMenu_1a4e10e43feb29875c0e86b91b15f0c1b6" kind="function"><name>check_unloaded_errors</name></member>
+    <member refid="classMenu_1a6676a4fd2611efa0185852b24e135a26" kind="function"><name>show_data_options</name></member>
+    <member refid="classMenu_1ae32c8e7216be9755780b48deaf73ca08" kind="function"><name>save_csv</name></member>
+    <member refid="classMenu_1a586307437e1e10c56853bd83b8c3e361" kind="function"><name>show_poly_lin</name></member>
+    <member refid="classMenu_1ad33276d92ca6fad9ce0c36ab4154c474" kind="function"><name>show_regression_options</name></member>
+    <member refid="classMenu_1a8f5f67b770d28fea9ea7c25c5c2be696" kind="function"><name>show_interpolation_option</name></member>
+    <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" kind="function"><name>Menu</name></member>
+    <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" kind="function"><name>~Menu</name></member>
+    <member refid="classMenu_1a35656cd130e24d69383a5c9d0a73a38c" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classmisc_1_1Plot" kind="class"><name>misc::Plot</name>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434e" kind="enum"><name>Color</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf" kind="enumvalue"><name>red</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad" kind="enumvalue"><name>green</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437" kind="enumvalue"><name>yellow</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4" kind="enumvalue"><name>purple</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb" kind="enumvalue"><name>blue</name></member>
+    <member refid="classmisc_1_1Plot_1a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34" kind="enumvalue"><name>white</name></member>
     <member refid="classmisc_1_1Plot_1ae418d8c18c7e0a4682ac9258513ede5e" kind="variable"><name>height</name></member>
     <member refid="classmisc_1_1Plot_1ae5cb9d73243cfe0675f5bbebc095853f" kind="variable"><name>width</name></member>
     <member refid="classmisc_1_1Plot_1acd15f49e99e22504cd79b7a673590244" kind="variable"><name>xmin</name></member>
@@ -23,17 +114,38 @@
     <member refid="classmisc_1_1Plot_1a5ba170ac536e7d8399f8e4ecad64e1fe" kind="variable"><name>ymax</name></member>
     <member refid="classmisc_1_1Plot_1a0741ab8b63e13d8a4252acf6e93defbe" kind="variable"><name>cols</name></member>
     <member refid="classmisc_1_1Plot_1a2a9d2b16ea8c7f3138a5384a1ba923d8" kind="variable"><name>domain</name></member>
+    <member refid="classmisc_1_1Plot_1a51f146e8cb310a1d55af39f8ce52e9c3" kind="variable"><name>aoptions</name></member>
+    <member refid="classmisc_1_1Plot_1a11fce306db045b8384b8eca900a56aca" kind="variable"><name>c</name></member>
+    <member refid="classmisc_1_1Plot_1adf0ac53c3f9d96298d814b66bb92112f" kind="variable"><name>title</name></member>
     <member refid="classmisc_1_1Plot_1ad121e04781c92735596200df60b4ec7a" kind="function"><name>Plot</name></member>
-    <member refid="classmisc_1_1Plot_1a3f92965f3826de471737a081164d4c00" kind="function"><name>setDomain</name></member>
-    <member refid="classmisc_1_1Plot_1a18ff734377adc641213aa132bc34063b" kind="function"><name>setRange</name></member>
-    <member refid="classmisc_1_1Plot_1a03321a3f086b7b92f9b722176a8599dc" kind="function"><name>setSize</name></member>
-    <member refid="classmisc_1_1Plot_1afe5d9755ead78c69a1ad1415a2ea532f" kind="function"><name>generateDomain</name></member>
-    <member refid="classmisc_1_1Plot_1a6f75f1a37636d3b36b0dc3a117278a38" kind="function"><name>plotVect</name></member>
-    <member refid="classmisc_1_1Plot_1a8bfdf81ac1f5abeb96fa359fc73d9d31" kind="function"><name>plotFun</name></member>
+    <member refid="classmisc_1_1Plot_1a41c44efde77238011b7ef8d03fe70db9" kind="function"><name>set_domain</name></member>
+    <member refid="classmisc_1_1Plot_1a7d41a0e058bafb1a4243eb032c74556f" kind="function"><name>set_range</name></member>
+    <member refid="classmisc_1_1Plot_1a14f50751b025e9c7d33e52d87179a757" kind="function"><name>set_size</name></member>
+    <member refid="classmisc_1_1Plot_1a7476d78c32c4c21d6330fba416ceae2c" kind="function"><name>set_color</name></member>
+    <member refid="classmisc_1_1Plot_1ac2da558e0965208f9898d64cef0f6b74" kind="function"><name>set_title</name></member>
+    <member refid="classmisc_1_1Plot_1ab041be78e2edf33fb68ee3642453bacc" kind="function"><name>generate_domain</name></member>
+    <member refid="classmisc_1_1Plot_1a239205a9cc0ab0fffa92b8109a653b2f" kind="function"><name>generate_domain</name></member>
+    <member refid="classmisc_1_1Plot_1a85567735781b6a1cfb277c2c8ae12355" kind="function"><name>plot_vect</name></member>
+    <member refid="classmisc_1_1Plot_1aeea6cf0d2dbb82bad251918c8c202b87" kind="function"><name>plot_fun</name></member>
   </compound>
   <compound refid="classintp_1_1PolyInterp" kind="class"><name>intp::PolyInterp</name>
+    <member refid="classintp_1_1PolyInterp_1af2bbf7080242e2915109db16ec845b87" kind="function"><name>_find_value</name></member>
+    <member refid="classintp_1_1PolyInterp_1adaefb559da9f8802130334b6cf5ca88a" kind="function"><name>PolyInterp</name></member>
+    <member refid="classintp_1_1PolyInterp_1a262c78f8d052291360cdc2cc7d57bf31" kind="function"><name>~PolyInterp</name></member>
+    <member refid="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" kind="function"><name>load_data</name></member>
   </compound>
   <compound refid="classregr_1_1PolyRegression" kind="class"><name>regr::PolyRegression</name>
+    <member refid="classregr_1_1PolyRegression_1a8bddad858a0f6b59bd459cb6fa7d84be" kind="variable"><name>coeff</name></member>
+    <member refid="classregr_1_1PolyRegression_1a1c63523cea2d40ca3505509ce557062c" kind="variable"><name>degree</name></member>
+    <member refid="classregr_1_1PolyRegression_1a08293f8251aba51d2c6f3425e5157e63" kind="function"><name>fun</name></member>
+    <member refid="classregr_1_1PolyRegression_1a94f0880a9a098f4a33392a4d2765eaa4" kind="function"><name>get_power</name></member>
+    <member refid="classregr_1_1PolyRegression_1af35f2ea523bbdcc9f820a4a78df175ec" kind="function"><name>get_y_intersept</name></member>
+    <member refid="classregr_1_1PolyRegression_1a1088c5502e2cfc7997423c046bf01d8f" kind="function"><name>get_slope</name></member>
+    <member refid="classregr_1_1PolyRegression_1afc0775e307755fa0f1b64c59dbc97245" kind="function"><name>PolyRegression</name></member>
+    <member refid="classregr_1_1PolyRegression_1a349fb1f73a2128ed128aab156c7d7ce8" kind="function"><name>~PolyRegression</name></member>
+    <member refid="classregr_1_1PolyRegression_1a6333d5db93fe8526d3907343d7e46e20" kind="function"><name>set_degree</name></member>
+    <member refid="classregr_1_1PolyRegression_1a03689acc8b399c9760b277bfa95b610f" kind="function"><name>show_equation</name></member>
+    <member refid="classregr_1_1PolyRegression_1a8c30c057967c27d0fb86c3c28d77dec9" kind="function"><name>fit_data</name></member>
   </compound>
   <compound refid="structmisc_1_1Table_1_1QR" kind="struct"><name>misc::Table::QR</name>
     <member refid="structmisc_1_1Table_1_1QR_1a048249726c2a8f0ad9e3eca6f867c3fa" kind="variable"><name>LQ</name></member>
@@ -41,34 +153,54 @@
     <member refid="structmisc_1_1Table_1_1QR_1ac65f73e3532b6dfaa36e1ae65fafcb45" kind="variable"><name>Q2</name></member>
     <member refid="structmisc_1_1Table_1_1QR_1adcb33506be77f79517adf30cca5bc2ba" kind="variable"><name>Q3</name></member>
     <member refid="structmisc_1_1Table_1_1QR_1a971d49eb9b6cdeb684cf43d443d2f3c9" kind="variable"><name>UQ</name></member>
-    <member refid="structmisc_1_1Table_1_1QR_1ad325268e08fb78ecdb2ae782f5266a48" kind="variable"><name>IQR</name></member>
   </compound>
   <compound refid="classmisc_1_1Table" kind="class"><name>misc::Table</name>
     <member refid="classmisc_1_1Table_1aa920782e0a9185ee944d7b8e54b880aa" kind="variable"><name>headers</name></member>
+    <member refid="classmisc_1_1Table_1a0074cb923e5106b76e392c3f224224ce" kind="variable"><name>rows</name></member>
     <member refid="classmisc_1_1Table_1a39d2c3781309bd9d679735c67645c9c0" kind="variable"><name>row</name></member>
     <member refid="classmisc_1_1Table_1a03025d4e255a14c2469ae5e6bbc9504b" kind="variable"><name>col</name></member>
-    <member refid="classmisc_1_1Table_1a11154eddd2261171da35511d3afee138" kind="function"><name>checkHeader</name></member>
-    <member refid="classmisc_1_1Table_1a6e5c955b60123e296e33d6438521b1e9" kind="function"><name>getAvgs</name></member>
-    <member refid="classmisc_1_1Table_1a1e6b098ea88b59d0c26b24c5050d5843" kind="function"><name>getStds</name></member>
-    <member refid="classmisc_1_1Table_1ada09ad1dff1ef0d5d50cff347e9bbf70" kind="function"><name>getVars</name></member>
-    <member refid="classmisc_1_1Table_1a1b42a09b9bc50afb69ce94bc40fe1d52" kind="function"><name>getQRs</name></member>
+    <member refid="classmisc_1_1Table_1a5a24d8acca13e5f7c5124894277a2c45" kind="variable"><name>sz</name></member>
+    <member refid="classmisc_1_1Table_1a5dbe7bad06a669f5475640ba66b7c4a8" kind="function"><name>check_header</name></member>
+    <member refid="classmisc_1_1Table_1a3f5cdfdd090295744091adef6d17db54" kind="function"><name>get_col_</name></member>
+    <member refid="classmisc_1_1Table_1afb08720056b64979ce0916c01bfa6d7e" kind="function"><name>get_avgs</name></member>
+    <member refid="classmisc_1_1Table_1a2e504c6423c1803b3dfcb76c9a4b0ffb" kind="function"><name>get_stds</name></member>
+    <member refid="classmisc_1_1Table_1ad560a764340864bcfaa45cb223630946" kind="function"><name>get_vars</name></member>
+    <member refid="classmisc_1_1Table_1a7541cb47eeb32a66371d1b62222ed804" kind="function"><name>get_qrs</name></member>
+    <member refid="classmisc_1_1Table_1abd886f85bf61413954403bb2b0bf618c" kind="function"><name>get_sums</name></member>
+    <member refid="classmisc_1_1Table_1ab06d0dec2ff90ca78a1fc572ed961b57" kind="function"><name>generate_rows</name></member>
+    <member refid="classmisc_1_1Table_1aafff7966d5668296d0db42859ee1e084" kind="function"><name>check_size</name></member>
+    <member refid="classmisc_1_1Table_1a6fcbc154dd5f1009aea707f2a0656139" kind="function"><name>generate_line</name></member>
+    <member refid="classmisc_1_1Table_1aad64d80cd3d176cf91d27dd05cb01317" kind="function"><name>center</name></member>
+    <member refid="classmisc_1_1Table_1aee2aa345050c5e4737302c02c41c38b2" kind="function"><name>prd</name></member>
+    <member refid="classmisc_1_1Table_1aa49d6ed7fe338f0ba010abd480ebc159" kind="function"><name>prd</name></member>
     <member refid="classmisc_1_1Table_1ac69a4a70b5674acf1e81404b0f7e13d7" kind="function"><name>Table</name></member>
-    <member refid="classmisc_1_1Table_1a067fc995824a17e51c0900b0114605e6" kind="function"><name>checkSize</name></member>
-    <member refid="classmisc_1_1Table_1a4de8db30fe3f14355bf444c2c24a093a" kind="function"><name>readCSV</name></member>
-    <member refid="classmisc_1_1Table_1aea1f278838960dbc4eed3cfadd7176dd" kind="function"><name>saveCSV</name></member>
-    <member refid="classmisc_1_1Table_1a9b2a1ba1bfa3946fd0b71a53061f7689" kind="function"><name>operator[]</name></member>
-    <member refid="classmisc_1_1Table_1a4553ac717bcf5482688d2e29c05c8b19" kind="function"><name>getMin</name></member>
-    <member refid="classmisc_1_1Table_1a24471fff20c0a96eadf41531b2bcd923" kind="function"><name>getMax</name></member>
-    <member refid="classmisc_1_1Table_1a1978b6ea40bacf28cab9a4dbee6fba74" kind="function"><name>getAvg</name></member>
-    <member refid="classmisc_1_1Table_1a949aa45612aacbdc6709b0ba4c864207" kind="function"><name>getStd</name></member>
-    <member refid="classmisc_1_1Table_1ab194bb65153718986cb8bfff18526294" kind="function"><name>getVar</name></member>
-    <member refid="classmisc_1_1Table_1a6c43ec9c6d7e7d4ca414b92617f83881" kind="function"><name>getQR</name></member>
+    <member refid="classmisc_1_1Table_1a1b46d730f03703016528c5e828939c6a" kind="function"><name>~Table</name></member>
+    <member refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kind="function"><name>read_csv</name></member>
+    <member refid="classmisc_1_1Table_1ab761f2dcb25eb9e0a02ea055c44055c1" kind="function"><name>save_csv</name></member>
+    <member refid="classmisc_1_1Table_1a16f7da85853fc97975fe420e14a87ab4" kind="function"><name>get_row_size</name></member>
+    <member refid="classmisc_1_1Table_1a2be7ed52482dc5bfeb38fa6485c76b91" kind="function"><name>get_col_size</name></member>
+    <member refid="classmisc_1_1Table_1a6cfc813d910d26b898fa6db3888e30c3" kind="function"><name>operator[]</name></member>
+    <member refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kind="function"><name>show</name></member>
     <member refid="classmisc_1_1Table_1af39df8b64a7353ae48f237186fc516c9" kind="function"><name>show</name></member>
-    <member refid="classmisc_1_1Table_1a36662d07cb040777cfe3974b4d234fac" kind="function"><name>describeAll</name></member>
+    <member refid="classmisc_1_1Table_1a9fcaf25cf5b2adf8b4496339f8009017" kind="function"><name>describe_all</name></member>
+    <member refid="classmisc_1_1Table_1a643a1adbde19cd5f0ad9f310fcd5bae0" kind="function"><name>get_row</name></member>
+    <member refid="classmisc_1_1Table_1afea5e8f9a4f0fa30ca705423c880c01a" kind="function"><name>get_col</name></member>
+    <member refid="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" kind="function"><name>add_col</name></member>
+    <member refid="classmisc_1_1Table_1a04926443acfc292868328875a4c51e18" kind="function"><name>show_header</name></member>
+    <member refid="classmisc_1_1Table_1a59c8c9916e068a8fbb1d6175a4ca2b94" kind="function"><name>sort_asc</name></member>
+    <member refid="classmisc_1_1Table_1a00f26317647c271278462e5e8569e293" kind="function"><name>get_min</name></member>
+    <member refid="classmisc_1_1Table_1a64096cc9612a8351e8c030d06e3c114e" kind="function"><name>get_max</name></member>
+    <member refid="classmisc_1_1Table_1af50133b223f56da3837c4de8a93998e5" kind="function"><name>get_sum</name></member>
+    <member refid="classmisc_1_1Table_1a932bcc149fe677607d3a82f27bd1d25c" kind="function"><name>get_avg</name></member>
+    <member refid="classmisc_1_1Table_1a423ecab88f682cd4ac3ae683842892af" kind="function"><name>get_var</name></member>
+    <member refid="classmisc_1_1Table_1a4616a2f714ab67617098c655d8321de4" kind="function"><name>get_std</name></member>
+    <member refid="classmisc_1_1Table_1a0ead87e9c4a877d0141076b5ba4dcc0b" kind="function"><name>get_qr</name></member>
+    <member refid="classmisc_1_1Table_1a1efe608906aefaec83b77dd3a76662d2" kind="function"><name>get_r</name></member>
   </compound>
   <compound refid="namespaceintp" kind="namespace"><name>intp</name>
   </compound>
   <compound refid="namespacemisc" kind="namespace"><name>misc</name>
+    <member refid="namespacemisc_1af54e23a4e431270b3e2e589b9d732b7e" kind="function"><name>generate_vector</name></member>
   </compound>
   <compound refid="namespaceregr" kind="namespace"><name>regr</name>
   </compound>
@@ -90,11 +222,16 @@
     <member refid="graphs_8hpp_1a01dbe23781c1a611f8d763a4b86e60fb" kind="function"><name>graph</name></member>
     <member refid="graphs_8hpp_1aba2da8a69f16ce7852287271183e134c" kind="function"><name>graph</name></member>
   </compound>
-  <compound refid="int_8hpp" kind="file"><name>int.hpp</name>
+  <compound refid="intp_8hpp" kind="file"><name>intp.hpp</name>
+  </compound>
+  <compound refid="menu_8hpp" kind="file"><name>menu.hpp</name>
   </compound>
   <compound refid="misc_8hpp" kind="file"><name>misc.hpp</name>
+    <member refid="misc_8hpp_1ad117ac09cf8ab47747371b2cbd921225" kind="function"><name>operator*</name></member>
+    <member refid="misc_8hpp_1a4ea6f15122d3506b7322511c59d732a0" kind="function"><name>round</name></member>
+    <member refid="namespacemisc_1af54e23a4e431270b3e2e589b9d732b7e" kind="function"><name>generate_vector</name></member>
   </compound>
-  <compound refid="reg_8hpp" kind="file"><name>reg.hpp</name>
+  <compound refid="regr_8hpp" kind="file"><name>regr.hpp</name>
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
   </compound>

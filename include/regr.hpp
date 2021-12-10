@@ -1,8 +1,23 @@
+/**
+ * @file regr.hpp
+ * @author Harith Al-Safi
+ * @brief 
+ * @version 0.1
+ * @date 2021-12-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #pragma once
 #include "misc.hpp"
 
 namespace regr
 {
+    /**
+     * @brief Class for Linear regression 
+     * 
+     */
     class LinearRegression
     {
         private:
@@ -189,6 +204,10 @@ namespace regr
             friend class PolyRegression; 
     };
 
+    /**
+     * @brief Class for polynomial regression 
+     * 
+     */
     class PolyRegression: public LinearRegression
     {
         private:   

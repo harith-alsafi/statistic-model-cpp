@@ -1,0 +1,473 @@
+\hypertarget{classMenu}{}\doxysection{Menu Class Reference}
+\label{classMenu}\index{Menu@{Menu}}
+
+
+Class for the main menu.  
+
+
+
+
+{\ttfamily \#include \char`\"{}menu.\+hpp\char`\"{}}
+
+
+
+Collaboration diagram for Menu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMenu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Menu object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{$\sim$\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Menu object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a35656cd130e24d69383a5c9d0a73a38c}{run}} ()
+\begin{DoxyCompactList}\small\item\em Main run method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2}{State}} \{ \newline
+\mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9}{running}}
+, \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b}{exit}}
+, \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55}{error\+\_\+csv}}
+, \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb}{error\+\_\+unloaded\+\_\+data}}
+, \newline
+\mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4}{show\+\_\+data}}
+, \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48}{regression}}
+, \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc}{interpolation}}
+ \}
+\begin{DoxyCompactList}\small\item\em State of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMenu_ada2f777bf28916af738443aa3ebcb927}{check\+\_\+choice}} (int max, int ch)
+\begin{DoxyCompactList}\small\item\em Checks the choices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_ab19a5a2c276c6e316a573371cd9f493c}{main\+\_\+options}} ()
+\begin{DoxyCompactList}\small\item\em Showcase main options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_aee8fe3152b6510f00eee2cc8569c7ce7}{load\+\_\+csv}} ()
+\begin{DoxyCompactList}\small\item\em load csv options \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMenu_aa50e9b58689b9187ea8f92f41eec963d}{check\+\_\+csv\+\_\+errors}} ()
+\begin{DoxyCompactList}\small\item\em Checks if csv was loaded correctly. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMenu_a4e10e43feb29875c0e86b91b15f0c1b6}{check\+\_\+unloaded\+\_\+errors}} ()
+\begin{DoxyCompactList}\small\item\em Checks if data was loaded correctly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a6676a4fd2611efa0185852b24e135a26}{show\+\_\+data\+\_\+options}} ()
+\begin{DoxyCompactList}\small\item\em show data options \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_ae32c8e7216be9755780b48deaf73ca08}{save\+\_\+csv}} ()
+\begin{DoxyCompactList}\small\item\em save csv options \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a586307437e1e10c56853bd83b8c3e361}{show\+\_\+poly\+\_\+lin}} (std\+::string str)
+\begin{DoxyCompactList}\small\item\em Polynomial or linear option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_ad33276d92ca6fad9ce0c36ab4154c474}{show\+\_\+regression\+\_\+options}} ()
+\begin{DoxyCompactList}\small\item\em Show the regression option. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a8f5f67b770d28fea9ea7c25c5c2be696}{show\+\_\+interpolation\+\_\+option}} ()
+\begin{DoxyCompactList}\small\item\em Show interpolation options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2}{State}} \mbox{\hyperlink{classMenu_a1454c539a24cfb1cd1fd8b123808f915}{menu\+\_\+state}}
+\item 
+\mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} \mbox{\hyperlink{classMenu_a5c32e53d60f984a0fa95c4c945a27b2a}{table}}
+\item 
+\mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} \mbox{\hyperlink{classMenu_a64fa7fe586f049762b839f59ac605b89}{plt}}
+\item 
+\mbox{\hyperlink{classregr_1_1LinearRegression}{regr\+::\+Linear\+Regression}} \mbox{\hyperlink{classMenu_a44980a00fc87a13a68d8b375e324247c}{lr}}
+\item 
+\mbox{\hyperlink{classregr_1_1PolyRegression}{regr\+::\+Poly\+Regression}} \mbox{\hyperlink{classMenu_aa0e85d4ee6dbc5859fc13f4dabfa64dc}{pr}}
+\item 
+\mbox{\hyperlink{classintp_1_1LinearInterp}{intp\+::\+Linear\+Interp}} \mbox{\hyperlink{classMenu_a7a58bdb496c3d5d9e9b77022a0586cee}{lip}}
+\item 
+\mbox{\hyperlink{classintp_1_1PolyInterp}{intp\+::\+Poly\+Interp}} \mbox{\hyperlink{classMenu_a44f5bfea44ad13c7f92ca314e5182551}{pip}}
+\item 
+int \mbox{\hyperlink{classMenu_ad5152b40c2819510f9e74600f4b510ad}{choice}}
+\item 
+std\+::string \mbox{\hyperlink{classMenu_a10059b5c997cc3a0db9e8e2a64887b43}{filename}}
+\item 
+bool \mbox{\hyperlink{classMenu_a485adcf0d2d5801661dbb29368f9b62c}{linear\+\_\+intp}}
+\item 
+bool \mbox{\hyperlink{classMenu_ae9b50937e0f5b42edc0f62c7f882da45}{linear\+\_\+reg}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the main menu. 
+
+Definition at line 21 of file menu.\+hpp.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2}\label{classMenu_a8269685e78203b028d5bd77c339898b2}} 
+\index{Menu@{Menu}!State@{State}}
+\index{State@{State}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2}{Menu\+::\+State}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+State of the program. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{running@{running}!Menu@{Menu}}\index{Menu@{Menu}!running@{running}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9}\label{classMenu_a8269685e78203b028d5bd77c339898b2a0e761c96d2f13375002975757da558e9}} 
+running&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{exit@{exit}!Menu@{Menu}}\index{Menu@{Menu}!exit@{exit}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b}\label{classMenu_a8269685e78203b028d5bd77c339898b2a49850d615f174c8beb89fb811123100b}} 
+exit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{error\_csv@{error\_csv}!Menu@{Menu}}\index{Menu@{Menu}!error\_csv@{error\_csv}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55}\label{classMenu_a8269685e78203b028d5bd77c339898b2af0c12be317e7e1765fac69a011ab2f55}} 
+error\+\_\+csv&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{error\_unloaded\_data@{error\_unloaded\_data}!Menu@{Menu}}\index{Menu@{Menu}!error\_unloaded\_data@{error\_unloaded\_data}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb}\label{classMenu_a8269685e78203b028d5bd77c339898b2ab7835c5892a0fd061247433b68ab1ffb}} 
+error\+\_\+unloaded\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{show\_data@{show\_data}!Menu@{Menu}}\index{Menu@{Menu}!show\_data@{show\_data}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4}\label{classMenu_a8269685e78203b028d5bd77c339898b2a8ad7900ee62e0c1ad3f95335ab0aa6f4}} 
+show\+\_\+data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{regression@{regression}!Menu@{Menu}}\index{Menu@{Menu}!regression@{regression}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48}\label{classMenu_a8269685e78203b028d5bd77c339898b2ac384e0102eb830512f7184c57b61ef48}} 
+regression&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{interpolation@{interpolation}!Menu@{Menu}}\index{Menu@{Menu}!interpolation@{interpolation}}}\mbox{\Hypertarget{classMenu_a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc}\label{classMenu_a8269685e78203b028d5bd77c339898b2aa14390d3bcd0a5c965fdbd9dc3ff52dc}} 
+interpolation&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 28 of file menu.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMenu_ad466dd83355124a6ed958430450bfe94}\label{classMenu_ad466dd83355124a6ed958430450bfe94}} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Menu object. 
+
+
+
+Definition at line 409 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a831387f51358cfb88cd018e1777bc980}\label{classMenu_a831387f51358cfb88cd018e1777bc980}} 
+\index{Menu@{Menu}!````~Menu@{$\sim$Menu}}
+\index{````~Menu@{$\sim$Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{$\sim$Menu()}{~Menu()}}
+{\footnotesize\ttfamily Menu\+::$\sim$\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Menu object. 
+
+
+
+Definition at line 420 of file menu.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMenu_ada2f777bf28916af738443aa3ebcb927}\label{classMenu_ada2f777bf28916af738443aa3ebcb927}} 
+\index{Menu@{Menu}!check\_choice@{check\_choice}}
+\index{check\_choice@{check\_choice}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{check\_choice()}{check\_choice()}}
+{\footnotesize\ttfamily void Menu\+::check\+\_\+choice (\begin{DoxyParamCaption}\item[{int}]{max,  }\item[{int}]{ch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks the choices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & \\
+\hline
+{\em ch} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_aa50e9b58689b9187ea8f92f41eec963d}\label{classMenu_aa50e9b58689b9187ea8f92f41eec963d}} 
+\index{Menu@{Menu}!check\_csv\_errors@{check\_csv\_errors}}
+\index{check\_csv\_errors@{check\_csv\_errors}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{check\_csv\_errors()}{check\_csv\_errors()}}
+{\footnotesize\ttfamily bool Menu\+::check\+\_\+csv\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks if csv was loaded correctly. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a4e10e43feb29875c0e86b91b15f0c1b6}\label{classMenu_a4e10e43feb29875c0e86b91b15f0c1b6}} 
+\index{Menu@{Menu}!check\_unloaded\_errors@{check\_unloaded\_errors}}
+\index{check\_unloaded\_errors@{check\_unloaded\_errors}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{check\_unloaded\_errors()}{check\_unloaded\_errors()}}
+{\footnotesize\ttfamily bool Menu\+::check\+\_\+unloaded\+\_\+errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks if data was loaded correctly. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+Definition at line 130 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_aee8fe3152b6510f00eee2cc8569c7ce7}\label{classMenu_aee8fe3152b6510f00eee2cc8569c7ce7}} 
+\index{Menu@{Menu}!load\_csv@{load\_csv}}
+\index{load\_csv@{load\_csv}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{load\_csv()}{load\_csv()}}
+{\footnotesize\ttfamily void Menu\+::load\+\_\+csv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+load csv options 
+
+
+
+Definition at line 92 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_ab19a5a2c276c6e316a573371cd9f493c}\label{classMenu_ab19a5a2c276c6e316a573371cd9f493c}} 
+\index{Menu@{Menu}!main\_options@{main\_options}}
+\index{main\_options@{main\_options}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{main\_options()}{main\_options()}}
+{\footnotesize\ttfamily void Menu\+::main\+\_\+options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Showcase main options. 
+
+
+
+Definition at line 72 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a35656cd130e24d69383a5c9d0a73a38c}\label{classMenu_a35656cd130e24d69383a5c9d0a73a38c}} 
+\index{Menu@{Menu}!run@{run}}
+\index{run@{run}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Menu\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Main run method. 
+
+
+
+Definition at line 426 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_ae32c8e7216be9755780b48deaf73ca08}\label{classMenu_ae32c8e7216be9755780b48deaf73ca08}} 
+\index{Menu@{Menu}!save\_csv@{save\_csv}}
+\index{save\_csv@{save\_csv}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{save\_csv()}{save\_csv()}}
+{\footnotesize\ttfamily void Menu\+::save\+\_\+csv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+save csv options 
+
+
+
+Definition at line 203 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a6676a4fd2611efa0185852b24e135a26}\label{classMenu_a6676a4fd2611efa0185852b24e135a26}} 
+\index{Menu@{Menu}!show\_data\_options@{show\_data\_options}}
+\index{show\_data\_options@{show\_data\_options}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{show\_data\_options()}{show\_data\_options()}}
+{\footnotesize\ttfamily void Menu\+::show\+\_\+data\+\_\+options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+show data options 
+
+
+
+Definition at line 142 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a8f5f67b770d28fea9ea7c25c5c2be696}\label{classMenu_a8f5f67b770d28fea9ea7c25c5c2be696}} 
+\index{Menu@{Menu}!show\_interpolation\_option@{show\_interpolation\_option}}
+\index{show\_interpolation\_option@{show\_interpolation\_option}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{show\_interpolation\_option()}{show\_interpolation\_option()}}
+{\footnotesize\ttfamily void Menu\+::show\+\_\+interpolation\+\_\+option (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Show interpolation options. 
+
+
+
+Definition at line 316 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a586307437e1e10c56853bd83b8c3e361}\label{classMenu_a586307437e1e10c56853bd83b8c3e361}} 
+\index{Menu@{Menu}!show\_poly\_lin@{show\_poly\_lin}}
+\index{show\_poly\_lin@{show\_poly\_lin}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{show\_poly\_lin()}{show\_poly\_lin()}}
+{\footnotesize\ttfamily void Menu\+::show\+\_\+poly\+\_\+lin (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Polynomial or linear option. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 220 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_ad33276d92ca6fad9ce0c36ab4154c474}\label{classMenu_ad33276d92ca6fad9ce0c36ab4154c474}} 
+\index{Menu@{Menu}!show\_regression\_options@{show\_regression\_options}}
+\index{show\_regression\_options@{show\_regression\_options}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{show\_regression\_options()}{show\_regression\_options()}}
+{\footnotesize\ttfamily void Menu\+::show\+\_\+regression\+\_\+options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Show the regression option. 
+
+
+
+Definition at line 231 of file menu.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMenu_ad5152b40c2819510f9e74600f4b510ad}\label{classMenu_ad5152b40c2819510f9e74600f4b510ad}} 
+\index{Menu@{Menu}!choice@{choice}}
+\index{choice@{choice}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{choice}{choice}}
+{\footnotesize\ttfamily int Menu\+::choice\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 50 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a10059b5c997cc3a0db9e8e2a64887b43}\label{classMenu_a10059b5c997cc3a0db9e8e2a64887b43}} 
+\index{Menu@{Menu}!filename@{filename}}
+\index{filename@{filename}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily std\+::string Menu\+::filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 51 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a485adcf0d2d5801661dbb29368f9b62c}\label{classMenu_a485adcf0d2d5801661dbb29368f9b62c}} 
+\index{Menu@{Menu}!linear\_intp@{linear\_intp}}
+\index{linear\_intp@{linear\_intp}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{linear\_intp}{linear\_intp}}
+{\footnotesize\ttfamily bool Menu\+::linear\+\_\+intp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 52 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_ae9b50937e0f5b42edc0f62c7f882da45}\label{classMenu_ae9b50937e0f5b42edc0f62c7f882da45}} 
+\index{Menu@{Menu}!linear\_reg@{linear\_reg}}
+\index{linear\_reg@{linear\_reg}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{linear\_reg}{linear\_reg}}
+{\footnotesize\ttfamily bool Menu\+::linear\+\_\+reg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a7a58bdb496c3d5d9e9b77022a0586cee}\label{classMenu_a7a58bdb496c3d5d9e9b77022a0586cee}} 
+\index{Menu@{Menu}!lip@{lip}}
+\index{lip@{lip}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{lip}{lip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classintp_1_1LinearInterp}{intp\+::\+Linear\+Interp}} Menu\+::lip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a44980a00fc87a13a68d8b375e324247c}\label{classMenu_a44980a00fc87a13a68d8b375e324247c}} 
+\index{Menu@{Menu}!lr@{lr}}
+\index{lr@{lr}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{lr}{lr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classregr_1_1LinearRegression}{regr\+::\+Linear\+Regression}} Menu\+::lr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 44 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a1454c539a24cfb1cd1fd8b123808f915}\label{classMenu_a1454c539a24cfb1cd1fd8b123808f915}} 
+\index{Menu@{Menu}!menu\_state@{menu\_state}}
+\index{menu\_state@{menu\_state}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{menu\_state}{menu\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMenu_a8269685e78203b028d5bd77c339898b2}{State}} Menu\+::menu\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 39 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a44f5bfea44ad13c7f92ca314e5182551}\label{classMenu_a44f5bfea44ad13c7f92ca314e5182551}} 
+\index{Menu@{Menu}!pip@{pip}}
+\index{pip@{pip}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{pip}{pip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classintp_1_1PolyInterp}{intp\+::\+Poly\+Interp}} Menu\+::pip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 48 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a64fa7fe586f049762b839f59ac605b89}\label{classMenu_a64fa7fe586f049762b839f59ac605b89}} 
+\index{Menu@{Menu}!plt@{plt}}
+\index{plt@{plt}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{plt}{plt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Plot}{misc\+::\+Plot}} Menu\+::plt\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 42 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_aa0e85d4ee6dbc5859fc13f4dabfa64dc}\label{classMenu_aa0e85d4ee6dbc5859fc13f4dabfa64dc}} 
+\index{Menu@{Menu}!pr@{pr}}
+\index{pr@{pr}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{pr}{pr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classregr_1_1PolyRegression}{regr\+::\+Poly\+Regression}} Menu\+::pr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 45 of file menu.\+hpp.
+
+\mbox{\Hypertarget{classMenu_a5c32e53d60f984a0fa95c4c945a27b2a}\label{classMenu_a5c32e53d60f984a0fa95c4c945a27b2a}} 
+\index{Menu@{Menu}!table@{table}}
+\index{table@{table}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{table}{table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmisc_1_1Table}{misc\+::\+Table}} Menu\+::table\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 41 of file menu.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{menu_8hpp}{menu.\+hpp}}\end{DoxyCompactItemize}

@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['generatedomain_72',['generateDomain',['../classmisc_1_1Plot.html#afe5d9755ead78c69a1ad1415a2ea532f',1,'misc::Plot']]],
-  ['getavg_73',['getAvg',['../classmisc_1_1Table.html#a1978b6ea40bacf28cab9a4dbee6fba74',1,'misc::Table']]],
-  ['getavgs_74',['getAvgs',['../classmisc_1_1Table.html#a6e5c955b60123e296e33d6438521b1e9',1,'misc::Table']]],
-  ['getmax_75',['getMax',['../classmisc_1_1Table.html#a24471fff20c0a96eadf41531b2bcd923',1,'misc::Table']]],
-  ['getmin_76',['getMin',['../classmisc_1_1Table.html#a4553ac717bcf5482688d2e29c05c8b19',1,'misc::Table']]],
-  ['getqr_77',['getQR',['../classmisc_1_1Table.html#a6c43ec9c6d7e7d4ca414b92617f83881',1,'misc::Table']]],
-  ['getqrs_78',['getQRs',['../classmisc_1_1Table.html#a1b42a09b9bc50afb69ce94bc40fe1d52',1,'misc::Table']]],
-  ['getstd_79',['getStd',['../classmisc_1_1Table.html#a949aa45612aacbdc6709b0ba4c864207',1,'misc::Table']]],
-  ['getstds_80',['getStds',['../classmisc_1_1Table.html#a1e6b098ea88b59d0c26b24c5050d5843',1,'misc::Table']]],
-  ['getvar_81',['getVar',['../classmisc_1_1Table.html#ab194bb65153718986cb8bfff18526294',1,'misc::Table']]],
-  ['getvars_82',['getVars',['../classmisc_1_1Table.html#ada09ad1dff1ef0d5d50cff347e9bbf70',1,'misc::Table']]],
-  ['graphoptions_83',['graphoptions',['../structgraphoptions.html#a142ea0e411fcfd6cfeeeb1c6a8869133',1,'graphoptions']]]
+  ['center_201',['center',['../classmisc_1_1Table.html#aad64d80cd3d176cf91d27dd05cb01317',1,'misc::Table']]],
+  ['check_5fchoice_202',['check_choice',['../classMenu.html#ada2f777bf28916af738443aa3ebcb927',1,'Menu']]],
+  ['check_5fcsv_5ferrors_203',['check_csv_errors',['../classMenu.html#aa50e9b58689b9187ea8f92f41eec963d',1,'Menu']]],
+  ['check_5fheader_204',['check_header',['../classmisc_1_1Table.html#a5dbe7bad06a669f5475640ba66b7c4a8',1,'misc::Table']]],
+  ['check_5fsize_205',['check_size',['../classmisc_1_1Table.html#aafff7966d5668296d0db42859ee1e084',1,'misc::Table']]],
+  ['check_5funloaded_5ferrors_206',['check_unloaded_errors',['../classMenu.html#a4e10e43feb29875c0e86b91b15f0c1b6',1,'Menu']]]
 ];

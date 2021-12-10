@@ -2,19 +2,217 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classintp_1_1PolyInterp" kind="class" language="C++" prot="public">
     <compoundname>intp::PolyInterp</compoundname>
-    <includes local="yes">int.hpp</includes>
+    <basecompoundref refid="classintp_1_1LinearInterp" prot="public" virt="non-virtual">intp::LinearInterp</basecompoundref>
+    <includes refid="intp_8hpp" local="yes">intp.hpp</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classintp_1_1PolyInterp_1af2bbf7080242e2915109db16ec845b87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>long double</type>
+        <definition>long double intp::PolyInterp::_find_value</definition>
+        <argsstring>(long double xx, std::vector&lt; long double &gt; _x, std::vector&lt; long double &gt; _y)</argsstring>
+        <name>_find_value</name>
+        <reimplements refid="classintp_1_1LinearInterp_1a1bfbc01f2d393ea8ece07c281888a00b">_find_value</reimplements>
+        <param>
+          <type>long double</type>
+          <declname>xx</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+<para>Overloads the find_val from LinearInterp. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="307" column="25" bodyfile="include/intp.hpp" bodystart="307" bodyend="355"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classintp_1_1PolyInterp_1adaefb559da9f8802130334b6cf5ca88a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>intp::PolyInterp::PolyInterp</definition>
+        <argsstring>()</argsstring>
+        <name>PolyInterp</name>
+        <briefdescription>
+<para>Construct a new Poly Interp object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="361" column="13" bodyfile="include/intp.hpp" bodystart="361" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classintp_1_1PolyInterp_1a262c78f8d052291360cdc2cc7d57bf31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>intp::PolyInterp::~PolyInterp</definition>
+        <argsstring>()</argsstring>
+        <name>~PolyInterp</name>
+        <briefdescription>
+<para>Destroy the Poly Interp object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="367" column="13" bodyfile="include/intp.hpp" bodystart="367" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void intp::PolyInterp::load_data</definition>
+        <argsstring>(std::vector&lt; long double &gt; xx, std::vector&lt; long double &gt; yy)</argsstring>
+        <name>load_data</name>
+        <reimplements refid="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6">load_data</reimplements>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>xx</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>yy</declname>
+        </param>
+        <briefdescription>
+<para>Overloads the load_data from LinearInterp. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/intp.hpp" line="375" column="18" bodyfile="include/intp.hpp" bodystart="375" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
+<para>Class for polynomial interpolation. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
+    <inheritancegraph>
+      <node id="2">
+        <label>intp::LinearInterp</label>
+        <link refid="classintp_1_1LinearInterp"/>
+      </node>
       <node id="1">
         <label>intp::PolyInterp</label>
         <link refid="classintp_1_1PolyInterp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>graphoptions</label>
+        <link refid="structgraphoptions"/>
+      </node>
+      <node id="2">
+        <label>intp::LinearInterp</label>
+        <link refid="classintp_1_1LinearInterp"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-p</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>intp::PolyInterp</label>
+        <link refid="classintp_1_1PolyInterp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc::Plot</label>
+        <link refid="classmisc_1_1Plot"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-aoptions</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-title</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="5">
+        <label>std::string</label>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
       </node>
     </collaborationgraph>
-    <location file="include/int.hpp" line="9" column="5" bodyfile="include/int.hpp" bodystart="10" bodyend="12"/>
+    <location file="include/intp.hpp" line="296" column="5" bodyfile="include/intp.hpp" bodystart="297" bodyend="387"/>
     <listofallmembers>
+      <member refid="classintp_1_1PolyInterp_1af2bbf7080242e2915109db16ec845b87" prot="private" virt="virtual"><scope>intp::PolyInterp</scope><name>_find_value</name></member>
+      <member refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>find_value</name></member>
+      <member refid="classintp_1_1LinearInterp_1a312024163ea8f6d9bdc20d37902b9fed" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>get_combined_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a34f189c555a7c5d8a2900a2f314ddd59" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>get_interpolated_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a0c2c830a638153841382d819f4bc1e73" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>get_original_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a5596a0d46568cb0256b4cea36e19d5dd" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>get_r_combined_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a33c4b83f8be6b8c68079dde8068fc86f" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>get_r_original_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1ab47c88b454ae9e5680d7e25895c0db57" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>LinearInterp</name></member>
+      <member refid="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" prot="public" virt="virtual"><scope>intp::PolyInterp</scope><name>load_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a34d4500170e1150a3ef09ad97a919f39" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>n</name></member>
+      <member refid="classintp_1_1LinearInterp_1ab5d909f2ba117c11352037451891c43d" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>p</name></member>
+      <member refid="classintp_1_1LinearInterp_1a905b1a16a9718f3c87f47d4f6c87eb93" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>plot_all_interpolation</name></member>
+      <member refid="classintp_1_1LinearInterp_1a2e77ad32addfd39d1f81e198ed90b58c" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>plot_combined_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1a2ce5eafccbdfd1a92cec39694a5601ee" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>plot_data</name></member>
+      <member refid="classintp_1_1LinearInterp_1af0af99e177d8c2c9bd345546ffe96a85" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>plot_interpolated_data</name></member>
+      <member refid="classintp_1_1PolyInterp_1adaefb559da9f8802130334b6cf5ca88a" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>PolyInterp</name></member>
+      <member refid="classintp_1_1LinearInterp_1a586931cc4470450bfcf1215f7e3daa2c" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>reset_interpolated</name></member>
+      <member refid="classintp_1_1LinearInterp_1a61ee1cce36d503c6489e87aa000e45c5" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>x</name></member>
+      <member refid="classintp_1_1LinearInterp_1ae8546f0b25e02cdd8464cbd31c88e042" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>x_comb</name></member>
+      <member refid="classintp_1_1LinearInterp_1a7c88e4e60132c995b00e593fc27445f0" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>x_in</name></member>
+      <member refid="classintp_1_1LinearInterp_1a1b27f11407f80190fbfbc5d9abdc1403" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>y</name></member>
+      <member refid="classintp_1_1LinearInterp_1a26963d5b0be30c57582579a36c472769" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>y_comb</name></member>
+      <member refid="classintp_1_1LinearInterp_1ac9c017b3cd9b3a51b55af6b64b751619" prot="private" virt="non-virtual"><scope>intp::PolyInterp</scope><name>y_in</name></member>
+      <member refid="classintp_1_1LinearInterp_1a16bc0a0f005f2b57af8c3cff45d80b8f" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>~LinearInterp</name></member>
+      <member refid="classintp_1_1PolyInterp_1a262c78f8d052291360cdc2cc7d57bf31" prot="public" virt="non-virtual"><scope>intp::PolyInterp</scope><name>~PolyInterp</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

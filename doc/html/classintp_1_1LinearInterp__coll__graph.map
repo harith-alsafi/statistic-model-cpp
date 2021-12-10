@@ -1,3 +1,7 @@
 <map id="intp::LinearInterp" name="intp::LinearInterp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,124,83"/>
+<area shape="rect" id="node1" title="Class for Linear interpolation." alt="" coords="27,764,196,1135"/>
+<area shape="rect" id="node2" href="$classmisc_1_1Plot.html" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" id="node3" href="$structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" id="node4" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" id="node5" title=" " alt="" coords="131,5,257,97"/>
 </map>

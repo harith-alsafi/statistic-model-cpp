@@ -3,6 +3,18 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+/**
+ * @file misc.hpp
+ * @author Harith Al-Safi
+ * @brief 
+ * @version 0.1
+ * @date 2021-12-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
+
 #include <algorithm>
 #include <numeric>
 #include "graphs.hpp"
@@ -723,7 +735,7 @@ namespace misc
     };
 
     /**
-     * @brief Simple terminal plot 
+     * @brief Encapsulates graph.hpp (https://github.com/tdulcet/Tables-and-Graphs) 
      * 
      */
     class Plot

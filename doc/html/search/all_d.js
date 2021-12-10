@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['savecsv_43',['saveCSV',['../classmisc_1_1Table.html#aea1f278838960dbc4eed3cfadd7176dd',1,'misc::Table']]],
-  ['setdomain_44',['setDomain',['../classmisc_1_1Plot.html#a3f92965f3826de471737a081164d4c00',1,'misc::Plot']]],
-  ['setrange_45',['setRange',['../classmisc_1_1Plot.html#a18ff734377adc641213aa132bc34063b',1,'misc::Plot']]],
-  ['setsize_46',['setSize',['../classmisc_1_1Plot.html#a03321a3f086b7b92f9b722176a8599dc',1,'misc::Plot']]],
-  ['show_47',['show',['../classmisc_1_1Table.html#af39df8b64a7353ae48f237186fc516c9',1,'misc::Table']]],
-  ['style_48',['style',['../structgraphoptions.html#ac00b5ba04b71e70f7789cde248f6ad82',1,'graphoptions']]]
+  ['operator_2a_95',['operator*',['../misc_8hpp.html#ad117ac09cf8ab47747371b2cbd921225',1,'misc.hpp']]],
+  ['operator_5b_5d_96',['operator[]',['../classmisc_1_1Table.html#a6cfc813d910d26b898fa6db3888e30c3',1,'misc::Table']]],
+  ['outputlabel_97',['outputlabel',['../graphs_8hpp.html#a78d4673ef4f8b08c0d58e9128abc0fd3',1,'graphs.hpp']]]
 ];

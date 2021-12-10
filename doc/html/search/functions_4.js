@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['plot_85',['Plot',['../classmisc_1_1Plot.html#ad121e04781c92735596200df60b4ec7a',1,'misc::Plot']]],
-  ['plotfun_86',['plotFun',['../classmisc_1_1Plot.html#a8bfdf81ac1f5abeb96fa359fc73d9d31',1,'misc::Plot']]],
-  ['plotvect_87',['plotVect',['../classmisc_1_1Plot.html#a6f75f1a37636d3b36b0dc3a117278a38',1,'misc::Plot']]]
+  ['find_5fvalue_208',['find_value',['../classintp_1_1LinearInterp.html#a19a36bb67d8a42be7d15d04648229208',1,'intp::LinearInterp']]],
+  ['fit_5fdata_209',['fit_data',['../classregr_1_1LinearRegression.html#adcc20a41b2f80db68e21f169262a3d8a',1,'regr::LinearRegression::fit_data()'],['../classregr_1_1PolyRegression.html#a8c30c057967c27d0fb86c3c28d77dec9',1,'regr::PolyRegression::fit_data()']]],
+  ['fun_210',['fun',['../classregr_1_1LinearRegression.html#a54deda798bb827b04338f02734e17b7f',1,'regr::LinearRegression::fun()'],['../classregr_1_1PolyRegression.html#a08293f8251aba51d2c6f3425e5157e63',1,'regr::PolyRegression::fun()']]]
 ];

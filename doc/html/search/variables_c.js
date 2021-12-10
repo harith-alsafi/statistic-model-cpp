@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['width_114',['width',['../classmisc_1_1Plot.html#ae5cb9d73243cfe0675f5bbebc095853f',1,'misc::Plot']]]
+  ['row_331',['row',['../classmisc_1_1Table.html#a39d2c3781309bd9d679735c67645c9c0',1,'misc::Table']]],
+  ['rows_332',['rows',['../classmisc_1_1Table.html#a0074cb923e5106b76e392c3f224224ce',1,'misc::Table']]]
 ];

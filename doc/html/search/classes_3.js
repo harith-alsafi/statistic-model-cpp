@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['qr_64',['QR',['../structmisc_1_1Table_1_1QR.html',1,'misc::Table']]]
+  ['plot_186',['Plot',['../classmisc_1_1Plot.html',1,'misc']]],
+  ['polyinterp_187',['PolyInterp',['../classintp_1_1PolyInterp.html',1,'intp']]],
+  ['polyregression_188',['PolyRegression',['../classregr_1_1PolyRegression.html',1,'regr']]]
 ];

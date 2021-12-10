@@ -2,19 +2,143 @@
 \label{classintp_1_1PolyInterp}\index{intp::PolyInterp@{intp::PolyInterp}}
 
 
-{\ttfamily \#include \char`\"{}int.\+hpp\char`\"{}}
+Class for polynomial interpolation.  
 
+
+
+
+{\ttfamily \#include \char`\"{}intp.\+hpp\char`\"{}}
+
+
+
+Inheritance diagram for intp\+::Poly\+Interp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classintp_1_1PolyInterp__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for intp\+::Poly\+Interp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=163pt]{classintp_1_1PolyInterp__coll__graph}
+\includegraphics[height=550pt]{classintp_1_1PolyInterp__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classintp_1_1PolyInterp_adaefb559da9f8802130334b6cf5ca88a}{Poly\+Interp}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Poly Interp object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classintp_1_1PolyInterp_a262c78f8d052291360cdc2cc7d57bf31}{$\sim$\+Poly\+Interp}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Poly Interp object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classintp_1_1PolyInterp_af7f4fb4af5ff903947fbcc932490646e}{load\+\_\+data}} (std\+::vector$<$ long double $>$ xx, std\+::vector$<$ long double $>$ yy)
+\begin{DoxyCompactList}\small\item\em Overloads the load\+\_\+data from Linear\+Interp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long double \mbox{\hyperlink{classintp_1_1PolyInterp_af2bbf7080242e2915109db16ec845b87}{\+\_\+find\+\_\+value}} (long double xx, std\+::vector$<$ long double $>$ \+\_\+x, std\+::vector$<$ long double $>$ \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Overloads the find\+\_\+val from Linear\+Interp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for polynomial interpolation. 
+
+Definition at line 296 of file intp.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classintp_1_1PolyInterp_adaefb559da9f8802130334b6cf5ca88a}\label{classintp_1_1PolyInterp_adaefb559da9f8802130334b6cf5ca88a}} 
+\index{intp::PolyInterp@{intp::PolyInterp}!PolyInterp@{PolyInterp}}
+\index{PolyInterp@{PolyInterp}!intp::PolyInterp@{intp::PolyInterp}}
+\doxysubsubsection{\texorpdfstring{PolyInterp()}{PolyInterp()}}
+{\footnotesize\ttfamily intp\+::\+Poly\+Interp\+::\+Poly\+Interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Poly Interp object. 
+
+
+
+Definition at line 361 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1PolyInterp_a262c78f8d052291360cdc2cc7d57bf31}\label{classintp_1_1PolyInterp_a262c78f8d052291360cdc2cc7d57bf31}} 
+\index{intp::PolyInterp@{intp::PolyInterp}!````~PolyInterp@{$\sim$PolyInterp}}
+\index{````~PolyInterp@{$\sim$PolyInterp}!intp::PolyInterp@{intp::PolyInterp}}
+\doxysubsubsection{\texorpdfstring{$\sim$PolyInterp()}{~PolyInterp()}}
+{\footnotesize\ttfamily intp\+::\+Poly\+Interp\+::$\sim$\+Poly\+Interp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Poly Interp object. 
+
+
+
+Definition at line 367 of file intp.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classintp_1_1PolyInterp_af2bbf7080242e2915109db16ec845b87}\label{classintp_1_1PolyInterp_af2bbf7080242e2915109db16ec845b87}} 
+\index{intp::PolyInterp@{intp::PolyInterp}!\_find\_value@{\_find\_value}}
+\index{\_find\_value@{\_find\_value}!intp::PolyInterp@{intp::PolyInterp}}
+\doxysubsubsection{\texorpdfstring{\_find\_value()}{\_find\_value()}}
+{\footnotesize\ttfamily long double intp\+::\+Poly\+Interp\+::\+\_\+find\+\_\+value (\begin{DoxyParamCaption}\item[{long double}]{xx,  }\item[{std\+::vector$<$ long double $>$}]{\+\_\+x,  }\item[{std\+::vector$<$ long double $>$}]{\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Overloads the find\+\_\+val from Linear\+Interp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em \+\_\+x} & \\
+\hline
+{\em \+\_\+y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classintp_1_1LinearInterp_a1bfbc01f2d393ea8ece07c281888a00b}{intp\+::\+Linear\+Interp}}.
+
+
+
+Definition at line 307 of file intp.\+hpp.
+
+\mbox{\Hypertarget{classintp_1_1PolyInterp_af7f4fb4af5ff903947fbcc932490646e}\label{classintp_1_1PolyInterp_af7f4fb4af5ff903947fbcc932490646e}} 
+\index{intp::PolyInterp@{intp::PolyInterp}!load\_data@{load\_data}}
+\index{load\_data@{load\_data}!intp::PolyInterp@{intp::PolyInterp}}
+\doxysubsubsection{\texorpdfstring{load\_data()}{load\_data()}}
+{\footnotesize\ttfamily void intp\+::\+Poly\+Interp\+::load\+\_\+data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ long double $>$}]{xx,  }\item[{std\+::vector$<$ long double $>$}]{yy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloads the load\+\_\+data from Linear\+Interp. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+{\em yy} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classintp_1_1LinearInterp_a1ee7f275fca970ba5ed822689f772ed6}{intp\+::\+Linear\+Interp}}.
+
+
+
+Definition at line 375 of file intp.\+hpp.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/int.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{intp_8hpp}{intp.\+hpp}}\end{DoxyCompactItemize}

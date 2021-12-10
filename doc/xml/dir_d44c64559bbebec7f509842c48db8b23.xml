@@ -3,9 +3,10 @@
   <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
     <compoundname>include</compoundname>
     <innerfile refid="graphs_8hpp">graphs.hpp</innerfile>
-    <innerfile refid="int_8hpp">int.hpp</innerfile>
+    <innerfile refid="intp_8hpp">intp.hpp</innerfile>
+    <innerfile refid="menu_8hpp">menu.hpp</innerfile>
     <innerfile refid="misc_8hpp">misc.hpp</innerfile>
-    <innerfile refid="reg_8hpp">reg.hpp</innerfile>
+    <innerfile refid="regr_8hpp">regr.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

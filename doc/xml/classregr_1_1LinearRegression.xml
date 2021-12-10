@@ -2,19 +2,527 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
   <compounddef id="classregr_1_1LinearRegression" kind="class" language="C++" prot="public">
     <compoundname>regr::LinearRegression</compoundname>
-    <includes local="yes">reg.hpp</includes>
+    <derivedcompoundref refid="classregr_1_1PolyRegression" prot="public" virt="non-virtual">regr::PolyRegression</derivedcompoundref>
+    <includes refid="regr_8hpp" local="yes">regr.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a2ab986584cf1e65f73067befbbf31f20" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; regr::LinearRegression::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="24" column="25" bodyfile="include/regr.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a15da637fcac71de15546d67adeadb174" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; regr::LinearRegression::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="25" column="25" bodyfile="include/regr.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a1a1127b7fa4cdefefccb7ebad58fcf1a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; regr::LinearRegression::yfit</definition>
+        <argsstring></argsstring>
+        <name>yfit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="26" column="25" bodyfile="include/regr.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a691f55a1966c8ee3fccfe5b0d0830164" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="27" column="25" bodyfile="include/regr.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1aa685ec626a5a2fcd37ab42375ac2dbde" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="28" column="25" bodyfile="include/regr.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1abd7eab80727c7419b6be007f0fe15546" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::sumx</definition>
+        <argsstring></argsstring>
+        <name>sumx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="29" column="25" bodyfile="include/regr.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a58835f34ed83ca222fe7e77ab1c354c9" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::sumy</definition>
+        <argsstring></argsstring>
+        <name>sumy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="30" column="25" bodyfile="include/regr.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a2a3df8724439e5029f8e9679fda55c58" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::sumxx</definition>
+        <argsstring></argsstring>
+        <name>sumxx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="31" column="25" bodyfile="include/regr.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a6e3b21917833e9d88d8c9a28dad34524" prot="private" static="no" mutable="no">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::sumxy</definition>
+        <argsstring></argsstring>
+        <name>sumxy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="32" column="25" bodyfile="include/regr.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1a53294f76033f6bd16ae3f80061cc960b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int regr::LinearRegression::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="33" column="17" bodyfile="include/regr.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classregr_1_1LinearRegression_1afce244541db45ad270d2e623bfd762bc" prot="private" static="no" mutable="no">
+        <type><ref refid="classmisc_1_1Plot" kindref="compound">misc::Plot</ref></type>
+        <definition>misc::Plot regr::LinearRegression::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="34" column="24" bodyfile="include/regr.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classregr_1_1LinearRegression_1ac86b2d6ec0b013eae630dd02c884b53e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class PolyRegression</definition>
+        <argsstring></argsstring>
+        <name>PolyRegression</name>
+        <param>
+          <type><ref refid="classregr_1_1PolyRegression" kindref="compound">PolyRegression</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="204" column="26" bodyfile="include/regr.hpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a54deda798bb827b04338f02734e17b7f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>long double</type>
+        <definition>virtual long double regr::LinearRegression::fun</definition>
+        <argsstring>(long double xx)</argsstring>
+        <name>fun</name>
+        <reimplementedby refid="classregr_1_1PolyRegression_1a08293f8251aba51d2c6f3425e5157e63">fun</reimplementedby>
+        <param>
+          <type>long double</type>
+          <declname>xx</declname>
+        </param>
+        <briefdescription>
+<para>The regression function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="42" column="33" bodyfile="include/regr.hpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1aa80d196a8a446d9444ab7217bb1eb102" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>regr::LinearRegression::LinearRegression</definition>
+        <argsstring>()</argsstring>
+        <name>LinearRegression</name>
+        <briefdescription>
+<para>Construct a new Linear Regression object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="52" column="13" bodyfile="include/regr.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a4a2a708a797e3066411b9ff9601394e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>regr::LinearRegression::~LinearRegression</definition>
+        <argsstring>()</argsstring>
+        <name>~LinearRegression</name>
+        <briefdescription>
+<para>Destroy the Linear Regression object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="58" column="13" bodyfile="include/regr.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a1088c5502e2cfc7997423c046bf01d8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::get_slope</definition>
+        <argsstring>()</argsstring>
+        <name>get_slope</name>
+        <briefdescription>
+<para>Get the slope object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="65" column="25" bodyfile="include/regr.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1af35f2ea523bbdcc9f820a4a78df175ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::get_y_intersept</definition>
+        <argsstring>()</argsstring>
+        <name>get_y_intersept</name>
+        <briefdescription>
+<para>Get the y intersept object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="72" column="25" bodyfile="include/regr.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a06c777ad76e48b829906937b962f56bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; long double &gt;</type>
+        <definition>std::vector&lt;long double&gt; regr::LinearRegression::get_fit_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_fit_data</name>
+        <briefdescription>
+<para>Get the fit data object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::vector&lt;long double&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="79" column="25" bodyfile="include/regr.hpp" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a172f6f7583a1703f71fb831bd74af95c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::get_original_r</definition>
+        <argsstring>()</argsstring>
+        <name>get_original_r</name>
+        <briefdescription>
+<para>Get the original corelation coefficient (using original data) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="86" column="25" bodyfile="include/regr.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a99e5f6f8cbde93b005728cc05d55a3ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::get_fitted_r</definition>
+        <argsstring>()</argsstring>
+        <name>get_fitted_r</name>
+        <briefdescription>
+<para>Get the fitted corelation coefficient using fitted data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="93" column="25" bodyfile="include/regr.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long double</type>
+        <definition>long double regr::LinearRegression::load_data</definition>
+        <argsstring>(std::vector&lt; long double &gt; xx, std::vector&lt; long double &gt; yy)</argsstring>
+        <name>load_data</name>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>xx</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; long double &gt;</type>
+          <declname>yy</declname>
+        </param>
+        <briefdescription>
+<para>Loads the data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>long double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="102" column="25" bodyfile="include/regr.hpp" bodystart="102" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1adcc20a41b2f80db68e21f169262a3d8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void regr::LinearRegression::fit_data</definition>
+        <argsstring>()</argsstring>
+        <name>fit_data</name>
+        <reimplementedby refid="classregr_1_1PolyRegression_1a8c30c057967c27d0fb86c3c28d77dec9">fit_data</reimplementedby>
+        <briefdescription>
+<para>Fits the data and trains the model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="122" column="26" bodyfile="include/regr.hpp" bodystart="122" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a7550e154140c7d8d16afc1458a4171b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void regr::LinearRegression::show_equation</definition>
+        <argsstring>()</argsstring>
+        <name>show_equation</name>
+        <reimplementedby refid="classregr_1_1PolyRegression_1a03689acc8b399c9760b277bfa95b610f">show_equation</reimplementedby>
+        <briefdescription>
+<para>Shows the regression equation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="135" column="26" bodyfile="include/regr.hpp" bodystart="135" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1abc4fcce72b8749b7a616c6096a78bbc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void regr::LinearRegression::plot_equation</definition>
+        <argsstring>(int nn=500)</argsstring>
+        <name>plot_equation</name>
+        <param>
+          <type>int</type>
+          <declname>nn</declname>
+          <defval>500</defval>
+        </param>
+        <briefdescription>
+<para>Plots the regression function for given number of points. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="148" column="18" bodyfile="include/regr.hpp" bodystart="148" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a42d8b4eba987c0cf243aa36f0a3c1c4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void regr::LinearRegression::plot_data</definition>
+        <argsstring>()</argsstring>
+        <name>plot_data</name>
+        <briefdescription>
+<para>plots the original data and predicted data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="172" column="18" bodyfile="include/regr.hpp" bodystart="172" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classregr_1_1LinearRegression_1a2c2066e9dbd92a01a1426ee72d357f88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref></type>
+        <definition>misc::Table regr::LinearRegression::get_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_data</name>
+        <briefdescription>
+<para>Get the data of regression. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>misc::Table </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/regr.hpp" line="195" column="25" bodyfile="include/regr.hpp" bodystart="195" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
+<para>Class for Linear regression. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <collaborationgraph>
+    <inheritancegraph>
       <node id="1">
         <label>regr::LinearRegression</label>
         <link refid="classregr_1_1LinearRegression"/>
       </node>
+      <node id="2">
+        <label>regr::PolyRegression</label>
+        <link refid="classregr_1_1PolyRegression"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>graphoptions</label>
+        <link refid="structgraphoptions"/>
+      </node>
+      <node id="2">
+        <label>misc::Plot</label>
+        <link refid="classmisc_1_1Plot"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-aoptions</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-title</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>regr::LinearRegression</label>
+        <link refid="classregr_1_1LinearRegression"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-p</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
     </collaborationgraph>
-    <location file="include/reg.hpp" line="4" column="5" bodyfile="include/reg.hpp" bodystart="5" bodyend="7"/>
+    <location file="include/regr.hpp" line="21" column="5" bodyfile="include/regr.hpp" bodystart="22" bodyend="205"/>
     <listofallmembers>
+      <member refid="classregr_1_1LinearRegression_1aa685ec626a5a2fcd37ab42375ac2dbde" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>c</name></member>
+      <member refid="classregr_1_1LinearRegression_1adcc20a41b2f80db68e21f169262a3d8a" prot="public" virt="virtual"><scope>regr::LinearRegression</scope><name>fit_data</name></member>
+      <member refid="classregr_1_1LinearRegression_1a54deda798bb827b04338f02734e17b7f" prot="private" virt="virtual"><scope>regr::LinearRegression</scope><name>fun</name></member>
+      <member refid="classregr_1_1LinearRegression_1a2c2066e9dbd92a01a1426ee72d357f88" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_data</name></member>
+      <member refid="classregr_1_1LinearRegression_1a06c777ad76e48b829906937b962f56bf" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_fit_data</name></member>
+      <member refid="classregr_1_1LinearRegression_1a99e5f6f8cbde93b005728cc05d55a3ef" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_fitted_r</name></member>
+      <member refid="classregr_1_1LinearRegression_1a172f6f7583a1703f71fb831bd74af95c" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_original_r</name></member>
+      <member refid="classregr_1_1LinearRegression_1a1088c5502e2cfc7997423c046bf01d8f" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_slope</name></member>
+      <member refid="classregr_1_1LinearRegression_1af35f2ea523bbdcc9f820a4a78df175ec" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>get_y_intersept</name></member>
+      <member refid="classregr_1_1LinearRegression_1aa80d196a8a446d9444ab7217bb1eb102" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>LinearRegression</name></member>
+      <member refid="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>load_data</name></member>
+      <member refid="classregr_1_1LinearRegression_1a691f55a1966c8ee3fccfe5b0d0830164" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>m</name></member>
+      <member refid="classregr_1_1LinearRegression_1a53294f76033f6bd16ae3f80061cc960b" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>n</name></member>
+      <member refid="classregr_1_1LinearRegression_1afce244541db45ad270d2e623bfd762bc" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>p</name></member>
+      <member refid="classregr_1_1LinearRegression_1a42d8b4eba987c0cf243aa36f0a3c1c4b" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>plot_data</name></member>
+      <member refid="classregr_1_1LinearRegression_1abc4fcce72b8749b7a616c6096a78bbc7" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>plot_equation</name></member>
+      <member refid="classregr_1_1LinearRegression_1ac86b2d6ec0b013eae630dd02c884b53e" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>PolyRegression</name></member>
+      <member refid="classregr_1_1LinearRegression_1a7550e154140c7d8d16afc1458a4171b5" prot="public" virt="virtual"><scope>regr::LinearRegression</scope><name>show_equation</name></member>
+      <member refid="classregr_1_1LinearRegression_1abd7eab80727c7419b6be007f0fe15546" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>sumx</name></member>
+      <member refid="classregr_1_1LinearRegression_1a2a3df8724439e5029f8e9679fda55c58" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>sumxx</name></member>
+      <member refid="classregr_1_1LinearRegression_1a6e3b21917833e9d88d8c9a28dad34524" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>sumxy</name></member>
+      <member refid="classregr_1_1LinearRegression_1a58835f34ed83ca222fe7e77ab1c354c9" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>sumy</name></member>
+      <member refid="classregr_1_1LinearRegression_1a2ab986584cf1e65f73067befbbf31f20" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>x</name></member>
+      <member refid="classregr_1_1LinearRegression_1a15da637fcac71de15546d67adeadb174" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>y</name></member>
+      <member refid="classregr_1_1LinearRegression_1a1a1127b7fa4cdefefccb7ebad58fcf1a" prot="private" virt="non-virtual"><scope>regr::LinearRegression</scope><name>yfit</name></member>
+      <member refid="classregr_1_1LinearRegression_1a4a2a708a797e3066411b9ff9601394e2" prot="public" virt="non-virtual"><scope>regr::LinearRegression</scope><name>~LinearRegression</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -66,6 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classmisc_1_1Plot-members.html">List of all members</a>  </div>
@@ -74,43 +75,70 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Simple terminal plot.  
+<p>Encapsulates graph.hpp (<a href="https://github.com/tdulcet/Tables-and-Graphs">https://github.com/tdulcet/Tables-and-Graphs</a>)  
  <a href="classmisc_1_1Plot.html#details">More...</a></p>
 
-<p><code>#include &quot;misc.hpp&quot;</code></p>
+<p><code>#include &quot;<a class="el" href="misc_8hpp_source.html">misc.hpp</a>&quot;</code></p>
 <div class="dynheader">
 Collaboration diagram for misc::Plot:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmisc_1_1Plot__coll__graph.png" border="0" usemap="#amisc_1_1Plot_coll__map" alt="Collaboration graph"/></div>
 <map name="amisc_1_1Plot_coll__map" id="amisc_1_1Plot_coll__map">
-<area shape="rect" title="Simple terminal plot." alt="" coords="5,5,143,273"/>
+<area shape="rect" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" href="structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" title=" " alt="" coords="131,5,257,97"/>
 </map>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a6f9abfb902e62f8e77f705f1d103434e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">Color</a> { <br />
+&#160;&#160;<a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf">red</a> = 10
+, <a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad">green</a> = 11
+, <a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437">yellow</a> = 12
+, <a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4">purple</a> = 14
+, <br />
+&#160;&#160;<a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb">blue</a> = 15
+, <a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34">white</a> = 16
+<br />
+ }</td></tr>
+<tr class="memdesc:a6f9abfb902e62f8e77f705f1d103434e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Colors for plots.  <a href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">More...</a><br /></td></tr>
+<tr class="separator:a6f9abfb902e62f8e77f705f1d103434e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad121e04781c92735596200df60b4ec7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#ad121e04781c92735596200df60b4ec7a">Plot</a> (int h=145, int w=145, long double xmn=-10, long double xmx=10, long double ymn=-10, long double ymx=10)</td></tr>
 <tr class="memdesc:ad121e04781c92735596200df60b4ec7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Plot object.  <a href="classmisc_1_1Plot.html#ad121e04781c92735596200df60b4ec7a">More...</a><br /></td></tr>
 <tr class="separator:ad121e04781c92735596200df60b4ec7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f92965f3826de471737a081164d4c00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a3f92965f3826de471737a081164d4c00">setDomain</a> (long double xmn=-10, long double xmx=10)</td></tr>
-<tr class="memdesc:a3f92965f3826de471737a081164d4c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Domain.  <a href="classmisc_1_1Plot.html#a3f92965f3826de471737a081164d4c00">More...</a><br /></td></tr>
-<tr class="separator:a3f92965f3826de471737a081164d4c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ff734377adc641213aa132bc34063b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a18ff734377adc641213aa132bc34063b">setRange</a> (long double ymn=-10, long double ymx=10)</td></tr>
-<tr class="memdesc:a18ff734377adc641213aa132bc34063b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Range.  <a href="classmisc_1_1Plot.html#a18ff734377adc641213aa132bc34063b">More...</a><br /></td></tr>
-<tr class="separator:a18ff734377adc641213aa132bc34063b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03321a3f086b7b92f9b722176a8599dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a03321a3f086b7b92f9b722176a8599dc">setSize</a> (int h=140, int w=140)</td></tr>
-<tr class="memdesc:a03321a3f086b7b92f9b722176a8599dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Size of figure.  <a href="classmisc_1_1Plot.html#a03321a3f086b7b92f9b722176a8599dc">More...</a><br /></td></tr>
-<tr class="separator:a03321a3f086b7b92f9b722176a8599dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe5d9755ead78c69a1ad1415a2ea532f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#afe5d9755ead78c69a1ad1415a2ea532f">generateDomain</a> (long double xmn=-10, long double xmx=10, int n=50)</td></tr>
-<tr class="memdesc:afe5d9755ead78c69a1ad1415a2ea532f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates domain to plot function.  <a href="classmisc_1_1Plot.html#afe5d9755ead78c69a1ad1415a2ea532f">More...</a><br /></td></tr>
-<tr class="separator:afe5d9755ead78c69a1ad1415a2ea532f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f75f1a37636d3b36b0dc3a117278a38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a6f75f1a37636d3b36b0dc3a117278a38">plotVect</a> (std::vector&lt; long double &gt; &amp;x, std::vector&lt; long double &gt; &amp;y)</td></tr>
-<tr class="memdesc:a6f75f1a37636d3b36b0dc3a117278a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots vectors.  <a href="classmisc_1_1Plot.html#a6f75f1a37636d3b36b0dc3a117278a38">More...</a><br /></td></tr>
-<tr class="separator:a6f75f1a37636d3b36b0dc3a117278a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bfdf81ac1f5abeb96fa359fc73d9d31"><td class="memTemplParams" colspan="2">template&lt;typename D &gt; </td></tr>
-<tr class="memitem:a8bfdf81ac1f5abeb96fa359fc73d9d31"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a8bfdf81ac1f5abeb96fa359fc73d9d31">plotFun</a> (D fun)</td></tr>
-<tr class="memdesc:a8bfdf81ac1f5abeb96fa359fc73d9d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots function.  <a href="classmisc_1_1Plot.html#a8bfdf81ac1f5abeb96fa359fc73d9d31">More...</a><br /></td></tr>
-<tr class="separator:a8bfdf81ac1f5abeb96fa359fc73d9d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41c44efde77238011b7ef8d03fe70db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a41c44efde77238011b7ef8d03fe70db9">set_domain</a> (long double xmn=-10, long double xmx=10)</td></tr>
+<tr class="memdesc:a41c44efde77238011b7ef8d03fe70db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Domain.  <a href="classmisc_1_1Plot.html#a41c44efde77238011b7ef8d03fe70db9">More...</a><br /></td></tr>
+<tr class="separator:a41c44efde77238011b7ef8d03fe70db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d41a0e058bafb1a4243eb032c74556f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a7d41a0e058bafb1a4243eb032c74556f">set_range</a> (long double ymn=-10, long double ymx=10)</td></tr>
+<tr class="memdesc:a7d41a0e058bafb1a4243eb032c74556f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Range.  <a href="classmisc_1_1Plot.html#a7d41a0e058bafb1a4243eb032c74556f">More...</a><br /></td></tr>
+<tr class="separator:a7d41a0e058bafb1a4243eb032c74556f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14f50751b025e9c7d33e52d87179a757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a14f50751b025e9c7d33e52d87179a757">set_size</a> (int h=140, int w=140)</td></tr>
+<tr class="memdesc:a14f50751b025e9c7d33e52d87179a757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Size of figure.  <a href="classmisc_1_1Plot.html#a14f50751b025e9c7d33e52d87179a757">More...</a><br /></td></tr>
+<tr class="separator:a14f50751b025e9c7d33e52d87179a757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7476d78c32c4c21d6330fba416ceae2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a7476d78c32c4c21d6330fba416ceae2c">set_color</a> (<a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">Color</a> cc=Color::blue)</td></tr>
+<tr class="memdesc:a7476d78c32c4c21d6330fba416ceae2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the color.  <a href="classmisc_1_1Plot.html#a7476d78c32c4c21d6330fba416ceae2c">More...</a><br /></td></tr>
+<tr class="separator:a7476d78c32c4c21d6330fba416ceae2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2da558e0965208f9898d64cef0f6b74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#ac2da558e0965208f9898d64cef0f6b74">set_title</a> (std::string tt)</td></tr>
+<tr class="memdesc:ac2da558e0965208f9898d64cef0f6b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the title.  <a href="classmisc_1_1Plot.html#ac2da558e0965208f9898d64cef0f6b74">More...</a><br /></td></tr>
+<tr class="separator:ac2da558e0965208f9898d64cef0f6b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab041be78e2edf33fb68ee3642453bacc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#ab041be78e2edf33fb68ee3642453bacc">generate_domain</a> (int n=50)</td></tr>
+<tr class="memdesc:ab041be78e2edf33fb68ee3642453bacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates domain.  <a href="classmisc_1_1Plot.html#ab041be78e2edf33fb68ee3642453bacc">More...</a><br /></td></tr>
+<tr class="separator:ab041be78e2edf33fb68ee3642453bacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239205a9cc0ab0fffa92b8109a653b2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a239205a9cc0ab0fffa92b8109a653b2f">generate_domain</a> (long double xmn, long double xmx, int n)</td></tr>
+<tr class="memdesc:a239205a9cc0ab0fffa92b8109a653b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates domain to plot function.  <a href="classmisc_1_1Plot.html#a239205a9cc0ab0fffa92b8109a653b2f">More...</a><br /></td></tr>
+<tr class="separator:a239205a9cc0ab0fffa92b8109a653b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85567735781b6a1cfb277c2c8ae12355"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a85567735781b6a1cfb277c2c8ae12355">plot_vect</a> (std::vector&lt; long double &gt; &amp;x, std::vector&lt; long double &gt; &amp;y)</td></tr>
+<tr class="memdesc:a85567735781b6a1cfb277c2c8ae12355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots vectors.  <a href="classmisc_1_1Plot.html#a85567735781b6a1cfb277c2c8ae12355">More...</a><br /></td></tr>
+<tr class="separator:a85567735781b6a1cfb277c2c8ae12355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea6cf0d2dbb82bad251918c8c202b87"><td class="memTemplParams" colspan="2">template&lt;typename LAMBDA &gt; </td></tr>
+<tr class="memitem:aeea6cf0d2dbb82bad251918c8c202b87"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#aeea6cf0d2dbb82bad251918c8c202b87">plot_fun</a> (LAMBDA fun)</td></tr>
+<tr class="memdesc:aeea6cf0d2dbb82bad251918c8c202b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots function.  <a href="classmisc_1_1Plot.html#aeea6cf0d2dbb82bad251918c8c202b87">More...</a><br /></td></tr>
+<tr class="separator:aeea6cf0d2dbb82bad251918c8c202b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -130,10 +158,45 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a0741ab8b63e13d8a4252acf6e93defbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a9d2b16ea8c7f3138a5384a1ba923d8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a2a9d2b16ea8c7f3138a5384a1ba923d8">domain</a></td></tr>
 <tr class="separator:a2a9d2b16ea8c7f3138a5384a1ba923d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f146e8cb310a1d55af39f8ce52e9c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structgraphoptions.html">graphoptions</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a51f146e8cb310a1d55af39f8ce52e9c3">aoptions</a></td></tr>
+<tr class="separator:a51f146e8cb310a1d55af39f8ce52e9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11fce306db045b8384b8eca900a56aca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#a11fce306db045b8384b8eca900a56aca">c</a></td></tr>
+<tr class="separator:a11fce306db045b8384b8eca900a56aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0ac53c3f9d96298d814b66bb92112f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmisc_1_1Plot.html#adf0ac53c3f9d96298d814b66bb92112f">title</a></td></tr>
+<tr class="separator:adf0ac53c3f9d96298d814b66bb92112f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p class="">Simple terminal plot. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><p class="">Encapsulates graph.hpp (<a href="https://github.com/tdulcet/Tables-and-Graphs">https://github.com/tdulcet/Tables-and-Graphs</a>) </p>
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00741">741</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a6f9abfb902e62f8e77f705f1d103434e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9abfb902e62f8e77f705f1d103434e">&#9670;&nbsp;</a></span>Color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">misc::Plot::Color</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Colors for plots. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434eaf1c00051304eb25d9edf9ebc88206faf"></a>red&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434ea5512d580549087751bffa1176bd509ad"></a>green&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434eaacf7d822e7a75c76d2605df3e114f437"></a>yellow&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434ea70fb0a56f794a93e4bf8539c614c4bd4"></a>purple&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434eab2bc1c3baa6181f640987efd6cf3a6eb"></a>blue&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6f9abfb902e62f8e77f705f1d103434ea905cabe77e72444aff019a8043dcbf34"></a>white&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00748">748</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad121e04781c92735596200df60b4ec7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad121e04781c92735596200df60b4ec7a">&#9670;&nbsp;</a></span>Plot()</h2>
 
@@ -205,11 +268,13 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00784">784</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afe5d9755ead78c69a1ad1415a2ea532f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe5d9755ead78c69a1ad1415a2ea532f">&#9670;&nbsp;</a></span>generateDomain()</h2>
+<a id="ab041be78e2edf33fb68ee3642453bacc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab041be78e2edf33fb68ee3642453bacc">&#9670;&nbsp;</a></span>generate_domain() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,22 +283,58 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::generateDomain </td>
+          <td class="memname">void misc::Plot::generate_domain </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em> = <code>50</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates domain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00848">848</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a239205a9cc0ab0fffa92b8109a653b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239205a9cc0ab0fffa92b8109a653b2f">&#9670;&nbsp;</a></span>generate_domain() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void misc::Plot::generate_domain </td>
           <td>(</td>
           <td class="paramtype">long double&#160;</td>
-          <td class="paramname"><em>xmn</em> = <code>-10</code>, </td>
+          <td class="paramname"><em>xmn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long double&#160;</td>
-          <td class="paramname"><em>xmx</em> = <code>10</code>, </td>
+          <td class="paramname"><em>xmx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em> = <code>50</code>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -258,23 +359,25 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00859">859</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
-<a id="a8bfdf81ac1f5abeb96fa359fc73d9d31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bfdf81ac1f5abeb96fa359fc73d9d31">&#9670;&nbsp;</a></span>plotFun()</h2>
+<a id="aeea6cf0d2dbb82bad251918c8c202b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea6cf0d2dbb82bad251918c8c202b87">&#9670;&nbsp;</a></span>plot_fun()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename D &gt; </div>
+template&lt;typename LAMBDA &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::plotFun </td>
+          <td class="memname">void misc::Plot::plot_fun </td>
           <td>(</td>
-          <td class="paramtype">D&#160;</td>
+          <td class="paramtype">LAMBDA&#160;</td>
           <td class="paramname"><em>fun</em></td><td>)</td>
           <td></td>
         </tr>
@@ -289,7 +392,7 @@ template&lt;typename D &gt; </div>
 <p>Plots function. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">D</td><td></td></tr>
+    <tr><td class="paramname">LAMBDA</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -300,10 +403,12 @@ template&lt;typename D &gt; </div>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00914">914</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
-<a id="a6f75f1a37636d3b36b0dc3a117278a38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f75f1a37636d3b36b0dc3a117278a38">&#9670;&nbsp;</a></span>plotVect()</h2>
+<a id="a85567735781b6a1cfb277c2c8ae12355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85567735781b6a1cfb277c2c8ae12355">&#9670;&nbsp;</a></span>plot_vect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -312,7 +417,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::plotVect </td>
+          <td class="memname">void misc::Plot::plot_vect </td>
           <td>(</td>
           <td class="paramtype">std::vector&lt; long double &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -345,10 +450,12 @@ template&lt;typename D &gt; </div>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00869">869</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
-<a id="a3f92965f3826de471737a081164d4c00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f92965f3826de471737a081164d4c00">&#9670;&nbsp;</a></span>setDomain()</h2>
+<a id="a7476d78c32c4c21d6330fba416ceae2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7476d78c32c4c21d6330fba416ceae2c">&#9670;&nbsp;</a></span>set_color()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -357,7 +464,43 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::setDomain </td>
+          <td class="memname">void misc::Plot::set_color </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">Color</a>&#160;</td>
+          <td class="paramname"><em>cc</em> = <code>Color::blue</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the color. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cc</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00830">830</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a41c44efde77238011b7ef8d03fe70db9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41c44efde77238011b7ef8d03fe70db9">&#9670;&nbsp;</a></span>set_domain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void misc::Plot::set_domain </td>
           <td>(</td>
           <td class="paramtype">long double&#160;</td>
           <td class="paramname"><em>xmn</em> = <code>-10</code>, </td>
@@ -390,10 +533,12 @@ template&lt;typename D &gt; </div>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00797">797</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
-<a id="a18ff734377adc641213aa132bc34063b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18ff734377adc641213aa132bc34063b">&#9670;&nbsp;</a></span>setRange()</h2>
+<a id="a7d41a0e058bafb1a4243eb032c74556f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d41a0e058bafb1a4243eb032c74556f">&#9670;&nbsp;</a></span>set_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +547,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::setRange </td>
+          <td class="memname">void misc::Plot::set_range </td>
           <td>(</td>
           <td class="paramtype">long double&#160;</td>
           <td class="paramname"><em>ymn</em> = <code>-10</code>, </td>
@@ -435,10 +580,12 @@ template&lt;typename D &gt; </div>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00808">808</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
-<a id="a03321a3f086b7b92f9b722176a8599dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03321a3f086b7b92f9b722176a8599dc">&#9670;&nbsp;</a></span>setSize()</h2>
+<a id="a14f50751b025e9c7d33e52d87179a757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14f50751b025e9c7d33e52d87179a757">&#9670;&nbsp;</a></span>set_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,7 +594,7 @@ template&lt;typename D &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void misc::Plot::setSize </td>
+          <td class="memname">void misc::Plot::set_size </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>h</em> = <code>140</code>, </td>
@@ -480,9 +627,95 @@ template&lt;typename D &gt; </div>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00819">819</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2da558e0965208f9898d64cef0f6b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2da558e0965208f9898d64cef0f6b74">&#9670;&nbsp;</a></span>set_title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void misc::Plot::set_title </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the title. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tt</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00839">839</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a51f146e8cb310a1d55af39f8ce52e9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f146e8cb310a1d55af39f8ce52e9c3">&#9670;&nbsp;</a></span>aoptions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structgraphoptions.html">graphoptions</a> misc::Plot::aoptions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00769">769</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a11fce306db045b8384b8eca900a56aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fce306db045b8384b8eca900a56aca">&#9670;&nbsp;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Plot.html#a6f9abfb902e62f8e77f705f1d103434e">Color</a> misc::Plot::c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00770">770</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a0741ab8b63e13d8a4252acf6e93defbe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0741ab8b63e13d8a4252acf6e93defbe">&#9670;&nbsp;</a></span>cols</h2>
 
@@ -502,6 +735,8 @@ template&lt;typename D &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00767">767</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
 
 </div>
 </div>
@@ -525,6 +760,8 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00768">768</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <a id="ae418d8c18c7e0a4682ac9258513ede5e"></a>
@@ -546,6 +783,32 @@ template&lt;typename D &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00759">759</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adf0ac53c3f9d96298d814b66bb92112f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0ac53c3f9d96298d814b66bb92112f">&#9670;&nbsp;</a></span>title</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string misc::Plot::title</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00771">771</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
 
 </div>
 </div>
@@ -569,6 +832,8 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00760">760</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <a id="ae31d12ae7f4cd55acf4273141585959d"></a>
@@ -590,6 +855,8 @@ template&lt;typename D &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00763">763</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
 
 </div>
 </div>
@@ -613,6 +880,8 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00762">762</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <a id="a5ba170ac536e7d8399f8e4ecad64e1fe"></a>
@@ -634,6 +903,8 @@ template&lt;typename D &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00765">765</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
 
 </div>
 </div>
@@ -657,10 +928,12 @@ template&lt;typename D &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="misc_8hpp_source.html#l00764">764</a> of file <a class="el" href="misc_8hpp_source.html">misc.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/misc.hpp</li>
+<li>include/<a class="el" href="misc_8hpp_source.html">misc.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

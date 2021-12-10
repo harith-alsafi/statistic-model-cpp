@@ -1,3 +1,14 @@
+/**
+ * @file intp.hpp
+ * @author Harith Al-Safi
+ * @brief 
+ * @version 0.1
+ * @date 2021-12-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #pragma once 
 #include <iterator>
 #include <utility>
@@ -5,6 +16,10 @@
 
 namespace intp
 {
+    /**
+     * @brief Class for Linear interpolation 
+     * 
+     */
     class LinearInterp
     {
         private:
@@ -274,6 +289,10 @@ namespace intp
             friend class PolyInterp;
     };
 
+    /**
+     * @brief Class for polynomial interpolation
+     * 
+     */
     class PolyInterp : public LinearInterp
     {
         private:      

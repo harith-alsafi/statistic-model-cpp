@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['axislabel_0',['axislabel',['../structgraphoptions.html#a759a20af91d0700136ff4ab6b6f6459a',1,'graphoptions']]],
-  ['axisunitslabel_1',['axisunitslabel',['../structgraphoptions.html#a6b640af21b351f274169578753012203',1,'graphoptions']]]
+  ['_5ffind_5fvalue_0',['_find_value',['../classintp_1_1LinearInterp.html#a1bfbc01f2d393ea8ece07c281888a00b',1,'intp::LinearInterp::_find_value()'],['../classintp_1_1PolyInterp.html#af2bbf7080242e2915109db16ec845b87',1,'intp::PolyInterp::_find_value()']]]
 ];

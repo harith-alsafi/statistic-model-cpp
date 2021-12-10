@@ -1,8 +1,23 @@
+/**
+ * @file menu.hpp
+ * @author Harith Al-Safi
+ * @brief 
+ * @version 0.1
+ * @date 2021-12-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #pragma once
 #include "intp.hpp"
 #include "misc.hpp"
 #include "regr.hpp"
 
+/**
+ * @brief Class for the main menu 
+ * 
+ */
 class Menu
 {
     private:
@@ -55,7 +70,7 @@ class Menu
          * 
          */
         void main_options(){
-            std::cout << "―――――――――――――――――――――Main Window―――――――――――――――――――――――― \n";
+            std::cout << "―――――――――――――――――――――Option 2―――――――――――――――――――――――― \n";
             std::cout << "[1] Load CSV file \n";
             std::cout << "[2] Show data of loaded CSV \n";
             std::cout << "[3] Statistical analysis of all columns in loaded CSV \n";
@@ -75,7 +90,7 @@ class Menu
          * 
          */
         void load_csv(){
-            std::cout <<"Pre-existing csv files (Note: all options will work with any csv file): \n ";
+            std::cout <<"Pre-existing csv files (Note: all options will work with any csv file): \n";
             std::cout <<"statistics.csv [for all options] \n ";
             std::cout <<"regression.csv [shows true demonstration of regression] \n ";
             std::cout <<"interpolation.csv [shows true demonstration of interpolation] \n ";

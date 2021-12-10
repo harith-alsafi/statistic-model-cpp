@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
-  <compounddef id="structmisc_1_1Table_1_1QR" kind="struct" language="C++" prot="private">
+  <compounddef id="structmisc_1_1Table_1_1QR" kind="struct" language="C++" prot="public">
     <compoundname>misc::Table::QR</compoundname>
+    <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1a048249726c2a8f0ad9e3eca6f867c3fa" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -14,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="17" column="25" bodyfile="include/misc.hpp" bodystart="17" bodyend="-1"/>
+        <location file="include/misc.hpp" line="92" column="29" bodyfile="include/misc.hpp" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -27,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="18" column="25" bodyfile="include/misc.hpp" bodystart="18" bodyend="-1"/>
+        <location file="include/misc.hpp" line="93" column="29" bodyfile="include/misc.hpp" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1ac65f73e3532b6dfaa36e1ae65fafcb45" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -40,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="19" column="25" bodyfile="include/misc.hpp" bodystart="19" bodyend="-1"/>
+        <location file="include/misc.hpp" line="94" column="29" bodyfile="include/misc.hpp" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1adcb33506be77f79517adf30cca5bc2ba" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -53,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="20" column="25" bodyfile="include/misc.hpp" bodystart="20" bodyend="-1"/>
+        <location file="include/misc.hpp" line="95" column="29" bodyfile="include/misc.hpp" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1a971d49eb9b6cdeb684cf43d443d2f3c9" prot="public" static="no" mutable="no">
         <type>long double</type>
@@ -66,24 +67,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="include/misc.hpp" line="21" column="25" bodyfile="include/misc.hpp" bodystart="21" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="structmisc_1_1Table_1_1QR_1ad325268e08fb78ecdb2ae782f5266a48" prot="public" static="no" mutable="no">
-        <type>long double</type>
-        <definition>long double misc::Table::QR::IQR</definition>
-        <argsstring></argsstring>
-        <name>IQR</name>
-        <initializer>= <ref refid="structmisc_1_1Table_1_1QR_1adcb33506be77f79517adf30cca5bc2ba" kindref="member">Q3</ref>-<ref refid="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" kindref="member">Q1</ref></initializer>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="include/misc.hpp" line="22" column="25" bodyfile="include/misc.hpp" bodystart="22" bodyend="-1"/>
+        <location file="include/misc.hpp" line="96" column="29" bodyfile="include/misc.hpp" bodystart="96" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Struct to contain the quartile range. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -93,9 +81,8 @@
         <link refid="structmisc_1_1Table_1_1QR"/>
       </node>
     </collaborationgraph>
-    <location file="include/misc.hpp" line="15" column="9" bodyfile="include/misc.hpp" bodystart="16" bodyend="23"/>
+    <location file="include/misc.hpp" line="90" column="13" bodyfile="include/misc.hpp" bodystart="91" bodyend="97"/>
     <listofallmembers>
-      <member refid="structmisc_1_1Table_1_1QR_1ad325268e08fb78ecdb2ae782f5266a48" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>IQR</name></member>
       <member refid="structmisc_1_1Table_1_1QR_1a048249726c2a8f0ad9e3eca6f867c3fa" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>LQ</name></member>
       <member refid="structmisc_1_1Table_1_1QR_1aae95e478b315f5e216d6e5c6099aae9f" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>Q1</name></member>
       <member refid="structmisc_1_1Table_1_1QR_1ac65f73e3532b6dfaa36e1ae65fafcb45" prot="public" virt="non-virtual"><scope>misc::Table::QR</scope><name>Q2</name></member>

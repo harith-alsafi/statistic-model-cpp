@@ -65,22 +65,871 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classregr_1_1LinearRegression-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">regr::LinearRegression Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &quot;reg.hpp&quot;</code></p>
+<p>Class for Linear regression.  
+ <a href="classregr_1_1LinearRegression.html#details">More...</a></p>
+
+<p><code>#include &quot;<a class="el" href="regr_8hpp_source.html">regr.hpp</a>&quot;</code></p>
+<div class="dynheader">
+Inheritance diagram for regr::LinearRegression:</div>
+<div class="dyncontent">
+<div class="center"><img src="classregr_1_1LinearRegression__inherit__graph.png" border="0" usemap="#aregr_1_1LinearRegression_inherit__map" alt="Inheritance graph"/></div>
+<map name="aregr_1_1LinearRegression_inherit__map" id="aregr_1_1LinearRegression_inherit__map">
+<area shape="rect" title="Class for Linear regression." alt="" coords="5,5,159,420"/>
+<area shape="rect" href="classregr_1_1PolyRegression.html" title="Class for polynomial regression." alt="" coords="10,468,154,677"/>
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for regr::LinearRegression:</div>
 <div class="dyncontent">
 <div class="center"><img src="classregr_1_1LinearRegression__coll__graph.png" border="0" usemap="#aregr_1_1LinearRegression_coll__map" alt="Collaboration graph"/></div>
 <map name="aregr_1_1LinearRegression_coll__map" id="aregr_1_1LinearRegression_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,159,83"/>
+<area shape="rect" title="Class for Linear regression." alt="" coords="35,764,188,1164"/>
+<area shape="rect" href="classmisc_1_1Plot.html" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" href="structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" title=" " alt="" coords="131,5,257,97"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa80d196a8a446d9444ab7217bb1eb102"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#aa80d196a8a446d9444ab7217bb1eb102">LinearRegression</a> ()</td></tr>
+<tr class="memdesc:aa80d196a8a446d9444ab7217bb1eb102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Linear Regression object.  <a href="classregr_1_1LinearRegression.html#aa80d196a8a446d9444ab7217bb1eb102">More...</a><br /></td></tr>
+<tr class="separator:aa80d196a8a446d9444ab7217bb1eb102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2a708a797e3066411b9ff9601394e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a4a2a708a797e3066411b9ff9601394e2">~LinearRegression</a> ()</td></tr>
+<tr class="memdesc:a4a2a708a797e3066411b9ff9601394e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Linear Regression object.  <a href="classregr_1_1LinearRegression.html#a4a2a708a797e3066411b9ff9601394e2">More...</a><br /></td></tr>
+<tr class="separator:a4a2a708a797e3066411b9ff9601394e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1088c5502e2cfc7997423c046bf01d8f"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a1088c5502e2cfc7997423c046bf01d8f">get_slope</a> ()</td></tr>
+<tr class="memdesc:a1088c5502e2cfc7997423c046bf01d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the slope object.  <a href="classregr_1_1LinearRegression.html#a1088c5502e2cfc7997423c046bf01d8f">More...</a><br /></td></tr>
+<tr class="separator:a1088c5502e2cfc7997423c046bf01d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35f2ea523bbdcc9f820a4a78df175ec"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#af35f2ea523bbdcc9f820a4a78df175ec">get_y_intersept</a> ()</td></tr>
+<tr class="memdesc:af35f2ea523bbdcc9f820a4a78df175ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the y intersept object.  <a href="classregr_1_1LinearRegression.html#af35f2ea523bbdcc9f820a4a78df175ec">More...</a><br /></td></tr>
+<tr class="separator:af35f2ea523bbdcc9f820a4a78df175ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c777ad76e48b829906937b962f56bf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a06c777ad76e48b829906937b962f56bf">get_fit_data</a> ()</td></tr>
+<tr class="memdesc:a06c777ad76e48b829906937b962f56bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fit data object.  <a href="classregr_1_1LinearRegression.html#a06c777ad76e48b829906937b962f56bf">More...</a><br /></td></tr>
+<tr class="separator:a06c777ad76e48b829906937b962f56bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172f6f7583a1703f71fb831bd74af95c"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a172f6f7583a1703f71fb831bd74af95c">get_original_r</a> ()</td></tr>
+<tr class="memdesc:a172f6f7583a1703f71fb831bd74af95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the original corelation coefficient (using original data)  <a href="classregr_1_1LinearRegression.html#a172f6f7583a1703f71fb831bd74af95c">More...</a><br /></td></tr>
+<tr class="separator:a172f6f7583a1703f71fb831bd74af95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99e5f6f8cbde93b005728cc05d55a3ef"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a99e5f6f8cbde93b005728cc05d55a3ef">get_fitted_r</a> ()</td></tr>
+<tr class="memdesc:a99e5f6f8cbde93b005728cc05d55a3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fitted corelation coefficient using fitted data.  <a href="classregr_1_1LinearRegression.html#a99e5f6f8cbde93b005728cc05d55a3ef">More...</a><br /></td></tr>
+<tr class="separator:a99e5f6f8cbde93b005728cc05d55a3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcb948847da6de38e83105577b77e25"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a3dcb948847da6de38e83105577b77e25">load_data</a> (std::vector&lt; long double &gt; xx, std::vector&lt; long double &gt; yy)</td></tr>
+<tr class="memdesc:a3dcb948847da6de38e83105577b77e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the data.  <a href="classregr_1_1LinearRegression.html#a3dcb948847da6de38e83105577b77e25">More...</a><br /></td></tr>
+<tr class="separator:a3dcb948847da6de38e83105577b77e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc20a41b2f80db68e21f169262a3d8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#adcc20a41b2f80db68e21f169262a3d8a">fit_data</a> ()</td></tr>
+<tr class="memdesc:adcc20a41b2f80db68e21f169262a3d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fits the data and trains the model.  <a href="classregr_1_1LinearRegression.html#adcc20a41b2f80db68e21f169262a3d8a">More...</a><br /></td></tr>
+<tr class="separator:adcc20a41b2f80db68e21f169262a3d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7550e154140c7d8d16afc1458a4171b5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a7550e154140c7d8d16afc1458a4171b5">show_equation</a> ()</td></tr>
+<tr class="memdesc:a7550e154140c7d8d16afc1458a4171b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the regression equation.  <a href="classregr_1_1LinearRegression.html#a7550e154140c7d8d16afc1458a4171b5">More...</a><br /></td></tr>
+<tr class="separator:a7550e154140c7d8d16afc1458a4171b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4fcce72b8749b7a616c6096a78bbc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#abc4fcce72b8749b7a616c6096a78bbc7">plot_equation</a> (int nn=500)</td></tr>
+<tr class="memdesc:abc4fcce72b8749b7a616c6096a78bbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots the regression function for given number of points.  <a href="classregr_1_1LinearRegression.html#abc4fcce72b8749b7a616c6096a78bbc7">More...</a><br /></td></tr>
+<tr class="separator:abc4fcce72b8749b7a616c6096a78bbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d8b4eba987c0cf243aa36f0a3c1c4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a42d8b4eba987c0cf243aa36f0a3c1c4b">plot_data</a> ()</td></tr>
+<tr class="memdesc:a42d8b4eba987c0cf243aa36f0a3c1c4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">plots the original data and predicted data  <a href="classregr_1_1LinearRegression.html#a42d8b4eba987c0cf243aa36f0a3c1c4b">More...</a><br /></td></tr>
+<tr class="separator:a42d8b4eba987c0cf243aa36f0a3c1c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2066e9dbd92a01a1426ee72d357f88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Table.html">misc::Table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a2c2066e9dbd92a01a1426ee72d357f88">get_data</a> ()</td></tr>
+<tr class="memdesc:a2c2066e9dbd92a01a1426ee72d357f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data of regression.  <a href="classregr_1_1LinearRegression.html#a2c2066e9dbd92a01a1426ee72d357f88">More...</a><br /></td></tr>
+<tr class="separator:a2c2066e9dbd92a01a1426ee72d357f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a54deda798bb827b04338f02734e17b7f"><td class="memItemLeft" align="right" valign="top">virtual long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a54deda798bb827b04338f02734e17b7f">fun</a> (long double xx)</td></tr>
+<tr class="memdesc:a54deda798bb827b04338f02734e17b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The regression function.  <a href="classregr_1_1LinearRegression.html#a54deda798bb827b04338f02734e17b7f">More...</a><br /></td></tr>
+<tr class="separator:a54deda798bb827b04338f02734e17b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a2ab986584cf1e65f73067befbbf31f20"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a2ab986584cf1e65f73067befbbf31f20">x</a></td></tr>
+<tr class="separator:a2ab986584cf1e65f73067befbbf31f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15da637fcac71de15546d67adeadb174"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a15da637fcac71de15546d67adeadb174">y</a></td></tr>
+<tr class="separator:a15da637fcac71de15546d67adeadb174"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1127b7fa4cdefefccb7ebad58fcf1a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; long double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a1a1127b7fa4cdefefccb7ebad58fcf1a">yfit</a></td></tr>
+<tr class="separator:a1a1127b7fa4cdefefccb7ebad58fcf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691f55a1966c8ee3fccfe5b0d0830164"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a691f55a1966c8ee3fccfe5b0d0830164">m</a></td></tr>
+<tr class="separator:a691f55a1966c8ee3fccfe5b0d0830164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa685ec626a5a2fcd37ab42375ac2dbde"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#aa685ec626a5a2fcd37ab42375ac2dbde">c</a></td></tr>
+<tr class="separator:aa685ec626a5a2fcd37ab42375ac2dbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd7eab80727c7419b6be007f0fe15546"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#abd7eab80727c7419b6be007f0fe15546">sumx</a></td></tr>
+<tr class="separator:abd7eab80727c7419b6be007f0fe15546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58835f34ed83ca222fe7e77ab1c354c9"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a58835f34ed83ca222fe7e77ab1c354c9">sumy</a></td></tr>
+<tr class="separator:a58835f34ed83ca222fe7e77ab1c354c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3df8724439e5029f8e9679fda55c58"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a2a3df8724439e5029f8e9679fda55c58">sumxx</a></td></tr>
+<tr class="separator:a2a3df8724439e5029f8e9679fda55c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3b21917833e9d88d8c9a28dad34524"><td class="memItemLeft" align="right" valign="top">long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a6e3b21917833e9d88d8c9a28dad34524">sumxy</a></td></tr>
+<tr class="separator:a6e3b21917833e9d88d8c9a28dad34524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53294f76033f6bd16ae3f80061cc960b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#a53294f76033f6bd16ae3f80061cc960b">n</a></td></tr>
+<tr class="separator:a53294f76033f6bd16ae3f80061cc960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce244541db45ad270d2e623bfd762bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmisc_1_1Plot.html">misc::Plot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#afce244541db45ad270d2e623bfd762bc">p</a></td></tr>
+<tr class="separator:afce244541db45ad270d2e623bfd762bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ac86b2d6ec0b013eae630dd02c884b53e"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classregr_1_1LinearRegression.html#ac86b2d6ec0b013eae630dd02c884b53e">PolyRegression</a></td></tr>
+<tr class="separator:ac86b2d6ec0b013eae630dd02c884b53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p class="">Class for Linear regression. </p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00021">21</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa80d196a8a446d9444ab7217bb1eb102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80d196a8a446d9444ab7217bb1eb102">&#9670;&nbsp;</a></span>LinearRegression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">regr::LinearRegression::LinearRegression </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Linear Regression object. </p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00052">52</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4a2a708a797e3066411b9ff9601394e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2a708a797e3066411b9ff9601394e2">&#9670;&nbsp;</a></span>~LinearRegression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">regr::LinearRegression::~LinearRegression </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy the Linear Regression object. </p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00058">58</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adcc20a41b2f80db68e21f169262a3d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc20a41b2f80db68e21f169262a3d8a">&#9670;&nbsp;</a></span>fit_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void regr::LinearRegression::fit_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fits the data and trains the model. </p>
+
+<p>Reimplemented in <a class="el" href="classregr_1_1PolyRegression.html#a8c30c057967c27d0fb86c3c28d77dec9">regr::PolyRegression</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00122">122</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a54deda798bb827b04338f02734e17b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54deda798bb827b04338f02734e17b7f">&#9670;&nbsp;</a></span>fun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long double regr::LinearRegression::fun </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>xx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The regression function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classregr_1_1PolyRegression.html#a08293f8251aba51d2c6f3425e5157e63">regr::PolyRegression</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00042">42</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c2066e9dbd92a01a1426ee72d357f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c2066e9dbd92a01a1426ee72d357f88">&#9670;&nbsp;</a></span>get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Table.html">misc::Table</a> regr::LinearRegression::get_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the data of regression. </p>
+<dl class="section return"><dt>Returns</dt><dd>misc::Table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00195">195</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a06c777ad76e48b829906937b962f56bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c777ad76e48b829906937b962f56bf">&#9670;&nbsp;</a></span>get_fit_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; regr::LinearRegression::get_fit_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the fit data object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;long double&gt; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00079">79</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a99e5f6f8cbde93b005728cc05d55a3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99e5f6f8cbde93b005728cc05d55a3ef">&#9670;&nbsp;</a></span>get_fitted_r()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::get_fitted_r </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the fitted corelation coefficient using fitted data. </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00093">93</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a172f6f7583a1703f71fb831bd74af95c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172f6f7583a1703f71fb831bd74af95c">&#9670;&nbsp;</a></span>get_original_r()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::get_original_r </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the original corelation coefficient (using original data) </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00086">86</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1088c5502e2cfc7997423c046bf01d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1088c5502e2cfc7997423c046bf01d8f">&#9670;&nbsp;</a></span>get_slope()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::get_slope </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the slope object. </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00065">65</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af35f2ea523bbdcc9f820a4a78df175ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35f2ea523bbdcc9f820a4a78df175ec">&#9670;&nbsp;</a></span>get_y_intersept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::get_y_intersept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the y intersept object. </p>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00072">72</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3dcb948847da6de38e83105577b77e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcb948847da6de38e83105577b77e25">&#9670;&nbsp;</a></span>load_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::load_data </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>xx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; long double &gt;&#160;</td>
+          <td class="paramname"><em>yy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xx</td><td></td></tr>
+    <tr><td class="paramname">yy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>long double </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00102">102</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a42d8b4eba987c0cf243aa36f0a3c1c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d8b4eba987c0cf243aa36f0a3c1c4b">&#9670;&nbsp;</a></span>plot_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void regr::LinearRegression::plot_data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>plots the original data and predicted data </p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00172">172</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abc4fcce72b8749b7a616c6096a78bbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc4fcce72b8749b7a616c6096a78bbc7">&#9670;&nbsp;</a></span>plot_equation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void regr::LinearRegression::plot_equation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nn</em> = <code>500</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Plots the regression function for given number of points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nn</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00148">148</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7550e154140c7d8d16afc1458a4171b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7550e154140c7d8d16afc1458a4171b5">&#9670;&nbsp;</a></span>show_equation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void regr::LinearRegression::show_equation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shows the regression equation. </p>
+
+<p>Reimplemented in <a class="el" href="classregr_1_1PolyRegression.html#a03689acc8b399c9760b277bfa95b610f">regr::PolyRegression</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00135">135</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ac86b2d6ec0b013eae630dd02c884b53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86b2d6ec0b013eae630dd02c884b53e">&#9670;&nbsp;</a></span>PolyRegression</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classregr_1_1PolyRegression.html">PolyRegression</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00204">204</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa685ec626a5a2fcd37ab42375ac2dbde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa685ec626a5a2fcd37ab42375ac2dbde">&#9670;&nbsp;</a></span>c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00028">28</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a691f55a1966c8ee3fccfe5b0d0830164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691f55a1966c8ee3fccfe5b0d0830164">&#9670;&nbsp;</a></span>m</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::m</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00027">27</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a53294f76033f6bd16ae3f80061cc960b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53294f76033f6bd16ae3f80061cc960b">&#9670;&nbsp;</a></span>n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int regr::LinearRegression::n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00033">33</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afce244541db45ad270d2e623bfd762bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce244541db45ad270d2e623bfd762bc">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmisc_1_1Plot.html">misc::Plot</a> regr::LinearRegression::p</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00034">34</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abd7eab80727c7419b6be007f0fe15546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd7eab80727c7419b6be007f0fe15546">&#9670;&nbsp;</a></span>sumx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::sumx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00029">29</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2a3df8724439e5029f8e9679fda55c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3df8724439e5029f8e9679fda55c58">&#9670;&nbsp;</a></span>sumxx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::sumxx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00031">31</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e3b21917833e9d88d8c9a28dad34524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3b21917833e9d88d8c9a28dad34524">&#9670;&nbsp;</a></span>sumxy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::sumxy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00032">32</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a58835f34ed83ca222fe7e77ab1c354c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58835f34ed83ca222fe7e77ab1c354c9">&#9670;&nbsp;</a></span>sumy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long double regr::LinearRegression::sumy</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00030">30</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2ab986584cf1e65f73067befbbf31f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab986584cf1e65f73067befbbf31f20">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; regr::LinearRegression::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00024">24</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a15da637fcac71de15546d67adeadb174"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15da637fcac71de15546d67adeadb174">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; regr::LinearRegression::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00025">25</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1a1127b7fa4cdefefccb7ebad58fcf1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1127b7fa4cdefefccb7ebad58fcf1a">&#9670;&nbsp;</a></span>yfit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;long double&gt; regr::LinearRegression::yfit</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="regr_8hpp_source.html#l00026">26</a> of file <a class="el" href="regr_8hpp_source.html">regr.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/reg.hpp</li>
+<li>include/<a class="el" href="regr_8hpp_source.html">regr.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

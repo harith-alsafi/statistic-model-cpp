@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iqr_105',['IQR',['../structmisc_1_1Table_1_1QR.html#ad325268e08fb78ecdb2ae782f5266a48',1,'misc::Table::QR']]]
+  ['graphdefaultoptions_313',['graphdefaultoptions',['../graphs_8hpp.html#a5c1a8e3cedb72ff9591ac596bd334f28',1,'graphs.hpp']]]
 ];

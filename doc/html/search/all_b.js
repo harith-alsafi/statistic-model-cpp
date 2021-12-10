@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['q1_36',['Q1',['../structmisc_1_1Table_1_1QR.html#aae95e478b315f5e216d6e5c6099aae9f',1,'misc::Table::QR']]],
-  ['q2_37',['Q2',['../structmisc_1_1Table_1_1QR.html#ac65f73e3532b6dfaa36e1ae65fafcb45',1,'misc::Table::QR']]],
-  ['q3_38',['Q3',['../structmisc_1_1Table_1_1QR.html#adcb33506be77f79517adf30cca5bc2ba',1,'misc::Table::QR']]],
-  ['qr_39',['QR',['../structmisc_1_1Table_1_1QR.html',1,'misc::Table']]]
+  ['m_87',['m',['../classregr_1_1LinearRegression.html#a691f55a1966c8ee3fccfe5b0d0830164',1,'regr::LinearRegression']]],
+  ['main_5foptions_88',['main_options',['../classMenu.html#ab19a5a2c276c6e316a573371cd9f493c',1,'Menu']]],
+  ['menu_89',['Menu',['../classMenu.html',1,'Menu'],['../classMenu.html#ad466dd83355124a6ed958430450bfe94',1,'Menu::Menu()']]],
+  ['menu_2ehpp_90',['menu.hpp',['../menu_8hpp.html',1,'']]],
+  ['menu_5fstate_91',['menu_state',['../classMenu.html#a1454c539a24cfb1cd1fd8b123808f915',1,'Menu']]],
+  ['misc_92',['misc',['../namespacemisc.html',1,'']]],
+  ['misc_2ehpp_93',['misc.hpp',['../misc_8hpp.html',1,'']]]
 ];

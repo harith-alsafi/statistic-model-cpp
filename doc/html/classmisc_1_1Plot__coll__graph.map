@@ -1,3 +1,6 @@
 <map id="misc::Plot" name="misc::Plot">
-<area shape="rect" id="node1" title="Simple terminal plot." alt="" coords="5,5,143,273"/>
+<area shape="rect" id="node1" title="Encapsulates graph.hpp (https://github.com/tdulcet/Tables&#45;and&#45;Graphs)" alt="" coords="41,375,182,701"/>
+<area shape="rect" id="node2" href="$structgraphoptions.html" title=" " alt="" coords="5,147,129,312"/>
+<area shape="rect" id="node3" title=" " alt="" coords="154,191,234,268"/>
+<area shape="rect" id="node4" title=" " alt="" coords="131,5,257,97"/>
 </map>

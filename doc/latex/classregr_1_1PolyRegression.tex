@@ -2,19 +2,262 @@
 \label{classregr_1_1PolyRegression}\index{regr::PolyRegression@{regr::PolyRegression}}
 
 
-{\ttfamily \#include \char`\"{}reg.\+hpp\char`\"{}}
+Class for polynomial regression.  
 
+
+
+
+{\ttfamily \#include \char`\"{}regr.\+hpp\char`\"{}}
+
+
+
+Inheritance diagram for regr\+::Poly\+Regression\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classregr_1_1PolyRegression__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for regr\+::Poly\+Regression\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=188pt]{classregr_1_1PolyRegression__coll__graph}
+\includegraphics[height=550pt]{classregr_1_1PolyRegression__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classregr_1_1PolyRegression_afc0775e307755fa0f1b64c59dbc97245}{Poly\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Poly Regression object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classregr_1_1PolyRegression_a349fb1f73a2128ed128aab156c7d7ce8}{$\sim$\+Poly\+Regression}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Poly Regression object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregr_1_1PolyRegression_a6333d5db93fe8526d3907343d7e46e20}{set\+\_\+degree}} (int deg=2)
+\begin{DoxyCompactList}\small\item\em Set the degree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregr_1_1PolyRegression_a03689acc8b399c9760b277bfa95b610f}{show\+\_\+equation}} ()
+\begin{DoxyCompactList}\small\item\em Overloads show\+\_\+equation from Linear\+Regression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classregr_1_1PolyRegression_a8c30c057967c27d0fb86c3c28d77dec9}{fit\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Overloads the fit\+\_\+data from Linear\+Regression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long double \mbox{\hyperlink{classregr_1_1PolyRegression_a08293f8251aba51d2c6f3425e5157e63}{fun}} (long double xx)
+\begin{DoxyCompactList}\small\item\em overloads the regression function from Linear\+Regression \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classregr_1_1PolyRegression_a94f0880a9a098f4a33392a4d2765eaa4}{get\+\_\+power}} (int i)
+\begin{DoxyCompactList}\small\item\em Get the power as string. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1PolyRegression_af35f2ea523bbdcc9f820a4a78df175ec}{get\+\_\+y\+\_\+intersept}} ()
+\begin{DoxyCompactList}\small\item\em So that we cant acess these methods when using this class. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{classregr_1_1PolyRegression_a1088c5502e2cfc7997423c046bf01d8f}{get\+\_\+slope}} ()
+\begin{DoxyCompactList}\small\item\em Get the slope object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ long double $>$ \mbox{\hyperlink{classregr_1_1PolyRegression_a8bddad858a0f6b59bd459cb6fa7d84be}{coeff}}
+\item 
+int \mbox{\hyperlink{classregr_1_1PolyRegression_a1c63523cea2d40ca3505509ce557062c}{degree}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for polynomial regression. 
+
+Definition at line 211 of file regr.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classregr_1_1PolyRegression_afc0775e307755fa0f1b64c59dbc97245}\label{classregr_1_1PolyRegression_afc0775e307755fa0f1b64c59dbc97245}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!PolyRegression@{PolyRegression}}
+\index{PolyRegression@{PolyRegression}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{PolyRegression()}{PolyRegression()}}
+{\footnotesize\ttfamily regr\+::\+Poly\+Regression\+::\+Poly\+Regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Poly Regression object. 
+
+
+
+Definition at line 273 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a349fb1f73a2128ed128aab156c7d7ce8}\label{classregr_1_1PolyRegression_a349fb1f73a2128ed128aab156c7d7ce8}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!````~PolyRegression@{$\sim$PolyRegression}}
+\index{````~PolyRegression@{$\sim$PolyRegression}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{$\sim$PolyRegression()}{~PolyRegression()}}
+{\footnotesize\ttfamily regr\+::\+Poly\+Regression\+::$\sim$\+Poly\+Regression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the Poly Regression object. 
+
+
+
+Definition at line 279 of file regr.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a8c30c057967c27d0fb86c3c28d77dec9}\label{classregr_1_1PolyRegression_a8c30c057967c27d0fb86c3c28d77dec9}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!fit\_data@{fit\_data}}
+\index{fit\_data@{fit\_data}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{fit\_data()}{fit\_data()}}
+{\footnotesize\ttfamily void regr\+::\+Poly\+Regression\+::fit\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloads the fit\+\_\+data from Linear\+Regression. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classregr_1_1LinearRegression_adcc20a41b2f80db68e21f169262a3d8a}{regr\+::\+Linear\+Regression}}.
+
+
+
+Definition at line 317 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a08293f8251aba51d2c6f3425e5157e63}\label{classregr_1_1PolyRegression_a08293f8251aba51d2c6f3425e5157e63}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!fun@{fun}}
+\index{fun@{fun}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{fun()}{fun()}}
+{\footnotesize\ttfamily long double regr\+::\+Poly\+Regression\+::fun (\begin{DoxyParamCaption}\item[{long double}]{xx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+overloads the regression function from Linear\+Regression 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classregr_1_1LinearRegression_a54deda798bb827b04338f02734e17b7f}{regr\+::\+Linear\+Regression}}.
+
+
+
+Definition at line 233 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a94f0880a9a098f4a33392a4d2765eaa4}\label{classregr_1_1PolyRegression_a94f0880a9a098f4a33392a4d2765eaa4}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!get\_power@{get\_power}}
+\index{get\_power@{get\_power}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{get\_power()}{get\_power()}}
+{\footnotesize\ttfamily std\+::string regr\+::\+Poly\+Regression\+::get\+\_\+power (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the power as string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a1088c5502e2cfc7997423c046bf01d8f}\label{classregr_1_1PolyRegression_a1088c5502e2cfc7997423c046bf01d8f}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!get\_slope@{get\_slope}}
+\index{get\_slope@{get\_slope}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{get\_slope()}{get\_slope()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+slope\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get the slope object. 
+
+\begin{DoxyReturn}{Returns}
+long double 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_af35f2ea523bbdcc9f820a4a78df175ec}\label{classregr_1_1PolyRegression_af35f2ea523bbdcc9f820a4a78df175ec}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!get\_y\_intersept@{get\_y\_intersept}}
+\index{get\_y\_intersept@{get\_y\_intersept}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{get\_y\_intersept()}{get\_y\_intersept()}}
+{\footnotesize\ttfamily long double regr\+::\+Linear\+Regression\+::get\+\_\+y\+\_\+intersept\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+So that we cant acess these methods when using this class. 
+
+
+
+Definition at line 72 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a6333d5db93fe8526d3907343d7e46e20}\label{classregr_1_1PolyRegression_a6333d5db93fe8526d3907343d7e46e20}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!set\_degree@{set\_degree}}
+\index{set\_degree@{set\_degree}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{set\_degree()}{set\_degree()}}
+{\footnotesize\ttfamily void regr\+::\+Poly\+Regression\+::set\+\_\+degree (\begin{DoxyParamCaption}\item[{int}]{deg = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deg} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 286 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a03689acc8b399c9760b277bfa95b610f}\label{classregr_1_1PolyRegression_a03689acc8b399c9760b277bfa95b610f}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!show\_equation@{show\_equation}}
+\index{show\_equation@{show\_equation}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{show\_equation()}{show\_equation()}}
+{\footnotesize\ttfamily void regr\+::\+Poly\+Regression\+::show\+\_\+equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overloads show\+\_\+equation from Linear\+Regression. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classregr_1_1LinearRegression_a7550e154140c7d8d16afc1458a4171b5}{regr\+::\+Linear\+Regression}}.
+
+
+
+Definition at line 294 of file regr.\+hpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a8bddad858a0f6b59bd459cb6fa7d84be}\label{classregr_1_1PolyRegression_a8bddad858a0f6b59bd459cb6fa7d84be}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!coeff@{coeff}}
+\index{coeff@{coeff}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{coeff}{coeff}}
+{\footnotesize\ttfamily std\+::vector$<$long double$>$ regr\+::\+Poly\+Regression\+::coeff\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 222 of file regr.\+hpp.
+
+\mbox{\Hypertarget{classregr_1_1PolyRegression_a1c63523cea2d40ca3505509ce557062c}\label{classregr_1_1PolyRegression_a1c63523cea2d40ca3505509ce557062c}} 
+\index{regr::PolyRegression@{regr::PolyRegression}!degree@{degree}}
+\index{degree@{degree}!regr::PolyRegression@{regr::PolyRegression}}
+\doxysubsubsection{\texorpdfstring{degree}{degree}}
+{\footnotesize\ttfamily int regr\+::\+Poly\+Regression\+::degree\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 225 of file regr.\+hpp.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/reg.\+hpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{regr_8hpp}{regr.\+hpp}}\end{DoxyCompactItemize}
