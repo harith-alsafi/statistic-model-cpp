@@ -5,6 +5,7 @@
     <includes refid="intp_8hpp" local="yes">intp.hpp</includes>
     <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
     <includes refid="regr_8hpp" local="yes">regr.hpp</includes>
+    <includedby refid="menu__test_8cpp" local="yes">test/menu_test.cpp</includedby>
     <incdepgraph>
       <node id="12">
         <label>graphs.hpp</label>
@@ -136,6 +137,18 @@
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/menu.hpp</label>
+        <link refid="menu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>test/menu_test.cpp</label>
+        <link refid="menu__test_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classMenu" prot="public">Menu</innerclass>
     <briefdescription>
     </briefdescription>

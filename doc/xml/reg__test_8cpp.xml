@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="reg__test_8cpp" kind="file" language="C++">
+    <compoundname>reg_test.cpp</compoundname>
+    <includes refid="regr_8hpp" local="yes">../include/regr.hpp</includes>
+    <includes local="yes">../lib/googletest/googletest/include/gtest/gtest.h</includes>
+    <incdepgraph>
+      <node id="22">
+        <label>../lib/googletest/googletest/include/gtest/gtest.h</label>
+      </node>
+      <node id="10">
+        <label>graphs.hpp</label>
+        <link refid="graphs_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/regr.hpp</label>
+        <link refid="regr_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/reg_test.cpp</label>
+        <link refid="reg__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cfloat</label>
+      </node>
+      <node id="18">
+        <label>clocale</label>
+      </node>
+      <node id="13">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstdlib</label>
+      </node>
+      <node id="12">
+        <label>cstring</label>
+      </node>
+      <node id="17">
+        <label>cwchar</label>
+      </node>
+      <node id="7">
+        <label>fstream</label>
+      </node>
+      <node id="16">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="14">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>numeric</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="20">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="21">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="reg__test_8cpp_1a932bbe7bcd4e1af1f9efef98f6585da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(reg, lr_showing)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>reg</type>
+        </param>
+        <param>
+          <type>lr_showing</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/reg_test.cpp" line="6" column="1" bodyfile="test/reg_test.cpp" bodystart="6" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="reg__test_8cpp_1ae62863c9943c0bbe0a3e3c98c365da50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(reg, lr_values)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>reg</type>
+        </param>
+        <param>
+          <type>lr_values</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/reg_test.cpp" line="19" column="1" bodyfile="test/reg_test.cpp" bodystart="19" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="reg__test_8cpp_1a97273c99966211d8c1fdbe07a19edead" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(reg, pr_showing)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>reg</type>
+        </param>
+        <param>
+          <type>pr_showing</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/reg_test.cpp" line="32" column="1" bodyfile="test/reg_test.cpp" bodystart="32" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="reg__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/reg_test.cpp" line="46" column="5" bodyfile="test/reg_test.cpp" bodystart="46" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/regr.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lib/googletest/googletest/include/gtest/gtest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceregr" kindref="compound">regr</ref>;<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="reg__test_8cpp_1a932bbe7bcd4e1af1f9efef98f6585da7" refkind="member"><highlight class="normal"><ref refid="reg__test_8cpp_1a932bbe7bcd4e1af1f9efef98f6585da7" kindref="member">TEST</ref>(reg,<sp/>lr_showing)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><ref refid="classregr_1_1LinearRegression" kindref="compound">LinearRegression</ref><sp/>lr;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" kindref="member">load_data</ref>(</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>2,<sp/>5,<sp/>7},</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{-1,<sp/>5,<sp/>12,<sp/>20});</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1adcc20a41b2f80db68e21f169262a3d8a" kindref="member">fit_data</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1a7550e154140c7d8d16afc1458a4171b5" kindref="member">show_equation</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1abc4fcce72b8749b7a616c6096a78bbc7" kindref="member">plot_equation</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1a2c2066e9dbd92a01a1426ee72d357f88" kindref="member">get_data</ref>().<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1a42d8b4eba987c0cf243aa36f0a3c1c4b" kindref="member">plot_data</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="reg__test_8cpp_1ae62863c9943c0bbe0a3e3c98c365da50" refkind="member"><highlight class="normal"><ref refid="reg__test_8cpp_1a932bbe7bcd4e1af1f9efef98f6585da7" kindref="member">TEST</ref>(reg,<sp/>lr_values)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><ref refid="classregr_1_1LinearRegression" kindref="compound">LinearRegression</ref><sp/>lr;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" kindref="member">load_data</ref>(</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{0,<sp/>2,<sp/>5,<sp/>7},</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{-1,<sp/>5,<sp/>12,<sp/>20});</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>lr.<ref refid="classregr_1_1LinearRegression_1adcc20a41b2f80db68e21f169262a3d8a" kindref="member">fit_data</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(<ref refid="misc_8hpp_1a4ea6f15122d3506b7322511c59d732a0" kindref="member">round</ref>(lr.<ref refid="classregr_1_1LinearRegression_1a172f6f7583a1703f71fb831bd74af95c" kindref="member">get_original_r</ref>(),<sp/>4),<sp/>0.9945);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(<ref refid="misc_8hpp_1a4ea6f15122d3506b7322511c59d732a0" kindref="member">round</ref>(lr.<ref refid="classregr_1_1LinearRegression_1a1088c5502e2cfc7997423c046bf01d8f" kindref="member">get_slope</ref>(),<sp/>3),<sp/>2.897);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(<ref refid="misc_8hpp_1a4ea6f15122d3506b7322511c59d732a0" kindref="member">round</ref>(lr.<ref refid="classregr_1_1LinearRegression_1af35f2ea523bbdcc9f820a4a78df175ec" kindref="member">get_y_intersept</ref>(),<sp/>3),<sp/>-1.138);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="reg__test_8cpp_1a97273c99966211d8c1fdbe07a19edead" refkind="member"><highlight class="normal"><ref refid="reg__test_8cpp_1a932bbe7bcd4e1af1f9efef98f6585da7" kindref="member">TEST</ref>(reg,<sp/>pr_showing)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><ref refid="classregr_1_1PolyRegression" kindref="compound">PolyRegression</ref><sp/>pr;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1LinearRegression_1a3dcb948847da6de38e83105577b77e25" kindref="member">load_data</ref>(</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{0.0,<sp/>1.0,<sp/>2.0,<sp/>3.0,<sp/>4.0},</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{1.0,<sp/>1.8,<sp/>1.3,<sp/>2.5,<sp/>6.3});</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1PolyRegression_1a6333d5db93fe8526d3907343d7e46e20" kindref="member">set_degree</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1PolyRegression_1a8c30c057967c27d0fb86c3c28d77dec9" kindref="member">fit_data</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1PolyRegression_1a03689acc8b399c9760b277bfa95b610f" kindref="member">show_equation</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1LinearRegression_1a42d8b4eba987c0cf243aa36f0a3c1c4b" kindref="member">plot_data</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>pr.<ref refid="classregr_1_1LinearRegression_1abc4fcce72b8749b7a616c6096a78bbc7" kindref="member">plot_equation</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="reg__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="reg__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/reg_test.cpp"/>
+  </compounddef>
+</doxygen>

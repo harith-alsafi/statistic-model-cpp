@@ -4,6 +4,7 @@
     <compoundname>regr.hpp</compoundname>
     <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
     <includedby refid="menu_8hpp" local="yes">include/menu.hpp</includedby>
+    <includedby refid="reg__test_8cpp" local="yes">test/reg_test.cpp</includedby>
     <incdepgraph>
       <node id="9">
         <label>graphs.hpp</label>
@@ -113,12 +114,24 @@
       <node id="2">
         <label>include/menu.hpp</label>
         <link refid="menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
       <node id="1">
         <label>include/regr.hpp</label>
         <link refid="regr_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>test/menu_test.cpp</label>
+        <link refid="menu__test_8cpp"/>
+      </node>
+      <node id="4">
+        <label>test/reg_test.cpp</label>
+        <link refid="reg__test_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classregr_1_1LinearRegression" prot="public">regr::LinearRegression</innerclass>

@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="int__test_8cpp" kind="file" language="C++">
+    <compoundname>int_test.cpp</compoundname>
+    <includes refid="intp_8hpp" local="yes">../include/intp.hpp</includes>
+    <includes local="yes">../lib/googletest/googletest/include/gtest/gtest.h</includes>
+    <incdepgraph>
+      <node id="24">
+        <label>../lib/googletest/googletest/include/gtest/gtest.h</label>
+      </node>
+      <node id="12">
+        <label>graphs.hpp</label>
+        <link refid="graphs_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/intp.hpp</label>
+        <link refid="intp_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/int_test.cpp</label>
+        <link refid="int__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>algorithm</label>
+      </node>
+      <node id="17">
+        <label>cfloat</label>
+      </node>
+      <node id="20">
+        <label>clocale</label>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="21">
+        <label>cstdlib</label>
+      </node>
+      <node id="14">
+        <label>cstring</label>
+      </node>
+      <node id="19">
+        <label>cwchar</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="18">
+        <label>iomanip</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>iterator</label>
+      </node>
+      <node id="16">
+        <label>limits</label>
+      </node>
+      <node id="11">
+        <label>numeric</label>
+      </node>
+      <node id="13">
+        <label>sstream</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="23">
+        <label>unistd.h</label>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(intp, linear_data_test)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>intp</type>
+        </param>
+        <param>
+          <type>linear_data_test</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="5" column="1" bodyfile="test/int_test.cpp" bodystart="5" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="int__test_8cpp_1a228b58ec3166e5f12b77d513045eddc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(intp, linear_show_plots)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>intp</type>
+        </param>
+        <param>
+          <type>linear_show_plots</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="19" column="1" bodyfile="test/int_test.cpp" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="int__test_8cpp_1a12dcce7343044fffc5b8282918664fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(intp, linear_show_table)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>intp</type>
+        </param>
+        <param>
+          <type>linear_show_table</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="33" column="1" bodyfile="test/int_test.cpp" bodystart="33" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="int__test_8cpp_1a736c19174f1365ed25f264fac7cfa23e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(intp, poly_data_test)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>intp</type>
+        </param>
+        <param>
+          <type>poly_data_test</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="52" column="1" bodyfile="test/int_test.cpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="int__test_8cpp_1ac38e0cc6a0def3082c32c60bf84bac0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(intp, poly_plots)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>intp</type>
+        </param>
+        <param>
+          <type>poly_plots</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="64" column="1" bodyfile="test/int_test.cpp" bodystart="64" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="int__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/int_test.cpp" line="78" column="5" bodyfile="test/int_test.cpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/intp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lib/googletest/googletest/include/gtest/gtest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceintp" kindref="compound">intp</ref>;<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" refkind="member"><highlight class="normal"><ref refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" kindref="member">TEST</ref>(<ref refid="namespaceintp" kindref="compound">intp</ref>,<sp/>linear_data_test)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{7.5,<sp/>1.5,<sp/>0.5,<sp/>3.5};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{32.0,<sp/>20.0,<sp/>10.0,<sp/>28.0};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><ref refid="classintp_1_1LinearInterp" kindref="compound">LinearInterp</ref><sp/>lip;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6" kindref="member">load_data</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(2.5),<sp/>24.0);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(5.5),<sp/>30.0);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(1.0),<sp/>15.0);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="int__test_8cpp_1a228b58ec3166e5f12b77d513045eddc1" refkind="member"><highlight class="normal"><ref refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" kindref="member">TEST</ref>(<ref refid="namespaceintp" kindref="compound">intp</ref>,<sp/>linear_show_plots)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{6.0,<sp/>2.0,<sp/>1.0,<sp/>5.0,<sp/>4.0,<sp/>3.0};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{3.0,<sp/>3.0,<sp/>2.0,<sp/>1.0,<sp/>-2.0,<sp/>1.0};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><ref refid="classintp_1_1LinearInterp" kindref="compound">LinearInterp</ref><sp/>lip;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6" kindref="member">load_data</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a2ce5eafccbdfd1a92cec39694a5601ee" kindref="member">plot_data</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a2e77ad32addfd39d1f81e198ed90b58c" kindref="member">plot_combined_data</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1af0af99e177d8c2c9bd345546ffe96a85" kindref="member">plot_interpolated_data</ref>();<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a905b1a16a9718f3c87f47d4f6c87eb93" kindref="member">plot_all_interpolation</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="int__test_8cpp_1a12dcce7343044fffc5b8282918664fcb" refkind="member"><highlight class="normal"><ref refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" kindref="member">TEST</ref>(<ref refid="namespaceintp" kindref="compound">intp</ref>,<sp/>linear_show_table)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{7.5,<sp/>1.5,<sp/>0.5,<sp/>3.5};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{32.0,<sp/>20.0,<sp/>10.0,<sp/>28.0};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><ref refid="classintp_1_1LinearInterp" kindref="compound">LinearInterp</ref><sp/>lip;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a1ee7f275fca970ba5ed822689f772ed6" kindref="member">load_data</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(2.5);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(5.5);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(1.0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a0c2c830a638153841382d819f4bc1e73" kindref="member">get_original_data</ref>().<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a312024163ea8f6d9bdc20d37902b9fed" kindref="member">get_combined_data</ref>().<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/>lip.<ref refid="classintp_1_1LinearInterp_1a34f189c555a7c5d8a2900a2f314ddd59" kindref="member">get_interpolated_data</ref>().<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="int__test_8cpp_1a736c19174f1365ed25f264fac7cfa23e" refkind="member"><highlight class="normal"><ref refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" kindref="member">TEST</ref>(<ref refid="namespaceintp" kindref="compound">intp</ref>,<sp/>poly_data_test)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{5.0,<sp/>7.0,<sp/>11.0,<sp/>13.0,<sp/>17.0};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{150.0,<sp/>392.0,<sp/>1452.0,<sp/>2366.0,<sp/>5202.0<sp/>};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><ref refid="classintp_1_1PolyInterp" kindref="compound">PolyInterp</ref><sp/>pip;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/>pip.<ref refid="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" kindref="member">load_data</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(pip.<ref refid="classintp_1_1LinearInterp_1a19a36bb67d8a42be7d15d04648229208" kindref="member">find_value</ref>(9.0),<sp/>810.0);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="int__test_8cpp_1ac38e0cc6a0def3082c32c60bf84bac0a" refkind="member"><highlight class="normal"><ref refid="int__test_8cpp_1acd546bf189425a595a7273b9ca043745" kindref="member">TEST</ref>(<ref refid="namespaceintp" kindref="compound">intp</ref>,<sp/>poly_plots)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">misc::Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;homes.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{6.0,<sp/>2.0,<sp/>1.0,<sp/>5.0,<sp/>4.0,<sp/>3.0,<sp/>7.0,<sp/>8.0,<sp/>9.0};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{3.0,<sp/>3.0,<sp/>2.0,<sp/>1.0,<sp/>-2.0,<sp/>1.0,<sp/>3.5,<sp/>4.5,<sp/>3.0};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><ref refid="classintp_1_1PolyInterp" kindref="compound">PolyInterp</ref><sp/>pip;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/>pip.<ref refid="classintp_1_1PolyInterp_1af7f4fb4af5ff903947fbcc932490646e" kindref="member">load_data</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/>pip.<ref refid="classintp_1_1LinearInterp_1a2ce5eafccbdfd1a92cec39694a5601ee" kindref="member">plot_data</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/>pip.<ref refid="classintp_1_1LinearInterp_1a905b1a16a9718f3c87f47d4f6c87eb93" kindref="member">plot_all_interpolation</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="int__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="int__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/int_test.cpp"/>
+  </compounddef>
+</doxygen>

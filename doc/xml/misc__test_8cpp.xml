@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="misc__test_8cpp" kind="file" language="C++">
+    <compoundname>misc_test.cpp</compoundname>
+    <includes refid="misc_8hpp" local="yes">../include/misc.hpp</includes>
+    <includes local="yes">../lib/googletest/googletest/include/gtest/gtest.h</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>../lib/googletest/googletest/include/gtest/gtest.h</label>
+      </node>
+      <node id="9">
+        <label>graphs.hpp</label>
+        <link refid="graphs_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>test/misc_test.cpp</label>
+        <link refid="misc__test_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+      <node id="14">
+        <label>cfloat</label>
+      </node>
+      <node id="17">
+        <label>clocale</label>
+      </node>
+      <node id="12">
+        <label>cmath</label>
+      </node>
+      <node id="18">
+        <label>cstdlib</label>
+      </node>
+      <node id="11">
+        <label>cstring</label>
+      </node>
+      <node id="16">
+        <label>cwchar</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="15">
+        <label>iomanip</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>limits</label>
+      </node>
+      <node id="8">
+        <label>numeric</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="20">
+        <label>unistd.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, plots_fun)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>plots_fun</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="5" column="1" bodyfile="test/misc_test.cpp" bodystart="5" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1a6a0b0b31098fc6d8d891056708030f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, plot_arr)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>plot_arr</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="14" column="1" bodyfile="test/misc_test.cpp" bodystart="14" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1ad91f25b5c4e6c042d690901f1b068747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_read_csv)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_read_csv</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="26" column="1" bodyfile="test/misc_test.cpp" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1a70e25cccd1debbbb9be6f48b171513f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_header)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_header</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="33" column="1" bodyfile="test/misc_test.cpp" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1a49e8b14c8b38bc3bd7d80ecc7e55c83b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_qr_sort_asc)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_qr_sort_asc</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="44" column="1" bodyfile="test/misc_test.cpp" bodystart="44" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1ab7cd2fa37869833975b314d48365c3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_mean_std_var_sum)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_mean_std_var_sum</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="57" column="1" bodyfile="test/misc_test.cpp" bodystart="57" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1af0466a8ce6844b6fcf05b103b1d17f05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_describe_all)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_describe_all</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="63" column="1" bodyfile="test/misc_test.cpp" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1ac7b88a3e357e538f71daef0f0ddadc9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_show_row)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_show_row</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="72" column="1" bodyfile="test/misc_test.cpp" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1a7d729d38315fdd788c01adb60b8ee2ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_show_col)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_show_col</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="80" column="1" bodyfile="test/misc_test.cpp" bodystart="80" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1abd2bb076f35483c3dcdbf49d46cf8f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST</definition>
+        <argsstring>(misc, table_add_col)</argsstring>
+        <name>TEST</name>
+        <param>
+          <type>misc</type>
+        </param>
+        <param>
+          <type>table_add_col</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="88" column="1" bodyfile="test/misc_test.cpp" bodystart="88" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="misc__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/misc_test.cpp" line="98" column="5" bodyfile="test/misc_test.cpp" bodystart="98" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;../include/misc.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lib/googletest/googletest/include/gtest/gtest.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemisc" kindref="compound">misc</ref>;<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>plots_fun)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Plot" kindref="compound">Plot</ref><sp/>p;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>f<sp/>=<sp/>[](</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x)-&gt;</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x*x;};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1a7d41a0e058bafb1a4243eb032c74556f" kindref="member">set_range</ref>(-2,<sp/>15);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1ab041be78e2edf33fb68ee3642453bacc" kindref="member">generate_domain</ref>(-5,<sp/>5,<sp/>100);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1aeea6cf0d2dbb82bad251918c8c202b87" kindref="member">plot_fun</ref>(f);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="misc__test_8cpp_1a6a0b0b31098fc6d8d891056708030f52" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>plot_arr)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Plot" kindref="compound">Plot</ref><sp/>p;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>x<sp/>=<sp/>{-2,<sp/>-1,<sp/>0,<sp/>1,<sp/>2,<sp/>3};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>y<sp/>=<sp/>{-4,<sp/>-2,<sp/>0,<sp/>2,<sp/>4,<sp/>6};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1a7d41a0e058bafb1a4243eb032c74556f" kindref="member">set_range</ref>(-5.0,<sp/>7.0);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1a41c44efde77238011b7ef8d03fe70db9" kindref="member">set_domain</ref>(-3.0,<sp/>4.0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1ac2da558e0965208f9898d64cef0f6b74" kindref="member">set_title</ref>(</highlight><highlight class="stringliteral">&quot;Original<sp/>data&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1a7476d78c32c4c21d6330fba416ceae2c" kindref="member">set_color</ref>(Plot::Color::yellow);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>p.<ref refid="classmisc_1_1Plot_1a85567735781b6a1cfb277c2c8ae12355" kindref="member">plot_vect</ref>(x,<sp/>y);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="misc__test_8cpp_1ad91f25b5c4e6c042d690901f1b068747" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_read_csv)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;homes.csv&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(t.<ref refid="classmisc_1_1Table_1ab761f2dcb25eb9e0a02ea055c44055c1" kindref="member">save_csv</ref>(</highlight><highlight class="stringliteral">&quot;test.csv&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="misc__test_8cpp_1a70e25cccd1debbbb9be6f48b171513f7" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_header)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;home.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>sold<sp/>=<sp/>t[</highlight><highlight class="stringliteral">&quot;Sell&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(t.size()<sp/>==<sp/>sold.size());</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sold.size();<sp/>i++){</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ASSERT_TRUE(t.at(i).at(0)<sp/>==<sp/>sold[i]);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="misc__test_8cpp_1a49e8b14c8b38bc3bd7d80ecc7e55c83b" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_qr_sort_asc)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>string<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>qr<sp/>=<sp/>Table::get_qr(</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{5.0,<sp/>8.2,<sp/>10.3,<sp/>10.3,<sp/>15.2,<sp/>18.2,<sp/>23.1});</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmisc_1_1Table_1_1QR" kindref="compound">Table::QR</ref><sp/>qr_answer<sp/>=<sp/>{5.0,<sp/>8.2,<sp/>10.3,<sp/>18.2,<sp/>23.1};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(qr_answer.LQ<sp/>==<sp/>qr.LQ);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(qr_answer.Q1<sp/>==<sp/>qr.Q1);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(qr_answer.Q2<sp/>==<sp/>qr.Q2);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(qr_answer.Q3<sp/>==<sp/>qr.Q3);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_TRUE(qr_answer.UQ<sp/>==<sp/>qr.UQ);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="misc__test_8cpp_1ab7cd2fa37869833975b314d48365c3ce" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_mean_std_var_sum)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>double&gt;<sp/>a<sp/>=<sp/>{10.0,<sp/>8.0,<sp/>10.0,<sp/>8.0,<sp/>8.0,<sp/>4.0};<sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_DOUBLE_EQ(Table::get_std(a),<sp/>2.0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="misc__test_8cpp_1af0466a8ce6844b6fcf05b103b1d17f05" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_describe_all)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;homes.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t2<sp/>=<sp/>t.<ref refid="classmisc_1_1Table_1a9fcaf25cf5b2adf8b4496339f8009017" kindref="member">describe_all</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>t2.<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="misc__test_8cpp_1ac7b88a3e357e538f71daef0f0ddadc9d" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_show_row)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;homes.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tt<sp/>=<sp/>t.<ref refid="classmisc_1_1Table_1a643a1adbde19cd5f0ad9f310fcd5bae0" kindref="member">get_row</ref>(2);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>tt.<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="misc__test_8cpp_1a7d729d38315fdd788c01adb60b8ee2ac" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_show_col)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac3a4f917dcc61e3d94a3685ded4d0147" kindref="member">read_csv</ref>(</highlight><highlight class="stringliteral">&quot;homes.csv&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tt<sp/>=<sp/>t.<ref refid="classmisc_1_1Table_1afea5e8f9a4f0fa30ca705423c880c01a" kindref="member">get_col</ref>(</highlight><highlight class="stringliteral">&quot;Sell&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>tt.<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="misc__test_8cpp_1abd2bb076f35483c3dcdbf49d46cf8f22" refkind="member"><highlight class="normal"><ref refid="misc__test_8cpp_1a81c720282b586b9d3c9b35e64a27febf" kindref="member">TEST</ref>(<ref refid="namespacemisc" kindref="compound">misc</ref>,<sp/>table_add_col)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classmisc_1_1Table" kindref="compound">Table</ref><sp/>t;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" kindref="member">add_col</ref>(</highlight><highlight class="stringliteral">&quot;x1&quot;</highlight><highlight class="normal">,<sp/>{1,<sp/>2,<sp/>3,<sp/>4});</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" kindref="member">add_col</ref>(</highlight><highlight class="stringliteral">&quot;x2&quot;</highlight><highlight class="normal">,<sp/>{5,<sp/>6,<sp/>7,<sp/>8});</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1af3aa863033df4b4b83469675c5dbb846" kindref="member">add_col</ref>(</highlight><highlight class="stringliteral">&quot;x3&quot;</highlight><highlight class="normal">,<sp/>{9,<sp/>10,<sp/>11,<sp/>12});</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>t.<ref refid="classmisc_1_1Table_1ac40ba1f7fd77804cc48c93cd45ae675c" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="misc__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="misc__test_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv)<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/>testing::InitGoogleTest(&amp;argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>RUN_ALL_TESTS();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test/misc_test.cpp"/>
+  </compounddef>
+</doxygen>

@@ -6,6 +6,7 @@
     <includes local="no">utility</includes>
     <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
     <includedby refid="menu_8hpp" local="yes">include/menu.hpp</includedby>
+    <includedby refid="int__test_8cpp" local="yes">test/int_test.cpp</includedby>
     <incdepgraph>
       <node id="11">
         <label>graphs.hpp</label>
@@ -127,10 +128,22 @@
         <link refid="intp_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>include/menu.hpp</label>
         <link refid="menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>test/int_test.cpp</label>
+        <link refid="int__test_8cpp"/>
+      </node>
+      <node id="3">
+        <label>test/menu_test.cpp</label>
+        <link refid="menu__test_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classintp_1_1LinearInterp" prot="public">intp::LinearInterp</innerclass>
