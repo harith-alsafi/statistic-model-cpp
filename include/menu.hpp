@@ -447,7 +447,6 @@ class Menu
                         lip.plot_all_interpolation();
                     }
                     else{
-                        std::cout << "hile \n";
                         pip.plot_data();
                         pip.plot_all_interpolation();
                     }

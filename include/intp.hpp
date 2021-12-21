@@ -184,22 +184,16 @@ namespace intp
             }
 
             /**
-             * @brief Resets the interpolated data 
-             * 
-             */
-            void reset_interpolated(){
-                x_in.clear();
-                y_in.clear();
-                x_comb = x;
-                y_comb = y;
-            }
-
-            /**
              * @brief Plots all posiible interpolations within given number of points 
              * 
              * @param nn 
              */
             void plot_all_interpolation(int nn = 500){
+                std::vector<long double> tempx_in = x_in;
+                std::vector<long double> tempy_in = y_in;
+                std::vector<long double> tempx_comb = x_comb;
+                std::vector<long double> tempy_comb = y_comb;
+
                 auto dmn = misc::generate_vector(
                 misc::Table::get_min(x), misc::Table::get_max(x),
                 nn);
@@ -207,7 +201,11 @@ namespace intp
                     find_value(dmn[i]);
                 }
                 plot_combined_data();
-                reset_interpolated();
+                
+                x_in = tempx_in;
+                y_in = tempy_in;
+                x_comb = tempx_comb;
+                y_comb = tempy_comb;
             }
 
             /**
