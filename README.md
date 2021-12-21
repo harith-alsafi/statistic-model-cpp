@@ -1,5 +1,6 @@
 # Table of content 
-
+- [Features](#features)
+- [Code and screenshots](#code-and-screenshots)
 - [Project overview](#project-overview)
 - [Detailed design](#detailed-design)
   * [misc.hpp](#mischpp)
@@ -8,6 +9,155 @@
   * [menu.hpp](#menuhpp)
 - [Mathematical design](#mathematical-design)
 - [Reference](#reference)
+
+# Features 
+
+* The program is divided into three parts 
+
+  * Statistical analysis 
+    * Users can load CSV files as they are prompted  
+    * Users can save CSV files 
+    * The CSV file is encapsulated file into a ``misc::Table`` class 
+    * Viewing content of CSV files 
+      * Showing all rows 
+      * Showing certain number of rows 
+      * Showing certain column 
+      * Showing certain row 
+    * Statistical analysis of all columns in the table 
+      * Standard deviation and variance 
+      * Mean and Summation 
+      * Maximum value and minimum value 
+      * 25th percentile, median and 75th percentile 
+      * Interquartile range (IQR)
+
+  * Regression 
+    * Correlation coefficient 
+    * Plots original data, and predicted data 
+    * Plots the equation with 500 points with the minimum and maximum of the loaded x-data  
+    * Shows a table containing  x-values, y-values and the predicted data 
+    * Linear regression shows slope and y-intersect in equation form
+    * Polynomial regression shows coefficients of polynomials within the equation which is printed as a latex view 
+  * Interpolation 
+    * Plots original data
+    * Plots all possible interpolations for 500 points with the minimum and maximum of the loaded x-data  
+    * Gets the user's x-input and returns the interpolated output , in the same time this output gets stored in the vector and can be viewed as a table at any time 
+    * Shows a table x-values, y-values and the interpolated data 
+    * Applies either linear interpolation or polynomial interpolation 
+  * Error warning and crash prevention against:
+    * miss-loaded data 
+    * No read CSV files 
+    * Out of bounds input 
+    * Wrong data type input 
+
+# Code and screenshots 
+
+* Screenshots 
+
+  * Main menu 
+
+  ![image-20211210114443425](https://i.imgur.com/NuMBPv3.png)
+
+  * Option-1
+
+  ![image-20211210114512952](https://i.imgur.com/Tv3gUcV.png)
+
+  * Option-2
+
+    ![image-20211210114543717](https://i.imgur.com/sn3qW6D.png)
+
+     * Sub-option-1 (it keeps going)
+
+    ![image-20211210114718904](https://i.imgur.com/u4Vfobz.png)
+
+     * Sub-option-2
+
+    ![image-20211210114747902](https://i.imgur.com/iULetFk.png)
+
+     * Sub-option-3
+
+    ![image-20211210114806074](https://i.imgur.com/G7SY4GA.png)
+
+     * Sub-option-4	
+
+    ![image-20211210114837387](https://i.imgur.com/KUqAPIv.png)
+
+  * Option-3 (``statistics.csv`` is loaded)
+
+  ![image-20211210114915002](https://i.imgur.com/z1Smk7j.png)
+
+  * Option-4
+
+    ![image-20211210114956569](https://i.imgur.com/2TqHNiA.png)
+
+    * Sub-option-1
+
+      * Linear 
+
+      ![image-20211210115131461](https://i.imgur.com/E5oXciN.png)
+
+      * Polynomial 
+
+      ![image-20211210115459232](https://i.imgur.com/l5UK7YX.png)
+
+    * Sub-option-2
+
+      * Linear 
+
+      ![image-20211210115200240](https://i.imgur.com/33F2a9l.png)
+
+      ![image-20211210115221062](https://i.imgur.com/IjQd1om.png)
+
+      ![image-20211210115240990](https://i.imgur.com/TLaISOL.png)
+
+      * Polynomial 
+
+      ![image-20211210115537511](https://i.imgur.com/kfheYsZ.png)
+
+      ![image-20211210115555109](https://i.imgur.com/Wvsm1wY.png)
+
+      ![image-20211210115638213](https://i.imgur.com/JQ0KeuZ.png)
+
+    * Sub-option-3
+
+    ![image-20211210115327360](https://i.imgur.com/Qcr7p49.png)
+
+  * Option-5
+
+    ![image-20211210115921631](https://i.imgur.com/fIdwNp1.png)
+
+    * Sub-option-1
+
+    ![image-20211210115849857](https://i.imgur.com/RwG1chn.png)
+
+    * Sub-option-2
+
+    ![image-20211210115958484](https://i.imgur.com/0FHns1I.png)
+
+    * Sub-option-3
+
+      * Linear 
+
+      ![image-20211210120039712](https://i.imgur.com/jmeXE48.png)
+
+      ![image-20211210120056815](https://i.imgur.com/0fodBQS.png)
+
+      * Polynomial 
+
+      ![image-20211210120755319](https://i.imgur.com/6i5WBQl.png)
+
+      ![image-20211210120807800](https://i.imgur.com/cBSlqJU.png)
+
+    * Sub-option-4
+
+    ![image-20211210120709181](https://i.imgur.com/hXjvrPI.png)
+
+  * Option-6
+
+    ![image-20211210123043442](https://i.imgur.com/kILHLMy.png)
+
+* This is the code as a ``.zip`` file:
+
+
 
 # Project overview 
 
